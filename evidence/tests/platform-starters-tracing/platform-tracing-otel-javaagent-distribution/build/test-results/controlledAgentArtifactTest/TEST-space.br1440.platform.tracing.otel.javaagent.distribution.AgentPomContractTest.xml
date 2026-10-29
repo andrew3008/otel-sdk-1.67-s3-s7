@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.distribution.AgentPomContractTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:55.901Z" hostname="DESKTOP-OEGBG7F" time="0.116">
+  <properties/>
+  <testcase name="pom_contract_accepts_project_name_preceded_by_organization_name(Path)" classname="space.br1440.platform.tracing.otel.javaagent.distribution.AgentPomContractTest" time="0.083"/>
+  <testcase name="pom_contract_rejects_dependencies_declared_inside_profile(Path)" classname="space.br1440.platform.tracing.otel.javaagent.distribution.AgentPomContractTest" time="0.017"/>
+  <testcase name="pom_contract_rejects_organization_name_in_place_of_project_name(Path)" classname="space.br1440.platform.tracing.otel.javaagent.distribution.AgentPomContractTest" time="0.004"/>
+  <testcase name="pom_contract_rejects_duplicate_project_name(Path)" classname="space.br1440.platform.tracing.otel.javaagent.distribution.AgentPomContractTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

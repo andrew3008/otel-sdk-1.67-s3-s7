@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxAssessorCurrentProcessTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.069Z" hostname="DESKTOP-OEGBG7F" time="0.389">
+  <properties/>
+  <testcase name="[1] variable=JAVA_TOOL_OPTIONS" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxAssessorCurrentProcessTest" time="0.121"/>
+  <testcase name="[2] variable=JDK_JAVA_OPTIONS" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxAssessorCurrentProcessTest" time="0.126"/>
+  <testcase name="child_process_without_flags_is_authorized()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxAssessorCurrentProcessTest" time="0.142"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

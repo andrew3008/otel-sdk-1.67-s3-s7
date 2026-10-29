@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:08.982Z" hostname="DESKTOP-OEGBG7F" time="0.056">
+  <properties/>
+  <testcase name="fatal_diagnostic_registration_is_suppressed_on_sticky_cause_and_propagated()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationTest" time="0.033"/>
+  <testcase name="execute_preserves_SANITIZER_FOREIGN_SAFE_EXPORTER_and_fails_readiness()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationTest" time="0.004"/>
+  <testcase name="trace_pipeline_attestation_failure_before_prepare_publishes_diagnostic_mbean()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationTest" time="0.003"/>
+  <testcase name="diagnostic_readiness_is_registered_during_prepare_and_not_again_on_customization_failure()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationTest" time="0.004"/>
+  <testcase name="diagnostic_registration_failure_is_suppressed_on_prepare_cause()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationTest" time="0.004"/>
+  <testcase name="linkage_error_before_prepare_is_published_before_original_error_propagates()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationTest" time="0.003"/>
+  <testcase name="customization_failure_after_prepare_publishes_diagnostic_mbean_until_coordinator_close()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

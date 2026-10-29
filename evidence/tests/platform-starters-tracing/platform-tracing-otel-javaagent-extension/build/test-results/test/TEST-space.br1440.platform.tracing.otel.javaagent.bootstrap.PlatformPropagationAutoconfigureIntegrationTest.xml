@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Пропагация: platform propagator через реальный autoconfigure" tests="23" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.348Z" hostname="DESKTOP-OEGBG7F" time="0.096">
+  <properties/>
+  <testcase name="integration: outbound baggage через final SDK propagator фильтрует allowlist, кодирует %20 и проходит stock round-trip" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.011"/>
+  <testcase name="sdkInvariant_coversEverySupportedPropagator()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.001"/>
+  <testcase name="явный otel.propagators=...,platform-trace-control → без дубля (fields стабильны)" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.004"/>
+  <testcase name="characterization: tracecontext,baggage,platform-trace-control → final fields без дублей" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <testcase name="otel.propagators=none → платформенный пропагатор НЕ добавляется" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.004"/>
+  <testcase name="otel.propagators=jaeger" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.006"/>
+  <testcase name="otel.propagators=ottrace" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.004"/>
+  <testcase name="otel.propagators=tracecontext,jaeger" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <testcase name="otel.propagators=JAEGER" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <testcase name="platform.tracing.baggage.outbound-header.deny-patterns=[" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.005"/>
+  <testcase name="platform.tracing.baggage.span-attributes.deny-patterns=[" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <testcase name="platform.tracing.baggage.outbound-header.allowed-keys=platform.correlation.id" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <testcase name="platform.tracing.baggage.outbound-header.allowed-keys=Platform.Correlation.Id" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <testcase name="default: otel.propagators не задан → platform-trace-control добавлен" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.004"/>
+  <testcase name="otel.propagators=tracecontext,baggage, baggage enabled=false" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.005"/>
+  <testcase name="otel.propagators=tracecontext,baggage, baggage enabled=true" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <testcase name="otel.propagators=tracecontext,baggage,b3, baggage enabled=false" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.005"/>
+  <testcase name="otel.propagators=tracecontext,baggage,b3, baggage enabled=true" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <testcase name="otel.propagators=tracecontext,baggage,b3multi, baggage enabled=false" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <testcase name="otel.propagators=tracecontext,baggage,b3multi, baggage enabled=true" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <testcase name="otel.propagators=tracecontext,baggage,platform-trace-control, baggage enabled=false" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <testcase name="otel.propagators=tracecontext,baggage,platform-trace-control, baggage enabled=true" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.004"/>
+  <testcase name="ENV-aware: otel.propagators задан через property-source → platform всё равно добавлен" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformPropagationAutoconfigureIntegrationTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

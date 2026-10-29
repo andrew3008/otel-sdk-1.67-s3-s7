@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.859Z" hostname="DESKTOP-OEGBG7F" time="0.056">
+  <properties/>
+  <testcase name="extensionVersionMustMatchTheAttestedDistributionVersion()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.007"/>
+  <testcase name="uppercase_expected_digest_matches_the_computed_distribution()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.004"/>
+  <testcase name="malformed_upstream_sha256_is_missing_evidence()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.004"/>
+  <testcase name="missingExpectedDigestFailsClosed()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.003"/>
+  <testcase name="missingOrBlankDistributionVersionFailsClosed()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.007"/>
+  <testcase name="isolatedExtensionAndSdkLoadersAreDistinguishable()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.004"/>
+  <testcase name="systemLoaderIsDescribedFromTheMeasuredSdkClassLiteral()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.004"/>
+  <testcase name="missing_upstream_sha256_is_missing_evidence()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.004"/>
+  <testcase name="blank_extension_version_is_missing_evidence()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.003"/>
+  <testcase name="digestMismatchFailsWithStableDistributionCode()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.003"/>
+  <testcase name="upstream_pin_mismatch_fails_with_distribution_mismatch()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.003"/>
+  <testcase name="attestsActualAgentIdentityAndPublishesMeasuredLoaderDescriptions()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.004"/>
+  <testcase name="bootstrapLoaderIsDescribedWithoutIdentityHash()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentVerifierTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

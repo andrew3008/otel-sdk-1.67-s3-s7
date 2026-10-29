@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.736Z" hostname="DESKTOP-OEGBG7F" time="0.024">
+  <properties/>
+  <testcase name="corrupt_jar_is_recorded_as_UNREADABLE_FILE(Path)" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.002"/>
+  <testcase name="jar_with_forbidden_class_is_rejected_by_hygiene(Path)" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.003"/>
+  <testcase name="ERROR_mode_throws_on_hygiene_violation(Path)" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.002"/>
+  <testcase name="linkage_error_wrapped_as_ServiceConfigurationError_cause_is_still_fatal()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.001"/>
+  <testcase name="non_class_entries_with_forbidden_prefix_do_not_trigger_hygiene(Path)" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.004"/>
+  <testcase name="corrupt_services_file_is_recorded_as_SERVICE_CONFIGURATION_ERROR(Path)" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.003"/>
+  <testcase name="nonexistent_path_is_recorded_as_MISSING_PATH()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.0"/>
+  <testcase name="ordinary_RuntimeException_in_WARNING_mode_is_still_skipped()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.0"/>
+  <testcase name="empty_property_yields_zero_rules_without_errors()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.0"/>
+  <testcase name="same_jar_listed_twice_is_deduplicated_by_canonical_path(Path)" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.004"/>
+  <testcase name="linkage_error_is_rethrown_as_fatal_and_not_classified_as_sanitizer_failure()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.001"/>
+  <testcase name="corrupt_jar_in_ERROR_mode_preserves_inspection_cause(Path)" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

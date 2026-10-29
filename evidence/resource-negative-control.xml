@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.ResourceCustomizerAutoconfigureIntegrationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-10-29T12:45:15.914Z" hostname="DESKTOP-OEGBG7F" time="0.269">
+  <properties/>
+  <testcase name="pinned_resource_detectors_preserve_service_schema_without_merge_conflicts()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.ResourceCustomizerAutoconfigureIntegrationTest" time="0.269">
+    <failure message="java.lang.AssertionError: &#13;&#10;Expecting no elements of:&#13;&#10;  [java.util.logging.LogRecord@4a734c04, java.util.logging.LogRecord@4760f169]&#13;&#10;to match given predicate but this element did:&#13;&#10;  java.util.logging.LogRecord@4a734c04" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expecting no elements of:
+  [java.util.logging.LogRecord@4a734c04, java.util.logging.LogRecord@4760f169]
+to match given predicate but this element did:
+  java.util.logging.LogRecord@4a734c04
+	at space.br1440.platform.tracing.otel.javaagent.bootstrap.ResourceCustomizerAutoconfigureIntegrationTest.pinned_resource_detectors_preserve_service_schema_without_merge_conflicts(ResourceCustomizerAutoconfigureIntegrationTest.java:149)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oct 29, 2026 12:45:16 PM io.opentelemetry.sdk.resources.Resource mergeSchemaUrl
+INFO: Attempting to merge Resources with different schemaUrls. The resulting Resource will have no schemaUrl assigned. Schema 1: https://opentelemetry.io/schemas/1.40.0 Schema 2: https://opentelemetry.io/schemas/1.24.0
+Oct 29, 2026 12:45:16 PM io.opentelemetry.sdk.resources.Resource mergeSchemaUrl
+INFO: Attempting to merge Resources with different schemaUrls. The resulting Resource will have no schemaUrl assigned. Schema 1: https://opentelemetry.io/schemas/1.24.0 Schema 2: https://opentelemetry.io/schemas/1.40.0
+]]></system-err>
+</testsuite>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" tests="27" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.181Z" hostname="DESKTOP-OEGBG7F" time="0.167">
+  <properties/>
+  <testcase name="customize_registers_resource_and_tracer_provider_customizers_without_sampler_customizer()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.002"/>
+  <testcase name="invalid_final_configuration_does_not_install_sender_preferences()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.001"/>
+  <testcase name="resource_customization_failure_does_not_install_sender_preferences()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.005"/>
+  <testcase name="propertiesSupplier_returns_only_string_values_for_all_keys()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="sampler_with_zero_ratio_and_force_header_records_span()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="normalized_sampler_is_visible_to_later_properties_and_resource_customizers()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.001"/>
+  <testcase name="session_sampler_is_installed_on_tracer_provider_builder()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.002"/>
+  <testcase name="[1] protocol=grpc" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.041"/>
+  <testcase name="[2] protocol=http/protobuf" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.045"/>
+  <testcase name="customize_registers_propertiesSupplier_with_platform_OTel_SDK_defaults()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.0"/>
+  <testcase name="zero span timeout" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.004"/>
+  <testcase name="zero trace timeout" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="zero scan interval" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="zero max tracked traces" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.004"/>
+  <testcase name="zero max tracked spans per trace" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="zero max tracked spans" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.004"/>
+  <testcase name="trace timeout below span timeout" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="zero classification slow threshold" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="zero classification normal threshold" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="unordered classification thresholds" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.004"/>
+  <testcase name="non-numeric duration" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="non-numeric integer" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="negative duration" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="integer overflow" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <testcase name="session_sampler_with_explicit_zero_ratio_drops_without_override()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.002"/>
+  <testcase name="session_sampler_uses_custom_ratio_from_property()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.001"/>
+  <testcase name="disabling_scrubbing_is_rejected_by_final_configuration()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

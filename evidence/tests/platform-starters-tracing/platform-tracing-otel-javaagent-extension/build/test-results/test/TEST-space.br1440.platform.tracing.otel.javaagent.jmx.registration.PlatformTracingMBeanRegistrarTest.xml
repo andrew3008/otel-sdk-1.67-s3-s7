@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:21.269Z" hostname="DESKTOP-OEGBG7F" time="0.02">
+  <properties/>
+  <testcase name="closingRuntimeRegistrationTwiceIsIdempotentAndReleasesTheGeneration()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.001"/>
+  <testcase name="rollback_addSuppressed_present_when_rollback_fails()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.002"/>
+  <testcase name="authorizedRuntimeRegistrationRegistersDomainMBeans()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.0"/>
+  <testcase name="closingRuntimeRegistrationRemovesCompleteRuntimeBatch()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.001"/>
+  <testcase name="concurrentAuthorizedCallsDoNotBreakActiveRegistration()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.002"/>
+  <testcase name="secondRegistrarFailsClosedOnExistingOwnedObjectNames()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.001"/>
+  <testcase name="runtimeRegistrationRejectsDifferentAgentInstanceId()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.001"/>
+  <testcase name="batchRegistrationFailureKeepsIncompleteRollbackLeftoverUntilScopeReclaim()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.001"/>
+  <testcase name="fatalRuntimeRegistrationFailureRollsBackBatchWithoutMutatingReadiness()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.002"/>
+  <testcase name="exactlyOneConcurrentCallerRegistersCompleteRuntimeBatch()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.003"/>
+  <testcase name="runtimeMBeansRemainAbsentBeforeAuthorizedRegistration()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.001"/>
+  <testcase name="runtimeCloseFailureReleasesGenerationAndLeavesLeftoverForScopeReclaim()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.002"/>
+  <testcase name="isolatedRegistrationDoesNotLeakDomainMBeansOntoThePlatformServer()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.001"/>
+  <testcase name="activeRuntimeRegistrationRejectsRepeatedAuthorizedCall()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

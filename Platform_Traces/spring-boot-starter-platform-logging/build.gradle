@@ -1,0 +1,71 @@
+plugins {
+    id 'platform.java-library-publish'
+    id 'platform.java-library'
+    id 'platform.testing'
+}
+
+platformJavaLibrary {
+    bomProjectPath = ':spring-boot-starter-platform-bom'
+}
+
+dependencies {
+    implementation 'org.slf4j:slf4j-api'
+    implementation 'net.logstash.logback:logstash-logback-encoder'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
+    implementation 'org.aspectj:aspectjweaver'
+
+    api 'org.zalando:logbook-core'
+    implementation 'org.zalando:logbook-servlet'
+    compileOnly 'org.jspecify:jspecify'
+
+    compileOnly 'jakarta.servlet:jakarta.servlet-api'
+    compileOnly 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.springframework.boot:spring-boot-starter-security'
+    compileOnly 'org.springframework.grpc:spring-grpc-server-web-spring-boot-starter'
+    compileOnly 'org.springframework.boot:spring-boot-starter-webflux'
+    compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
+    compileOnly 'org.projectlombok:lombok'
+
+    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.mockito:mockito-core'
+    testImplementation 'org.mockito:mockito-junit-jupiter'
+    testImplementation 'org.assertj:assertj-core'
+    testImplementation 'ch.qos.logback:logback-classic'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+def platformLogMaskingElements = configurations.register('platformLogMaskingElements') {
+    it.canBeConsumed = true
+    it.canBeResolved = false
+    it.visible = false
+}
+
+def preparePlatformLogMasking = tasks.register('preparePlatformLogMasking', Sync) {
+    from('src/main/resources/space/br1440/platform/logging') {
+        include 'platform-log-masking-rules.yaml'
+    }
+
+    into layout.buildDirectory.dir('platform-log-masking')
+}
+
+artifacts {
+    add(platformLogMaskingElements.name, preparePlatformLogMasking.map { it.destinationDir }) {
+        builtBy(preparePlatformLogMasking)
+        type = 'directory'
+    }
+}
+
+tasks.named('test', Test) {
+    enabled = true
+}
+
+afterEvaluate {
+    tasks.named('test', Test) {
+        enabled = true
+    }
+}

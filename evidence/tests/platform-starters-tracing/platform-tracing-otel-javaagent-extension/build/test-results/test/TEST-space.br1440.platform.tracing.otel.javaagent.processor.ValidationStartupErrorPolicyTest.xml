@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.ValidationStartupErrorPolicyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:23.557Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="error_violation_emits_sanitized_error()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidationStartupErrorPolicyTest" time="0.002"/>
+  <testcase name="startup_error_preserves_error_behavior()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidationStartupErrorPolicyTest" time="0.0"/>
+  <testcase name="warning_level_violation_emits_warn_instead_of_error()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidationStartupErrorPolicyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

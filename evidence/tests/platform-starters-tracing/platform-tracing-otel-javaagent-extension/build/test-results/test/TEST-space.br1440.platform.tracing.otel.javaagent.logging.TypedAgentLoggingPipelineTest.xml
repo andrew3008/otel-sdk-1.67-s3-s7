@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.770Z" hostname="DESKTOP-OEGBG7F" time="0.007">
+  <properties/>
+  <testcase name="blank_field_value_emits_one_fixed_fallback_without_caller_values()" classname="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" time="0.001"/>
+  <testcase name="filtered_event_does_not_invoke_fields_callback()" classname="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" time="0.0"/>
+  <testcase name="typed_rate_transition_emits_marker_before_problem_and_denied_callback_is_lazy()" classname="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" time="0.001"/>
+  <testcase name="out_of_allowlist_field_emits_one_fixed_fallback_without_caller_values()" classname="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" time="0.001"/>
+  <testcase name="throwing_callback_after_partial_writes_emits_one_fixed_fallback_without_caller_values()" classname="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" time="0.0"/>
+  <testcase name="duplicate_field_emits_one_fixed_fallback_without_caller_values()" classname="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" time="0.0"/>
+  <testcase name="missing_required_cause_emits_one_fixed_fallback_without_caller_values()" classname="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" time="0.0"/>
+  <testcase name="normal_typed_emission_uses_catalog_metadata_and_canonical_fields()" classname="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" time="0.001"/>
+  <testcase name="recursive_callback_is_rejected_without_invoking_nested_callback()" classname="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" time="0.0"/>
+  <testcase name="null_field_value_emits_one_fixed_fallback_without_caller_values()" classname="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" time="0.001"/>
+  <testcase name="forbidden_cause_emits_one_fixed_fallback_without_caller_values()" classname="space.br1440.platform.tracing.otel.javaagent.logging.TypedAgentLoggingPipelineTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

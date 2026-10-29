@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderValidationModeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.761Z" hostname="DESKTOP-OEGBG7F" time="0.0">
+  <properties/>
+  <testcase name="parseRecognizesClosedSet()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.loader.ExtensionRuleLoaderValidationModeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

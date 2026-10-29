@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.arch.TracingAnnotationContractArchTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:52.631Z" hostname="DESKTOP-OEGBG7F" time="0.018">
+  <properties/>
+  <testcase name="no_traced_and_observed" classname="space.br1440.platform.tracing.autoconfigure.arch.TracingAnnotationContractArchTest" time="0.016"/>
+  <testcase name="no_traced_on_async_or_reactive" classname="space.br1440.platform.tracing.autoconfigure.arch.TracingAnnotationContractArchTest" time="0.0"/>
+  <testcase name="traced_attribute_type_allowlist" classname="space.br1440.platform.tracing.autoconfigure.arch.TracingAnnotationContractArchTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.diagnostics.SpringBootContextMatrixTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:08.875Z" hostname="DESKTOP-OEGBG7F" time="0.102">
+  <properties/>
+  <testcase name="micrometerAbsent_keepsOtelTracingRuntimeWithoutMeteredWrap()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.SpringBootContextMatrixTest" time="0.017"/>
+  <testcase name="micrometerPresent_wrapsTracingRuntimeWithMeteredDecorator()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.SpringBootContextMatrixTest" time="0.042"/>
+  <testcase name="enabledWithOpenTelemetry_exposesEnabledRuntime()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.SpringBootContextMatrixTest" time="0.013"/>
+  <testcase name="unavailableOpenTelemetry_failsStartup()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.SpringBootContextMatrixTest" time="0.007"/>
+  <testcase name="disabledTracingMode_exposesDisabledRuntimeAndNoOpFacade()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.SpringBootContextMatrixTest" time="0.008"/>
+  <system-out><![CDATA[2026-10-29T12:48:08.965Z  WARN 25468 --- [    Test worker] [                                                 ] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'platformTracingDeploymentDiagnostics' defined in space.br1440.platform.tracing.autoconfigure.TracingRuntimeAutoConfiguration: Failed to instantiate [space.br1440.platform.tracing.autoconfigure.agent.TracingDeploymentDiagnostics]: Factory method 'platformTracingDeploymentDiagnostics' threw exception with message: Platform tracing startup rejected: runtimeState=AGENT_MISSING, reason=CONTROLLED_AGENT_MISSING. The JVM was started without the Controlled Platform Agent. Start the process with -javaagent pointing at the platform-tracing-javaagent distribution JAR.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingJmxDomainHealthMetricsBinderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.946Z" hostname="DESKTOP-OEGBG7F" time="0.056">
+  <properties/>
+  <testcase name="domain_gauges_become_1_after_registration_and_successful_read()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingJmxDomainHealthMetricsBinderTest" time="0.051"/>
+  <testcase name="owner_present_0_when_domain_readable_but_owner_absent()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingJmxDomainHealthMetricsBinderTest" time="0.002"/>
+  <testcase name="owner_present_NaN_until_domain_read_succeeds()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingJmxDomainHealthMetricsBinderTest" time="0.001"/>
+  <testcase name="terminalCoherenceFailureProducesEmptyObservationWithoutEscapingScrape()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingJmxDomainHealthMetricsBinderTest" time="0.001"/>
+  <testcase name="domain_gauges_report_honest_zero_when_MBean_unregistered()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingJmxDomainHealthMetricsBinderTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

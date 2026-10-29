@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.795Z" hostname="DESKTOP-OEGBG7F" time="0.063">
+  <properties/>
+  <testcase name="quotedPathWithOptionsIsAccepted()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.018"/>
+  <testcase name="unmatchedQuoteFailsWithEvidenceMissing()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.001"/>
+  <testcase name="unreadableArchiveFailsWithEvidenceMissing()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.002"/>
+  <testcase name="twoIdentityBearingAgentsFailWithDistributionMismatch()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.004"/>
+  <testcase name="oversizedIdentityResourceFailsWithEvidenceMissing()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.003"/>
+  <testcase name="quotedPathIsAccepted()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.003"/>
+  <testcase name="launchWithoutAnyJavaAgentFailsWithEvidenceMissing()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.001"/>
+  <testcase name="missingAgentFileFailsWithEvidenceMissing()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.002"/>
+  <testcase name="absenceOfAnIdentityBearingAgentFailsWithEvidenceMissing()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.002"/>
+  <testcase name="nullAndUnrelatedArgumentsAreIgnored()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.003"/>
+  <testcase name="agentOptionsSuffixIsNotPartOfThePath()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.003"/>
+  <testcase name="agentsWithoutTheIdentityResourceAreIgnored()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.004"/>
+  <testcase name="unicodeEscapeIsDecodedByThePropertiesContract()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.003"/>
+  <testcase name="optionsMayContainAdditionalEqualsSigns()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.003"/>
+  <testcase name="emptyArtifactPathFailsWithEvidenceMissing()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.001"/>
+  <testcase name="unreadableForeignAgentFailsClosed()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.003"/>
+  <testcase name="malformedUnicodeEscapeFailsWithEvidenceMissing()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.002"/>
+  <testcase name="locatesTheAgentThatCarriesTheIdentityResource()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.ControlledAgentArtifactLocatorTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

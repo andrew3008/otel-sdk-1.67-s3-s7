@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.814Z" hostname="DESKTOP-OEGBG7F" time="0.056">
+  <properties/>
+  <testcase name="текущее поведение: исключение переписывает весь исходный снимок" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.047"/>
+  <testcase name="текущее поведение: массив чисел сохраняет длину при MASK" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.001"/>
+  <testcase name="текущее поведение: фатальная ошибка всплывает после fail-closed снимка" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.001"/>
+  <testcase name="текущее поведение: MASK/DROP/HASH числа и boolean увеличивают droppedActions" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.001"/>
+  <testcase name="normalizedValueOriginIsReservedForBoundaryWhileNativeOriginIsScrubbed()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.0"/>
+  <testcase name="текущее поведение: неудачное усечение IP возвращает маску и увеличивает failures" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.001"/>
+  <testcase name="текущее поведение: повторный markAttributesUnverified не увеличивает collapse" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.0"/>
+  <testcase name="текущее поведение: HASH строки без ключа возвращает маску и считает оба счётчика" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.0"/>
+  <testcase name="текущее поведение: fail-closed схлопывает массив до одного sentinel" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.0"/>
+  <testcase name="текущее поведение: короткая строка TRUNCATE увеличивает truncatedActions без перезаписи" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.001"/>
+  <testcase name="текущее поведение: TRUNCATE для числа и boolean оставляет значение" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.0"/>
+  <testcase name="текущее поведение: null внутри STRING_ARRAY сохраняется на своей позиции" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.0"/>
+  <testcase name="текущее поведение: AttributeType.VALUE не изменяется" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.0"/>
+  <testcase name="normalizedValueOriginRemainsBoundaryOwnedDuringFailClosedSnapshot()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.002"/>
+  <testcase name="текущее поведение: недоступный снимок не трогает атрибуты и включает collapse" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.001"/>
+  <testcase name="текущее поведение: DROP строки пишет пустую строку и оставляет атрибут" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.001"/>
+  <testcase name="liveLookupsPreserveValueOriginAfterSnapshotNormalization()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeCurrentBehaviorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

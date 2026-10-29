@@ -1,0 +1,92 @@
+import groovy.json.JsonBuilder
+import java.time.Instant
+
+plugins {
+    id 'platform.java-library-publish'
+    id 'platform.java-library'
+    id 'platform.testing'
+}
+
+platformJavaLibrary {
+    bomProjectPath = ':spring-boot-starter-platform-bom'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    compileOnly 'org.slf4j:slf4j-api'
+    compileOnly 'org.springframework.kafka:spring-kafka'
+    compileOnly 'org.springframework.boot:spring-boot-starter'
+    compileOnly 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.springframework.boot:spring-boot-starter-webflux'
+    compileOnly 'org.springframework.grpc:spring-grpc-server-web-spring-boot-starter'
+    compileOnly 'org.projectlombok:lombok'
+
+    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    testImplementation platform('org.junit:junit-bom')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.kafka:spring-kafka'
+    testImplementation 'org.springframework.boot:spring-boot-autoconfigure'
+    testImplementation 'org.springframework.boot:spring-boot-starter-webflux'
+    testImplementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.grpc:spring-grpc-server-web-spring-boot-starter'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
+    testImplementation 'org.apache.kafka:kafka-streams'
+    testImplementation 'io.micrometer:micrometer-observation-test'
+    testImplementation 'org.awaitility:awaitility'
+    testImplementation 'com.tngtech.archunit:archunit-junit5'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+}
+
+abstract class GenerateBuildInfoTask extends DefaultTask {
+
+    @Input
+    abstract Property<String> getProjectVersion()
+
+    @Input
+    abstract Property<String> getBuildTime()
+
+    @OutputFile
+    abstract RegularFileProperty getOutputFile()
+
+    @TaskAction
+    void generate() {
+        def out = outputFile.get().asFile
+        out.parentFile.mkdirs()
+
+        out.text = new JsonBuilder([
+                version  : projectVersion.get(),
+                buildTime: buildTime.get()
+        ]).toPrettyString()
+    }
+}
+
+def resolvedVersion = project.version.toString()
+
+def generateBuildInfo = tasks.register('generateBuildInfo', GenerateBuildInfoTask) {
+    group = 'build'
+    projectVersion.set(resolvedVersion)
+
+    buildTime.set(
+            providers.environmentVariable('SOURCE_DATE_EPOCH')
+                    .map { Instant.ofEpochSecond(it.toLong()).toString() }
+                    .orElse(providers.provider { Instant.now().toString() })
+    )
+
+    outputFile.set(layout.buildDirectory.file('generated/build-meta/build-info.json'))
+}
+
+tasks.named('processResources') {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from(generateBuildInfo.flatMap { it.outputFile }) {
+        into ''
+    }
+}

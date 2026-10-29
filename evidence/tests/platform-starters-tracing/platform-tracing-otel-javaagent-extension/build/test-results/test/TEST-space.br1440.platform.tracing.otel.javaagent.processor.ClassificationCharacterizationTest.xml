@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.ClassificationCharacterizationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.802Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="error_span_gets_high_priority_observed_behavior()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ClassificationCharacterizationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

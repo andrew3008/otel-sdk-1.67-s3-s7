@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.resources.BootstrapResourcesOrderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.609Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="repeatedCloseAfterSuccessReturnsNormally()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.resources.BootstrapResourcesOrderTest" time="0.001"/>
+  <testcase name="repeatedCloseAfterFailureRethrowsSameInstance()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.resources.BootstrapResourcesOrderTest" time="0.0"/>
+  <testcase name="resourcesCloseInStrictLifoOrder()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.resources.BootstrapResourcesOrderTest" time="0.0"/>
+  <testcase name="closeContinuesAfterFatalFailureAndRethrowsOriginalError()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.resources.BootstrapResourcesOrderTest" time="0.0"/>
+  <testcase name="identicalFatalFailuresDoNotStopRemainingCleanupOrSelfSuppress()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.resources.BootstrapResourcesOrderTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

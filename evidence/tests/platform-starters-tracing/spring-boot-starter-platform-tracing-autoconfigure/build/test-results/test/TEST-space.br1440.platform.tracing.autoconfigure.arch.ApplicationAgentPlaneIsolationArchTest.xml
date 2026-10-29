@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:51.644Z" hostname="DESKTOP-OEGBG7F" time="4.588">
+  <properties/>
+  <testcase name="autoconfigureDoesNotDependOnExtensionImplementation" classname="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" time="0.876"/>
+  <testcase name="applicationDoesNotDependOnCoreVersionedRuntime" classname="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" time="0.017"/>
+  <testcase name="infrastructureIdentityTypesAreNotPublic" classname="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" time="0.004"/>
+  <testcase name="remoteServiceNotConsumedByApplicationPlane" classname="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" time="0.013"/>
+  <testcase name="noLocalCopiesOfOtelSdkClasses" classname="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" time="0.002"/>
+  <testcase name="noFakeOtelPackages" classname="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" time="0.001"/>
+  <testcase name="noLocalOtelContractNames" classname="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" time="0.001"/>
+  <testcase name="noRawRecordExceptionOutsideRecorder" classname="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" time="0.004"/>
+  <testcase name="autoconfigureDoesNotDependOnExtensionScrubbingRuntime()" classname="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" time="0.962"/>
+  <testcase name="scrubbingBoundaryDetectsInvalidDependency()" classname="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" time="0.023"/>
+  <testcase name="applicationPlaneDoesNotDependOnJavaagentBootstrap()" classname="space.br1440.platform.tracing.autoconfigure.arch.ApplicationAgentPlaneIsolationArchTest" time="0.526"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

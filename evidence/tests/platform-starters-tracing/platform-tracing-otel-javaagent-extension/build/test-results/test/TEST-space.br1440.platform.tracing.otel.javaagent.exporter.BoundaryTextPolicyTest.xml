@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.exporter.BoundaryTextPolicyTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.940Z" hostname="DESKTOP-OEGBG7F" time="0.004">
+  <properties/>
+  <testcase name="BoundaryTextPolicy ignores BUNDLED_SPI and EXTERNAL_EXTENSION rules" classname="space.br1440.platform.tracing.otel.javaagent.exporter.BoundaryTextPolicyTest" time="0.001"/>
+  <testcase name="scrubName: unbounded TRUNCATE (IP prefix rule) downgrades to &lt;redacted&gt;" classname="space.br1440.platform.tracing.otel.javaagent.exporter.BoundaryTextPolicyTest" time="0.0"/>
+  <testcase name="scrubStatusDescription: DROP becomes empty string, distinct from name's &lt;redacted&gt;" classname="space.br1440.platform.tracing.otel.javaagent.exporter.BoundaryTextPolicyTest" time="0.001"/>
+  <testcase name="scrubName: null/empty input is returned as-is (never crashes, never redacted needlessly)" classname="space.br1440.platform.tracing.otel.javaagent.exporter.BoundaryTextPolicyTest" time="0.0"/>
+  <testcase name="scrubStatusDescription: HASH is forbidden and downgrades to &lt;redacted&gt;" classname="space.br1440.platform.tracing.otel.javaagent.exporter.BoundaryTextPolicyTest" time="0.0"/>
+  <testcase name="scrubName: KEEP leaves the name untouched" classname="space.br1440.platform.tracing.otel.javaagent.exporter.BoundaryTextPolicyTest" time="0.0"/>
+  <testcase name="scrubName: DROP never produces an empty/null name, downgrades to &lt;redacted&gt;" classname="space.br1440.platform.tracing.otel.javaagent.exporter.BoundaryTextPolicyTest" time="0.0"/>
+  <testcase name="scrubName: HASH is forbidden for names and downgrades to &lt;redacted&gt;, never a raw digest" classname="space.br1440.platform.tracing.otel.javaagent.exporter.BoundaryTextPolicyTest" time="0.0"/>
+  <testcase name="Span name and event name are distinct rule keys, not one shared 'span.name'" classname="space.br1440.platform.tracing.otel.javaagent.exporter.BoundaryTextPolicyTest" time="0.001"/>
+  <testcase name="No built-in text rules configured: text passes through unchanged" classname="space.br1440.platform.tracing.otel.javaagent.exporter.BoundaryTextPolicyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

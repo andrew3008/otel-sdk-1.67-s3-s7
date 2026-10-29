@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.metrics.MeteredSpanHandleDoubleCountTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.818Z" hostname="DESKTOP-OEGBG7F" time="0.042">
+  <properties/>
+  <testcase name="twoArgRecordExceptionWithPlainHandle_doesNotIncrement()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MeteredSpanHandleDoubleCountTest" time="0.039"/>
+  <testcase name="twoArgRecordExceptionWithNullThrowable_doesNotIncrement()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MeteredSpanHandleDoubleCountTest" time="0.001"/>
+  <testcase name="recordException_throughSpanHandle_incrementsExactlyOnce()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MeteredSpanHandleDoubleCountTest" time="0.0"/>
+  <testcase name="recordException_viaSpiTwoArgPath_doesNotDoubleCount()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MeteredSpanHandleDoubleCountTest" time="0.0"/>
+  <testcase name="recordException_nullThrowable_doesNotIncrement()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MeteredSpanHandleDoubleCountTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

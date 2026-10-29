@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:09.950Z" hostname="DESKTOP-OEGBG7F" time="0.142">
+  <properties/>
+  <testcase name="createsSpanForAnnotatedMethod(InMemorySpanExporter)" classname="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectTest" time="0.008"/>
+  <testcase name="doesNotCreateChildSpanWhenParentActive(InMemorySpanExporter)" classname="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectTest" time="0.002"/>
+  <testcase name="declaresHighestPrecedencePlusOneOrder()" classname="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectTest" time="0.001"/>
+  <testcase name="usesParameterNameWhenTracedAttributeKeyBlank(InMemorySpanExporter)" classname="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectTest" time="0.002"/>
+  <testcase name="createsSpanForClassLevelTraced(InMemorySpanExporter)" classname="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectTest" time="0.119"/>
+  <testcase name="marksSpanAsFailureOnException(InMemorySpanExporter)" classname="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectTest" time="0.003"/>
+  <testcase name="selfInvocationDoesNotApplyAdvice(InMemorySpanExporter)" classname="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectTest" time="0.001"/>
+  <testcase name="closesSpanBeforeCompletableFutureCompletes(InMemorySpanExporter)" classname="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectTest" time="0.005"/>
+  <system-out><![CDATA[2026-10-29T12:48:09.957Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+2026-10-29T12:48:09.960Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+2026-10-29T12:48:09.963Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+2026-10-29T12:48:10.080Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+2026-10-29T12:48:10.085Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+2026-10-29T12:48:10.091Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

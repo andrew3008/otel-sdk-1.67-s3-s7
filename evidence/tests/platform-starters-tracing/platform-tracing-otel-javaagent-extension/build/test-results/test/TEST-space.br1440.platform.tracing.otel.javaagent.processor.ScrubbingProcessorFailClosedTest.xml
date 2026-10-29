@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingProcessorFailClosedTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:23.432Z" hostname="DESKTOP-OEGBG7F" time="0.046">
+  <properties/>
+  <testcase name="unexpected_nonfatal_failure_collapses_every_value_from_original_snapshot()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingProcessorFailClosedTest" time="0.042"/>
+  <testcase name="collapse_that_itself_fails_still_degrades_the_session()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingProcessorFailClosedTest" time="0.002"/>
+  <testcase name="unavailable_snapshot_also_degrades_the_session()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingProcessorFailClosedTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

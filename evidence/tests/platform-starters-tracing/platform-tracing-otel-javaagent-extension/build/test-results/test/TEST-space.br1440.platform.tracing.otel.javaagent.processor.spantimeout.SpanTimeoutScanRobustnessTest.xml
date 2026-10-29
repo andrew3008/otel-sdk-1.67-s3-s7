@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutScanRobustnessTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:35.739Z" hostname="DESKTOP-OEGBG7F" time="0.015">
+  <properties/>
+  <testcase name="threadDeathFromManualScanIsPropagated()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutScanRobustnessTest" time="0.001"/>
+  <testcase name="cleanPassEmitsExactlyOneInfoSummary()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutScanRobustnessTest" time="0.002"/>
+  <testcase name="recoverableFailureOfOneCandidateDoesNotLoseTheRestOfTheBatch()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutScanRobustnessTest" time="0.003"/>
+  <testcase name="fatalErrorFromManualScanReturnsRemainingPermitsWithoutEndingTheRemainder()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutScanRobustnessTest" time="0.002"/>
+  <testcase name="reliefAndCollectionFailuresWithinOnePassIncrementScanFailuresOnce()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutScanRobustnessTest" time="0.002"/>
+  <testcase name="failureSummaryKeepsTheFirstFailureTuple()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutScanRobustnessTest" time="0.002"/>
+  <testcase name="collectionFailureAfterExtractionKeepsBothTheExtractedCandidateAndTheRemainder()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutScanRobustnessTest" time="0.002"/>
+  <testcase name="passWithCandidateFailuresEmitsExactlyOneWarnSummaryWithTheFailureType()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutScanRobustnessTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

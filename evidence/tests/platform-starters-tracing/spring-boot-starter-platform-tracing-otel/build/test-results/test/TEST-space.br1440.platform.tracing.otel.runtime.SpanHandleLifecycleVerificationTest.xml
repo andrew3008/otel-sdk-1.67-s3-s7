@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.runtime.SpanHandleLifecycleVerificationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.605Z" hostname="DESKTOP-OEGBG7F" time="0.019">
+  <properties/>
+  <testcase name="explicitHandles_closeIdempotentlyAndRestoreParentContext()" classname="space.br1440.platform.tracing.otel.runtime.SpanHandleLifecycleVerificationTest" time="0.003"/>
+  <testcase name="noOpHandle_preservesCloseAndExceptionSafety()" classname="space.br1440.platform.tracing.otel.runtime.SpanHandleLifecycleVerificationTest" time="0.003"/>
+  <testcase name="concurrentScopedExecutions_keepContextConfinedToOwningThread()" classname="space.br1440.platform.tracing.otel.runtime.SpanHandleLifecycleVerificationTest" time="0.012"/>
+  <system-out><![CDATA[12:47:47.606 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.607 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.611 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.623 [pool-11-thread-4] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.623 [pool-11-thread-3] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.623 [pool-11-thread-2] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.623 [pool-11-thread-1] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.624 [pool-11-thread-1] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.624 [pool-11-thread-4] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.624 [pool-11-thread-3] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.624 [pool-11-thread-2] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutProcessorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:35.702Z" hostname="DESKTOP-OEGBG7F" time="0.024">
+  <properties/>
+  <testcase name="concurrency_all_internal_indexes_cleared_after_spans_finish()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutProcessorTest" time="0.021"/>
+  <testcase name="force_closes_span_on_timeout_and_sets_platform_timeout_attribute()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutProcessorTest" time="0.001"/>
+  <testcase name="forceFlush_closes_stuck_spans_synchronously()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutProcessorTest" time="0.0"/>
+  <testcase name="does_not_touch_span_finished_before_timeout()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutProcessorTest" time="0.001"/>
+  <testcase name="force_closes_span_on_trace_timeout()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutProcessorTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oct 29, 2026 12:47:35 PM io.opentelemetry.sdk.trace.SdkTracerProvider shutdown
+INFO: Calling shutdown() multiple times.
+Oct 29, 2026 12:47:35 PM io.opentelemetry.sdk.trace.SdkTracerProvider shutdown
+INFO: Calling shutdown() multiple times.
+Oct 29, 2026 12:47:35 PM io.opentelemetry.sdk.trace.SdkTracerProvider shutdown
+INFO: Calling shutdown() multiple times.
+Oct 29, 2026 12:47:35 PM io.opentelemetry.sdk.trace.SdkTracerProvider shutdown
+INFO: Calling shutdown() multiple times.
+Oct 29, 2026 12:47:35 PM io.opentelemetry.sdk.trace.SdkTracerProvider shutdown
+INFO: Calling shutdown() multiple times.
+]]></system-err>
+</testsuite>

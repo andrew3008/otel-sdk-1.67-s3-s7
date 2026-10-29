@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Parity: ExtensionConfig values match old direct-read behavior" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:20.559Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="Default ExtensionConfig has same effective defaults as old ExtensionDefaults" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest$DefaultParity" time="0.0"/>
+  <testcase name="Baggage defaults: canonical span attribute policy" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest$DefaultParity" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

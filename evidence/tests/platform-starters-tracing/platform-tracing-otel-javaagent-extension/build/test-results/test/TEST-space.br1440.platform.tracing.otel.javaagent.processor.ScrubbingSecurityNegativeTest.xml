@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityNegativeTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:23.494Z" hostname="DESKTOP-OEGBG7F" time="0.008">
+  <properties/>
+  <testcase name="drop_integration_secret_absent_from_exported_SpanData()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityNegativeTest" time="0.001"/>
+  <testcase name="event_scope_token_in_event_is_not_scrubbed_by_SDK_processor()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityNegativeTest" time="0.0"/>
+  <testcase name="mixed_ip_header_masks_entire_value_in_exported_span()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityNegativeTest" time="0.003"/>
+  <testcase name="hmac_determinism_same_key_yields_same_hash()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityNegativeTest" time="0.001"/>
+  <testcase name="rule_priority_conflict_authorization_is_dropped_not_hashed()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityNegativeTest" time="0.0"/>
+  <testcase name="fail_fast_without_key_throws_at_startup()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityNegativeTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

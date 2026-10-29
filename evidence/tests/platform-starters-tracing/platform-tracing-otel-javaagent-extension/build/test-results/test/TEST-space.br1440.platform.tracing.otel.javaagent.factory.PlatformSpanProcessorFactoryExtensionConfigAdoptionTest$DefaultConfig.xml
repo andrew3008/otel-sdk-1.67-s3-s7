@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default config (no properties set) — span-timeout processor not added" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:20.560Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="factoryAddsBaggageProcessorWithCanonicalDefaults()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest$DefaultConfig" time="0.001"/>
+  <testcase name="empty_processor_allowlist_does_not_register_baggage_processor()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest$DefaultConfig" time="0.0"/>
+  <testcase name="factoryDoesNotAddSpanTimeoutProcessorByDefault()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest$DefaultConfig" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

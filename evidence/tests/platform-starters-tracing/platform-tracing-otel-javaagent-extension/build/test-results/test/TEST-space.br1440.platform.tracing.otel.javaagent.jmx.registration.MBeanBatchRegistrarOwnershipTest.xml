@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.jmx.registration.MBeanBatchRegistrarOwnershipTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:21.216Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="failed_batch_rolls_back_owned_registrations_in_reverse_order()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.MBeanBatchRegistrarOwnershipTest" time="0.001"/>
+  <testcase name="registration_collision_does_not_replace_foreign_mbean()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.MBeanBatchRegistrarOwnershipTest" time="0.0"/>
+  <testcase name="batch_identity_is_internal_unique_and_stable()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.MBeanBatchRegistrarOwnershipTest" time="0.001"/>
+  <testcase name="foreign_deregistration_is_rejected_but_owner_cleanup_succeeds()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.MBeanBatchRegistrarOwnershipTest" time="0.0"/>
+  <testcase name="fatalRegistrationFailureRollsBackOwnedRegistrationsAndPropagatesOriginalError()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.MBeanBatchRegistrarOwnershipTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

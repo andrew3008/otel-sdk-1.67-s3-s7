@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutSizingGateTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:36.287Z" hostname="DESKTOP-OEGBG7F" time="3.687">
+  <properties/>
+  <testcase name="sizingGateSelectsDefaultFromHeapAndScanCeilings()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutSizingGateTest" time="3.687"/>
+  <system-out><![CDATA[# WARNING: Unable to get Instrumentation. Dynamic Attach failed. You may add this JAR as -javaagent manually, or supply -Djdk.attach.allowAttachSelf
+SIZING layout InFlightTraceState=24
+SIZING layout Tracked=32
+SIZING layout AdmissionBudget=32
+SIZING profile=many-traces-few-spans traces=10000 spans=10000 trackedTraces=10000 jolRetainedBytes=945616 heapUsedBytes=501031864 scanP99Nanos=2918700
+SIZING profile=few-traces-many-spans traces=1 spans=10000 trackedTraces=1 jolRetainedBytes=705816 heapUsedBytes=484193824 scanP99Nanos=729400
+SIZING model bytesPerTracePlusSpan=94 bytesPerExtraSpan=70 scanP99PerSpanNanos=291
+SIZING burst onStartP99Nanos=21200 casFinalCount=10000 casElapsedMs=10
+SIZING capacityByScanCost=1718213
+SIZING heapClass=512MiB budgetBytes=10737418 capacityByHeap=149963 recommendedMaxTrackedSpans=149963
+SIZING heapClass=1024MiB budgetBytes=21474836 capacityByHeap=303354 recommendedMaxTrackedSpans=303354
+SIZING heapClass=2048MiB budgetBytes=33554432 capacityByHeap=475920 recommendedMaxTrackedSpans=475920
+SIZING heapClass=4096MiB budgetBytes=33554432 capacityByHeap=475920 recommendedMaxTrackedSpans=475920
+SIZING chosenDefaultMaxTrackedSpans=149963 adoptedDefaultMaxTrackedSpans=149000 adoptedPerTrace=1024
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

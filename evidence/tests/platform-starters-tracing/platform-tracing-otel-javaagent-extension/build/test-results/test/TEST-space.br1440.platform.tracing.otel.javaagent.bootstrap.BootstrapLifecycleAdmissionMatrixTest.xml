@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:11.583Z" hostname="DESKTOP-OEGBG7F" time="0.025">
+  <properties/>
+  <testcase name="NEW -&gt; NEW" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.003"/>
+  <testcase name="PREPARING -&gt; PREPARING" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.001"/>
+  <testcase name="PREPARED -&gt; ACTIVATING" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.001"/>
+  <testcase name="ACTIVATING -&gt; ACTIVATING" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.001"/>
+  <testcase name="ACTIVE -&gt; ACTIVE" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.002"/>
+  <testcase name="FAILED -&gt; FAILED" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.001"/>
+  <testcase name="CLOSING -&gt; CLOSING" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.0"/>
+  <testcase name="CLOSED -&gt; CLOSED" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.001"/>
+  <testcase name="NEW -&gt; PREPARING" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.0"/>
+  <testcase name="PREPARING -&gt; PREPARING" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.002"/>
+  <testcase name="PREPARED -&gt; PREPARED" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.001"/>
+  <testcase name="ACTIVATING -&gt; ACTIVATING" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.002"/>
+  <testcase name="ACTIVE -&gt; ACTIVE" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.002"/>
+  <testcase name="FAILED -&gt; FAILED" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.002"/>
+  <testcase name="CLOSING -&gt; CLOSING" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.001"/>
+  <testcase name="CLOSED -&gt; CLOSED" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapLifecycleAdmissionMatrixTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:20.547Z" hostname="DESKTOP-OEGBG7F" time="0.012">
+  <properties/>
+  <testcase name="factory_backed_pipeline_reclassifies_client_with_db_system_as_database()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest" time="0.006"/>
+  <testcase name="factory_start_delegates_do_not_write_required_platform_attributes()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest" time="0.002"/>
+  <testcase name="factory_backed_pipeline_recordsTypeOmissionBeforeDefaultEnrichment()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest" time="0.002"/>
+  <testcase name="factory_preserves_required_on_ending_order()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

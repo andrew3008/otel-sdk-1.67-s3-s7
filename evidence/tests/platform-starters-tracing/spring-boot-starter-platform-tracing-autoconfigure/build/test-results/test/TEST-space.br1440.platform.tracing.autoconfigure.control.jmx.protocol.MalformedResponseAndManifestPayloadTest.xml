@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedResponseAndManifestPayloadTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:00.330Z" hostname="DESKTOP-OEGBG7F" time="0.011">
+  <properties/>
+  <testcase name="builder_non_numeric_route_ratio_throws()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedResponseAndManifestPayloadTest" time="0.002"/>
+  <testcase name="builder_route_ratio_below_zero_throws()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedResponseAndManifestPayloadTest" time="0.002"/>
+  <testcase name="builder_route_ratio_above_one_throws()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedResponseAndManifestPayloadTest" time="0.002"/>
+  <testcase name="decode_response_null_outcome_throws()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedResponseAndManifestPayloadTest" time="0.001"/>
+  <testcase name="decode_response_wrong_type_throws()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedResponseAndManifestPayloadTest" time="0.001"/>
+  <testcase name="decode_response_blank_outcome_throws()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedResponseAndManifestPayloadTest" time="0.001"/>
+  <testcase name="decode_response_null_throws()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedResponseAndManifestPayloadTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

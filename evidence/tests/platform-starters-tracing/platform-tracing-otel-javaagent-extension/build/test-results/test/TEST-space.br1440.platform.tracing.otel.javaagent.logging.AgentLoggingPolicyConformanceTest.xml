@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingPolicyConformanceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.500Z" hostname="DESKTOP-OEGBG7F" time="0.004">
+  <properties/>
+  <testcase name="throwable_traversal_is_bounded()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingPolicyConformanceTest" time="0.001"/>
+  <testcase name="byte_budget_fallback_keeps_the_original_event_code()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingPolicyConformanceTest" time="0.0"/>
+  <testcase name="oversized_logger_is_rejected_by_the_event()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingPolicyConformanceTest" time="0.001"/>
+  <testcase name="encoded_payload_never_exceeds_max_bytes()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingPolicyConformanceTest" time="0.001"/>
+  <testcase name="encoder_escapes_quotes_and_keeps_truncation_deterministic()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingPolicyConformanceTest" time="0.0"/>
+  <testcase name="argument_values_are_truncated_and_control_chars_are_replaced()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingPolicyConformanceTest" time="0.001"/>
+  <testcase name="field_insertion_order_is_byte_stable()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingPolicyConformanceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

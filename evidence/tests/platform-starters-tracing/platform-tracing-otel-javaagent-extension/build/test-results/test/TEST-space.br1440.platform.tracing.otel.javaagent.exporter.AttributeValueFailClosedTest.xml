@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" tests="86" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.900Z" hostname="DESKTOP-OEGBG7F" time="0.03">
+  <properties/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: empty" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.002"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: string" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: long" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: double" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: boolean" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: bytes" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: string-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: long-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: double-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: boolean-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: heterogeneous-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: kv-list" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: nested-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="KEEP from the legacy rule engine does not authorize a VALUE attribute: nested" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="DROP removes the whole VALUE attribute: empty" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="DROP removes the whole VALUE attribute: string" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="DROP removes the whole VALUE attribute: long" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="DROP removes the whole VALUE attribute: double" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="DROP removes the whole VALUE attribute: boolean" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="DROP removes the whole VALUE attribute: bytes" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="DROP removes the whole VALUE attribute: string-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="DROP removes the whole VALUE attribute: long-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="DROP removes the whole VALUE attribute: double-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="DROP removes the whole VALUE attribute: boolean-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="DROP removes the whole VALUE attribute: heterogeneous-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="DROP removes the whole VALUE attribute: kv-list" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="DROP removes the whole VALUE attribute: nested-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="DROP removes the whole VALUE attribute: nested" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: empty" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.002"/>
+  <testcase name="collapse replaces VALUE with the sentinel: string" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: long" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: double" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: boolean" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: bytes" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: string-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: long-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: double-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: boolean-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: heterogeneous-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: kv-list" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: nested-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="collapse replaces VALUE with the sentinel: nested" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="HASH also removes the whole VALUE attribute: empty" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.005"/>
+  <testcase name="HASH also removes the whole VALUE attribute: string" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="HASH also removes the whole VALUE attribute: long" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="HASH also removes the whole VALUE attribute: double" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="HASH also removes the whole VALUE attribute: boolean" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="HASH also removes the whole VALUE attribute: bytes" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="HASH also removes the whole VALUE attribute: string-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="HASH also removes the whole VALUE attribute: long-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="HASH also removes the whole VALUE attribute: double-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="HASH also removes the whole VALUE attribute: boolean-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="HASH also removes the whole VALUE attribute: heterogeneous-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="HASH also removes the whole VALUE attribute: kv-list" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="HASH also removes the whole VALUE attribute: nested-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="HASH also removes the whole VALUE attribute: nested" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="Neighbouring attributes survive the removal regardless of the position of the VALUE key" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="VALUE remains fail-closed when no attribute rules are configured" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: empty" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: string" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: long" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: double" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: boolean" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: bytes" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: string-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: long-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: double-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: boolean-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="MASK also removes the whole VALUE attribute: heterogeneous-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: kv-list" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: nested-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="MASK also removes the whole VALUE attribute: nested" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: empty" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: string" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: long" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: double" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: boolean" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: bytes" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: string-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: long-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: double-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: boolean-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.001"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: heterogeneous-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: kv-list" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: nested-array" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <testcase name="TRUNCATE is not a KEEP-equivalent for VALUE: nested" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributeValueFailClosedTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

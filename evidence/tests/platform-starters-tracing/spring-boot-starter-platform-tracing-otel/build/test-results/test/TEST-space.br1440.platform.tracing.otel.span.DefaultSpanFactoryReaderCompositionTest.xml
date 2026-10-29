@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.span.DefaultSpanFactoryReaderCompositionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.712Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="enabledRuntimeUsesProductionReader()" classname="space.br1440.platform.tracing.otel.span.DefaultSpanFactoryReaderCompositionTest" time="0.004"/>
+  <testcase name="disabledRuntimeDoesNotParseTransportInput()" classname="space.br1440.platform.tracing.otel.span.DefaultSpanFactoryReaderCompositionTest" time="0.001"/>
+  <system-out><![CDATA[12:47:47.714 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:08.456Z" hostname="DESKTOP-OEGBG7F" time="0.302">
+  <properties/>
+  <testcase name="state_and_wire_never_visible_to_reader_in_inconsistent_combination_during_activate()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.136"/>
+  <testcase name="runtime_batch_failure_uses_owner_code_in_lifecycle_readiness_and_wire()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.014"/>
+  <testcase name="diagnostic_registration_failure_uses_owner_code_in_lifecycle_readiness_and_wire()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.006"/>
+  <testcase name="[1] missing=PROCESSOR_INSTALLED" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.01"/>
+  <testcase name="[2] missing=EXPORT_MODE_RESOLVED" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.003"/>
+  <testcase name="[3] missing=EXPORTER_WRAPPED" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.003"/>
+  <testcase name="[4] missing=EXPORT_PATH_PROTECTED" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.003"/>
+  <testcase name="missing_non_sanitizer_capability_fails_activation_after_barrier()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.004"/>
+  <testcase name="failure_mid_activate_rolls_back_LIFO_and_keeps_diagnostic_MBean_with_FAILED()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.005"/>
+  <testcase name="failure_after_activation_guard_is_terminalized_and_published()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.004"/>
+  <testcase name="repeated_activate_after_successful_activation_classified_as_DUPLICATE_ACTIVATION()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.009"/>
+  <testcase name="hook_registration_failure_is_terminalized_before_runtime_binding()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.091"/>
+  <testcase name="activation_prologue_failure_is_terminalized_and_published()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorActivationTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

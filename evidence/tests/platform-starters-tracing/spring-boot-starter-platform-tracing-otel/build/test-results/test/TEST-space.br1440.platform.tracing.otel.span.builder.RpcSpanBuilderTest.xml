@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.912Z" hostname="DESKTOP-OEGBG7F" time="0.011">
+  <properties/>
+  <testcase name="rpcBuilders_haveExpectedSemconvVersionMarker()" classname="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderTest" time="0.002"/>
+  <testcase name="rpcClientStart_routesSpanSpecThroughTracingRuntime()" classname="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderTest" time="0.001"/>
+  <testcase name="missingService_rejected()" classname="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderTest" time="0.001"/>
+  <testcase name="rootRelationship_works()" classname="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderTest" time="0.001"/>
+  <testcase name="transportRpc_returnsNonNullEntryPoint()" classname="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderTest" time="0.001"/>
+  <testcase name="missingSystem_rejected()" classname="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderTest" time="0.001"/>
+  <testcase name="missingMethod_rejectedAtStart()" classname="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderTest" time="0.001"/>
+  <testcase name="childWithLinks_rejected()" classname="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderTest" time="0.001"/>
+  <testcase name="rpcServerStart_routesSpanSpecThroughTracingRuntime()" classname="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

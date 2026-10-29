@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.distribution.UpstreamAgentContractTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:58.654Z" hostname="DESKTOP-OEGBG7F" time="0.317">
+  <properties/>
+  <testcase name="upstream_agent_sdk_version_matches_version_catalog()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.UpstreamAgentContractTest" time="0.244"/>
+  <testcase name="pinned_providers_match_upstream_autoconfigure_customizer_spi()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.UpstreamAgentContractTest" time="0.034"/>
+  <testcase name="pin_matches_the_resolved_otel_java_agent()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.UpstreamAgentContractTest" time="0.038"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

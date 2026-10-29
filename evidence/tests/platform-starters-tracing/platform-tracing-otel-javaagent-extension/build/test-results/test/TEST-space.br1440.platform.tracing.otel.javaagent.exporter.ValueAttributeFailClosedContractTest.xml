@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" tests="56" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:15.136Z" hostname="DESKTOP-OEGBG7F" time="0.031">
+  <properties/>
+  <testcase name="coerced_value_is_removed_at_export_when_no_rules_are_configured()" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-string/MASK" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.002"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-string/DROP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-string/HASH" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-string/TRUNCATE" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-string/KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-long/MASK" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-long/DROP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-long/HASH" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-long/TRUNCATE" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-long/KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-double/MASK" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-double/DROP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-double/HASH" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-double/TRUNCATE" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-double/KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-boolean/MASK" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-boolean/DROP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-boolean/HASH" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-boolean/TRUNCATE" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: scalar-boolean/KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: bytes/MASK" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: bytes/DROP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: bytes/HASH" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: bytes/TRUNCATE" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: bytes/KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: empty/MASK" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: empty/DROP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: empty/HASH" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: empty/TRUNCATE" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: empty/KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: string-array/MASK" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: string-array/DROP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: string-array/HASH" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: string-array/TRUNCATE" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: string-array/KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: long-array/MASK" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: long-array/DROP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: long-array/HASH" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: long-array/TRUNCATE" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: long-array/KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: heterogeneous-array/MASK" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: heterogeneous-array/DROP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: heterogeneous-array/HASH" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: heterogeneous-array/TRUNCATE" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: heterogeneous-array/KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: kv-list/MASK" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: kv-list/DROP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: kv-list/HASH" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <testcase name="VALUE не переживает exporter boundary: kv-list/TRUNCATE" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: kv-list/KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: nested/MASK" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: nested/DROP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: nested/HASH" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: nested/TRUNCATE" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.0"/>
+  <testcase name="VALUE не переживает exporter boundary: nested/KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.ValueAttributeFailClosedContractTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

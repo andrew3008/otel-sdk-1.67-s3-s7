@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentInstanceIdCanonicalParityTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:11.276Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="bothSidesAcceptTheSameCanonicalUuid()" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentInstanceIdCanonicalParityTest" time="0.0"/>
+  <testcase name="[1] value=2545D2BE-9095-4C83-9B37-C7737976A9ED" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentInstanceIdCanonicalParityTest" time="0.001"/>
+  <testcase name="[2] value=1-1-1-1-1" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentInstanceIdCanonicalParityTest" time="0.001"/>
+  <testcase name="[3] value=not-a-uuid" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentInstanceIdCanonicalParityTest" time="0.0"/>
+  <testcase name="[4] value= 2545d2be-9095-4c83-9b37-c7737976a9ed" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentInstanceIdCanonicalParityTest" time="0.001"/>
+  <testcase name="[5] value=2545d2be-9095-4c83-9b37-c7737976a9ed " classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentInstanceIdCanonicalParityTest" time="0.0"/>
+  <testcase name="[6] value=5a3f3fe4-e8ea-4dc4-b040-5d355e906f3" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentInstanceIdCanonicalParityTest" time="0.001"/>
+  <testcase name="[7] value=00000000-0000-0000-0000-000000000000" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentInstanceIdCanonicalParityTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

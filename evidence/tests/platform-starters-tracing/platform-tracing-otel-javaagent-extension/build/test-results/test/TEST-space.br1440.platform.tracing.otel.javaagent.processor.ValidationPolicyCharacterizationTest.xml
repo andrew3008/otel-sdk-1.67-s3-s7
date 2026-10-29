@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.ValidationPolicyCharacterizationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:23.546Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="ValidationDecisionCase[caseId=VAL-WARNING-MISS, validationLevel=WARNING, hasPlatformType=false, hasPlatformResult=false, expectExport=true, expectMissingAttribute=true, expectedThrowable=null]" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidationPolicyCharacterizationTest" time="0.0"/>
+  <testcase name="ValidationDecisionCase[caseId=VAL-WARNING-OK, validationLevel=WARNING, hasPlatformType=true, hasPlatformResult=true, expectExport=true, expectMissingAttribute=false, expectedThrowable=null]" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidationPolicyCharacterizationTest" time="0.0"/>
+  <testcase name="ValidationDecisionCase[caseId=VAL-ERROR-MISS, validationLevel=ERROR, hasPlatformType=false, hasPlatformResult=false, expectExport=true, expectMissingAttribute=true, expectedThrowable=null]" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidationPolicyCharacterizationTest" time="0.001"/>
+  <testcase name="ValidationDecisionCase[caseId=VAL-DISABLED, validationLevel=DISABLED, hasPlatformType=false, hasPlatformResult=false, expectExport=true, expectMissingAttribute=false, expectedThrowable=null]" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidationPolicyCharacterizationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

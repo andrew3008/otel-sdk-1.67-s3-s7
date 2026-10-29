@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.attributes.SpanAttributeValidationAutoConfigurationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:56.471Z" hostname="DESKTOP-OEGBG7F" time="0.058">
+  <properties/>
+  <testcase name="applicationBeanOfLevelTypeDoesNotOverrideProperty()" classname="space.br1440.platform.tracing.autoconfigure.attributes.SpanAttributeValidationAutoConfigurationTest" time="0.014"/>
+  <testcase name="disabledProperty_doesNotRejectMissingRequiredAttributes()" classname="space.br1440.platform.tracing.autoconfigure.attributes.SpanAttributeValidationAutoConfigurationTest" time="0.007"/>
+  <testcase name="defaultLevelIsWarnAndBeanIsUnique()" classname="space.br1440.platform.tracing.autoconfigure.attributes.SpanAttributeValidationAutoConfigurationTest" time="0.006"/>
+  <testcase name="strictProperty_rejectsInvalidSpecThroughTracingRuntime()" classname="space.br1440.platform.tracing.autoconfigure.attributes.SpanAttributeValidationAutoConfigurationTest" time="0.014"/>
+  <testcase name="property_switchesLevelToError()" classname="space.br1440.platform.tracing.autoconfigure.attributes.SpanAttributeValidationAutoConfigurationTest" time="0.008"/>
+  <testcase name="property_switchesLevelToDisabled()" classname="space.br1440.platform.tracing.autoconfigure.attributes.SpanAttributeValidationAutoConfigurationTest" time="0.006"/>
+  <system-out><![CDATA[12:47:56.493 [Test worker] WARN space.br1440.platform.tracing.autoconfigure.attributes.SpanAttributeValidationAutoConfiguration -- platform.tracing.span-attributes.validation.level=DISABLED: runtime span-attribute validation is off (reason='<unspecified>'). This is an emergency opt-out, NOT a migration mode. PII scrubbing continues independently of the validation level.
+12:47:56.511 [Test worker] WARN space.br1440.platform.tracing.autoconfigure.attributes.SpanAttributeValidationAutoConfiguration -- platform.tracing.span-attributes.validation.level=ERROR is intended for test/CI only; WARNING is recommended for production runtime. Application ERROR fails before startSpan(); agent ERROR remains diagnostic and does not drop the span
+12:47:56.521 [Test worker] WARN space.br1440.platform.tracing.autoconfigure.attributes.SpanAttributeValidationAutoConfiguration -- platform.tracing.span-attributes.validation.level=ERROR is intended for test/CI only; WARNING is recommended for production runtime. Application ERROR fails before startSpan(); agent ERROR remains diagnostic and does not drop the span
+12:47:56.529 [Test worker] WARN space.br1440.platform.tracing.autoconfigure.attributes.SpanAttributeValidationAutoConfiguration -- platform.tracing.span-attributes.validation.level=DISABLED: runtime span-attribute validation is off (reason='<unspecified>'). This is an emergency opt-out, NOT a migration mode. PII scrubbing continues independently of the validation level.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

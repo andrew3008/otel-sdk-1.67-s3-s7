@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxDenialReasonTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.459Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="denial_reasons_publish_bounded_machine_codes()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxDenialReasonTest" time="0.0"/>
+  <testcase name="REMOTE_JMX_EVIDENCE_UNKNOWN" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxDenialReasonTest" time="0.0"/>
+  <testcase name="REMOTE_JMX_MANAGEMENT_AGENT_CONFIGURED" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxDenialReasonTest" time="0.0"/>
+  <testcase name="none_does_not_deny()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxDenialReasonTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

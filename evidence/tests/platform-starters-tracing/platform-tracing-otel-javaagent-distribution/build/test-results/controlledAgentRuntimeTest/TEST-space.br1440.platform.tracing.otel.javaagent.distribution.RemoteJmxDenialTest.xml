@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.distribution.RemoteJmxDenialTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:49:27.085Z" hostname="DESKTOP-OEGBG7F" time="2.648">
+  <properties/>
+  <testcase name="management_agent_argument_fails_readiness_without_registering_mutation()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.RemoteJmxDenialTest" time="2.648"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="A: initial delivery — missing leaf → readiness BLOCKED" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:59.185Z" hostname="DESKTOP-OEGBG7F" time="0.119">
+  <properties/>
+  <testcase name="deliverInitial throws TracingSettingsManifestException when any Category A leaf is missing" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.CategoryALeafMissingTest$InitialMissingLeaf" time="0.093"/>
+  <testcase name="deliverInitial never reaches applySnapshot when leaf is missing" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.CategoryALeafMissingTest$InitialMissingLeaf" time="0.016"/>
+  <testcase name="deliverInitial throws for EACH of the 6 mandatory non-route-ratio leaves" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.CategoryALeafMissingTest$InitialMissingLeaf" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.control.jmx.lifecycle.PlatformSettingsStatusMBeanTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.264Z" hostname="DESKTOP-OEGBG7F" time="0.045">
+  <properties/>
+  <testcase name="exposesExactGeneratedOpenMBeanContract()" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.lifecycle.PlatformSettingsStatusMBeanTest" time="0.001"/>
+  <testcase name="returnsCoherentGeneratedAcceptedPolicySnapshot()" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.lifecycle.PlatformSettingsStatusMBeanTest" time="0.002"/>
+  <testcase name="captureFailureDoesNotExposeForeignThrowable()" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.lifecycle.PlatformSettingsStatusMBeanTest" time="0.042"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

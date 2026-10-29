@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.span.SpanEnrichmentAutoConfigurationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:11.057Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="defaultEnricherIsUnique()" classname="space.br1440.platform.tracing.autoconfigure.span.SpanEnrichmentAutoConfigurationTest" time="0.003"/>
+  <testcase name="applicationDefinedSpanEnricherReplacesDefaultBean()" classname="space.br1440.platform.tracing.autoconfigure.span.SpanEnrichmentAutoConfigurationTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

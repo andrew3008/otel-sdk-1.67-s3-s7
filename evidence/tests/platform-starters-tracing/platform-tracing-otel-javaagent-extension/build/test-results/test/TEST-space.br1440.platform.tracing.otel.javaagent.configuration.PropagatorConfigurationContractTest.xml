@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.055Z" hostname="DESKTOP-OEGBG7F" time="0.008">
+  <properties/>
+  <testcase name="reports_unsupported_and_supported_names_in_deterministic_order()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.001"/>
+  <testcase name="[1] propagator=jaeger" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.001"/>
+  <testcase name="[2] propagator=ottrace" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="[3] propagator=xray" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="[4] propagator=xray-lambda" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="[1] propagator=JAEGER" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="[2] propagator=B3" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="[3] propagator=unknown" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.001"/>
+  <testcase name="rejected_cases_cover_all_unsupported_agent_propagators()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="accepts_absent_propagators()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.001"/>
+  <testcase name="[1] propagators=" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="[2] propagators=none" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.001"/>
+  <testcase name="[3] propagators=tracecontext" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="[4] propagators=baggage" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="[5] propagators=b3" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="[6] propagators=b3multi" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="[7] propagators=platform-trace-control" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.0"/>
+  <testcase name="[8] propagators=tracecontext,baggage,b3,platform-trace-control" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PropagatorConfigurationContractTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

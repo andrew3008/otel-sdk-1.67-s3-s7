@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.distribution.ExtensionSurfaceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:56.991Z" hostname="DESKTOP-OEGBG7F" time="0.063">
+  <properties/>
+  <testcase name="packaged_extension_stays_on_the_allowlisted_surface()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.ExtensionSurfaceTest" time="0.063"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

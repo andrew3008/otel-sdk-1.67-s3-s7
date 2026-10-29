@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.PlatformTracingJmxClientTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:09.632Z" hostname="DESKTOP-OEGBG7F" time="0.004">
+  <properties/>
+  <testcase name="decisionCounts_owner_absent_when_composite_sampler_not_attached()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.PlatformTracingJmxClientTest" time="0.002"/>
+  <testcase name="sampling_observation_empty_when_MBean_unavailable()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.PlatformTracingJmxClientTest" time="0.0"/>
+  <testcase name="registrationSnapshot_REGISTERED_only_for_sampling_after_its_registration()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.PlatformTracingJmxClientTest" time="0.0"/>
+  <testcase name="registrationSnapshot_all_NOT_REGISTERED_when_no_MBean_is_registered()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.PlatformTracingJmxClientTest" time="0.001"/>
+  <testcase name="export_observation_empty_when_MBean_unavailable()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.PlatformTracingJmxClientTest" time="0.0"/>
+  <testcase name="jmxContractDiagnostics_empty_until_first_contract_violation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.PlatformTracingJmxClientTest" time="0.0"/>
+  <testcase name="diagnostics_observation_empty_when_MBean_unavailable()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.PlatformTracingJmxClientTest" time="0.0"/>
+  <testcase name="sampling_observation_returns_value_after_registration()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.PlatformTracingJmxClientTest" time="0.001"/>
+  <testcase name="constructorWithoutVerifierIsPackagePrivate()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.PlatformTracingJmxClientTest" time="0.0"/>
+  <testcase name="scrubbing_observation_empty_when_MBean_unavailable()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.PlatformTracingJmxClientTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

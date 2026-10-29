@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.distribution.InvalidExtensionConfigurationTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:08.211Z" hostname="DESKTOP-OEGBG7F" time="64.202">
+  <properties/>
+  <testcase name="invalid_max_span_age_environment_fails_bootstrap_without_platform_export()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.InvalidExtensionConfigurationTest" time="6.268"/>
+  <testcase name="foreign_sampler_environment_fails_bootstrap_without_platform_export()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.InvalidExtensionConfigurationTest" time="6.045"/>
+  <testcase name="mismatched_controlled_agent_digest_fails_before_sdk_build_without_platform_export()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.InvalidExtensionConfigurationTest" time="5.951"/>
+  <testcase name="sdk_disabled_environment_fails_bootstrap_without_platform_export()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.InvalidExtensionConfigurationTest" time="5.978"/>
+  <testcase name="invalid_extension_configuration_fails_bootstrap_without_platform_export()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.InvalidExtensionConfigurationTest" time="14.167"/>
+  <testcase name="external_javaagent_extension_environment_fails_bootstrap_without_platform_export()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.InvalidExtensionConfigurationTest" time="5.996"/>
+  <testcase name="sampler_argument_environment_fails_bootstrap_without_platform_export_or_value_disclosure()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.InvalidExtensionConfigurationTest" time="5.971"/>
+  <testcase name="declarative_configuration_file_fails_bootstrap_without_platform_export()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.InvalidExtensionConfigurationTest" time="7.839"/>
+  <testcase name="foreign_sampler_system_property_fails_bootstrap_without_platform_export()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.InvalidExtensionConfigurationTest" time="5.987"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

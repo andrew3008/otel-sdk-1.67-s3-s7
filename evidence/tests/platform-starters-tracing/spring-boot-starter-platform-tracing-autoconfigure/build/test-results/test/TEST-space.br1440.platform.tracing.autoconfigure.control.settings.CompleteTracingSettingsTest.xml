@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:08.697Z" hostname="DESKTOP-OEGBG7F" time="0.022">
+  <properties/>
+  <testcase name="builderProducesAllSevenLeaves()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.0"/>
+  <testcase name="toStringReportsRouteCountWithoutRouteKeys()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.009"/>
+  <testcase name="rejectsNullBlankControlAndOversizedRoutePrefixesWithoutEcho()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.002"/>
+  <testcase name="incompleteBuilderStillThrowsManifestException()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.001"/>
+  <testcase name="rejectsNonFiniteAndOutOfRangeSamplingRatio()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.002"/>
+  <testcase name="canonicalizesNegativeZeroBeforePublication()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.0"/>
+  <testcase name="canonicalizesValidationLevelCaseInsensitively()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.0"/>
+  <testcase name="canonicalizesLogLevelCaseInsensitivelyAndRejectsWhitespace()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.002"/>
+  <testcase name="acceptsExactMaximumRouteBounds()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.001"/>
+  <testcase name="equalSnapshotsAreEqual()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.0"/>
+  <testcase name="snapshotIsImmutable()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.0"/>
+  <testcase name="rejectsUnknownValidationLevel()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.001"/>
+  <testcase name="logLevelCanonicalizationUsesRootLocale()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.001"/>
+  <testcase name="rejectsOversizedRouteMapAndNullOrInvalidRouteRatio()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.001"/>
+  <testcase name="rejectsRoutePrefixExceedingUtf8ByteLimit()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.001"/>
+  <testcase name="withMethodsProduceCopyWithOneDiff()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.CompleteTracingSettingsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

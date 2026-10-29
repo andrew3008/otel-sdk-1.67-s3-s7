@@ -1,0 +1,90 @@
+include:
+  - component: $CI_SERVER_FQDN/pe/cicd/catalog/java/gitlab-ci@~latest
+    inputs:
+      kubedock-enabled: true
+  - component: $CI_SERVER_FQDN/pe/cicd/catalog/semantic-release/gitlab-ci@~latest
+  - project: pe/cicd/templates
+    ref: v0.0.8
+    file:
+      - /templates/infra/vault/base.yaml
+
+platform-tracing-helm-check:
+  stage: test
+  image:
+    name: r.1440.space/pe/cicd/images/helm:v3.16.4-1
+    entrypoint: [""]
+  tags:
+    - k8s-amd64
+  rules:
+    - changes:
+        - platform-starters-tracing/platform-tracing-helm/**/*
+  script:
+    - sh "$CI_PROJECT_DIR/platform-starters-tracing/platform-tracing-helm/tests/render-test.sh"
+
+# publish объявлен во внешнем helm pe/cicd/catalog/java/gitlab-ci
+platform-tracing-helm:
+  stage: publish
+  needs:
+    - job: platform-tracing-helm-check
+  interruptible: false
+  extends: .base-vault-secrets
+  image:
+    name: r.1440.space/pe/cicd/images/helm:v3.16.4-1
+    entrypoint: [""]
+  tags:
+    - k8s-amd64
+  variables:
+    HARBOR_REGISTRY: r.1440.space
+    CHART_DIR: platform-starters-tracing/platform-tracing-helm/platform-tracing
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      changes:
+        - platform-starters-tracing/platform-tracing-helm/**/*
+      when: manual
+      allow_failure: true
+    - when: never
+  script:
+    - |
+      set -eu
+      cd "$CI_PROJECT_DIR/$CHART_DIR"
+      chart_name=$(helm show chart . | awk -F': *' '$1=="name"{print $2; exit}')
+      chart_version=$(helm show chart . | awk -F': *' '$1=="version"{print $2; exit}')
+      if [ "$chart_name" != "platform-tracing" ]; then
+        echo "chart name must stay platform-tracing, got '$chart_name'" >&2
+        exit 1
+      fi
+      case "$chart_version" in
+        [0-9]*.[0-9]*.[0-9]*) ;;
+        *) echo "Chart.yaml version must be unquoted semver, got '$chart_version'" >&2; exit 1 ;;
+      esac
+      printf '%s' "$HARBOR_PASSWORD" | helm registry login "$HARBOR_REGISTRY" --username "$HARBOR_USERNAME" --password-stdin
+      chart_ref="oci://${HARBOR_REGISTRY}/platform/charts/${chart_name}"
+      if helm show chart "$chart_ref" --version "$chart_version" >/dev/null 2>/tmp/helm-show.err; then
+        echo "${chart_ref}:${chart_version} already exists; bump version in Chart.yaml" >&2
+        exit 1
+      fi
+      if ! grep -Eqi 'not found|404' /tmp/helm-show.err; then
+        echo "existence check failed with unexpected error:" >&2
+        cat /tmp/helm-show.err >&2
+        exit 1
+      fi
+      helm package .
+      helm push "${chart_name}-${chart_version}.tgz" "oci://${HARBOR_REGISTRY}/platform/charts"
+
+variables:
+  GRADLE_IMAGE: r.1440.space/dockerhub/gradle:8.12.0-jdk21
+  GRADLE_BUILD_ARGS: "assemble :platform-starters-tracing:platform-tracing-otel-javaagent-distribution:check :platform-starters-tracing:platform-tracing-otel-javaagent-extension:check -PrunTests --info"
+  GRADLE_PUBLISH_ENABLED: true
+  GRADLE_PUBLISH_ARGS: "publishAllToNexus --info"
+  GRADLE_SBOM_VERSION: disabled
+  GRADLE_DEPENDENCY_CHECK_DISABLED: true
+
+  GIT_STRATEGY: clone
+  GIT_SUBMODULE_STRATEGY: recursive
+  GIT_SUBMODULE_FORCE_HTTPS: true
+
+  DEV_REF: /^(master|develop|feature\/.*|release\/.*)$/
+  STAGING_REF: /^(v?[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9\-]+)?|release\/.*)$/
+  PROD_REF: /^v?[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9\-]+)?$/
+
+  SONAR_DISABLED: true

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.sampler.SamplingRuleChainCharacterizationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.150Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="absent_url_path_skips_hard_drop_and_route_ratio()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.SamplingRuleChainCharacterizationTest" time="0.001"/>
+  <testcase name="force_header_before_parent_decision()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.SamplingRuleChainCharacterizationTest" time="0.0"/>
+  <testcase name="hard_drop_before_force_header_and_qa()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.SamplingRuleChainCharacterizationTest" time="0.0"/>
+  <testcase name="qa_trace_before_parent_decision()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.SamplingRuleChainCharacterizationTest" time="0.0"/>
+  <testcase name="kill_switch_blocks_force_qa_route_and_global_ratio()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.SamplingRuleChainCharacterizationTest" time="0.0"/>
+  <testcase name="custom_force_value_fires_when_forceRecordValues_match()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.SamplingRuleChainCharacterizationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

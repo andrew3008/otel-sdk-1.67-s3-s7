@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.resilience.PlatformThrowablesTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.063Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="rethrows_VirtualMachineError()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.PlatformThrowablesTest" time="0.0"/>
+  <testcase name="ordinary_exception_is_not_thrown()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.PlatformThrowablesTest" time="0.0"/>
+  <testcase name="propagateFatalCauseChain_rethrows_LinkageError_wrapped_as_cause()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.PlatformThrowablesTest" time="0.0"/>
+  <testcase name="null_is_safe()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.PlatformThrowablesTest" time="0.0"/>
+  <testcase name="rethrows_LinkageError()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.PlatformThrowablesTest" time="0.0"/>
+  <testcase name="interruptedException_restores_interrupt_flag()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.PlatformThrowablesTest" time="0.0"/>
+  <testcase name="propagateFatalCauseChain_self_referencing_cause_does_not_loop_forever()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.PlatformThrowablesTest" time="0.001"/>
+  <testcase name="propagateFatalCauseChain_ordinary_exception_is_not_thrown()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.PlatformThrowablesTest" time="0.0"/>
+  <testcase name="propagateFatalCauseChain_rethrows_top_LinkageError()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.PlatformThrowablesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

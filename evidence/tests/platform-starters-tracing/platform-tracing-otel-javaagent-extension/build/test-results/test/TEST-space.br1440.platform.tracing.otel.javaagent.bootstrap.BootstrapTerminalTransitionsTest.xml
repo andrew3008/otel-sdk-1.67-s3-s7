@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" tests="26" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:12.794Z" hostname="DESKTOP-OEGBG7F" time="0.091">
+  <properties/>
+  <testcase name="reachable_publication_fatal_is_promoted_without_backlink_cycle()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.041"/>
+  <testcase name="fatal_shutdown_logging_failure_preserves_preexisting_activation_cause()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.002"/>
+  <testcase name="cleanup_error_remains_first_fatal_over_publication_error()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.003"/>
+  <testcase name="first_fatal_stays_root_when_later_fatal_already_reaches_it()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.001"/>
+  <testcase name="shutdown_log_delivery_failure_preserves_cleanup_outcome_and_completes_flight()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.001"/>
+  <testcase name="cleanup_failure_escalates_activation_failure_without_replacing_its_cause()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.002"/>
+  <testcase name="settled_close_repairs_stale_journal_without_close_log()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.002"/>
+  <testcase name="fatal_activation_cause_wins_over_fatal_cleanup_and_preserves_cleanup_identity()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.001"/>
+  <testcase name="rollback_marker_escalates_without_mutating_primary_cause_suppressed()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.001"/>
+  <testcase name="preexisting_cyclic_failure_graph_terminates_without_duplicate_edges()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.002"/>
+  <testcase name="graph_reachable_cleanup_without_settlement_is_terminalized_by_close()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.001"/>
+  <testcase name="early_failure_fence_preserves_ready_evidence_and_avoids_final_republication()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.001"/>
+  <testcase name="identical_fatal_cleanup_and_publication_failure_does_not_self_suppress()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.002"/>
+  <testcase name="fatal_activation_cause_wins_over_failure_publication_error()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.001"/>
+  <testcase name="fatal_shutdown_logging_failure_becomes_secondary_then_flight_root_without_retry()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.002"/>
+  <testcase name="failed_journal_repair_keeps_fatal_first_outcome_without_close_log()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.003"/>
+  <testcase name="publication_failure_with_cleanup_settles_rollback_before_rethrow()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.003"/>
+  <testcase name="first_fatal_publication_failure_wins_over_later_fatal_cleanup()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.003"/>
+  <testcase name="first_fatal_publication_failure_wins_over_later_settlement_failure()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.003"/>
+  <testcase name="accepted_operation_failure_after_close_is_rejected_without_publication()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.002"/>
+  <testcase name="early_publication_error_is_secondary_in_lifecycle_and_root_in_flight()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.002"/>
+  <testcase name="final_runtime_publication_failure_keeps_cleanup_as_lifecycle_and_flight_root()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.001"/>
+  <testcase name="cleanup_error_remains_first_fatal_over_runtime_publication_failure()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.002"/>
+  <testcase name="preexisting_activation_cause_survives_fatal_first_close_outcome()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.002"/>
+  <testcase name="accepted_operation_failure_during_close_is_rejected_without_publication()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.001"/>
+  <testcase name="final_publication_error_is_secondary_in_lifecycle_and_root_in_flight()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

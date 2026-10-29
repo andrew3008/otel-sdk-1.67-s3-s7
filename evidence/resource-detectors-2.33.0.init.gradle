@@ -1,0 +1,5 @@
+allprojects {
+    configurations.matching { it.name == 'resourceDetectors' }.configureEach {
+        resolutionStrategy.force 'io.opentelemetry.instrumentation:opentelemetry-resources:2.33.0-alpha'
+    }
+}

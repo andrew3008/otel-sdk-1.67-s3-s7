@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.TracingRuntimeGateOwnershipTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:54.469Z" hostname="DESKTOP-OEGBG7F" time="0.043">
+  <properties/>
+  <testcase name="platform_owns_exactly_one_instance_of_each_startup_gate()" classname="space.br1440.platform.tracing.autoconfigure.TracingRuntimeGateOwnershipTest" time="0.009"/>
+  <testcase name="application_owned_startup_verifier_is_rejected()" classname="space.br1440.platform.tracing.autoconfigure.TracingRuntimeGateOwnershipTest" time="0.005"/>
+  <testcase name="manually_registered_coherence_guard_under_platform_name_is_rejected()" classname="space.br1440.platform.tracing.autoconfigure.TracingRuntimeGateOwnershipTest" time="0.004"/>
+  <testcase name="manually_registered_startup_verifier_is_rejected()" classname="space.br1440.platform.tracing.autoconfigure.TracingRuntimeGateOwnershipTest" time="0.004"/>
+  <testcase name="application_owned_coherence_guard_is_rejected()" classname="space.br1440.platform.tracing.autoconfigure.TracingRuntimeGateOwnershipTest" time="0.004"/>
+  <testcase name="manually_registered_startup_verifier_under_platform_name_is_rejected()" classname="space.br1440.platform.tracing.autoconfigure.TracingRuntimeGateOwnershipTest" time="0.005"/>
+  <testcase name="manually_registered_coherence_guard_is_rejected()" classname="space.br1440.platform.tracing.autoconfigure.TracingRuntimeGateOwnershipTest" time="0.005"/>
+  <system-out><![CDATA[12:47:54.483 [Test worker] WARN org.springframework.context.annotation.AnnotationConfigApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Application-owned AgentStartupVerifier bean is not supported with Controlled Agent ownership: customAgentStartupVerifier
+12:47:54.489 [Test worker] WARN org.springframework.context.annotation.AnnotationConfigApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Application-owned AgentReadinessCoherenceGuard bean is not supported with Controlled Agent ownership: agentReadinessCoherenceGuard
+12:47:54.494 [Test worker] WARN org.springframework.context.annotation.AnnotationConfigApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Application-owned AgentStartupVerifier bean is not supported with Controlled Agent ownership: manualAgentStartupVerifier
+12:47:54.499 [Test worker] WARN org.springframework.context.annotation.AnnotationConfigApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Application-owned AgentReadinessCoherenceGuard bean is not supported with Controlled Agent ownership: customAgentReadinessCoherenceGuard
+12:47:54.505 [Test worker] WARN org.springframework.context.annotation.AnnotationConfigApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Application-owned AgentStartupVerifier bean is not supported with Controlled Agent ownership: agentStartupVerifier
+12:47:54.511 [Test worker] WARN org.springframework.context.annotation.AnnotationConfigApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Application-owned AgentReadinessCoherenceGuard bean is not supported with Controlled Agent ownership: manualAgentReadinessCoherenceGuard
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

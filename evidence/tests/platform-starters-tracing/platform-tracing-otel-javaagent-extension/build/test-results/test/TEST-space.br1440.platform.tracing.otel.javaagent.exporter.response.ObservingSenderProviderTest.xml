@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderProviderTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:15.169Z" hostname="DESKTOP-OEGBG7F" time="0.137">
+  <properties/>
+  <testcase name="gRPC: error_message без отклонений не увеличивает счётчики отклонений" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderProviderTest" time="0.087"/>
+  <testcase name="gRPC: нечитаемое сообщение не отменяет успех экспорта и не подставляет rejected_spans = 0" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderProviderTest" time="0.005"/>
+  <testcase name="gRPC: partial-success сообщение наблюдается для открытой export operation" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderProviderTest" time="0.001"/>
+  <testcase name="HTTP: нечитаемое тело не отменяет успех экспорта и не подставляет rejected_spans = 0" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderProviderTest" time="0.04"/>
+  <testcase name="Scope закрывается и не протекает за пределы export operation" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderProviderTest" time="0.0"/>
+  <testcase name="gRPC: статус не OK не трактуется как принятые span'ы" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderProviderTest" time="0.001"/>
+  <testcase name="HTTP: partial-success ответ наблюдается для открытой export operation" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderProviderTest" time="0.001"/>
+  <testcase name="HTTP: ответ с ошибкой не трактуется как принятые span'ы" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderProviderTest" time="0.0"/>
+  <testcase name="HTTP: без открытой export operation ответ доставляется без наблюдения" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderProviderTest" time="0.001"/>
+  <testcase name="HTTP: error_message без отклонений не увеличивает счётчики отклонений" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderProviderTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

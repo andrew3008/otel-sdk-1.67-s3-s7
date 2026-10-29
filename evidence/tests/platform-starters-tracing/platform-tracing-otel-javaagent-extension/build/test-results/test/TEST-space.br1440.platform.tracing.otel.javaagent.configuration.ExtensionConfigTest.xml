@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" tests="37" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.004Z" hostname="DESKTOP-OEGBG7F" time="0.041">
+  <properties/>
+  <testcase name="spanTimeout_rejects_zero_max_tracked_traces()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.002"/>
+  <testcase name="[1] raw=WARNING, expected=WARNING" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.005"/>
+  <testcase name="[2] raw=error, expected=ERROR" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="spanTimeout_rejects_zero_trace_timeout()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="spanTimeoutCanBeExplicitlyDisabled()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="classification_rejects_non_positive_threshold()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="validation_rejects_unknown_level()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="spanTimeout_rejects_negative_max_tracked_spans()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="sampling_reads_explicit_ratio()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="scrubbing_reads_explicit_hmac_key()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="sampling_returns_defaults_when_config_is_empty()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="spanTimeout_rejects_zero_max_tracked_spans_per_trace()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="spanTimeout_returns_defaults_when_config_is_empty()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="baggage_reads_explicit_outbound_header_allowlist()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="spanTimeout_rejects_non_positive_span_timeout()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="spanTimeout_rejects_negative_max_tracked_traces()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="classification_returns_defaults_when_config_is_empty()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="baggage_reads_explicit_span_attributes_allowlist()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="sampling_reads_explicit_enabled_false()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="resource_validation_mode_defaults_to_warning_when_absent()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="scrubbing_rejects_unknown_missing_key_policy()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="spanTimeoutCanBeExplicitlyEnabled()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="baggage_returns_defaults_when_config_is_empty()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="spanTimeoutIsDisabledByDefault()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="validation_reads_disabled_level()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="validation_returns_defaults_when_config_is_empty()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="[1] raw=" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="[2] raw= " classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="[3] raw=NOPE" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="scrubbing_returns_defaults_when_config_is_empty()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="spanTimeout_allows_global_span_budget_below_per_trace_budget()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="constructor_rejects_null_config()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.002"/>
+  <testcase name="spanTimeout_rejects_trace_timeout_shorter_than_span_timeout()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <testcase name="classification_rejects_slow_threshold_below_normal_threshold()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="spanTimeout_rejects_negative_trace_timeout()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="spanTimeout_reads_explicit_span_timeout()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.0"/>
+  <testcase name="spanTimeout_rejects_non_positive_scan_interval()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

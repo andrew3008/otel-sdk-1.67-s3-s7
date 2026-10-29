@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.893Z" hostname="DESKTOP-OEGBG7F" time="0.013">
+  <properties/>
+  <testcase name="operationName_appearsInSpanSpec()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.001"/>
+  <testcase name="run_startsAndClosesSpan()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.0"/>
+  <testcase name="detachedRelationship_preservedInSpec()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.0"/>
+  <testcase name="start_routesThroughTracingRuntime()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.0"/>
+  <testcase name="childRelationship_preservedInSpec()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.0"/>
+  <testcase name="detachedWithLinks_rejected()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.002"/>
+  <testcase name="rootWithLinks_preserved()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.001"/>
+  <testcase name="category_isInternalWithoutReason()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.001"/>
+  <testcase name="blankName_rejected()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.001"/>
+  <testcase name="callChecked_propagatesCheckedExceptionAndClosesSpan()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.001"/>
+  <testcase name="nullName_rejected()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.001"/>
+  <testcase name="childWithLinks_rejected()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.0"/>
+  <testcase name="call_returnsValueAndClosesSpan()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.0"/>
+  <testcase name="rootRelationship_preservedInSpec()" classname="space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderTest" time="0.001"/>
+  <system-out><![CDATA[12:47:47.895 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.896 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.897 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.897 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.897 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.901 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.902 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.903 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.906 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.906 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

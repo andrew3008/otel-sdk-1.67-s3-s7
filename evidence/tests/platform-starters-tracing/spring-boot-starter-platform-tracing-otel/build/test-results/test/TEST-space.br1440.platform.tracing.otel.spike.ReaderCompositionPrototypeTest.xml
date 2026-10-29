@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.spike.ReaderCompositionPrototypeTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.973Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="disabledUsesNoopReader()" classname="space.br1440.platform.tracing.otel.spike.ReaderCompositionPrototypeTest" time="0.0"/>
+  <testcase name="agentOnlyHasNoApplicationReader()" classname="space.br1440.platform.tracing.otel.spike.ReaderCompositionPrototypeTest" time="0.0"/>
+  <testcase name="invalidTraceparentIsRejectedWithoutClassInitializationFailure()" classname="space.br1440.platform.tracing.otel.spike.ReaderCompositionPrototypeTest" time="0.001"/>
+  <testcase name="springDirectAndSpringAgentUseExplicitApplicationReader()" classname="space.br1440.platform.tracing.otel.spike.ReaderCompositionPrototypeTest" time="0.0"/>
+  <system-out><![CDATA[12:47:47.974 [Test worker] DEBUG space.br1440.platform.tracing.otel.propagation.OtelTraceparentReaderImpl -- rejected traceparent: not-a-traceparent
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

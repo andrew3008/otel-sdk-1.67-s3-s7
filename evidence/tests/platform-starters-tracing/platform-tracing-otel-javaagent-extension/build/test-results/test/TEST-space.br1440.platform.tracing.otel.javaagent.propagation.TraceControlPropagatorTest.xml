@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TraceControlPropagator: extract в Context; outbound inject — intentional no-op" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.037Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="extract без платформенных заголовков не меняет Context" classname="space.br1440.platform.tracing.otel.javaagent.propagation.TraceControlPropagatorTest" time="0.001"/>
+  <testcase name="Gate выключен: extract не извлекает — propagation no-op" classname="space.br1440.platform.tracing.otel.javaagent.propagation.TraceControlPropagatorTest" time="0.0"/>
+  <testcase name="extract ignores X-Request-Id and does not create control from it" classname="space.br1440.platform.tracing.otel.javaagent.propagation.TraceControlPropagatorTest" time="0.0"/>
+  <testcase name="extract кладёт InboundTraceControl в Context" classname="space.br1440.platform.tracing.otel.javaagent.propagation.TraceControlPropagatorTest" time="0.0"/>
+  <testcase name="fields() не зависит от текущего gate value" classname="space.br1440.platform.tracing.otel.javaagent.propagation.TraceControlPropagatorTest" time="0.0"/>
+  <testcase name="inject — intentional no-op: outbound-инъекция принадлежит app-plane порту, не пропагатору" classname="space.br1440.platform.tracing.otel.javaagent.propagation.TraceControlPropagatorTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityCharacterizationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:23.489Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="event_attributes_not_scrubbed_by_span_processor_observed_behavior()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityCharacterizationTest" time="0.001"/>
+  <testcase name="fatal_rule_failure_propagates_before_circuit_breaker()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityCharacterizationTest" time="0.002"/>
+  <testcase name="merge_precedence_drop_beats_hash_on_authorization_key()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityCharacterizationTest" time="0.0"/>
+  <testcase name="prefixed_password_key_is_scrubbed()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSecurityCharacterizationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

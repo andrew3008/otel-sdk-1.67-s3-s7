@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.998Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="[1] key=access_token" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.001"/>
+  <testcase name="[2] key=ACCESS_TOKEN" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.0"/>
+  <testcase name="[3] key=Token_suffix" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.0"/>
+  <testcase name="[4] key=prefix_token_suffix" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.0"/>
+  <testcase name="empty_allowlist_rejects_every_key()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.001"/>
+  <testcase name="[1] key=tenant_class" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.0"/>
+  <testcase name="[2] key=Tenant_Class" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.001"/>
+  <testcase name="[3] key=TENANT_CLASS" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.0"/>
+  <testcase name="[1] key=null" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.0"/>
+  <testcase name="[2] key=" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.0"/>
+  <testcase name="[3] key=unlisted" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.0"/>
+  <testcase name="[4] key= tenant_class " classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.0"/>
+  <testcase name="keeps_an_immutable_snapshot_of_allowlist_and_deny_patterns()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageKeyPolicyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingGoldenTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.496Z" hostname="DESKTOP-OEGBG7F" time="0.004">
+  <properties/>
+  <testcase name="encode_fallback_matches_golden_contract()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingGoldenTest" time="0.002"/>
+  <testcase name="boot_resource_identity_matches_golden_contract()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingGoldenTest" time="0.0"/>
+  <testcase name="export_span_timeout_matches_golden_contract()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingGoldenTest" time="0.001"/>
+  <testcase name="encoded_payload_is_independent_of_typed_field_insertion_order()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingGoldenTest" time="0.0"/>
+  <testcase name="valid_missing_attributes_warn_and_error_match_golden_contract()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingGoldenTest" time="0.001"/>
+  <testcase name="rate_markers_match_warn_and_error_golden_contracts()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingGoldenTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

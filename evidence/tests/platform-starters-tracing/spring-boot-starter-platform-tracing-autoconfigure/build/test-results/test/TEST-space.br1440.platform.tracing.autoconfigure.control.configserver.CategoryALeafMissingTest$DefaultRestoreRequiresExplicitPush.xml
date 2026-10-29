@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="C: default restores ONLY via explicit Config Server push, not implicitly" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:59.094Z" hostname="DESKTOP-OEGBG7F" time="0.064">
+  <properties/>
+  <testcase name="helm defaults are never auto-injected when Config Server leaf goes missing at runtime" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.CategoryALeafMissingTest$DefaultRestoreRequiresExplicitPush" time="0.057"/>
+  <testcase name="after leaf-missing, an explicit Config Server push with full snapshot restores state" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.CategoryALeafMissingTest$DefaultRestoreRequiresExplicitPush" time="0.004"/>
+  <testcase name="after leaf-missing REJECTED, no implicit default is submitted to agent" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.CategoryALeafMissingTest$DefaultRestoreRequiresExplicitPush" time="0.003"/>
+  <system-out><![CDATA[2026-10-29T12:47:59.151Z ERROR 25468 --- [    Test worker] [                                                 ] a.c.c.ConfigServerTracingSettingsAdapter : Config Server manifest rejected locally; LKG retained: leaf missing
+2026-10-29T12:47:59.154Z ERROR 25468 --- [    Test worker] [                                                 ] a.c.c.ConfigServerTracingSettingsAdapter : Config Server manifest rejected locally; LKG retained: leaf missing
+2026-10-29T12:47:59.155Z  INFO 25468 --- [    Test worker] [                                                 ] .ConfigServerTracingSettingsSynchronizer : Config Server settings delivery: phase=REFRESH, attemptId=00000000-0000-0000-0000-000000000001, outcome=APPLIED, messageCode=NONE, base=SettingsRevision[agentInstanceId=d7468019-f52a-44a9-b3cd-3654c13ebc4d, acceptedSequence=42]
+2026-10-29T12:47:59.158Z ERROR 25468 --- [    Test worker] [                                                 ] a.c.c.ConfigServerTracingSettingsAdapter : Config Server manifest rejected locally; LKG retained: leaf missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.788Z" hostname="DESKTOP-OEGBG7F" time="0.009">
+  <properties/>
+  <testcase name="preservesEveryAttemptAcrossSuppressionAndHeal()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.0"/>
+  <testcase name="attemptEveryFiftySecondsHealsOnSecondAttempt()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.001"/>
+  <testcase name="transitionDiscardsResidualCreditBeforeHeal()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.0"/>
+  <testcase name="attemptEveryFiveSecondsDoesNotHealForTenIntervals()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.0"/>
+  <testcase name="slowAdmissionDoesNotAccumulateUnusedScheduleTime()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.001"/>
+  <testcase name="healedThrottleCanEmitAnotherTransitionMarker()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.0"/>
+  <testcase name="slowDeadlineSurvivesNanoTimeWraparound()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.0"/>
+  <testcase name="concurrentInitialAttemptsPreserveFastAndSlowCardinality()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.002"/>
+  <testcase name="partialRefillRestoresOneFastAdmission()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.0"/>
+  <testcase name="rejectsInvalidConfiguration()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.001"/>
+  <testcase name="attemptAtHealBoundaryReturnsToFastWithSuppressedCount()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.0"/>
+  <testcase name="exhaustsFastBurstThenEmitsOneTransitionMarker()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.0"/>
+  <testcase name="fastRefillSurvivesNanoTimeWraparound()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.0"/>
+  <testcase name="attemptOneNanosecondBeforeHealBoundaryRemainsSlow()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.0"/>
+  <testcase name="overflowSafeRefillSaturatesLargeValidCapacity()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.0"/>
+  <testcase name="concurrentHealPreservesSuppressionAndStartsOneNewSlowEpisode()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.002"/>
+  <testcase name="slowAttemptsEveryTwelveSecondsAdmitOncePerInterval()" classname="space.br1440.platform.tracing.otel.javaagent.logging.ratelimit.SeverityThrottleTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

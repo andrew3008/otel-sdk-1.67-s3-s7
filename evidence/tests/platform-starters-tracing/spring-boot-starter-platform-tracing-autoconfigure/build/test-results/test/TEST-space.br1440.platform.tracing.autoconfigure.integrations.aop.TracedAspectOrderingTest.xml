@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectOrderingTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:09.863Z" hostname="DESKTOP-OEGBG7F" time="0.086">
+  <properties/>
+  <testcase name="tracedAspectIsOuterRelativeToKafkaRequestIdentityAspect(TraceOperations)" classname="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectOrderingTest" time="0.069"/>
+  <testcase name="tracedAspectIsOuterRelativeToLowestPrecedenceStub(TraceOperations)" classname="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectOrderingTest" time="0.011"/>
+  <testcase name="tracedAspectRecordsExceptionThatRollsBackTransaction(TraceOperations)" classname="space.br1440.platform.tracing.autoconfigure.integrations.aop.TracedAspectOrderingTest" time="0.006"/>
+  <system-out><![CDATA[2026-10-29T12:48:09.928Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+2026-10-29T12:48:09.942Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+2026-10-29T12:48:09.950Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

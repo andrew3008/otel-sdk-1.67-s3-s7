@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.integrations.kafka.KafkaRequestIdentitySeedFailureLogTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.402Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="oneInstanceLogsTheFirstEnrichmentFailureOnly(CapturedOutput)" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.KafkaRequestIdentitySeedFailureLogTest" time="0.002"/>
+  <system-out><![CDATA[2026-10-29T12:48:10.404Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.i.k.KafkaRequestIdentityAspect : Failed to seed request id on the current span: java.lang.IllegalStateException
+2026-10-29T12:48:10.405Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.i.k.KafkaRequestIdentityAspect : Failed to seed request id on the current span: java.lang.IllegalStateException
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

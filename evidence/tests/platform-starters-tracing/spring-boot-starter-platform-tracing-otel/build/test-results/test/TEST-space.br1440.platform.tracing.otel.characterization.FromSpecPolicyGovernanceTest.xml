@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.characterization.FromSpecPolicyGovernanceTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.446Z" hostname="DESKTOP-OEGBG7F" time="0.047">
+  <properties/>
+  <testcase name="fromSpecRejectsAttributesRejectedByErrorPolicy()" classname="space.br1440.platform.tracing.otel.characterization.FromSpecPolicyGovernanceTest" time="0.007"/>
+  <testcase name="fromSpecRejectsMissingReason()" classname="space.br1440.platform.tracing.otel.characterization.FromSpecPolicyGovernanceTest" time="0.002"/>
+  <testcase name="[1] category=HTTP_SERVER" classname="space.br1440.platform.tracing.otel.characterization.FromSpecPolicyGovernanceTest" time="0.021"/>
+  <testcase name="[2] category=HTTP_CLIENT" classname="space.br1440.platform.tracing.otel.characterization.FromSpecPolicyGovernanceTest" time="0.001"/>
+  <testcase name="[3] category=DATABASE" classname="space.br1440.platform.tracing.otel.characterization.FromSpecPolicyGovernanceTest" time="0.002"/>
+  <testcase name="[4] category=RPC_SERVER" classname="space.br1440.platform.tracing.otel.characterization.FromSpecPolicyGovernanceTest" time="0.001"/>
+  <testcase name="[5] category=RPC_CLIENT" classname="space.br1440.platform.tracing.otel.characterization.FromSpecPolicyGovernanceTest" time="0.002"/>
+  <testcase name="[6] category=KAFKA_PRODUCER" classname="space.br1440.platform.tracing.otel.characterization.FromSpecPolicyGovernanceTest" time="0.001"/>
+  <testcase name="[7] category=KAFKA_CONSUMER" classname="space.br1440.platform.tracing.otel.characterization.FromSpecPolicyGovernanceTest" time="0.001"/>
+  <testcase name="[8] category=INTERNAL" classname="space.br1440.platform.tracing.otel.characterization.FromSpecPolicyGovernanceTest" time="0.001"/>
+  <system-out><![CDATA[12:47:47.458 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=HTTP_SERVER: required attribute 'http.request.method' is missing
+12:47:47.458 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=HTTP_SERVER: required attribute 'platform.trace.type' is missing
+12:47:47.481 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=HTTP_CLIENT: required attribute 'http.request.method' is missing
+12:47:47.481 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=HTTP_CLIENT: required attribute 'platform.trace.type' is missing
+12:47:47.483 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=DATABASE: required attribute 'platform.trace.type' is missing
+12:47:47.483 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_ANY_OF_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=DATABASE: at least one of [db.system, db.system.name] must be present
+12:47:47.485 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=RPC_SERVER: required attribute 'rpc.system.name' is missing
+12:47:47.485 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=RPC_SERVER: required attribute 'rpc.method' is missing
+12:47:47.485 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=RPC_SERVER: required attribute 'platform.trace.type' is missing
+12:47:47.487 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=RPC_CLIENT: required attribute 'rpc.system.name' is missing
+12:47:47.487 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=RPC_CLIENT: required attribute 'rpc.method' is missing
+12:47:47.487 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=RPC_CLIENT: required attribute 'platform.trace.type' is missing
+12:47:47.490 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=KAFKA_PRODUCER: required attribute 'messaging.destination.name' is missing
+12:47:47.490 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=KAFKA_PRODUCER: required attribute 'messaging.system' is missing
+12:47:47.490 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=KAFKA_PRODUCER: required attribute 'platform.trace.type' is missing
+12:47:47.492 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=KAFKA_CONSUMER: required attribute 'messaging.destination.name' is missing
+12:47:47.492 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=KAFKA_CONSUMER: required attribute 'messaging.system' is missing
+12:47:47.492 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=KAFKA_CONSUMER: required attribute 'platform.trace.type' is missing
+12:47:47.493 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=INTERNAL: required attribute 'platform.trace.type' is missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

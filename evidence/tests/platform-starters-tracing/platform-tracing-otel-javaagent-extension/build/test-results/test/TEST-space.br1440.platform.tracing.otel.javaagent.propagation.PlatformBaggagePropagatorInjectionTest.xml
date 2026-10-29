@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PlatformBaggagePropagator: исходящая фильтрация и сериализация W3C" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:39.987Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="extract не применяет исходящие allowlist и deny-паттерны" classname="space.br1440.platform.tracing.otel.javaagent.propagation.PlatformBaggagePropagatorInjectionTest" time="0.0"/>
+  <testcase name="conformance: BaggageEntryMetadata сохраняется и кодируется штатным delegate" classname="space.br1440.platform.tracing.otel.javaagent.propagation.PlatformBaggagePropagatorInjectionTest" time="0.0"/>
+  <testcase name="conformance: исходный Context/Baggage не мутируются inject-ом" classname="space.br1440.platform.tracing.otel.javaagent.propagation.PlatformBaggagePropagatorInjectionTest" time="0.001"/>
+  <testcase name="characterization: полностью отфильтрованный baggage не вызывает setter.set ни разу" classname="space.br1440.platform.tracing.otel.javaagent.propagation.PlatformBaggagePropagatorInjectionTest" time="0.0"/>
+  <testcase name="conformance: свыше 64 entries и заголовок свыше 8192 байт ограничены stock OTel contract" classname="space.br1440.platform.tracing.otel.javaagent.propagation.PlatformBaggagePropagatorInjectionTest" time="0.0"/>
+  <testcase name="conformance: denied/non-allowlisted ключи отсутствуют в заголовке целиком" classname="space.br1440.platform.tracing.otel.javaagent.propagation.PlatformBaggagePropagatorInjectionTest" time="0.001"/>
+  <testcase name="conformance: ASCII space кодируется как %20 (не '+') и проходит stock round-trip" classname="space.br1440.platform.tracing.otel.javaagent.propagation.PlatformBaggagePropagatorInjectionTest" time="0.0"/>
+  <testcase name="characterization: пустой (без entries) baggage не вызывает setter.set ни разу" classname="space.br1440.platform.tracing.otel.javaagent.propagation.PlatformBaggagePropagatorInjectionTest" time="0.0"/>
+  <testcase name="conformance: UTF-8 Unicode проходит stock inject/extract round-trip без изменения значения" classname="space.br1440.platform.tracing.otel.javaagent.propagation.PlatformBaggagePropagatorInjectionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

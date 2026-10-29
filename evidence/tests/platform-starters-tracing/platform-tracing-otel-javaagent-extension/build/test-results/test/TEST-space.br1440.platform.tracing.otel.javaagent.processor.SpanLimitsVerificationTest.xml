@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.SpanLimitsVerificationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:23.517Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="attribute_value_is_truncated_by_character_count()" classname="space.br1440.platform.tracing.otel.javaagent.processor.SpanLimitsVerificationTest" time="0.001"/>
+  <testcase name="attribute_limit_exceeded_is_counted_as_dropped()" classname="space.br1440.platform.tracing.otel.javaagent.processor.SpanLimitsVerificationTest" time="0.0"/>
+  <testcase name="link_limit_exceeded_is_counted_as_dropped()" classname="space.br1440.platform.tracing.otel.javaagent.processor.SpanLimitsVerificationTest" time="0.0"/>
+  <testcase name="no_limit_exceeded_does_not_yield_negative_counters()" classname="space.br1440.platform.tracing.otel.javaagent.processor.SpanLimitsVerificationTest" time="0.0"/>
+  <testcase name="event_limit_exceeded_is_counted_as_dropped()" classname="space.br1440.platform.tracing.otel.javaagent.processor.SpanLimitsVerificationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

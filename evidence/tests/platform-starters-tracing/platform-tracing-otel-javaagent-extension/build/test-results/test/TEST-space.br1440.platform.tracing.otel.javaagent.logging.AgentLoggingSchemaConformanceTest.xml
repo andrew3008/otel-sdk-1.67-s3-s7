@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.565Z" hostname="DESKTOP-OEGBG7F" time="0.021">
+  <properties/>
+  <testcase name="encoded_event_includes_message_and_optional_fields()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" time="0.014"/>
+  <testcase name="worst_case_fields_fall_back_with_the_original_event_code()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" time="0.0"/>
+  <testcase name="over_budget_four_byte_stacktrace_keeps_error_identity_and_marks_truncation()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" time="0.001"/>
+  <testcase name="additional_property_is_allowed()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" time="0.0"/>
+  <testcase name="encoded_error_with_throwable_matches_schema()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" time="0.0"/>
+  <testcase name="missing_required_field_is_rejected()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" time="0.003"/>
+  <testcase name="encoded_minimal_info_matches_schema()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" time="0.001"/>
+  <testcase name="published_limits_match_emit_path_constants()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" time="0.0"/>
+  <testcase name="encode_fallback_matches_schema()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" time="0.0"/>
+  <testcase name="encoded_warn_matches_schema()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" time="0.001"/>
+  <testcase name="invalid_level_timestamp_and_event_code_are_rejected()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaConformanceTest" time="0.0"/>
+  <system-out><![CDATA[12:47:22.586 [Test worker] DEBUG com.networknt.schema.format.DateTimeFormat -- Invalid date-time: Expected character [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] at position 1, found n: not-a-timestamp
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

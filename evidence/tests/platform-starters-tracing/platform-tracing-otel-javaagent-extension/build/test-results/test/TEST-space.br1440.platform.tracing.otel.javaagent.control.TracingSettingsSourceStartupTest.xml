@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.251Z" hostname="DESKTOP-OEGBG7F" time="0.013">
+  <properties/>
+  <testcase name="configuredValueWithoutBootstrapPropertyIsAgentDefault()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.001"/>
+  <testcase name="duplicateRouteRatioKeyFailsStartup()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.001"/>
+  <testcase name="leftoverPlatformEnvironmentDoesNotDowngradeError()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.001"/>
+  <testcase name="processDisabledStartsDisabled()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.0"/>
+  <testcase name="[1] routePrefix=" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.0"/>
+  <testcase name="[2] routePrefix=   " classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.0"/>
+  <testcase name="disabledValidationLevelIsStoredAtStartup()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.001"/>
+  <testcase name="errorValidationLevelIsStoredAtStartup()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.0"/>
+  <testcase name="absentControlSettingsUseTypedDefaults()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.0"/>
+  <testcase name="[1] invalidValue=null" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.001"/>
+  <testcase name="[2] invalidValue=" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.001"/>
+  <testcase name="[3] invalidValue=   " classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.0"/>
+  <testcase name="unknownDiagnosticsLogLevelFailsFast()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.001"/>
+  <testcase name="invalidRouteRatioFailsStartupWithoutExposingValue()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.0"/>
+  <testcase name="nullRouteRatioKeyFailsStartupWithoutExposingValue()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.001"/>
+  <testcase name="unknownLevelIsRejectedBeforeSettingsAreCreated()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.0"/>
+  <testcase name="processDisabledCanBeEnabledLaterWithoutLifetimeBan()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.0"/>
+  <testcase name="explicitControlSettingsReachStartupPolicy()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.0"/>
+  <testcase name="absentLevelStartsWarning()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.0"/>
+  <testcase name="processErrorStartsError()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceStartupTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

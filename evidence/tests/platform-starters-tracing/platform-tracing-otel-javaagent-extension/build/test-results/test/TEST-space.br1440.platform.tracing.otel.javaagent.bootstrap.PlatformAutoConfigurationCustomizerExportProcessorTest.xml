@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerExportProcessorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.110Z" hostname="DESKTOP-OEGBG7F" time="0.036">
+  <properties/>
+  <testcase name="Hostless OTLP endpoint is rejected without publishing a READY snapshot" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerExportProcessorTest" time="0.006"/>
+  <testcase name="Failing log record exporter abandons PREPARED with diagnostic readiness still INITIALIZING" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerExportProcessorTest" time="0.007"/>
+  <testcase name="Multiple exporters keep the stock OTLP BatchSpanProcessor" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerExportProcessorTest" time="0.01"/>
+  <testcase name="Single OTLP exporter: платформенный DROP_OLDEST processor" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerExportProcessorTest" time="0.006"/>
+  <testcase name="Foreign SafeSpanExporter fails the real customizer chain before readiness" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerExportProcessorTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oct 29, 2026 12:47:13 PM io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder buildImpl
+INFO: Error encountered during autoconfiguration. Closing partially configured components.
+Oct 29, 2026 12:47:13 PM io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder buildImpl
+INFO: Error encountered during autoconfiguration. Closing partially configured components.
+Oct 29, 2026 12:47:13 PM io.opentelemetry.sdk.trace.SdkTracerProvider shutdown
+INFO: Calling shutdown() multiple times.
+Oct 29, 2026 12:47:13 PM io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder buildImpl
+INFO: Error encountered during autoconfiguration. Closing partially configured components.
+]]></system-err>
+</testsuite>

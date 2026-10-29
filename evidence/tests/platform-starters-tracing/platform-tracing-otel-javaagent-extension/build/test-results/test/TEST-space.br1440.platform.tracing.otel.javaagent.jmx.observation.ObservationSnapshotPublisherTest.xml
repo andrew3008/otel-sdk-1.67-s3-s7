@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.jmx.observation.ObservationSnapshotPublisherTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:20.600Z" hostname="DESKTOP-OEGBG7F" time="0.599">
+  <properties/>
+  <testcase name="repeatedPublicationFailuresAreRateLimited()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.ObservationSnapshotPublisherTest" time="0.002"/>
+  <testcase name="closeInterruptsAndJoinsPublisherThread()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.ObservationSnapshotPublisherTest" time="0.015"/>
+  <testcase name="publicationRequestBeforeStartIsIgnored()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.ObservationSnapshotPublisherTest" time="0.0"/>
+  <testcase name="eventDrivenPublicationRequestsAreCoalescedWhileRefreshIsRunning()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.ObservationSnapshotPublisherTest" time="0.502"/>
+  <testcase name="closedPublisherRejectsStartAndIgnoresPublication()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.ObservationSnapshotPublisherTest" time="0.001"/>
+  <testcase name="hangingRefreshDoesNotBlockPublishedSnapshotGetter()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.ObservationSnapshotPublisherTest" time="0.048"/>
+  <testcase name="repeatedStartKeepsTheSinglePublisherThread()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.ObservationSnapshotPublisherTest" time="0.029"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

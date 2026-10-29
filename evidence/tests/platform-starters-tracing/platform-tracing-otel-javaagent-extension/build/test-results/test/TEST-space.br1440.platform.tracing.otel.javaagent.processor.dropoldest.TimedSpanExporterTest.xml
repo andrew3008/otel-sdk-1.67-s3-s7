@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.TimedSpanExporterTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:35.237Z" hostname="DESKTOP-OEGBG7F" time="0.102">
+  <properties/>
+  <testcase name="processorTimeoutWithoutDelegateCompletionDoesNotOpenRecoveryEpisode()" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.TimedSpanExporterTest" time="0.039"/>
+  <testcase name="shutdownFailuresUseCatalogEventsAndTypedTimeout()" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.TimedSpanExporterTest" time="0.031"/>
+  <testcase name="exportFailuresUseCatalogEventsAndTypedTimeout()" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.TimedSpanExporterTest" time="0.032"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

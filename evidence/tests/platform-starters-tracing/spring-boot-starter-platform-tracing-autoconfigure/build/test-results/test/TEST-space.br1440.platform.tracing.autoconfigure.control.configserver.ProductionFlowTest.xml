@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.configserver.ProductionFlowTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:59.781Z" hostname="DESKTOP-OEGBG7F" time="0.015">
+  <properties/>
+  <testcase name="initialDeliveryWritesCompleteSnapshotAgainstCurrentAgentRevision()" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.ProductionFlowTest" time="0.007"/>
+  <testcase name="sequentialRefreshesBuildAndApplyCurrentEnvironmentSnapshotOncePerEvent()" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.ProductionFlowTest" time="0.006"/>
+  <testcase name="staleRefreshIsReturnedWithoutRetry()" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.ProductionFlowTest" time="0.002"/>
+  <system-out><![CDATA[2026-10-29T12:47:59.785Z  INFO 25468 --- [    Test worker] [                                                 ] .ConfigServerTracingSettingsSynchronizer : Config Server settings delivery: phase=INITIAL, attemptId=00000000-0000-0000-0000-000000000001, outcome=APPLIED, messageCode=NONE, base=SettingsRevision[agentInstanceId=66f8525d-95e6-4cf8-a2ca-d384e6fd7b3c, acceptedSequence=7]
+2026-10-29T12:47:59.790Z  INFO 25468 --- [    Test worker] [                                                 ] .ConfigServerTracingSettingsSynchronizer : Config Server settings delivery: phase=REFRESH, attemptId=00000000-0000-0000-0000-000000000001, outcome=APPLIED, messageCode=NONE, base=SettingsRevision[agentInstanceId=66f8525d-95e6-4cf8-a2ca-d384e6fd7b3c, acceptedSequence=7]
+2026-10-29T12:47:59.791Z  INFO 25468 --- [    Test worker] [                                                 ] .ConfigServerTracingSettingsSynchronizer : Config Server settings delivery: phase=REFRESH, attemptId=00000000-0000-0000-0000-000000000001, outcome=APPLIED, messageCode=NONE, base=SettingsRevision[agentInstanceId=66f8525d-95e6-4cf8-a2ca-d384e6fd7b3c, acceptedSequence=7]
+2026-10-29T12:47:59.796Z  WARN 25468 --- [    Test worker] [                                                 ] .ConfigServerTracingSettingsSynchronizer : Config Server settings delivery: phase=REFRESH, attemptId=00000000-0000-0000-0000-000000000001, outcome=STALE, messageCode=ACCEPTED_SEQUENCE_MISMATCH, base=SettingsRevision[agentInstanceId=66f8525d-95e6-4cf8-a2ca-d384e6fd7b3c, acceptedSequence=7]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

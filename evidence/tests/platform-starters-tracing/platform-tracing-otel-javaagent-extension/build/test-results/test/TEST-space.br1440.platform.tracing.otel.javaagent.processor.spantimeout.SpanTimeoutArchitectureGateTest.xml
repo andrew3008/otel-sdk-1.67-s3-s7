@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutArchitectureGateTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:35.658Z" hostname="DESKTOP-OEGBG7F" time="0.009">
+  <properties/>
+  <testcase name="supportTypesAreNotPublic()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutArchitectureGateTest" time="0.0"/>
+  <testcase name="facadeDoesNotOwnTraceMapOrSpanPermitFieldsDirectly()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutArchitectureGateTest" time="0.002"/>
+  <testcase name="logRateLimitingIsOwnedOnlyByMinIntervalRateLimiter()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutArchitectureGateTest" time="0.002"/>
+  <testcase name="inFlightTraceIndexIsTheSingleAuthoritativeTraceOwner()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutArchitectureGateTest" time="0.001"/>
+  <testcase name="admissionRejectionsOwnsRejectionCountersAndPlannerIsStateless()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutArchitectureGateTest" time="0.002"/>
+  <testcase name="inFlightTraceIndexNeverLeaksTheRawMapThroughItsPublicSurface()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutArchitectureGateTest" time="0.0"/>
+  <testcase name="admissionBudgetIsTheSingleOwnerOfTheBudgetState()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutArchitectureGateTest" time="0.001"/>
+  <testcase name="scanOwnsForceEndCountersAndScannerOwnsHeartbeat()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutArchitectureGateTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:09.652Z" hostname="DESKTOP-OEGBG7F" time="0.006">
+  <properties/>
+  <testcase name="space.br1440.platform.tracing.SamplingObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ScrubbingObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ValidationObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ExportObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ExportProcessorValues" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.SafeExporterValues" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ProcessorMetricsObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ProcessorSpanTimeoutValues" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ProcessorCompositeValues" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ProcessorMetricsValues" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.001"/>
+  <testcase name="space.br1440.platform.tracing.DiagnosticsObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.SamplingObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.002"/>
+  <testcase name="space.br1440.platform.tracing.ScrubbingObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.001"/>
+  <testcase name="space.br1440.platform.tracing.ValidationObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ExportObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ExportProcessorValues" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.SafeExporterValues" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ProcessorMetricsObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ProcessorSpanTimeoutValues" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ProcessorCompositeValues" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.ProcessorMetricsValues" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <testcase name="space.br1440.platform.tracing.DiagnosticsObservation" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxObservationCodecTypeNameTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

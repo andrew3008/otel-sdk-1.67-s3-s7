@@ -1,0 +1,41 @@
+plugins {
+    id 'platform.java-library-publish'
+    id 'platform.java-library'
+    id 'platform.testing'
+}
+
+group = 'space.br1440.platform.starters.errorhandling'
+
+platformJavaLibrary {
+    bomProjectPath = ':spring-boot-starter-platform-bom'
+}
+
+dependencies {
+    api project(':platform-starters-error-handling:platform-error-handling-core')
+    api 'org.springframework.boot:spring-boot-starter-web'
+
+    compileOnly 'org.springframework.boot:spring-boot-starter-security'
+
+    compileOnly 'io.micrometer:micrometer-core'
+    compileOnly 'io.opentelemetry:opentelemetry-api'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    testImplementation 'com.tngtech.archunit:archunit-junit5'
+
+    testImplementation 'org.springframework.security:spring-security-core'
+    testImplementation 'org.springframework.security:spring-security-config'
+    testImplementation 'org.springframework.security:spring-security-web'
+
+    testImplementation 'io.micrometer:micrometer-core'
+    testImplementation 'io.opentelemetry:opentelemetry-api'
+
+    testImplementation "net.bytebuddy:byte-buddy:${libs.versions.byte.buddy.get()}"
+
+    testImplementation project(':platform-starters-error-handling:spring-boot-starter-platform-error-handling-webflux')
+}

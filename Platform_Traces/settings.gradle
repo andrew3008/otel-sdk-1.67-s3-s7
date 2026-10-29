@@ -1,0 +1,114 @@
+pluginManagement {
+    includeBuild('platform-starters-tracing/build-logic')
+
+    def platformConventionsVersion = '1.1.0'
+
+    repositories {
+        maven {
+            url = "https://n.1440.space/repository/platform-maven/"
+        }
+        maven {
+            url = "https://n.1440.space/repository/platform-maven-dev/"
+        }
+        maven {
+            url = "https://n.1440.space/repository/plugins.gradle.org-proxy/"
+        }
+        maven {
+            url = "https://n.1440.space/repository/repo1.maven.org-proxy"
+        }
+
+        boolean allowMavenLocal = providers.gradleProperty('allowMavenLocal')
+                .map { value -> Boolean.parseBoolean(value) }
+                .getOrElse(false)
+        if (allowMavenLocal) {
+            if (providers.environmentVariable('CI').isPresent()) {
+                throw new GradleException('mavenLocal is forbidden in CI')
+            }
+            mavenLocal()
+        }
+    }
+
+    plugins {
+        id 'platform.java-base' version platformConventionsVersion
+        id 'platform.java-library' version platformConventionsVersion
+        id 'platform.java-library-publish' version platformConventionsVersion
+        id 'platform.java-platform-publish' version platformConventionsVersion
+        id 'platform.publishing-repositories' version platformConventionsVersion
+        id 'platform.gradle-plugin-publish' version platformConventionsVersion
+        id 'platform.testing' version platformConventionsVersion
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+
+    repositories {
+        maven {
+            url = uri("https://n.1440.space/repository/platform-maven/")
+        }
+        maven {
+            url = uri("https://n.1440.space/repository/platform-maven-dev/")
+        }
+        maven {
+            url = uri("https://n.1440.space/repository/repo1.maven.org-proxy")
+        }
+        maven {
+            url = uri("https://n.1440.space/repository/plugins.gradle.org-proxy/")
+        }
+
+        boolean allowMavenLocal = providers.gradleProperty('allowMavenLocal')
+                .map { value -> Boolean.parseBoolean(value) }
+                .getOrElse(false)
+        if (allowMavenLocal) {
+            if (providers.environmentVariable('CI').isPresent()) {
+                throw new GradleException('mavenLocal is forbidden in CI')
+            }
+            mavenLocal()
+        }
+    }
+}
+
+rootProject.name = 'spring-boot-platform-starters'
+
+include('platform-spring-boot-plugin')
+include('spring-boot-starter-platform-bom')
+
+include('platform-starters-common')
+include('platform-starters-common:spring-boot-starter-platform-common-uid1440')
+include('platform-starters-common:spring-boot-starter-platform-common-header-based-routing')
+include('platform-starters-common:spring-boot-starter-platform-common-x-trace-id')
+include('platform-starters-common:platform-starters-common-util')
+project(':platform-starters-common:spring-boot-starter-platform-common-uid1440').projectDir =
+        file("${rootDir}/platform-starters-common/spring-boot-starter-uid1440")
+project(':platform-starters-common:spring-boot-starter-platform-common-header-based-routing').projectDir =
+        file("${rootDir}/platform-starters-common/spring-boot-starter-header-based-routing")
+project(':platform-starters-common:spring-boot-starter-platform-common-x-trace-id').projectDir =
+        file("${rootDir}/platform-starters-common/spring-boot-starter-x-trace-id")
+
+include('spring-boot-starter-platform-metrics')
+include('spring-boot-starter-platform-logging')
+include('spring-boot-starter-platform-leader-election')
+include('spring-boot-starter-platform-health-checks')
+include('spring-boot-starter-platform-security')
+include('spring-boot-starter-platform-postgres-read-write-split-jdbc')
+
+include('platform-starters-tracing')
+include('platform-starters-tracing:spring-boot-starter-platform-tracing-api')
+include('platform-starters-tracing:platform-tracing-runtime-policy')
+include('platform-starters-tracing:spring-boot-starter-platform-tracing-otel')
+include('platform-starters-tracing:spring-boot-starter-platform-tracing-autoconfigure')
+include('platform-starters-tracing:spring-boot-starter-platform-tracing-autoconfigure-webmvc')
+include('platform-starters-tracing:spring-boot-starter-platform-tracing-autoconfigure-webflux')
+include('platform-starters-tracing:spring-boot-starter-platform-tracing-mvc')
+include('platform-starters-tracing:spring-boot-starter-platform-tracing-webflux')
+include('platform-starters-tracing:platform-tracing-testkit')
+include('platform-starters-tracing:platform-tracing-otel-javaagent-extension')
+include('platform-starters-tracing:platform-tracing-otel-javaagent-distribution')
+include('platform-starters-tracing:platform-tracing-jib-plugin')
+include('platform-starters-tracing:platform-tracing-jmx-contract')
+include('platform-starters-tracing:platform-tracing-e2e-tests')
+
+include('platform-starters-error-handling')
+include('platform-starters-error-handling:platform-error-handling-core')
+include('platform-starters-error-handling:spring-boot-starter-platform-error-handling-mvc')
+include('platform-starters-error-handling:spring-boot-starter-platform-error-handling-webflux')

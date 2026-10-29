@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.ClassificationSpanProcessorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.803Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="classifiesFastSpan()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ClassificationSpanProcessorTest" time="0.0"/>
+  <testcase name="classifiesSlowSpan()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ClassificationSpanProcessorTest" time="0.0"/>
+  <testcase name="classifiesNormalSpan()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ClassificationSpanProcessorTest" time="0.0"/>
+  <testcase name="setsHighPriorityForErrorSpansEvenIfFast()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ClassificationSpanProcessorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

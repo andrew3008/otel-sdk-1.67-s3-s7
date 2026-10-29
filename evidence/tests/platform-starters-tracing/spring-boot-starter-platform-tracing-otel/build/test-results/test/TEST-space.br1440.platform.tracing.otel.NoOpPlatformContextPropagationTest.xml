@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.NoOpPlatformContextPropagationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:46.953Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="contextAwareExecutor_returns_original_object()" classname="space.br1440.platform.tracing.otel.NoOpPlatformContextPropagationTest" time="0.001"/>
+  <testcase name="wrapThrowingSupplier_returns_original_object()" classname="space.br1440.platform.tracing.otel.NoOpPlatformContextPropagationTest" time="0.001"/>
+  <testcase name="contextAwareExecutorService_returns_original_object()" classname="space.br1440.platform.tracing.otel.NoOpPlatformContextPropagationTest" time="0.002"/>
+  <testcase name="wrapRunnable_returns_original_object()" classname="space.br1440.platform.tracing.otel.NoOpPlatformContextPropagationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

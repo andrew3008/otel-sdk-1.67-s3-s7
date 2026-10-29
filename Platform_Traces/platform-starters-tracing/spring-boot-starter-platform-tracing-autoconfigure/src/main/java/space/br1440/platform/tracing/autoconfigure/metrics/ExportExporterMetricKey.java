@@ -1,0 +1,27 @@
+package space.br1440.platform.tracing.autoconfigure.metrics;
+
+import space.br1440.platform.tracing.autoconfigure.jmx.contract.generated.JmxWireContract;
+
+enum ExportExporterMetricKey {
+
+    EXPORT_BATCHES(JmxWireContract.KEY_SAFE_EXPORTER_METRICS_EXPORT_BATCHES),
+    EXPORT_BATCH_FAILURES(JmxWireContract.KEY_SAFE_EXPORTER_METRICS_EXPORT_BATCH_FAILURES),
+    EXPORTED_SPANS(JmxWireContract.KEY_SAFE_EXPORTER_METRICS_EXPORTED_SPANS),
+    TRANSPORT_DROPPED_SPANS(JmxWireContract.KEY_SAFE_EXPORTER_METRICS_TRANSPORT_DROPPED_SPANS),
+    PARTIAL_SUCCESS_BATCHES(JmxWireContract.KEY_SAFE_EXPORTER_METRICS_PARTIAL_SUCCESS_BATCHES),
+    REJECTED_SPANS(JmxWireContract.KEY_SAFE_EXPORTER_METRICS_REJECTED_SPANS),
+    ACCEPTED_UNKNOWN_BATCHES(JmxWireContract.KEY_SAFE_EXPORTER_METRICS_ACCEPTED_UNKNOWN_BATCHES),
+    FLUSH_FAILURES(JmxWireContract.KEY_SAFE_EXPORTER_METRICS_FLUSH_FAILURES),
+    SHUTDOWN_FAILURES(JmxWireContract.KEY_SAFE_EXPORTER_METRICS_SHUTDOWN_FAILURES),
+    SUPPRESSED_SPANS_EXPORT_DISABLED(JmxWireContract.KEY_SAFE_EXPORTER_METRICS_SUPPRESSED_SPANS_EXPORT_DISABLED);
+
+    private final String wireKey;
+
+    ExportExporterMetricKey(String wireKey) {
+        this.wireKey = wireKey;
+    }
+
+    String wireKey() {
+        return wireKey;
+    }
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.bootstrap.ConfigurationPropertySourceIterationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:56.530Z" hostname="DESKTOP-OEGBG7F" time="0.523">
+  <properties/>
+  <testcase name="iterationExposesConfigServerLeafAndMappedEnvironmentName()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.ConfigurationPropertySourceIterationTest" time="0.002"/>
+  <testcase name="iterationSeesNamesAddedToTheSameSourceAfterContextRefresh()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.ConfigurationPropertySourceIterationTest" time="0.521"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-29T12:47:56.881Z  INFO 25468 --- [    Test worker] [                                                 ] w.o.g.p.i.worker.GradleWorkerMain        : Starting GradleWorkerMain using Java 21.0.6 with PID 25468 (started by andrew in E:\Platform_Traces\platform-starters-tracing\spring-boot-starter-platform-tracing-autoconfigure)
+2026-10-29T12:47:56.882Z  INFO 25468 --- [    Test worker] [                                                 ] w.o.g.p.i.worker.GradleWorkerMain        : No active profile set, falling back to 1 default profile: "default"
+2026-10-29T12:47:56.882Z DEBUG 25468 --- [    Test worker] [                                                 ] o.s.boot.SpringApplication               : Loading source class space.br1440.platform.tracing.autoconfigure.bootstrap.ConfigurationPropertySourceIterationTest$RefreshOnlyConfiguration
+2026-10-29T12:47:56.924Z  INFO 25468 --- [    Test worker] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7a7ca34f-05c0-3d7d-beaa-ebe93da08a3c
+2026-10-29T12:47:56.948Z DEBUG 25468 --- [    Test worker] [                                                 ] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   RefreshAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.cloud.context.scope.refresh.RefreshScope' (OnClassCondition)
+      - @ConditionalOnProperty (spring.cloud.refresh.enabled) matched (OnPropertyCondition)
+
+   RefreshAutoConfiguration#configDataContextRefresher matched:
+      - @ConditionalOnMissingBean (types: org.springframework.cloud.context.refresh.ConfigDataContextRefresher; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - NoneNestedConditions 0 matched 3 did not; NestedCondition on ConditionalOnBootstrapDisabled.OnBootstrapDisabledCondition.OnBootstrapEnabled @ConditionalOnProperty (spring.cloud.bootstrap.enabled) did not find property 'spring.cloud.bootstrap.enabled'; NestedCondition on ConditionalOnBootstrapDisabled.OnBootstrapDisabledCondition.OnUseLegacyProcessingEnabled @ConditionalOnProperty (spring.config.use-legacy-processing) did not find property 'spring.config.use-legacy-processing'; NestedCondition on ConditionalOnBootstrapDisabled.OnBootstrapDisabledCondition.OnBootstrapMarkerClassPresent @ConditionalOnClass did not find required class 'org.springframework.cloud.bootstrap.marker.Marker' (ConditionalOnBootstrapDisabled.OnBootstrapDisabledCondition)
+
+   RefreshAutoConfiguration#loggingRebinder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.cloud.logging.LoggingRebinder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   RefreshAutoConfiguration#refreshScope matched:
+      - @ConditionalOnMissingBean (types: org.springframework.cloud.context.scope.refresh.RefreshScope; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   RefreshAutoConfiguration#refreshScopeLifecycle matched:
+      - @ConditionalOnProperty (spring.cloud.refresh.on-restart.enabled) matched (OnPropertyCondition)
+
+
+Negative matches:
+-----------------
+
+   RefreshAutoConfiguration#legacyContextRefresher:
+      Did not match:
+         - AnyNestedCondition 0 matched 3 did not; NestedCondition on ConditionalOnBootstrapEnabled.OnBootstrapEnabledCondition.OnBootstrapEnabled @ConditionalOnProperty (spring.cloud.bootstrap.enabled) did not find property 'spring.cloud.bootstrap.enabled'; NestedCondition on ConditionalOnBootstrapEnabled.OnBootstrapEnabledCondition.OnUseLegacyProcessingEnabled @ConditionalOnProperty (spring.config.use-legacy-processing) did not find property 'spring.config.use-legacy-processing'; NestedCondition on ConditionalOnBootstrapEnabled.OnBootstrapEnabledCondition.OnBootstrapMarkerClassPresent @ConditionalOnClass did not find required class 'org.springframework.cloud.bootstrap.marker.Marker' (ConditionalOnBootstrapEnabled.OnBootstrapEnabledCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2026-10-29T12:47:56.950Z  INFO 25468 --- [    Test worker] [                                                 ] w.o.g.p.i.worker.GradleWorkerMain        : Started GradleWorkerMain in 0.27 seconds (process running for 7.723)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

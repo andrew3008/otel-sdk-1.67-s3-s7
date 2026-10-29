@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.094Z" hostname="DESKTOP-OEGBG7F" time="0.031">
+  <properties/>
+  <testcase name="absent_signal_delegates_decision_to_external_sampler()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.0"/>
+  <testcase name="drop_paths_drop_span_when_no_force_signal()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.0"/>
+  <testcase name="sampling_reason_from_ratio()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.0"/>
+  <testcase name="sampling_reason_from_parent()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.001"/>
+  <testcase name="sampling_reason_from_force_header()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.0"/>
+  <testcase name="description_reads_one_policy_revision()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.029"/>
+  <testcase name="forced_recording_returns_record_and_sample()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.0"/>
+  <testcase name="sampling_reason_on_drop_paths()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.001"/>
+  <testcase name="custom_value_comparison_depends_on_forceRecordValues()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.0"/>
+  <testcase name="force_signal_does_not_override_hard_drop()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.0"/>
+  <testcase name="QA_signal_presence_enables_recording()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.0"/>
+  <testcase name="qa_signal_does_not_override_hard_drop()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.CompositeSamplerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorLifecycleTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:24.774Z" hostname="DESKTOP-OEGBG7F" time="0.449">
+  <properties/>
+  <testcase name="Исключение из exporter.export() изолировано: процессор продолжает работать, exportFailures растёт" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorLifecycleTest" time="0.001"/>
+  <testcase name="exportFailureDuringShutdownDrainFailsShutdown()" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorLifecycleTest" time="0.0"/>
+  <testcase name="lateDelegateCompletionAfterExportTimeoutDoesNotChangeTheProcessorResult()" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorLifecycleTest" time="0.227"/>
+  <testcase name="После shutdown новые спаны учитываются как droppedSpansAfterShutdown, не как overflow" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorLifecycleTest" time="0.063"/>
+  <testcase name="shutdown дренирует очередь до пустоты в пределах shutdownTimeout" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorLifecycleTest" time="0.001"/>
+  <testcase name="exportTimeout срабатывает: счётчик exportTimeouts инкрементируется, экспорт неуспешен" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorLifecycleTest" time="0.155"/>
+  <testcase name="forceFlush дренирует очередь и завершается успехом" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorLifecycleTest" time="0.001"/>
+  <testcase name="shutdown идемпотентен: повторный вызов возвращает тот же CompletableResultCode" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorLifecycleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

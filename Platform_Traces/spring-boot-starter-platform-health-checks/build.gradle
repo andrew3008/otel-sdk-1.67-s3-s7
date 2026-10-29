@@ -1,0 +1,48 @@
+plugins {
+    id 'platform.java-library-publish'
+    id 'platform.java-library'
+    id 'platform.testing'
+}
+
+platformJavaLibrary {
+    bomProjectPath = ':spring-boot-starter-platform-bom'
+}
+
+dependencies {
+    api 'org.springframework.boot:spring-boot-autoconfigure'
+    api 'org.springframework.boot:spring-boot-actuator'
+    api 'org.springframework.boot:spring-boot-actuator-autoconfigure'
+    api 'org.springframework.boot:spring-boot-starter-jdbc'
+    api 'org.springframework.kafka:spring-kafka'
+    api 'com.zaxxer:HikariCP'
+    api 'org.apache.commons:commons-lang3'
+
+    compileOnly 'io.minio:minio'
+    testImplementation 'io.minio:minio'
+
+    compileOnly 'org.springframework.boot:spring-boot-starter-validation'
+    compileOnly 'org.projectlombok:lombok'
+
+    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    testImplementation libs.bundles.testcontainers
+    testImplementation "org.testcontainers:kafka:${libs.versions.testcontainers.get()}"
+    testImplementation "org.testcontainers:postgresql:${libs.versions.testcontainers.get()}"
+    testImplementation "org.testcontainers:minio:${libs.versions.testcontainers.get()}"
+
+    testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+
+    testImplementation 'org.postgresql:postgresql'
+    testImplementation 'com.h2database:h2'
+
+    testImplementation 'org.springframework.kafka:spring-kafka'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+}

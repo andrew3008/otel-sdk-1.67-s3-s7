@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.sampler.SafeSamplerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.127Z" hostname="DESKTOP-OEGBG7F" time="0.006">
+  <properties/>
+  <testcase name="null_delegate_result_is_treated_as_failure()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.SafeSamplerTest" time="0.002"/>
+  <testcase name="delegate_failure_is_not_thrown_and_falls_back_to_drop()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.SafeSamplerTest" time="0.001"/>
+  <testcase name="degraded_mode_stops_calling_consistently_failing_delegate()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.SafeSamplerTest" time="0.002"/>
+  <testcase name="getDescription_is_safe_when_delegate_fails()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.SafeSamplerTest" time="0.0"/>
+  <testcase name="fatal_delegate_error_is_propagated_and_counted_by_breaker()" classname="space.br1440.platform.tracing.otel.javaagent.sampler.SafeSamplerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

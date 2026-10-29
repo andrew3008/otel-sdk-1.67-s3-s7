@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingJmxMetricsScrapeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:11.002Z" hostname="DESKTOP-OEGBG7F" time="0.019">
+  <properties/>
+  <testcase name="fullScrapeCoalescesJmxTransportCallsPerBinderDomain()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingJmxMetricsScrapeTest" time="0.019"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

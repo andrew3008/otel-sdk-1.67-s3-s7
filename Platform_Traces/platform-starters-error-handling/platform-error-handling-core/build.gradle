@@ -1,0 +1,94 @@
+plugins {
+    id 'platform.java-library-publish'
+    id 'platform.java-library'
+    id 'platform.testing'
+}
+
+group = 'space.br1440.platform.starters.errorhandling'
+
+platformJavaLibrary {
+    bomProjectPath = ':spring-boot-starter-platform-bom'
+}
+
+dependencies {
+    api 'org.springframework.boot:spring-boot-starter'
+    api 'org.springframework:spring-web'
+    api 'space.br1440.platform:error-handling-model'
+    api project(':platform-starters-tracing:spring-boot-starter-platform-tracing-api')
+
+    implementation 'org.apache.commons:commons-lang3'
+    implementation 'org.slf4j:slf4j-api'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation project(':platform-starters-common:platform-starters-common-util')
+
+    compileOnly 'org.springframework.boot:spring-boot-starter-security'
+    compileOnly 'org.springframework.security:spring-security-oauth2-core'
+
+    compileOnly 'org.springframework:spring-tx'
+    compileOnly 'org.jooq:jooq'
+
+    compileOnly 'jakarta.validation:jakarta.validation-api'
+
+    compileOnly 'io.micrometer:micrometer-core'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    testImplementation 'com.tngtech.archunit:archunit-junit5'
+    testImplementation libs.bundles.testcontainers
+    testImplementation "org.testcontainers:postgresql:${libs.versions.testcontainers.get()}"
+    testImplementation "org.testcontainers:kafka:${libs.versions.testcontainers.get()}"
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    testImplementation 'org.springframework.boot:spring-boot-autoconfigure'
+
+    testImplementation 'org.postgresql:postgresql'
+    testImplementation 'org.springframework:spring-jdbc'
+    testImplementation 'com.zaxxer:HikariCP'
+    testImplementation 'org.jooq:jooq'
+    testImplementation 'org.hibernate.orm:hibernate-core'
+    testImplementation 'org.springframework:spring-orm'
+
+    testImplementation 'jakarta.validation:jakarta.validation-api'
+    testImplementation 'org.hibernate.validator:hibernate-validator'
+    testImplementation "org.glassfish.expressly:expressly:${libs.versions.expressly.get()}"
+
+    testImplementation 'org.springframework.security:spring-security-core'
+    testImplementation 'org.springframework.security:spring-security-oauth2-core'
+    testImplementation 'org.springframework.security:spring-security-oauth2-client'
+
+    testImplementation 'io.micrometer:micrometer-core'
+
+    testImplementation 'org.springframework:spring-webflux'
+    testImplementation 'org.springframework:spring-websocket'
+
+    testImplementation 'org.springframework.kafka:spring-kafka'
+    testImplementation 'org.springframework.amqp:spring-amqp'
+    testImplementation 'org.springframework.amqp:spring-rabbit'
+
+    testImplementation 'io.github.resilience4j:resilience4j-circuitbreaker'
+
+    testImplementation 'io.lettuce:lettuce-core'
+
+    testImplementation('io.minio:minio') {
+        exclude group: 'at.yawk.lz4', module: 'lz4-java'
+    }
+    testImplementation("com.clickhouse:client-v2:${libs.versions.clickhouse.client.v2.get()}") {
+        exclude group: 'at.yawk.lz4', module: 'lz4-java'
+    }
+
+    testImplementation 'io.netty:netty-codec-dns'
+    testImplementation 'io.netty:netty-resolver-dns'
+    testImplementation 'io.netty:netty-handler'
+
+    testImplementation 'io.github.openfeign:feign-core'
+
+    testImplementation 'org.springframework.vault:spring-vault-core'
+
+    testImplementation 'com.google.protobuf:protobuf-java'
+}

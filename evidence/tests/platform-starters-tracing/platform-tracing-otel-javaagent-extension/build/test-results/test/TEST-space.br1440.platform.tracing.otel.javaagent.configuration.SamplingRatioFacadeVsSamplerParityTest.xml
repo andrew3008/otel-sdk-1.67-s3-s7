@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.configuration.SamplingRatioFacadeVsSamplerParityTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.063Z" hostname="DESKTOP-OEGBG7F" time="0.004">
+  <properties/>
+  <testcase name="absentRatioResolvesToTheSameDefaultInFacadeAndSessionSampler()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.SamplingRatioFacadeVsSamplerParityTest" time="0.002"/>
+  <testcase name="emptyRatioResolvesToTheSameDefaultInFacadeAndSessionSampler()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.SamplingRatioFacadeVsSamplerParityTest" time="0.001"/>
+  <testcase name="explicitRatioIsAdoptedByFacadeAndSessionSampler()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.SamplingRatioFacadeVsSamplerParityTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

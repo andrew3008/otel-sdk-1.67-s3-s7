@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:57.117Z" hostname="DESKTOP-OEGBG7F" time="0.066">
+  <properties/>
+  <testcase name="[1] channel=NONE" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.005"/>
+  <testcase name="[2] channel=CONFIG_SERVER" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.004"/>
+  <testcase name="[3] channel=ACTUATOR" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.004"/>
+  <testcase name="disabledFromConfigServerStarts()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.005"/>
+  <testcase name="missingChannelFailsClosed()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.006"/>
+  <testcase name="unknownChannelFailsClosed()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.004"/>
+  <testcase name="disabledActuatorChannelFailsClosed()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.003"/>
+  <testcase name="disabledWithoutChannelStarts()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.005"/>
+  <testcase name="emptyChannelFailsClosed()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.003"/>
+  <testcase name="staticIsRejectedWithoutAlias()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.003"/>
+  <testcase name="disabledNoneStarts()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.005"/>
+  <testcase name="helmIsRejectedWithoutMappingToNone()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelFailFastTest" time="0.004"/>
+  <system-out><![CDATA[2026-10-29T12:47:57.144Z  WARN 25468 --- [    Test worker] [                                                 ] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: space.br1440.platform.tracing.autoconfigure.control.TracingConfigurationGuardException: Missing required property 'platform.tracing.control.channel'
+2026-10-29T12:47:57.152Z  WARN 25468 --- [    Test worker] [                                                 ] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: space.br1440.platform.tracing.autoconfigure.control.TracingConfigurationGuardException: Invalid property 'platform.tracing.control.channel'='DEV_ACTUATOR'. Accepted values: [NONE, CONFIG_SERVER, ACTUATOR]
+2026-10-29T12:47:57.156Z  WARN 25468 --- [    Test worker] [                                                 ] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: space.br1440.platform.tracing.autoconfigure.control.TracingConfigurationGuardException: Tracing disabled is incompatible with ACTUATOR control channel.
+2026-10-29T12:47:57.167Z  WARN 25468 --- [    Test worker] [                                                 ] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: space.br1440.platform.tracing.autoconfigure.control.TracingConfigurationGuardException: Property 'platform.tracing.control.channel' must not be blank
+2026-10-29T12:47:57.172Z  WARN 25468 --- [    Test worker] [                                                 ] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: space.br1440.platform.tracing.autoconfigure.control.TracingConfigurationGuardException: Invalid property 'platform.tracing.control.channel'='STATIC'. Accepted values: [NONE, CONFIG_SERVER, ACTUATOR]
+2026-10-29T12:47:57.183Z  WARN 25468 --- [    Test worker] [                                                 ] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: space.br1440.platform.tracing.autoconfigure.control.TracingConfigurationGuardException: Invalid property 'platform.tracing.control.channel'='HELM'. Accepted values: [NONE, CONFIG_SERVER, ACTUATOR]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

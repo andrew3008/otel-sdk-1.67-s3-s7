@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.ValidationRuntimeFoundationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:23.550Z" hostname="DESKTOP-OEGBG7F" time="0.006">
+  <properties/>
+  <testcase name="processor_uses_updated_snapshot_without_reconstruct()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidationRuntimeFoundationTest" time="0.001"/>
+  <testcase name="concurrent_updateValidation_and_onEnding_never_throws()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidationRuntimeFoundationTest" time="0.005"/>
+  <testcase name="warn_level_validation_failure_still_exports_span_not_dropped()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidationRuntimeFoundationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

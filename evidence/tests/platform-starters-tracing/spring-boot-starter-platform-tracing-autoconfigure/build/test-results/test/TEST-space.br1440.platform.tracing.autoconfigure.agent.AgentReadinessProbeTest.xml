@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:54.659Z" hostname="DESKTOP-OEGBG7F" time="0.01">
+  <properties/>
+  <testcase name="rejectsDuplicateCapabilityTokenAsMalformedSnapshot()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.002"/>
+  <testcase name="readsFailedSnapshotWithPrimaryAndEffectiveFailureCodes()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.001"/>
+  <testcase name="attributeFailureIsIndeterminateAndKeepsWrappedCause()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.001"/>
+  <testcase name="rejectsMalformedCompositeType()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.0"/>
+  <testcase name="readsInitializingSnapshotWithoutFlatteningFields()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.001"/>
+  <testcase name="rejectsNonCanonicalPrimaryFailureCodeAsMalformedSnapshot()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.0"/>
+  <testcase name="rejectsAbsentEndpoint()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.0"/>
+  <testcase name="rejectsLegacyNonOpenMBeanMetadataBeforeReadingPayload()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.0"/>
+  <testcase name="readsOneExactGeneratedReadySnapshot()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.001"/>
+  <testcase name="rejectsNullPrimaryFailureCodeAsMalformedSnapshot()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.0"/>
+  <testcase name="readsFailedSnapshotWithProducerFailureCode()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.0"/>
+  <testcase name="rejectsSnapshotWithoutPrimaryFailureCodeAsMalformedSnapshot()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.001"/>
+  <testcase name="rejectsCustomDtoBeforeDecode()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessProbeTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

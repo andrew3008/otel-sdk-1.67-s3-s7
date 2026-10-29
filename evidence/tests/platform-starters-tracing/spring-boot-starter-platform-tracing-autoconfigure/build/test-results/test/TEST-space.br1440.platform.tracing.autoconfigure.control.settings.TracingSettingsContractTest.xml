@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:08.719Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="controlChannelHasOnlySupportedValues()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractTest" time="0.0"/>
+  <testcase name="missingControlChannelIsRejected()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractTest" time="0.001"/>
+  <testcase name="actuatorIsAllowedWithoutEnvironmentGate()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractTest" time="0.0"/>
+  <testcase name="completeSnapshotIsBuilt()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractTest" time="0.0"/>
+  <testcase name="singleLeafMutationPreservesOtherSettings()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractTest" time="0.001"/>
+  <testcase name="disabledTracingWithConfigServerIsAccepted()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractTest" time="0.0"/>
+  <testcase name="legacyDevActuatorControlChannelIsRejected()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractTest" time="0.001"/>
+  <testcase name="emptyControlChannelIsRejected()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractTest" time="0.001"/>
+  <testcase name="partialSnapshotIsRejected()" classname="space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderPreferenceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:15.167Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="Preference на чужой provider прекращает bootstrap" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderPreferenceTest" time="0.001"/>
+  <testcase name="Чужой GRPC provider не оставляет частично установленный HTTP provider" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderPreferenceTest" time="0.001"/>
+  <testcase name="Повторная установка идемпотентна" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderPreferenceTest" time="0.0"/>
+  <testcase name="Без заданной preference устанавливаются наблюдающие senders" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderPreferenceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

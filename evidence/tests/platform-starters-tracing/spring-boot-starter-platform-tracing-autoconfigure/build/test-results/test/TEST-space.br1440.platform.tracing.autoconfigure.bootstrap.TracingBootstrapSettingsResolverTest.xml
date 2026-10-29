@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" tests="26" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:57.064Z" hostname="DESKTOP-OEGBG7F" time="0.018">
+  <properties/>
+  <testcase name="disabledActuatorChannelFailsBeforeSettingsAreReturned()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.001"/>
+  <testcase name="disabledConfigServerChannelIsPreserved()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="unknownControlChannelFailsFast()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.001"/>
+  <testcase name="helmIsNotMappedToStatic()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.001"/>
+  <testcase name="registrarRejectsSecondOwner()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="missingEnabledDefaultsToTrue()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="staticControlChannelIsRejectedWithoutAlias()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="enabledIsStrictBoolean()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="surroundingWhitespaceIsAccepted()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="legalChannelsAreResolved()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="[1] rawChannel=null, rawEnabled=null, expected=null" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.001"/>
+  <testcase name="[2] rawChannel=null, rawEnabled=false, expected=NONE" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.001"/>
+  <testcase name="[3] rawChannel= NONE , rawEnabled=null, expected=NONE" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.001"/>
+  <testcase name="[4] rawChannel=config_server, rawEnabled=null, expected=CONFIG_SERVER" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="[5] rawChannel=Actuator, rawEnabled=null, expected=ACTUATOR" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.001"/>
+  <testcase name="[6] rawChannel=, rawEnabled=null, expected=null" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="[7] rawChannel=REMOTE, rawEnabled=null, expected=null" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="[8] rawChannel=null, rawEnabled=, expected=null" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="emptyControlChannelFailsFast()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.001"/>
+  <testcase name="disabledTracingWithoutControlChannelUsesNone()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="[1] rawValue=null, expected=true" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.001"/>
+  <testcase name="[2] rawValue= true , expected=true" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="[3] rawValue=FALSE, expected=false" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="[4] rawValue=, expected=null" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.001"/>
+  <testcase name="[5] rawValue=yes, expected=null" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.0"/>
+  <testcase name="enabledTracingWithoutControlChannelFailsFast()" classname="space.br1440.platform.tracing.autoconfigure.bootstrap.TracingBootstrapSettingsResolverTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

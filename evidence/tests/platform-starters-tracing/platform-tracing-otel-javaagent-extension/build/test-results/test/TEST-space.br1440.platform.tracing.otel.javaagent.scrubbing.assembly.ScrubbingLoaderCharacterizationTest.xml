@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.scrubbing.assembly.ScrubbingLoaderCharacterizationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.717Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="startup_policy_is_immutable_and_scrubs_password()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.assembly.ScrubbingLoaderCharacterizationTest" time="0.001"/>
+  <testcase name="loader_missing_resource_fails_closed()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.assembly.ScrubbingLoaderCharacterizationTest" time="0.001"/>
+  <testcase name="loader_classpath_properties_preserves_order()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.assembly.ScrubbingLoaderCharacterizationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="degenerate inputs" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.937Z" hostname="DESKTOP-OEGBG7F" time="0.007">
+  <properties/>
+  <testcase name="[1] blank/null → null" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$DegenerateInputs" time="0.0"/>
+  <testcase name="[2] blank/null → null" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$DegenerateInputs" time="0.0"/>
+  <testcase name="[3] blank/null → null" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$DegenerateInputs" time="0.0"/>
+  <testcase name="[4] blank/null → null" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$DegenerateInputs" time="0.001"/>
+  <testcase name="[5] blank/null → null" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$DegenerateInputs" time="0.0"/>
+  <testcase name="[6] blank/null → null" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$DegenerateInputs" time="0.0"/>
+  <testcase name="URL without scheme, query and userinfo — returned unchanged" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$DegenerateInputs" time="0.0"/>
+  <testcase name="leading/trailing whitespace is stripped" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$DegenerateInputs" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

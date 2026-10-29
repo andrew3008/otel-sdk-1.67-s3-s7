@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSpanProcessorAdvancedTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:23.502Z" hostname="DESKTOP-OEGBG7F" time="0.006">
+  <properties/>
+  <testcase name="empty_rule_list_does_not_crash_processor_and_does_not_change_attributes()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSpanProcessorAdvancedTest" time="0.001"/>
+  <testcase name="exception_in_custom_rule_is_isolated_by_circuit_breaker_without_crashing_processor()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSpanProcessorAdvancedTest" time="0.001"/>
+  <testcase name="non_string_DROP_overwrites_type_neutral_sentinel()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSpanProcessorAdvancedTest" time="0.002"/>
+  <testcase name="merge_strict_action_wins_over_soft()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingSpanProcessorAdvancedTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

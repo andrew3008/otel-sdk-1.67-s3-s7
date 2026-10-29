@@ -1,0 +1,20 @@
+﻿[
+    {
+        "Configuration":  "otel-collector-agent-loadbalancing",
+        "ExitCode":  0,
+        "Stdout":  "E:\\Platform_Traces\\build\\otel-sdk-1.67-s3-s7\\otel-collector-agent-loadbalancing.validate.stdout.log",
+        "Stderr":  "E:\\Platform_Traces\\build\\otel-sdk-1.67-s3-s7\\otel-collector-agent-loadbalancing.validate.stderr.log"
+    },
+    {
+        "Configuration":  "otel-collector-gateway-tail-sampling",
+        "ExitCode":  0,
+        "Stdout":  "E:\\Platform_Traces\\build\\otel-sdk-1.67-s3-s7\\otel-collector-gateway-tail-sampling.validate.stdout.log",
+        "Stderr":  "E:\\Platform_Traces\\build\\otel-sdk-1.67-s3-s7\\otel-collector-gateway-tail-sampling.validate.stderr.log"
+    },
+    {
+        "Configuration":  "otel-collector-config-ttl-tiers",
+        "ExitCode":  0,
+        "Stdout":  "E:\\Platform_Traces\\build\\otel-sdk-1.67-s3-s7\\otel-collector-config-ttl-tiers.validate.stdout.log",
+        "Stderr":  "E:\\Platform_Traces\\build\\otel-sdk-1.67-s3-s7\\otel-collector-config-ttl-tiers.validate.stderr.log"
+    }
+]

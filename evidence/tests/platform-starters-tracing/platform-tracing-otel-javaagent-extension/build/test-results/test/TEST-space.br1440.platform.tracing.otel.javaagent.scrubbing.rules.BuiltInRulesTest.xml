@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.761Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="password_key_rule_drops_by_name()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest" time="0.0"/>
+  <testcase name="user_identity_drops_full_name_and_hashes_login()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest" time="0.0"/>
+  <testcase name="location_drops_geocoordinates()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest" time="0.0"/>
+  <testcase name="jwt_rule_drops_only_string_value_starting_with_eyJ()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest" time="0.0"/>
+  <testcase name="email_rule_hashes_string_with_email()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest" time="0.001"/>
+  <testcase name="email_rule_hashes_over_limit_value_without_regex_scan()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest" time="0.0"/>
+  <testcase name="critical_flag_true_for_security_rules_false_for_others()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest" time="0.0"/>
+  <testcase name="email_rule_handles_worst_case_bounded_input_within_timeout()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest" time="0.001"/>
+  <testcase name="ip_address_returns_truncate_with_marker()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

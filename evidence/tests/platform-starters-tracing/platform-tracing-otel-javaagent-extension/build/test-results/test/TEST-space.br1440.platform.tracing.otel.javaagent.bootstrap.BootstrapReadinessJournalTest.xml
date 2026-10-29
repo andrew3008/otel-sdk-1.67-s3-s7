@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapReadinessJournalTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:11.656Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="failedPublicationAlignsUnavailableEvidenceWithReadinessVersion()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapReadinessJournalTest" time="0.001"/>
+  <testcase name="failedPublicationRequiresLifecycleMonitor()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapReadinessJournalTest" time="0.001"/>
+  <testcase name="failureAfterForeignReadyAdvancesObservedEvidenceGeneration()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapReadinessJournalTest" time="0.0"/>
+  <testcase name="escalationPreservesMetadataFromFirstFailedSnapshot()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapReadinessJournalTest" time="0.0"/>
+  <testcase name="repeatedFailurePairPreservesFirstFailedGeneration()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapReadinessJournalTest" time="0.0"/>
+  <testcase name="failureWithoutBatchHasNoEvidenceGeneration()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapReadinessJournalTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

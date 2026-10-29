@@ -1,0 +1,108 @@
+import com.github.spotbugs.snom.Confidence
+import com.github.spotbugs.snom.Effort
+
+plugins {
+    id 'platform.java-library-publish'
+    id 'platform.java-library'
+    id 'platform.testing'
+    alias(libs.plugins.postgresReadWriteSplitJdbc.spotbugs)
+}
+
+platformJavaLibrary {
+    bomProjectPath = ':spring-boot-starter-platform-bom'
+}
+
+spotbugs {
+    toolVersion = '4.8.6'
+    effort = Effort.MAX
+    reportLevel = Confidence.valueOf('MEDIUM')
+    excludeFilter = file('config/spotbugs/exclude.xml')
+}
+
+dependencies {
+    api 'org.springframework.boot:spring-boot-starter-validation'
+    api 'space.br1440.platform:error-handling-model'
+
+    api 'org.springframework.boot:spring-boot-starter-jdbc'
+    api 'org.springframework.boot:spring-boot-starter-aop'
+    api 'com.zaxxer:HikariCP'
+
+    api 'org.springframework:spring-tx'
+    api 'org.springframework:spring-aop'
+
+    api 'org.springframework.boot:spring-boot-autoconfigure'
+
+    compileOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compileOnly 'org.springframework.boot:spring-boot-starter-jooq'
+
+    compileOnly 'io.micrometer:micrometer-core'
+    compileOnly 'io.micrometer:micrometer-observation'
+
+    compileOnly 'org.springframework.boot:spring-boot-starter-actuator'
+
+    compileOnly 'com.fasterxml.jackson.core:jackson-annotations'
+
+    compileOnly 'org.projectlombok:lombok'
+
+    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    testImplementation 'org.springframework.boot:spring-boot-starter-jooq'
+    testImplementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    testImplementation 'io.micrometer:micrometer-core'
+    testImplementation 'io.micrometer:micrometer-observation'
+    testImplementation 'io.micrometer:micrometer-observation-test'
+
+    testImplementation 'org.springframework:spring-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation 'com.h2database:h2'
+
+    testImplementation libs.bundles.testcontainers
+    testImplementation "org.testcontainers:postgresql:${libs.versions.testcontainers.get()}"
+    testImplementation "org.testcontainers:toxiproxy:${libs.versions.testcontainers.get()}"
+
+    testImplementation 'org.postgresql:postgresql'
+    testImplementation "org.awaitility:awaitility:${libs.versions.awaitility.get()}"
+    testImplementation 'com.tngtech.archunit:archunit-junit5'
+
+    testImplementation 'ch.qos.logback:logback-classic'
+
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+}
+
+tasks.named('spotbugsMain') {
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+tasks.named('spotbugsTest') {
+    enabled = false
+}
+
+tasks.named('test', Test) {
+    exclude 'space/br1440/platform/datasource/it/**'
+
+    systemProperty 'testcontainers.reuse.enable', 'true'
+    jvmArgs '-XX:+EnableDynamicAgentLoading', '-Djdk.attach.allowAttachSelf=true'
+    timeout = Duration.ofMinutes(15)
+}
+
+tasks.register('integrationTest', Test) {
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
+
+    include 'space/br1440/platform/datasource/it/**'
+
+    systemProperty 'testcontainers.reuse.enable', 'true'
+    timeout = Duration.ofMinutes(45)
+    maxParallelForks = 1
+}

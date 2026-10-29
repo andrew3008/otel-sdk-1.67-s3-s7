@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceDefaultPolicyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.250Z" hostname="DESKTOP-OEGBG7F" time="0.0">
+  <properties/>
+  <testcase name="defaultPolicyMatchesExtensionDefaultsAndIsCapturedOnce()" classname="space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSourceDefaultPolicyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

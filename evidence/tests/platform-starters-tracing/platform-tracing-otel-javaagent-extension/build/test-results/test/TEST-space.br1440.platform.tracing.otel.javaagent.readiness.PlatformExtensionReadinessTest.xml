@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.047Z" hostname="DESKTOP-OEGBG7F" time="0.012">
+  <properties/>
+  <testcase name="generatedWireContractRequiresExactlyTheDeclaredCapabilities()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.001"/>
+  <testcase name="readinessFailureRejectsMalformedCodes()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.0"/>
+  <testcase name="capabilityInstalledAfterReadyReusesTheReadyGeneration()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.0"/>
+  <testcase name="repeatedFailurePairReusesCurrentGenerationAndLateCapabilitiesAreIgnored()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.002"/>
+  <testcase name="duplicateInstallationReusesTheCurrentGeneration()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.0"/>
+  <testcase name="readyRequiresEveryDeclaredCapability()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.0"/>
+  <testcase name="snapshotsAreImmutableStateGenerations()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.0"/>
+  <testcase name="snapshotDefensivelyCopiesCapabilitySets()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.0"/>
+  <testcase name="nullCapabilityIsRejectedAtTheApiBoundary()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.0"/>
+  <testcase name="unresolvedVersionCannotBecomeReady()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.0"/>
+  <testcase name="concurrentCapabilityInstallationDoesNotLoseUpdates()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.001"/>
+  <testcase name="invalidFailureCodesFallBackWithoutMaskingTheFailureTransition()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.0"/>
+  <testcase name="failureWinsEveryRaceWithTheLastCapabilityInstallation()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.006"/>
+  <testcase name="effectiveFailureCodeEscalatesWithoutReplacingPrimaryCode()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.0"/>
+  <testcase name="readyStateCanStillTransitionToTerminalFailure()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.001"/>
+  <testcase name="completionReportsTheCapturedMissingCapabilities()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.PlatformExtensionReadinessTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Optional subsystems disabled → validation and enrichment remain" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:20.565Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="validation_owner_is_the_processor_installed_in_composite()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest$AllDisabled" time="0.001"/>
+  <testcase name="no_span_timeout_set_when_all_disabled()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest$AllDisabled" time="0.0"/>
+  <testcase name="no_metrics_set_when_all_disabled()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest$AllDisabled" time="0.0"/>
+  <testcase name="composite_contains_validation_and_enrichment()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryExtensionConfigAdoptionTest$AllDisabled" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

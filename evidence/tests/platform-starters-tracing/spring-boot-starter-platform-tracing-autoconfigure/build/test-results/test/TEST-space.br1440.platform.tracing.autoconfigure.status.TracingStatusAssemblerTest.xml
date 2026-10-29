@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:11.193Z" hostname="DESKTOP-OEGBG7F" time="0.064">
+  <properties/>
+  <testcase name="settingsCoherenceFailureIsNotReportedAsSettingsUnreadable()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.002"/>
+  <testcase name="endpointAbsentAgentSectionOmitsSnapshotFields()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.002"/>
+  <testcase name="settingsContractFailureDoesNotEscapeAndReportsSettingsUnreadable()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.002"/>
+  <testcase name="runtimeValidationSectionIncludesViolationCounter()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.001"/>
+  <testcase name="settingsGuardFailureDoesNotEscapeAndReportsAgentUnavailable()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.001"/>
+  <testcase name="runtimeSpanTimeoutSectionExposesLiveAndBoundedState()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.003"/>
+  <testcase name="guardFailureDoesNotCloseTheUnreadableEpisode()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.006"/>
+  <testcase name="unreadableAgentSectionKeepsEndpointPresenceAndOmitsSnapshotFields()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.002"/>
+  <testcase name="acceptedPolicyIsSecretSafeAndPostStartAgentLossIsObserved()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.002"/>
+  <testcase name="mixedReadinessGenerationIsNeverPublishedAsReadyStatus()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.002"/>
+  <testcase name="reasonPriorityStartsWithDisabledThenAgentAvailability()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.002"/>
+  <testcase name="[1] channel=NONE" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.016"/>
+  <testcase name="[2] channel=CONFIG_SERVER" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.003"/>
+  <testcase name="[3] channel=ACTUATOR" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.002"/>
+  <testcase name="spanTimeoutCaptureIsPublishedWhenOwnerIsAbsentAndBlankWhenObservationIsUnreadable()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.003"/>
+  <testcase name="settingsReadRecoveryResetsFailureTransitionLogging()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.004"/>
+  <testcase name="writeChannelDistinguishesAgentUnavailableAndSettingsUnreadable()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.003"/>
+  <testcase name="agentSectionReportsStarterFailureCodeWhenSnapshotFailureCodeDiffers()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.001"/>
+  <testcase name="repeatedSettingsReadFailureLogsWarnThenDebug()" classname="space.br1440.platform.tracing.autoconfigure.status.TracingStatusAssemblerTest" time="0.003"/>
+  <system-out><![CDATA[2026-10-29T12:48:11.199Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractViolationException
+2026-10-29T12:48:11.201Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=NO_ACCEPTED_SETTINGS
+2026-10-29T12:48:11.204Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=NO_ACCEPTED_SETTINGS
+2026-10-29T12:48:11.208Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=java.lang.IllegalStateException
+2026-10-29T12:48:11.210Z  INFO 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are readable again; previousFailureKind=java.lang.IllegalStateException
+2026-10-29T12:48:11.245Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=NO_ACCEPTED_SETTINGS
+2026-10-29T12:48:11.246Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=NO_ACCEPTED_SETTINGS
+2026-10-29T12:48:11.248Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=java.lang.IllegalStateException
+2026-10-29T12:48:11.249Z  INFO 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are readable again; previousFailureKind=java.lang.IllegalStateException
+2026-10-29T12:48:11.249Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=java.lang.IllegalStateException
+2026-10-29T12:48:11.252Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=NO_ACCEPTED_SETTINGS
+2026-10-29T12:48:11.256Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=java.lang.IllegalStateException
+2026-10-29T12:48:11.256Z DEBUG 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings remain unreadable; failureKind=java.lang.IllegalStateException
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

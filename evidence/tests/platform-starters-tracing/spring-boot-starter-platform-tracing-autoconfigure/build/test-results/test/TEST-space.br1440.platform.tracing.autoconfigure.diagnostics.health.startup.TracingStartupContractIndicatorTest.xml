@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.diagnostics.health.startup.TracingStartupContractIndicatorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:09.463Z" hostname="DESKTOP-OEGBG7F" time="0.0">
+  <properties/>
+  <testcase name="enabledContractSatisfiedIsUpWithoutFailureCode()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.health.startup.TracingStartupContractIndicatorTest" time="0.0"/>
+  <testcase name="violatedContractIsDownWithFailureCode()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.health.startup.TracingStartupContractIndicatorTest" time="0.0"/>
+  <testcase name="repeatedHealthChecksAreIdempotent()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.health.startup.TracingStartupContractIndicatorTest" time="0.0"/>
+  <testcase name="disabledContractSatisfiedIsUpWithoutFailureCode()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.health.startup.TracingStartupContractIndicatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

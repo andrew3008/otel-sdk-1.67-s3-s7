@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" tests="39" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:00.282Z" hostname="DESKTOP-OEGBG7F" time="0.047">
+  <properties/>
+  <testcase name="rejectsRouteRatioBelowZero()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsInfiniteRouteRatio()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsSequenceAsString()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsNaNRouteRatio()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.0"/>
+  <testcase name="rejectsNegativeAcceptedSequence()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.0"/>
+  <testcase name="rejectsOversizedRouteKey()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.0"/>
+  <testcase name="rejectsLowercaseValidationLevel()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.0"/>
+  <testcase name="rejectsSamplingRatioAsString()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsV2TypeName()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsUnsupportedSourceAuthority()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsWrongRouteRowTypeName()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsInteger()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.0"/>
+  <testcase name="rejectsBlankRoutePrefix()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsRouteRatioAboveOne()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsMissingSamplingRouteRatios()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.002"/>
+  <testcase name="rejectsMissingAgentInstanceId()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsBlankAgentInstanceId()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="acceptsRoutePrefixAtUtf8Limit()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsOversizedAgentInstanceId()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsEmptyDiagnosticsLogLevel()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsEmptyRoutePrefix()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsString()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsCyrillicRoutePrefixThatExceedsUtf8ByteLimit()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.007"/>
+  <testcase name="rejectsInfiniteSamplingRatio()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsEmptyAgentInstanceId()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsSamplingRatioBelow0()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsMissingAcceptedSequence()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsUnknownExtraField()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsNullDiagnosticsLogLevel()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsUnknownDiagnosticsLogLevel()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.0"/>
+  <testcase name="rejectsNaNSamplingRatio()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsOversizedRouteTable()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsIsoControlRoutePrefix()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsNullAgentInstanceId()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.0"/>
+  <testcase name="rejectsNull()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsLowercaseDiagnosticsLogLevel()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsSamplingRatioAboveOne()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.001"/>
+  <testcase name="rejectsWrongTypeName()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.0"/>
+  <testcase name="unknownSourceAuthorityIsReportedAsStatusResponseDecodeFailure()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.MalformedPayloadTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,42 @@
+﻿[
+    {
+        "Task":  "extension",
+        "Tests":  2020,
+        "Failures":  0,
+        "Errors":  0,
+        "Skipped":  0,
+        "Latest":  "2026-10-29T12:47:41.992Z"
+    },
+    {
+        "Task":  "otel",
+        "Tests":  329,
+        "Failures":  0,
+        "Errors":  0,
+        "Skipped":  0,
+        "Latest":  "2026-10-29T12:47:47.973Z"
+    },
+    {
+        "Task":  "autoconfigure",
+        "Tests":  926,
+        "Failures":  0,
+        "Errors":  0,
+        "Skipped":  0,
+        "Latest":  "2026-10-29T12:48:11.375Z"
+    },
+    {
+        "Task":  "controlledAgentArtifactTest",
+        "Tests":  14,
+        "Failures":  0,
+        "Errors":  0,
+        "Skipped":  0,
+        "Latest":  "2026-10-29T12:47:58.654Z"
+    },
+    {
+        "Task":  "controlledAgentRuntimeTest",
+        "Tests":  31,
+        "Failures":  0,
+        "Errors":  0,
+        "Skipped":  0,
+        "Latest":  "2026-10-29T12:49:47.486Z"
+    }
+]

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.scrubbing.engine.IpPrefixTruncatorTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.728Z" hostname="DESKTOP-OEGBG7F" time="0.0">
+  <properties/>
+  <testcase name="invalid_ip_returns_null_without_exception()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.engine.IpPrefixTruncatorTest" time="0.0"/>
+  <testcase name="ipv4_mapped_ipv6_reduces_to_ipv4()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.engine.IpPrefixTruncatorTest" time="0.0"/>
+  <testcase name="compressed_ipv6_is_truncated_by_real_eight_groups()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.engine.IpPrefixTruncatorTest" time="0.0"/>
+  <testcase name="ipv4_with_port_is_truncated_without_failure()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.engine.IpPrefixTruncatorTest" time="0.0"/>
+  <testcase name="x_forwarded_for_with_invalid_element_is_rejected_entirely()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.engine.IpPrefixTruncatorTest" time="0.0"/>
+  <testcase name="ipv6_is_truncated_to_64()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.engine.IpPrefixTruncatorTest" time="0.0"/>
+  <testcase name="ipv4_is_truncated_to_24()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.engine.IpPrefixTruncatorTest" time="0.0"/>
+  <testcase name="x_forwarded_for_processes_each_element()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.engine.IpPrefixTruncatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

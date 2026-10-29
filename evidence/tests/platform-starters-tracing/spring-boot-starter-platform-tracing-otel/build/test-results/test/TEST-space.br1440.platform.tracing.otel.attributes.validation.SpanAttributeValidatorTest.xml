@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidatorTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.354Z" hostname="DESKTOP-OEGBG7F" time="0.023">
+  <properties/>
+  <testcase name="warn_whenRequiredAbsent_doesNotThrow_appliesSafeDefault_andWritesMetric()" classname="space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidatorTest" time="0.002"/>
+  <testcase name="disabled_returnsAttributesAsIs_withoutDefaultsLogsMetrics()" classname="space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidatorTest" time="0.001"/>
+  <testcase name="warn_dbWithoutDbSystem_recordsRequiredAnyOf_andPassesWithIt()" classname="space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidatorTest" time="0.007"/>
+  <testcase name="databaseAllowlist_acceptsResponseStatusCode()" classname="space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidatorTest" time="0.001"/>
+  <testcase name="defaultConstructor_isWarn()" classname="space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidatorTest" time="0.003"/>
+  <testcase name="strict_whenRequiredAbsent_throwsSpanAttributeViolationException()" classname="space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidatorTest" time="0.001"/>
+  <testcase name="warn_onForbiddenAttribute_recordsForbiddenViolation()" classname="space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidatorTest" time="0.002"/>
+  <testcase name="httpClientAllowlist_rejectsResponseStatusCode()" classname="space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidatorTest" time="0.002"/>
+  <system-out><![CDATA[12:47:47.356 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=InternalSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.363 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_ANY_OF_MISSING] builder=DatabaseSpanBuilder category=DATABASE: at least one of [db.system, db.system.name] must be present
+12:47:47.369 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=default category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.373 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [ATTR_FORBIDDEN] builder=InternalSpanBuilder category=INTERNAL: forbidden attribute 'http.request.method' for category INTERNAL
+12:47:47.376 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [ATTR_NOT_ALLOWED] builder=HttpClientSpanBuilder category=HTTP_CLIENT: attribute 'db.response.status_code' is not in the allowlist for category HTTP_CLIENT
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

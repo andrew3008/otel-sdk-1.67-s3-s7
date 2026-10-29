@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.runtime.otel.SpanSpecAttributeValueConverterMixedListTypeTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.701Z" hostname="DESKTOP-OEGBG7F" time="0.007">
+  <properties/>
+  <testcase name="mixedTypeList_throwsIllegalArgumentException()" classname="space.br1440.platform.tracing.otel.runtime.otel.SpanSpecAttributeValueConverterMixedListTypeTest" time="0.001"/>
+  <testcase name="unsupportedElementType_throwsIllegalArgumentException()" classname="space.br1440.platform.tracing.otel.runtime.otel.SpanSpecAttributeValueConverterMixedListTypeTest" time="0.001"/>
+  <testcase name="nullSingletonListElement_throwsIllegalArgumentException()" classname="space.br1440.platform.tracing.otel.runtime.otel.SpanSpecAttributeValueConverterMixedListTypeTest" time="0.001"/>
+  <testcase name="nullListElementInMixedList_throwsIllegalArgumentException()" classname="space.br1440.platform.tracing.otel.runtime.otel.SpanSpecAttributeValueConverterMixedListTypeTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

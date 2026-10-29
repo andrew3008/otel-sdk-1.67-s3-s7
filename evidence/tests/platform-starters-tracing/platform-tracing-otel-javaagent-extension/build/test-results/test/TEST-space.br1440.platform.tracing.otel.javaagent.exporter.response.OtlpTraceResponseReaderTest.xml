@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpTraceResponseReaderTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:15.476Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="Пустой ответ означает, что приняты все span'ы batch'а" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpTraceResponseReaderTest" time="0.0"/>
+  <testcase name="partial_success с rejected_spans уменьшает число принятых span'ов" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpTraceResponseReaderTest" time="0.0"/>
+  <testcase name="Отрицательный rejected_spans не даёт числа принятых span'ов" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpTraceResponseReaderTest" time="0.0"/>
+  <testcase name="Отсутствующее тело ответа не даёт числа принятых span'ов" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpTraceResponseReaderTest" time="0.0"/>
+  <testcase name="error_message без отклонений остаётся предупреждением: batch принят целиком" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpTraceResponseReaderTest" time="0.001"/>
+  <testcase name="Второй ответ для одной export operation делает число принятых span'ов неизвестным" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpTraceResponseReaderTest" time="0.0"/>
+  <testcase name="Нечитаемый ответ не подставляет rejected_spans = 0" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpTraceResponseReaderTest" time="0.0"/>
+  <testcase name="rejected_spans больше размера batch'а не даёт числа принятых span'ов" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpTraceResponseReaderTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

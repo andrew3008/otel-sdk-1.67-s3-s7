@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.configuration.PlatformTracingDefaultsProviderTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.053Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="supply_does_not_publish_service_identity_keys()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PlatformTracingDefaultsProviderTest" time="0.0"/>
+  <testcase name="supply_returns_all_span_limit_defaults()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PlatformTracingDefaultsProviderTest" time="0.001"/>
+  <testcase name="supply_returns_independent_copy_on_each_call()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PlatformTracingDefaultsProviderTest" time="0.0"/>
+  <testcase name="supply_returns_canonical_logging_mdc_key_defaults()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PlatformTracingDefaultsProviderTest" time="0.0"/>
+  <testcase name="supply_returns_all_BSP_defaults()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PlatformTracingDefaultsProviderTest" time="0.0"/>
+  <testcase name="supply_does_not_contain_empty_values()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PlatformTracingDefaultsProviderTest" time="0.001"/>
+  <testcase name="supply_does_not_select_an_sdk_sampler()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.PlatformTracingDefaultsProviderTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

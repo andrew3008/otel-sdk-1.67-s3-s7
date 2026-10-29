@@ -1,0 +1,1565 @@
+diff --git a/gradle/libs.versions.toml b/gradle/libs.versions.toml
+index ff366262..43ab1ef5 100644
+--- a/gradle/libs.versions.toml
++++ b/gradle/libs.versions.toml
+@@ -45,11 +45,11 @@ bom-openfeign   = "4.3.0"
+ bom-minio       = "8.6.0"
+ bom-okhttp      = "5.3.2"
+ bom-resilience  = "2.3.0"
+-bom-opentelemetry = "1.66.0"
+-bom-otelproto   = "1.11.0-alpha"
+-bom-protobuf    = "4.35.1"
+-bom-otelinstrumentation = "2.32.0"
+-bom-otelextension = "2.32.0-alpha"
++bom-opentelemetry = "1.67.0"
++bom-otelproto   = "1.11.1-alpha"
++bom-protobuf    = "4.36.2"
++bom-otelinstrumentation = "2.33.1"
++bom-otelextension = "2.33.1-alpha"
+ bom-springcloud = "2025.0.0"
+ bom-logbook     = "4.0.4"
+ 
+diff --git a/platform-starters-tracing/build-logic/src/test/java/space/br1440/platform/tracing/gradle/javaagent/distribution/ControlledAgentDistributionContractTest.java b/platform-starters-tracing/build-logic/src/test/java/space/br1440/platform/tracing/gradle/javaagent/distribution/ControlledAgentDistributionContractTest.java
+index 9410a19a..7ea749ff 100644
+--- a/platform-starters-tracing/build-logic/src/test/java/space/br1440/platform/tracing/gradle/javaagent/distribution/ControlledAgentDistributionContractTest.java
++++ b/platform-starters-tracing/build-logic/src/test/java/space/br1440/platform/tracing/gradle/javaagent/distribution/ControlledAgentDistributionContractTest.java
+@@ -485,7 +485,7 @@ class ControlledAgentDistributionContractTest {
+         Files.createDirectories(catalog.getParent());
+         Files.writeString(catalog, """
+                 [versions]
+-                bom-opentelemetry = "1.66.0"
++                bom-opentelemetry = "1.67.0"
+                 """, StandardCharsets.UTF_8);
+     }
+ 
+diff --git a/platform-starters-tracing/build-logic/src/test/java/space/br1440/platform/tracing/gradle/javaagent/distribution/ControlledAgentTestArgumentsTest.java b/platform-starters-tracing/build-logic/src/test/java/space/br1440/platform/tracing/gradle/javaagent/distribution/ControlledAgentTestArgumentsTest.java
+index 40d4dbe5..0d885e45 100644
+--- a/platform-starters-tracing/build-logic/src/test/java/space/br1440/platform/tracing/gradle/javaagent/distribution/ControlledAgentTestArgumentsTest.java
++++ b/platform-starters-tracing/build-logic/src/test/java/space/br1440/platform/tracing/gradle/javaagent/distribution/ControlledAgentTestArgumentsTest.java
+@@ -95,7 +95,7 @@ class ControlledAgentTestArgumentsTest {
+         arguments.getExtensionJar().set(Files.createFile(directory.resolve("packaged extension.jar")).toFile());
+         arguments.getUpstreamAgentJar().set(Files.createFile(directory.resolve("upstream agent.jar")).toFile());
+         arguments.getDistributionVersion().set("1.2.3");
+-        arguments.getExpectedOtelSdkVersion().set("1.66.0");
++        arguments.getExpectedOtelSdkVersion().set("1.67.0");
+         arguments.getExpectedUpstreamCoordinate().set("io.opentelemetry.javaagent:synthetic-agent:1.0.0");
+         return arguments;
+     }
+diff --git a/platform-starters-tracing/platform-tracing-collector-config/otel-collector-agent-loadbalancing.yaml b/platform-starters-tracing/platform-tracing-collector-config/otel-collector-agent-loadbalancing.yaml
+index 2f406a1a..4200e979 100644
+--- a/platform-starters-tracing/platform-tracing-collector-config/otel-collector-agent-loadbalancing.yaml
++++ b/platform-starters-tracing/platform-tracing-collector-config/otel-collector-agent-loadbalancing.yaml
+@@ -17,6 +17,7 @@ receivers:
+     protocols:
+       grpc:
+         endpoint: 0.0.0.0:4317
++        max_recv_msg_size_mib: 16
+       http:
+         endpoint: 0.0.0.0:4318
+ 
+@@ -56,6 +57,13 @@ exporters:
+     protocol:
+       otlp:
+         timeout: 1s
++        sending_queue:
++          batch:
++            # Только разделение: 16 MiB минус запас 64 KiB на gzip.
++            sizer: bytes
++            min_size: 0
++            max_size: 16711680
++            flush_timeout: 200ms
+     resolver:
+       dns:
+         # Указание headless-сервиса Gateway-узлов
+diff --git a/platform-starters-tracing/platform-tracing-collector-config/otel-collector-config-ttl-tiers.yaml b/platform-starters-tracing/platform-tracing-collector-config/otel-collector-config-ttl-tiers.yaml
+index 49bd2c97..85b5dfd8 100644
+--- a/platform-starters-tracing/platform-tracing-collector-config/otel-collector-config-ttl-tiers.yaml
++++ b/platform-starters-tracing/platform-tracing-collector-config/otel-collector-config-ttl-tiers.yaml
+@@ -27,6 +27,7 @@ receivers:
+     protocols:
+       grpc:
+         endpoint: 0.0.0.0:4317
++        max_recv_msg_size_mib: 16
+       http:
+         endpoint: 0.0.0.0:4318
+ 
+@@ -89,6 +90,12 @@ exporters:
+       enabled: true
+       num_consumers: 4
+       queue_size: 10000
++      batch:
++        # Только разделение: 16 MiB минус запас 64 KiB на gzip.
++        sizer: bytes
++        min_size: 0
++        max_size: 16711680
++        flush_timeout: 200ms
+     retry_on_failure:
+       enabled: true
+       initial_interval: 1s
+@@ -103,6 +110,12 @@ exporters:
+       enabled: true
+       num_consumers: 4
+       queue_size: 10000
++      batch:
++        # Только разделение: 16 MiB минус запас 64 KiB на gzip.
++        sizer: bytes
++        min_size: 0
++        max_size: 16711680
++        flush_timeout: 200ms
+     retry_on_failure:
+       enabled: true
+       initial_interval: 1s
+diff --git a/platform-starters-tracing/platform-tracing-collector-config/otel-collector-gateway-tail-sampling.yaml b/platform-starters-tracing/platform-tracing-collector-config/otel-collector-gateway-tail-sampling.yaml
+index dc387f8d..d9e978bd 100644
+--- a/platform-starters-tracing/platform-tracing-collector-config/otel-collector-gateway-tail-sampling.yaml
++++ b/platform-starters-tracing/platform-tracing-collector-config/otel-collector-gateway-tail-sampling.yaml
+@@ -171,6 +171,12 @@ exporters:
+       enabled: true
+       num_consumers: 4
+       queue_size: 10000
++      batch:
++        # Только разделение: 16 MiB минус запас 64 KiB на gzip.
++        sizer: bytes
++        min_size: 0
++        max_size: 16711680
++        flush_timeout: 200ms
+     retry_on_failure:
+       enabled: true
+       initial_interval: 1s
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-distribution/src/controlledAgentRuntimeTest/java/space/br1440/platform/tracing/otel/javaagent/distribution/ControlledAgentStartupTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-distribution/src/controlledAgentRuntimeTest/java/space/br1440/platform/tracing/otel/javaagent/distribution/ControlledAgentStartupTest.java
+index 7a9a7de5..e210ae43 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-distribution/src/controlledAgentRuntimeTest/java/space/br1440/platform/tracing/otel/javaagent/distribution/ControlledAgentStartupTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-distribution/src/controlledAgentRuntimeTest/java/space/br1440/platform/tracing/otel/javaagent/distribution/ControlledAgentStartupTest.java
+@@ -122,6 +122,7 @@ class ControlledAgentStartupTest {
+ 
+     private static void assertStderrIsFreeOfLoggingAndExtensionFailures(ChildProcessResult result) {
+         assertThat(result.stderr())
++                .doesNotContain("Attempting to merge Resources with different schemaUrls")
+                 .doesNotContain("No SLF4J providers were found")
+                 .doesNotContain("Defaulting to no-operation (NOP) logger implementation")
+                 .doesNotContain("Failed to load extension")
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/build.gradle b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/build.gradle
+index 2f53ee8e..5382221c 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/build.gradle
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/build.gradle
+@@ -43,9 +43,27 @@ def mockitoAgentConfiguration = configurations.register('mockitoAgent') {
+     canBeResolved = true
+ }
+ 
++def resourceDetectorsConfiguration = configurations.register('resourceDetectors') {
++    canBeConsumed = false
++    canBeResolved = true
++    transitive = false
++}
++
++abstract class ResourceDetectorsArgumentProvider implements CommandLineArgumentProvider {
++    @Classpath
++    abstract ConfigurableFileCollection getResourceDetectorsClasspath()
++
++    @Override
++    Iterable<String> asArguments() {
++        return ["-DplatformTracing.resourceDetectorsJar=${resourceDetectorsClasspath.singleFile.absolutePath}"]
++    }
++}
++
+ dependencies {
+     jmxExtensionContractSources project(':platform-starters-tracing:platform-tracing-jmx-contract')
+ 
++    resourceDetectors "io.opentelemetry.instrumentation:opentelemetry-resources:${libs.versions.bom.otelextension.get()}"
++
+     mockitoAgent platform(project(':spring-boot-starter-platform-bom'))
+     mockitoAgent('org.mockito:mockito-core') {
+         transitive = false
+@@ -60,6 +78,7 @@ dependencies {
+     compileOnly 'io.opentelemetry:opentelemetry-sdk'
+     compileOnly 'io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi'
+     compileOnly 'io.opentelemetry:opentelemetry-sdk-extension-autoconfigure'
++    compileOnly 'io.opentelemetry:opentelemetry-exporter-otlp'
+     compileOnly 'io.opentelemetry:opentelemetry-exporter-sender-okhttp'
+     compileOnly 'io.opentelemetry.javaagent:opentelemetry-javaagent-extension-api'
+ 
+@@ -101,6 +120,10 @@ tasks.named('test', Test) {
+     mockitoAgentArguments.agentClasspath.from(mockitoAgentConfiguration)
+     jvmArgumentProviders.add(mockitoAgentArguments)
+ 
++    def resourceDetectorsArguments = objects.newInstance(ResourceDetectorsArgumentProvider)
++    resourceDetectorsArguments.resourceDetectorsClasspath.from(resourceDetectorsConfiguration)
++    jvmArgumentProviders.add(resourceDetectorsArguments)
++
+     inputs.property('expectedExtensionVersion', expectedExtensionVersion)
+     systemProperty('platformTracing.expectedExtensionVersion', expectedExtensionVersion)
+ 
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/BootstrapAutoConfigurationCustomizerProvider.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/BootstrapAutoConfigurationCustomizerProvider.java
+index 0291b136..b8963733 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/BootstrapAutoConfigurationCustomizerProvider.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/BootstrapAutoConfigurationCustomizerProvider.java
+@@ -1,12 +1,17 @@
+ package space.br1440.platform.tracing.otel.javaagent.bootstrap;
+ 
++import java.util.HashMap;
++import java.util.Map;
+ import java.util.Objects;
+ 
++import space.br1440.platform.common.util.StringUtils;
+ import space.br1440.platform.tracing.otel.javaagent.bootstrap.session.AutoconfigureSession;
+ import space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContract;
+ import space.br1440.platform.tracing.otel.javaagent.bootstrap.verification.TracePipelineSpiVerifier;
++import space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionPropertyNames;
+ import space.br1440.platform.tracing.otel.javaagent.configuration.PlatformTracingDefaultsProvider;
+ import space.br1440.platform.tracing.otel.javaagent.configuration.ResourceValidationMode;
++import space.br1440.platform.tracing.otel.javaagent.exporter.OtlpRequestSizeCustomizer;
+ import space.br1440.platform.tracing.otel.javaagent.exporter.response.ObservingSenderPreference;
+ import space.br1440.platform.tracing.otel.javaagent.propagation.BaggagePropagationCustomizer;
+ import space.br1440.platform.tracing.otel.javaagent.propagation.PlatformPropagatorsDefaultsCustomizer;
+@@ -16,7 +21,9 @@ import space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCus
+ import io.opentelemetry.context.propagation.TextMapPropagator;
+ import io.opentelemetry.sdk.autoconfigure.spi.AutoConfigurationCustomizer;
+ import io.opentelemetry.sdk.autoconfigure.spi.AutoConfigurationCustomizerProvider;
++import io.opentelemetry.sdk.autoconfigure.spi.ConfigProperties;
+ import io.opentelemetry.sdk.resources.Resource;
++import io.opentelemetry.sdk.trace.export.SpanExporter;
+ 
+ public final class BootstrapAutoConfigurationCustomizerProvider implements AutoConfigurationCustomizerProvider {
+ 
+@@ -53,7 +60,9 @@ public final class BootstrapAutoConfigurationCustomizerProvider implements AutoC
+                 return null;
+             });
+ 
+-            return SamplerConfigurationContract.normalize(config);
++            Map<String, String> overrides = new HashMap<>(SamplerConfigurationContract.normalize(config));
++            overrides.putAll(serviceNameDefaults(config));
++            return overrides;
+         });
+ 
+         customizer.addPropertiesCustomizer(propagatorsDefaults);
+@@ -100,7 +109,8 @@ public final class BootstrapAutoConfigurationCustomizerProvider implements AutoC
+         customizer.addSpanExporterCustomizer((exporter, config) ->
+                 bootstrap.execute("EXPORTER_INITIALIZATION_FAILED", () -> {
+                     AutoconfigureSession session = bootstrap.session();
+-                    return session.exportProcessorFactory().captureExporter(exporter, session.policy());
++                    SpanExporter limited = OtlpRequestSizeCustomizer.customize(exporter, config);
++                    return session.exportProcessorFactory().captureExporter(limited, session.policy());
+                 }));
+ 
+         customizer.addSpanProcessorCustomizer((processor, config) ->
+@@ -111,4 +121,16 @@ public final class BootstrapAutoConfigurationCustomizerProvider implements AutoC
+                     );
+                 }));
+     }
++
++    static Map<String, String> serviceNameDefaults(ConfigProperties config) {
++        if (config.getString("otel.service.name") != null
++                || config.getMap("otel.resource.attributes").containsKey("service.name")) {
++            return Map.of();
++        }
++
++        String platformName = config.getString(ExtensionPropertyNames.SERVICE_NAME);
++        return StringUtils.hasText(platformName)
++                ? Map.of("otel.service.name", platformName.strip())
++                : Map.of();
++    }
+ }
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactory.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactory.java
+index 1c41ae05..787b556f 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactory.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactory.java
+@@ -4,6 +4,7 @@ import java.util.Objects;
+ import java.util.function.Function;
+ 
+ import space.br1440.platform.tracing.otel.javaagent.bootstrap.resources.BootstrapCleanupFailures;
++import space.br1440.platform.tracing.otel.javaagent.configuration.BaggageAttributeCopyContract;
+ import space.br1440.platform.tracing.otel.javaagent.configuration.ConfigurationPropertyException;
+ import space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfig;
+ import space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionPropertyNames;
+@@ -49,6 +50,7 @@ public final class AutoconfigureSessionFactory {
+                                        ExtensionRuntimeEvidence evidence) {
+         SamplerConfigurationContract.requireFinal(config);
+         PropagatorConfigurationContract.requireSupported(config);
++        BaggageAttributeCopyContract.requireDisabled(config);
+ 
+         ExtensionConfig extensionConfig = new ExtensionConfig(config);
+         if (!extensionConfig.scrubbing().enabled()) {
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/configuration/OtelSdkDefaults.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/configuration/OtelSdkDefaults.java
+index 35c3e403..a934cb08 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/configuration/OtelSdkDefaults.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/configuration/OtelSdkDefaults.java
+@@ -12,6 +12,9 @@ public class OtelSdkDefaults {
+     public static final Duration DEFAULT_BSP_EXPORT_TIMEOUT = Duration.ofMillis(30_000);
+     public static final Duration DEFAULT_BSP_SCHEDULE_DELAY = Duration.ofMillis(5_000);
+ 
++    // Запас до байтового splitter коллектора учитывает обогащение спанов и сжатие при отправке.
++    public static final long MAX_OTLP_REQUEST_SIZE_BYTES = 15 * 1024L * 1024L;
++
+     static final int DEFAULT_SPAN_ATTRIBUTE_COUNT_LIMIT = 50;
+     static final int DEFAULT_SPAN_ATTRIBUTE_VALUE_LENGTH_LIMIT = 1_000;
+     static final int DEFAULT_SPAN_EVENT_COUNT_LIMIT = 10;
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/configuration/OtelSdkPropertyNames.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/configuration/OtelSdkPropertyNames.java
+index dc3f7fb5..a26c71eb 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/configuration/OtelSdkPropertyNames.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/configuration/OtelSdkPropertyNames.java
+@@ -6,10 +6,16 @@ import lombok.experimental.UtilityClass;
+ public final class OtelSdkPropertyNames {
+ 
+     public static final String PROPAGATORS = "otel.propagators";
++    public static final String OTLP_RETRY_DISABLED = "otel.java.exporter.otlp.retry.disabled";
+ 
+     public static final String BSP_MAX_QUEUE_SIZE = "otel.bsp.max.queue.size";
+     public static final String BSP_MAX_EXPORT_BATCH_SIZE = "otel.bsp.max.export.batch.size";
+     public static final String BSP_SCHEDULE_DELAY = "otel.bsp.schedule.delay";
+     public static final String BSP_EXPORT_TIMEOUT = "otel.bsp.export.timeout";
+ 
++    public static final String SPAN_ATTRIBUTES_COPY_FROM_BAGGAGE_INCLUDE =
++            "otel.java.experimental.span-attributes.copy-from-baggage.include";
++    public static final String LOG_ATTRIBUTES_COPY_FROM_BAGGAGE_INCLUDE =
++            "otel.java.experimental.log-attributes.copy-from-baggage.include";
++
+ }
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/exporter/SafeSpanExporter.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/exporter/SafeSpanExporter.java
+index 0be82067..6fe16309 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/exporter/SafeSpanExporter.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/exporter/SafeSpanExporter.java
+@@ -203,7 +203,8 @@ public final class SafeSpanExporter implements SpanExporter {
+                 }
+                 recordAcceptedSpans(observation, count);
+             } else {
+-                recordFailureMetrics(count, operationSequence, ExporterLogEvent.SAFE_EXPORT_RETURNED_FAILURE);
++                recordFailureMetrics(count, operationSequence, ExporterLogEvent.SAFE_EXPORT_RETURNED_FAILURE,
++                        result.getFailureThrowable());
+             }
+         } catch (Throwable ex) {
+             PlatformThrowables.propagateIfFatal(ex);
+@@ -278,13 +279,6 @@ public final class SafeSpanExporter implements SpanExporter {
+         recordFailureMetrics(count, operationSequence, eventType, error);
+     }
+ 
+-    @SuppressWarnings("SameParameterValue")
+-    private void recordFailureMetrics(int count,
+-                                      long operationSequence,
+-                                      AgentLogEventType eventType) {
+-        recordFailureMetrics(count, operationSequence, eventType, null);
+-    }
+-
+     private void recordFailureMetrics(int count,
+                                       long operationSequence,
+                                       AgentLogEventType eventType,
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/factory/PlatformSpanProcessorFactory.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/factory/PlatformSpanProcessorFactory.java
+index 99a21932..d30dc61b 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/factory/PlatformSpanProcessorFactory.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/factory/PlatformSpanProcessorFactory.java
+@@ -55,6 +55,11 @@ public final class PlatformSpanProcessorFactory {
+         }
+     }
+ 
++    /**
++     * Всегда включает три обязательных делегата: валидацию, обогащение и перенос requestId.
++     * Без них при отключённых необязательных процессорах SDK 1.67 вернёт noop tracer,
++     * и заполнение MDC/requestId перестанет работать.
++     */
+     private List<SpanProcessor> buildDelegates(ExtensionConfig extConfig,
+                                                TracingSettingsSource acceptedPolicy) {
+         List<SpanProcessor> delegates = new ArrayList<>();
+@@ -135,10 +140,6 @@ public final class PlatformSpanProcessorFactory {
+     }
+ 
+     private void installComposite(SdkTracerProviderBuilder tpBuilder, List<SpanProcessor> delegates) {
+-        if (delegates.isEmpty()) {
+-            return;
+-        }
+-
+         PlatformCompositeSpanProcessor composite = new PlatformCompositeSpanProcessor(delegates);
+         tpBuilder.addSpanProcessor(composite);
+         jmxRegistrar.setComposite(composite);
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/logging/event/ExporterLogEvent.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/logging/event/ExporterLogEvent.java
+index a9269465..01f23c5b 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/logging/event/ExporterLogEvent.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/logging/event/ExporterLogEvent.java
+@@ -1,6 +1,7 @@
+ package space.br1440.platform.tracing.otel.javaagent.logging.event;
+ 
+ import static space.br1440.platform.tracing.otel.javaagent.logging.event.AgentLogEventDefinition.noCause;
++import static space.br1440.platform.tracing.otel.javaagent.logging.event.AgentLogEventDefinition.optionalCause;
+ import static space.br1440.platform.tracing.otel.javaagent.logging.event.AgentLogEventDefinition.requiresCause;
+ import static space.br1440.platform.tracing.otel.javaagent.logging.schema.AgentLogLevel.INFO;
+ import static space.br1440.platform.tracing.otel.javaagent.logging.schema.AgentLogLevel.WARN;
+@@ -67,7 +68,7 @@ public enum ExporterLogEvent implements AgentLogEventType {
+     ),
+ 
+     SAFE_EXPORT_RETURNED_FAILURE(
+-            noCause(
++            optionalCause(
+                     AgentEventCode.EXPORT_SAFE_EXPORTER, WARN,
+                     "export() returned failure",
+                     AgentLogField.EXPORTER_TYPE
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/processor/dropoldest/ExportWorker.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/processor/dropoldest/ExportWorker.java
+index db7712e2..a8eea110 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/processor/dropoldest/ExportWorker.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/processor/dropoldest/ExportWorker.java
+@@ -97,7 +97,11 @@ final class ExportWorker implements Runnable {
+         if (unfinished != null) {
+             unfinished.whenComplete(() -> {
+                 long heldNanos = buffer.releaseDelegate();
+-                exporter.reportDelegateReleased(heldNanos, unfinished.isSuccess());
++                try {
++                    exporter.reportDelegateReleased(heldNanos, unfinished.isSuccess());
++                } catch (Throwable failure) {
++                    PlatformThrowables.propagateIfFatal(failure);
++                }
+             });
+         }
+     }
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/resource/PlatformResourceCustomizer.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/resource/PlatformResourceCustomizer.java
+index 3053dece..e7a62914 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/resource/PlatformResourceCustomizer.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/resource/PlatformResourceCustomizer.java
+@@ -31,7 +31,8 @@ import io.opentelemetry.sdk.resources.Resource;
+ /**
+  * Дополняет ресурс SDK identity-атрибутами платформы.
+  *
+- * <p>Порядок приоритетов одинаков для каждого атрибута:
++ * <p>Имя сервиса проецируется в {@code otel.service.name} до построения ресурса.
++ * Для остальных атрибутов действует следующий порядок приоритетов:
+  * <ol>
+  *   <li>явная OTel-конфигурация ({@code otel.service.name}, {@code otel.resource.attributes}) — атрибут не меняется;</li>
+  *   <li>свойство {@code platform.tracing.service.*} — перекрывает значение, уже присутствующее в ресурсе;</li>
+@@ -73,11 +74,6 @@ public final class PlatformResourceCustomizer {
+         Objects.requireNonNull(buildVersion, "buildVersion");
+         this.diagnostics = Objects.requireNonNull(diagnostics, "diagnostics");
+         this.attributes = List.of(
+-                new IdentityAttribute(
+-                        SERVICE_NAME_KEY, ExtensionPropertyNames.SERVICE_NAME,
+-                        String::strip, PlatformResourceCustomizer::isRealServiceName, true, NO_DETECTOR
+-                ),
+-
+                 new IdentityAttribute(
+                         SERVICE_VERSION_KEY, ExtensionPropertyNames.SERVICE_VERSION,
+                         String::strip, StringUtils::hasText, false, buildVersion
+@@ -157,6 +153,9 @@ public final class PlatformResourceCustomizer {
+ 
+     private void validate(Resource merged, ResourceValidationMode mode) {
+         List<String> missing = new ArrayList<>();
++        if (!isRealServiceName(merged.getAttribute(SERVICE_NAME_KEY))) {
++            missing.add(SERVICE_NAME_KEY.getKey());
++        }
+         for (IdentityAttribute attribute : attributes) {
+             if (attribute.required() && !attribute.isPresent(merged.getAttribute(attribute.key()))) {
+                 missing.add(attribute.key().getKey());
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/resources/META-INF/platform-tracing/otel-javaagent-acp-pin.properties b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/resources/META-INF/platform-tracing/otel-javaagent-acp-pin.properties
+index 3433cceb..d34aaf48 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/resources/META-INF/platform-tracing/otel-javaagent-acp-pin.properties
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/resources/META-INF/platform-tracing/otel-javaagent-acp-pin.properties
+@@ -1,5 +1,5 @@
+ format.version=1
+-otel.javaagent.sha256=f787eb6c7f3d18e69a431e108a15278d25ee37f83d68b678f621e063f3988f82
++otel.javaagent.sha256=e43a270df53c6f423e0ab157be9c27ccc01d5dc3232e162fe54777573db2f149
+ provider.0=io.opentelemetry.contrib.baggage.processor.BaggageProcessorCustomizer
+ provider.1=io.opentelemetry.javaagent.shaded.instrumentation.exporter.internal.ZipkinExporterRemovalCustomizerProvider
+ provider.2=io.opentelemetry.javaagent.shaded.instrumentation.resources.internal.ResourceProviderPropertiesCustomizer
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/BootstrapTerminalTransitionsTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/BootstrapTerminalTransitionsTest.java
+index 4b01d63e..33ffe415 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/BootstrapTerminalTransitionsTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/BootstrapTerminalTransitionsTest.java
+@@ -978,7 +978,7 @@ class BootstrapTerminalTransitionsTest {
+     private static ExtensionRuntimeEvidence completeEvidence(PlatformExtensionReadiness readiness) {
+         return new ExtensionRuntimeEvidence(
+                 "0123456789abcdef",
+-                "2.32.0",
++                "2.33.1",
+                 readiness.snapshot().extensionVersion(),
+                 "extension-loader",
+                 "sdk-loader"
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/PlatformAutoConfigurationCustomizerTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/PlatformAutoConfigurationCustomizerTest.java
+index 4f91b422..8e37896d 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/PlatformAutoConfigurationCustomizerTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/PlatformAutoConfigurationCustomizerTest.java
+@@ -3,6 +3,8 @@ package space.br1440.platform.tracing.otel.javaagent.bootstrap;
+ import static org.assertj.core.api.Assertions.assertThat;
+ import static org.assertj.core.api.Assertions.assertThatThrownBy;
+ import static org.assertj.core.api.Assertions.catchThrowableOfType;
++import static org.mockito.Mockito.spy;
++import static org.mockito.Mockito.verify;
+ 
+ import java.lang.reflect.Method;
+ import java.lang.reflect.Proxy;
+@@ -23,6 +25,7 @@ import org.junit.jupiter.api.parallel.ResourceLock;
+ import org.junit.jupiter.api.parallel.Resources;
+ import org.junit.jupiter.params.ParameterizedTest;
+ import org.junit.jupiter.params.provider.MethodSource;
++import org.junit.jupiter.params.provider.ValueSource;
+ 
+ import space.br1440.platform.tracing.api.propagation.control.InboundTraceControl;
+ import space.br1440.platform.tracing.otel.javaagent.AutoConfiguredSdkIsolationExtension;
+@@ -39,6 +42,8 @@ import space.br1440.platform.tracing.test.harness.SamplerHarness;
+ 
+ import io.opentelemetry.api.trace.SpanKind;
+ import io.opentelemetry.context.Context;
++import io.opentelemetry.exporter.otlp.http.trace.OtlpHttpSpanExporter;
++import io.opentelemetry.exporter.otlp.trace.OtlpGrpcSpanExporter;
+ import io.opentelemetry.sdk.autoconfigure.spi.AutoConfigurationCustomizer;
+ import io.opentelemetry.sdk.autoconfigure.spi.ConfigProperties;
+ import io.opentelemetry.sdk.autoconfigure.spi.ConfigurationException;
+@@ -60,6 +65,34 @@ class PlatformAutoConfigurationCustomizerTest {
+         return new BootstrapAutoConfigurationCustomizerProvider(coordinator);
+     }
+ 
++    @ParameterizedTest
++    @ValueSource(strings = {"grpc", "http/protobuf"})
++    void exporter_customizer_limits_otlp_before_safe_wrapping(String protocol) {
++        // given
++        BootstrapCoordinator coordinator = coordinator();
++        Recorder recorder = new Recorder();
++        provider(coordinator).customize(recorder.proxy());
++
++        try (coordinator) {
++            ConfigProperties config = recorder.primeWithConfig(Map.of());
++            SpanExporter original = spy(protocol.equals("grpc")
++                    ? OtlpGrpcSpanExporter.builder().build()
++                    : OtlpHttpSpanExporter.builder().build());
++
++            // when
++            try (SpanExporter protectedExporter = recorder.spanExporterCustomizer.apply(original, config)) {
++                // then
++                verify(original).shutdown();
++                assertThat(protectedExporter).extracting("delegate").extracting("delegate")
++                        .isNotSameAs(original)
++                        .isExactlyInstanceOf(original.getClass())
++                        .extracting("delegate")
++                        .extracting(protocol.equals("grpc") ? "maxRequestMessageSize" : "maxRequestBodySize")
++                        .isEqualTo(OtelSdkDefaults.MAX_OTLP_REQUEST_SIZE_BYTES);
++            }
++        }
++    }
++
+     @Test
+     void customize_registers_resource_and_tracer_provider_customizers_without_sampler_customizer() {
+         // given
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/PlatformPropagationAutoconfigureIntegrationTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/PlatformPropagationAutoconfigureIntegrationTest.java
+index 7188ad23..afb9fd75 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/PlatformPropagationAutoconfigureIntegrationTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/PlatformPropagationAutoconfigureIntegrationTest.java
+@@ -176,17 +176,7 @@ class PlatformPropagationAutoconfigureIntegrationTest {
+             // and: тот же final propagator должен вернуть исходное значение через extract
+             io.opentelemetry.context.Context extracted =
+                     root.extract(io.opentelemetry.context.Context.root(), carrier,
+-                            new io.opentelemetry.context.propagation.TextMapGetter<>() {
+-                                @Override
+-                                public Iterable<String> keys(Map<String, String> c) {
+-                                    return c.keySet();
+-                                }
+-
+-                                @Override
+-                                public String get(Map<String, String> c, String key) {
+-                                    return c == null ? null : c.get(key);
+-                                }
+-                            });
++                            (carrierMap, key) -> carrierMap == null ? null : carrierMap.get(key));
+             assertThat(io.opentelemetry.api.baggage.Baggage.fromContext(extracted).getEntryValue("tenant_class"))
+                     .isEqualTo("DF 28");
+         } finally {
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/ResourceCustomizerAutoconfigureIntegrationTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/ResourceCustomizerAutoconfigureIntegrationTest.java
+index cb582e0c..b5401127 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/ResourceCustomizerAutoconfigureIntegrationTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/ResourceCustomizerAutoconfigureIntegrationTest.java
+@@ -1,26 +1,42 @@
+ package space.br1440.platform.tracing.otel.javaagent.bootstrap;
+ 
+ import static org.assertj.core.api.Assertions.assertThat;
++import static org.assertj.core.api.Assertions.catchThrowable;
+ 
++import java.net.URL;
++import java.net.URLClassLoader;
++import java.nio.file.Path;
++import java.util.ArrayList;
+ import java.util.HashMap;
++import java.util.List;
+ import java.util.Map;
+ import java.util.concurrent.atomic.AtomicReference;
+ import java.util.function.Consumer;
++import java.util.logging.Handler;
++import java.util.logging.Level;
++import java.util.logging.LogRecord;
++import java.util.logging.Logger;
+ 
+ import org.junit.jupiter.api.Test;
+ import org.junit.jupiter.api.extension.ExtendWith;
++import org.junit.jupiter.api.parallel.ResourceLock;
+ 
+ import space.br1440.platform.tracing.api.attributes.PlatformAttributes;
+ import space.br1440.platform.tracing.otel.javaagent.AutoConfiguredSdkIsolationExtension;
+ import space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionPropertyNames;
++import space.br1440.platform.tracing.otel.javaagent.logging.AgentLogCapture;
++import space.br1440.platform.tracing.otel.javaagent.logging.schema.AgentLogLevel;
+ 
+ import io.opentelemetry.api.common.AttributeKey;
+ import io.opentelemetry.api.common.Attributes;
+ import io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdk;
+ import io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder;
+ import io.opentelemetry.sdk.resources.Resource;
++import io.opentelemetry.sdk.resources.internal.EntityUtil;
+ 
+ @ExtendWith(AutoConfiguredSdkIsolationExtension.class)
++@ResourceLock(AgentLogCapture.RESOURCE_LOCK)
++@ResourceLock("otel-resource-jul")
+ class ResourceCustomizerAutoconfigureIntegrationTest {
+ 
+     private static final AttributeKey<String> SERVICE_NAME = AttributeKey.stringKey(PlatformAttributes.SERVICE_NAME);
+@@ -29,6 +45,112 @@ class ResourceCustomizerAutoconfigureIntegrationTest {
+     private static final AttributeKey<String> CONTAINER_ID = AttributeKey.stringKey(PlatformAttributes.CONTAINER_ID);
+     private static final AttributeKey<String> DETECTOR_MARKER = AttributeKey.stringKey("test.detector.marker");
+ 
++    @Test
++    void platform_name_creates_service_entity_without_resource_warnings() {
++        // given
++        Map<String, String> properties = Map.of(
++                ExtensionPropertyNames.SERVICE_NAME, " demo ",
++                ExtensionPropertyNames.SERVICE_ENVIRONMENT, "production"
++        );
++        try (ResourceLogCapture logs = new ResourceLogCapture()) {
++            // when
++            Resource resource = configure(properties, builder -> {
++            });
++
++            // then
++            assertThat(resource.getAttribute(SERVICE_NAME)).isEqualTo("demo");
++            assertThat(EntityUtil.getEntities(resource))
++                    .filteredOn(entity -> entity.getType().equals("service"))
++                    .singleElement()
++                    .satisfies(entity -> assertThat(entity.getId().get(SERVICE_NAME)).isEqualTo("demo"));
++            assertThat(logs.records).noneMatch(record -> record.getLevel().intValue() >= Level.WARNING.intValue());
++        }
++    }
++
++    @Test
++    void resource_service_name_and_instance_id_win_over_platform_defaults() {
++        // given
++        Map<String, String> properties = Map.of(
++                "otel.resource.attributes", "service.name=attribute-service,service.instance.id=x",
++                ExtensionPropertyNames.SERVICE_NAME, "platform-service",
++                ExtensionPropertyNames.SERVICE_ENVIRONMENT, "production"
++        );
++
++        // when
++        Resource resource = configure(properties, builder -> {
++        });
++
++        // then
++        assertThat(resource.getAttribute(SERVICE_NAME)).isEqualTo("attribute-service");
++        assertThat(resource.getAttribute(AttributeKey.stringKey("service.instance.id"))).isEqualTo("x");
++    }
++
++    @Test
++    void disabled_service_name_is_not_restored_and_warning_reports_missing_identity() {
++        // given
++        Map<String, String> properties = disabledServiceName("WARNING");
++        try (AgentLogCapture logs = AgentLogCapture.installed()) {
++            // when
++            Resource resource = configure(properties, builder -> {
++            });
++
++            // then
++            assertThat(resource.getAttribute(SERVICE_NAME)).isNull();
++            assertThat(logs.events())
++                    .filteredOn(event -> event.eventName().equals("RESOURCE_IDENTITY_INCOMPLETE"))
++                    .singleElement()
++                    .satisfies(event -> {
++                        assertThat(event.level()).isEqualTo(AgentLogLevel.WARN);
++                        assertThat(event.fields()).containsEntry("missingKeys", "service.name");
++                    });
++        }
++    }
++
++    @Test
++    void disabled_service_name_fails_error_validation() {
++        // given
++        Map<String, String> properties = disabledServiceName("ERROR");
++
++        // when
++        Throwable failure = catchThrowable(() -> configure(properties, builder -> {
++        }));
++
++        // then
++        assertThat(failure).hasStackTraceContaining("missing required keys [service.name]");
++    }
++
++    @Test
++    void pinned_resource_detectors_preserve_service_schema_without_merge_conflicts() throws Exception {
++        // given
++        URL detectors = Path.of(System.getProperty("platformTracing.resourceDetectorsJar")).toUri().toURL();
++        Map<String, String> properties = Map.of(
++                ExtensionPropertyNames.SERVICE_NAME, "platform-service",
++                ExtensionPropertyNames.SERVICE_ENVIRONMENT, "production",
++                "otel.java.enabled.resource.providers", String.join(",",
++                        "io.opentelemetry.sdk.autoconfigure.EnvironmentResourceProvider",
++                        "io.opentelemetry.sdk.autoconfigure.ServiceInstanceIdResourceProvider",
++                        "io.opentelemetry.instrumentation.resources.HostResourceProvider",
++                        "io.opentelemetry.instrumentation.resources.OsResourceProvider",
++                        "io.opentelemetry.instrumentation.resources.ProcessResourceProvider",
++                        "io.opentelemetry.instrumentation.resources.ProcessRuntimeResourceProvider")
++        );
++        try (URLClassLoader loader = new URLClassLoader(new URL[]{detectors},
++                AutoConfigurationCustomizerTestClassLoader.withoutDiscoveredCustomizers());
++             ResourceLogCapture logs = new ResourceLogCapture()) {
++            // when
++            Resource resource = configure(properties, builder -> builder.setServiceClassLoader(loader));
++
++            // then
++            for (String key : List.of("host.arch", "os.description", "process.executable.path", "process.runtime.name")) {
++                assertThat(resource.getAttribute(AttributeKey.stringKey(key))).as(key).isNotBlank();
++            }
++            assertThat(resource.getAttribute(SERVICE_NAME)).isEqualTo("platform-service");
++            assertThat(resource.getSchemaUrl()).isEqualTo("https://opentelemetry.io/schemas/1.40.0");
++            assertThat(logs.records).noneMatch(record -> record.getMessage()
++                    .contains("Attempting to merge Resources with different schemaUrls"));
++        }
++    }
++
+     @Test
+     void explicit_otel_resource_wins_over_platform_fallback() {
+         // given
+@@ -104,18 +226,56 @@ class ResourceCustomizerAutoconfigureIntegrationTest {
+                 .disableShutdownHook()
+                 .addPropertiesSupplier(() -> Map.copyOf(effective));
+         beforePlatform.accept(builder);
+-        new BootstrapAutoConfigurationCustomizerProvider(RuntimeEvidenceTestFixtures.coordinator()).customize(builder);
+-        builder.addResourceCustomizer((resource, config) -> {
+-            observed.set(resource);
+-            return resource;
+-        });
++        try (BootstrapCoordinator coordinator = RuntimeEvidenceTestFixtures.coordinator()) {
++            new BootstrapAutoConfigurationCustomizerProvider(coordinator).customize(builder);
++            builder.addResourceCustomizer((resource, config) -> {
++                observed.set(resource);
++                return resource;
++            });
++
++            AutoConfiguredOpenTelemetrySdk sdk = builder.build();
++            try {
++                assertThat(sdk.getOpenTelemetrySdk()).isNotNull();
++                return observed.get();
++            } finally {
++                sdk.getOpenTelemetrySdk().close();
++            }
++        }
++    }
++
++    private static Map<String, String> disabledServiceName(String validationMode) {
++        return Map.of(
++                "otel.resource.disabled.keys", "service.name",
++                ExtensionPropertyNames.SERVICE_NAME, "platform-service",
++                ExtensionPropertyNames.SERVICE_ENVIRONMENT, "production",
++                ExtensionPropertyNames.RESOURCE_VALIDATION_MODE, validationMode
++        );
++    }
++
++    private static final class ResourceLogCapture extends Handler implements AutoCloseable {
++
++        private final Logger logger = Logger.getLogger("io.opentelemetry.sdk.resources");
++        private final Level previousLevel = logger.getLevel();
++        private final List<LogRecord> records = new ArrayList<>();
++
++        private ResourceLogCapture() {
++            logger.setLevel(Level.INFO);
++            logger.addHandler(this);
++        }
++
++        @Override
++        public void publish(LogRecord record) {
++            records.add(record);
++        }
++
++        @Override
++        public void flush() {
++        }
+ 
+-        AutoConfiguredOpenTelemetrySdk sdk = builder.build();
+-        try {
+-            assertThat(sdk.getOpenTelemetrySdk()).isNotNull();
+-            return observed.get();
+-        } finally {
+-            sdk.getOpenTelemetrySdk().close();
++        @Override
++        public void close() {
++            logger.removeHandler(this);
++            logger.setLevel(previousLevel);
+         }
+     }
+ }
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactoryCleanupTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactoryCleanupTest.java
+index 1b2741d5..67c8c149 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactoryCleanupTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactoryCleanupTest.java
+@@ -95,7 +95,7 @@ class AutoconfigureSessionFactoryCleanupTest {
+     private static ExtensionRuntimeEvidence evidence() {
+         return new ExtensionRuntimeEvidence(
+                 "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+-                "2.32.0",
++                "2.33.1",
+                 "test-extension",
+                 "extension-loader",
+                 "sdk-loader"
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactorySamplerTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactorySamplerTest.java
+index d7723820..ee8907ab 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactorySamplerTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactorySamplerTest.java
+@@ -142,7 +142,7 @@ class AutoconfigureSessionFactorySamplerTest {
+     private static ExtensionRuntimeEvidence evidence() {
+         return new ExtensionRuntimeEvidence(
+                 "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+-                "2.32.0",
++                "2.33.1",
+                 "test-extension",
+                 "extension-loader",
+                 "sdk-loader"
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/configuration/SamplingRatioFacadeVsSamplerParityTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/configuration/SamplingRatioFacadeVsSamplerParityTest.java
+index bc4ad8de..2ff986e7 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/configuration/SamplingRatioFacadeVsSamplerParityTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/configuration/SamplingRatioFacadeVsSamplerParityTest.java
+@@ -97,7 +97,7 @@ class SamplingRatioFacadeVsSamplerParityTest {
+     private static ExtensionRuntimeEvidence evidence() {
+         return new ExtensionRuntimeEvidence(
+                 "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+-                "2.32.0",
++                "2.33.1",
+                 "test-extension",
+                 "extension-loader",
+                 "sdk-loader"
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/exporter/SafeSpanExporterTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/exporter/SafeSpanExporterTest.java
+index c890cbb6..ef20007b 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/exporter/SafeSpanExporterTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/exporter/SafeSpanExporterTest.java
+@@ -125,6 +125,39 @@ class SafeSpanExporterTest {
+         assertThat(safe.getExportedSpans()).isZero();
+     }
+ 
++    @Test
++    void exceptionalResultCountsOnceAndLogsCauseWithoutSensitiveMessages() {
++        // given
++        String secret = "private-endpoint-and-response-body";
++        IOException failure = new IOException("Request message size " + secret,
++                new IllegalArgumentException("grpc-message " + secret));
++        failure.addSuppressed(new IOException("HTTP body " + secret));
++        CompletableResultCode delegateResult = CompletableResultCode.ofExceptionalFailure(failure);
++        SafeSpanExporter safe = safeExporter(delegate(delegateResult));
++
++        try (AgentLogCapture capture = AgentLogCapture.installed()) {
++            // when
++            CompletableResultCode result = safe.export(spansOfSize(5));
++
++            // then
++            assertThat(result).isSameAs(delegateResult);
++            assertThat(result.isSuccess()).isFalse();
++            assertThat(safe.getExportBatches()).isEqualTo(1L);
++            assertThat(safe.getExportFailures()).isEqualTo(1L);
++            assertThat(safe.getDroppedSpans()).isEqualTo(5L);
++            assertThat(safe.getExportedSpans()).isZero();
++            assertThat(capture.events()).singleElement().satisfies(event -> {
++                assertThat(event.eventName()).isEqualTo("SAFE_EXPORT_RETURNED_FAILURE");
++                assertThat(event.errorType()).isEqualTo(IOException.class.getName());
++                assertThat(event.throwableDigest())
++                        .contains(IOException.class.getName(), IllegalArgumentException.class.getName())
++                        .doesNotContain(secret, "Request message size", "grpc-message", "HTTP body");
++                assertThat(event.message()).doesNotContain(secret);
++                assertThat(event.fields().toString()).doesNotContain(secret);
++            });
++        }
++    }
++
+     @Test
+     @DisplayName("Successful export logs one fixed recovery event after an emitted failure")
+     void successfulExportLogsOneFixedRecoveryEventAfterFailure() {
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/exporter/SpanDataBoundaryScrubberTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/exporter/SpanDataBoundaryScrubberTest.java
+index 2688f162..a41e2683 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/exporter/SpanDataBoundaryScrubberTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/exporter/SpanDataBoundaryScrubberTest.java
+@@ -59,6 +59,30 @@ class SpanDataBoundaryScrubberTest {
+         assertThat(outcome.spanData().getAttributes().get(valueKey)).isNull();
+     }
+ 
++    @Test
++    void spanAttributeDropPreservesTheOriginalTotalAttributeCount() {
++        // given
++        ScrubbingRuntime runtime = ExporterBoundaryTestSupport.runtimeOf(List.of());
++        AttributeKey<Value<?>> droppedKey = AttributeKey.valueKey("payload");
++        AttributeKey<String> retainedKey = AttributeKey.stringKey("operation");
++        SpanData input = ExporterBoundaryTestSupport.baseSpan("op")
++                .setAttributes(Attributes.of(droppedKey, Value.of("secret"), retainedKey, "read"))
++                .setTotalAttributeCount(5)
++                .build();
++
++        // when
++        SpanBoundaryOutcome outcome = new SpanDataBoundaryScrubber(runtime).scrub(input);
++
++        // then
++        assertThat(outcome.dropSpan()).isFalse();
++        assertThat(outcome.changed()).isTrue();
++        assertThat(outcome.spanData().getAttributes().asMap()).containsOnlyKeys(retainedKey);
++        assertThat(outcome.spanData().getAttributes().get(retainedKey)).isEqualTo("read");
++        assertThat(outcome.spanData().getTotalAttributeCount()).isEqualTo(input.getTotalAttributeCount());
++        assertThat(outcome.spanData().getTotalAttributeCount() - outcome.spanData().getAttributes().size())
++                .isEqualTo(4);
++    }
++
+     @Test
+     @DisplayName("Event attributes: MASK is applied using the same effective ruleset as span attributes")
+     void eventAttributesAreScrubbedWithTheSharedRuleset() {
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/logging/AgentLogEventTypeTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/logging/AgentLogEventTypeTest.java
+index a44f3702..f8dcf5da 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/logging/AgentLogEventTypeTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/logging/AgentLogEventTypeTest.java
+@@ -22,6 +22,7 @@ import space.br1440.platform.tracing.otel.javaagent.logging.event.AgentLogEventC
+ import space.br1440.platform.tracing.otel.javaagent.logging.event.AgentLogEventType;
+ import space.br1440.platform.tracing.otel.javaagent.logging.event.BootstrapLogEvent;
+ import space.br1440.platform.tracing.otel.javaagent.logging.event.ExportPipelineLogEvent;
++import space.br1440.platform.tracing.otel.javaagent.logging.event.ExporterLogEvent;
+ import space.br1440.platform.tracing.otel.javaagent.logging.event.SamplingLogEvent;
+ import space.br1440.platform.tracing.otel.javaagent.logging.event.ScrubbingLogEvent;
+ import space.br1440.platform.tracing.otel.javaagent.logging.schema.AgentEventCode;
+@@ -148,6 +149,7 @@ class AgentLogEventTypeTest {
+ 
+         // then
+         assertThat(optional).containsExactlyInAnyOrder(
++                ExporterLogEvent.SAFE_EXPORT_RETURNED_FAILURE,
+                 SamplingLogEvent.SAMPLER_FAILED_CLOSED_TO_DROP,
+                 ScrubbingLogEvent.EXTENSION_SCRUBBING_RULE_SKIPPED,
+                 ScrubbingLogEvent.SCRUBBING_RULES_UNREADABLE,
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/processor/SpanLimitsMetricsProcessorTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/processor/SpanLimitsMetricsProcessorTest.java
+index ec9df393..09f1c387 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/processor/SpanLimitsMetricsProcessorTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/processor/SpanLimitsMetricsProcessorTest.java
+@@ -3,11 +3,101 @@ package space.br1440.platform.tracing.otel.javaagent.processor;
+ import static org.assertj.core.api.Assertions.assertThat;
+ 
+ import java.lang.reflect.Modifier;
++import java.util.List;
+ 
+ import org.junit.jupiter.api.Test;
+ 
++import space.br1440.platform.tracing.otel.javaagent.processor.composite.PlatformCompositeSpanProcessor;
++import space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInSpanAttributeScrubbingRules;
++import space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntime;
++import space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeTestFixtures;
++
++import io.opentelemetry.api.common.AttributeKey;
++import io.opentelemetry.sdk.trace.ReadWriteSpan;
++import io.opentelemetry.sdk.trace.SdkTracerProvider;
++import io.opentelemetry.sdk.trace.SpanLimits;
++import io.opentelemetry.sdk.trace.data.SpanData;
++
+ class SpanLimitsMetricsProcessorTest {
+ 
++    @Test
++    void overwritingAnAttributeAtTheLimitDoesNotCountAsADrop() {
++        // given
++        SpanLimitsMetricsProcessor processor = new SpanLimitsMetricsProcessor();
++        try (SdkTracerProvider provider = SdkTracerProvider.builder()
++                .setSpanLimits(SpanLimits.builder().setMaxNumberOfAttributes(1).build())
++                .addSpanProcessor(processor)
++                .build()) {
++            ReadWriteSpan span = (ReadWriteSpan) provider.get("span-limits-test").spanBuilder("overwrite").startSpan();
++
++            // when
++            span.setAttribute("key", "first");
++            span.setAttribute("key", "second");
++            span.setAttribute("key", "third");
++            span.end();
++
++            // then
++            SpanData data = span.toSpanData();
++            assertThat(data.getAttributes().get(AttributeKey.stringKey("key"))).isEqualTo("third");
++            assertThat(data.getAttributes().size()).isEqualTo(1);
++            assertThat(data.getTotalAttributeCount()).isEqualTo(1);
++            assertThat(processor.getDroppedAttributes()).isZero();
++        }
++    }
++
++    @Test
++    void attributesBeyondTheSdkLimitIncrementTheDropCounter() {
++        // given
++        SpanLimitsMetricsProcessor processor = new SpanLimitsMetricsProcessor();
++        try (SdkTracerProvider provider = SdkTracerProvider.builder()
++                .setSpanLimits(SpanLimits.builder().setMaxNumberOfAttributes(1).build())
++                .addSpanProcessor(processor)
++                .build()) {
++            ReadWriteSpan span = (ReadWriteSpan) provider.get("span-limits-test").spanBuilder("overflow").startSpan();
++
++            // when
++            span.setAttribute("first", "retained");
++            span.setAttribute("second", "dropped");
++            span.setAttribute("third", "dropped");
++            span.end();
++
++            // then
++            SpanData data = span.toSpanData();
++            assertThat(data.getAttributes().asMap()).containsOnlyKeys(AttributeKey.stringKey("first"));
++            assertThat(data.getTotalAttributeCount()).isEqualTo(3);
++            assertThat(processor.getDroppedAttributes()).isEqualTo(2);
++        }
++    }
++
++    @Test
++    void inPlaceScrubbingBeforeOnEndDoesNotCountAsAnSdkDrop() {
++        // given
++        SpanLimitsMetricsProcessor processor = new SpanLimitsMetricsProcessor();
++        ScrubbingRuntime runtime = ScrubbingRuntimeTestFixtures.fromBuiltInRules(
++                List.of(BuiltInSpanAttributeScrubbingRules.PASSWORD_KEY.create()));
++        PlatformCompositeSpanProcessor composite = new PlatformCompositeSpanProcessor(
++                List.of(processor, new ScrubbingSpanProcessor(runtime)));
++        try (SdkTracerProvider provider = SdkTracerProvider.builder()
++                .setSpanLimits(SpanLimits.builder().setMaxNumberOfAttributes(1).build())
++                .addSpanProcessor(composite)
++                .build()) {
++            ReadWriteSpan span = (ReadWriteSpan) provider.get("span-limits-test").spanBuilder("scrubbing").startSpan();
++            span.setAttribute("db.password", "supersecret");
++
++            // when
++            span.end();
++
++            // then
++            SpanData data = span.toSpanData();
++            assertThat(data.getAttributes().get(AttributeKey.stringKey("db.password"))).isEmpty();
++            assertThat(data.getAttributes().size()).isEqualTo(1);
++            assertThat(data.getTotalAttributeCount()).isEqualTo(1);
++            assertThat(runtime.droppedActions()).isEqualTo(1);
++            assertThat(processor.getDroppedAttributes()).isZero();
++            assertThat(composite.getProcessorErrorCounts().values()).allMatch(count -> count == 0L);
++        }
++    }
++
+     @Test
+     void exposesOnlySpanLimitDropCountersAndStableDiagnosticIdentity() {
+         try (SpanLimitsMetricsProcessor processor = new SpanLimitsMetricsProcessor()) {
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/processor/dropoldest/ExportWorkerDelegatePendingTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/processor/dropoldest/ExportWorkerDelegatePendingTest.java
+index 6a56a8b3..cc439c8c 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/processor/dropoldest/ExportWorkerDelegatePendingTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/processor/dropoldest/ExportWorkerDelegatePendingTest.java
+@@ -1,6 +1,13 @@
+ package space.br1440.platform.tracing.otel.javaagent.processor.dropoldest;
+ 
+ import static org.assertj.core.api.Assertions.assertThat;
++import static org.mockito.ArgumentMatchers.any;
++import static org.mockito.ArgumentMatchers.anyLong;
++import static org.mockito.ArgumentMatchers.eq;
++import static org.mockito.Mockito.doThrow;
++import static org.mockito.Mockito.times;
++import static org.mockito.Mockito.verify;
++import static org.mockito.Mockito.when;
+ 
+ import java.time.Duration;
+ import java.util.Collection;
+@@ -9,15 +16,19 @@ import java.util.concurrent.CountDownLatch;
+ import java.util.concurrent.TimeUnit;
+ import java.util.concurrent.atomic.AtomicBoolean;
+ import java.util.concurrent.atomic.AtomicInteger;
++import java.util.stream.Stream;
+ 
+ import org.junit.jupiter.api.Test;
+ import org.junit.jupiter.api.Timeout;
+ import org.junit.jupiter.api.extension.RegisterExtension;
+ import org.junit.jupiter.api.parallel.ResourceLock;
++import org.junit.jupiter.params.ParameterizedTest;
++import org.junit.jupiter.params.provider.MethodSource;
+ import org.mockito.Mockito;
+ 
+ import space.br1440.platform.tracing.otel.javaagent.logging.AgentLogCapture;
+ import space.br1440.platform.tracing.otel.javaagent.logging.CapturedLogEvent;
++import space.br1440.platform.tracing.otel.javaagent.logging.event.ExportPipelineLogEvent;
+ import space.br1440.platform.tracing.otel.javaagent.logging.event.ExporterLogEvent;
+ import space.br1440.platform.tracing.otel.javaagent.logging.schema.AgentLogLevel;
+ 
+@@ -33,6 +44,59 @@ class ExportWorkerDelegatePendingTest {
+     @RegisterExtension
+     final AgentLogCapture capture = new AgentLogCapture();
+ 
++    @ParameterizedTest
++    @MethodSource("nonfatalReporterFailures")
++    @Timeout(10)
++    void completedDelegateReleasesTheSlotAndContinuesAfterReporterFailure(Throwable reporterFailure)
++            throws InterruptedException {
++        // given
++        CompletableResultCode completed = CompletableResultCode.ofSuccess();
++        CountDownLatch secondEntered = new CountDownLatch(1);
++        AtomicInteger exports = new AtomicInteger();
++        TimedSpanExporter exporter = Mockito.mock(TimedSpanExporter.class);
++        when(exporter.export(any())).thenAnswer(invocation -> {
++            if (exports.incrementAndGet() == 1) {
++                return TimedExport.timedOut(completed);
++            }
++            secondEntered.countDown();
++            return TimedExport.finished(true);
++        });
++        when(exporter.shutdown()).thenReturn(true);
++        doThrow(reporterFailure).when(exporter).reportDelegateReleased(anyLong(), eq(true));
++        ExportBuffer buffer = new ExportBuffer(8, 1, new DropOldestExportMetrics());
++        ExportWorker worker = new ExportWorker(
++                buffer, exporter, Duration.ofMinutes(10).toNanos(), Duration.ofSeconds(2).toNanos());
++        buffer.admit(spanData());
++        buffer.admit(spanData());
++        Thread thread = new Thread(worker, ExportWorker.THREAD_NAME);
++        thread.setDaemon(true);
++
++        try {
++            // when
++            thread.start();
++            boolean continued = secondEntered.await(3, TimeUnit.SECONDS);
++
++            // then
++            assertThat(continued).isTrue();
++            assertThat(exports).hasValue(2);
++            assertThat(buffer.lifecycleState()).isEqualTo(LifecycleState.ACTIVE);
++            verify(exporter, times(1)).reportDelegateReleased(anyLong(), eq(true));
++            assertThat(worker.shutdown().join(3, TimeUnit.SECONDS).isSuccess()).isTrue();
++            assertThat(capture.events())
++                    .noneMatch(event -> event.eventName().equals(
++                            ExportPipelineLogEvent.EXPORT_WORKER_TERMINATED_ABNORMALLY.name()));
++        } finally {
++            worker.shutdown().join(3, TimeUnit.SECONDS);
++            assertThat(thread.join(Duration.ofSeconds(3))).isTrue();
++        }
++    }
++
++    private static Stream<Throwable> nonfatalReporterFailures() {
++        return Stream.of(
++                new IllegalStateException("simulated reporter failure"),
++                new AssertionError("simulated reporter error"));
++    }
++
+     @Test
+     void secondExportStartsOnlyAfterTheTimedOutDelegateCompletes() throws InterruptedException {
+         // given
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/BaggageIngressPipelineTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/BaggageIngressPipelineTest.java
+index bacfc882..e4108c12 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/BaggageIngressPipelineTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/BaggageIngressPipelineTest.java
+@@ -28,18 +28,8 @@ import io.opentelemetry.sdk.testing.exporter.InMemorySpanExporter;
+ 
+ class BaggageIngressPipelineTest {
+ 
+-    private static final TextMapGetter<Map<String, String>> GETTER = new TextMapGetter<>() {
+-
+-        @Override
+-        public Iterable<String> keys(Map<String, String> carrier) {
+-            return carrier.keySet();
+-        }
+-
+-        @Override
+-        public String get(Map<String, String> carrier, String key) {
+-            return (carrier == null) ? null : carrier.get(key);
+-        }
+-    };
++    private static final TextMapGetter<Map<String, String>> GETTER =
++            (carrier, key) -> carrier == null ? null : carrier.get(key);
+ 
+     @RegisterExtension
+     static OtelSdkExtension otel = OtelSdkExtension.builder()
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/BaggagePropagationCustomizerTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/BaggagePropagationCustomizerTest.java
+index ec091eda..12fe14ac 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/BaggagePropagationCustomizerTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/BaggagePropagationCustomizerTest.java
+@@ -203,20 +203,14 @@ class BaggagePropagationCustomizerTest {
+                 .put("traffic_source", "qa")
+                 .build());
+ 
+-        TextMapGetter<Map<String, String>> failingGetter = new TextMapGetter<>() {
+-            @Override
+-            public Iterable<String> keys(Map<String, String> carrier) {
+-                return carrier.keySet();
+-            }
+-
+-            @Override
+-            public String get(Map<String, String> carrier, String key) {
+-                throw new IllegalStateException("Carrier read failed");
+-            }
+-        };
+-
+         // when
+-        Context extracted = chain.extract(input, Map.of("baggage", "traffic_source=remote"), failingGetter);
++        Context extracted = chain.extract(
++                input,
++                Map.of("baggage", "traffic_source=remote"),
++                (carrier, key) -> {
++                    throw new IllegalStateException("Carrier read failed");
++                }
++        );
+ 
+         // then
+         assertThat(diagnostics.getPropagatorFailures()).isEqualTo(1);
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorBaggageLimitsTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorBaggageLimitsTest.java
+index 6e15afb3..2c9d9771 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorBaggageLimitsTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorBaggageLimitsTest.java
+@@ -24,17 +24,7 @@ class PlatformBaggagePropagatorBaggageLimitsTest {
+ 
+     private static final Set<String> ALLOWLIST = Set.of("traffic_source", "tenant_class");
+     private static final TextMapGetter<Map<String, String>> MAP_GETTER =
+-            new TextMapGetter<>() {
+-                @Override
+-                public Iterable<String> keys(Map<String, String> carrier) {
+-                    return carrier.keySet();
+-                }
+-
+-                @Override
+-                public String get(Map<String, String> carrier, String key) {
+-                    return carrier == null ? null : carrier.get(key);
+-                }
+-            };
++            (carrier, key) -> carrier == null ? null : carrier.get(key);
+ 
+     private static PlatformBaggagePropagator newPropagator() {
+         return new PlatformBaggagePropagator(
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorInjectionTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorInjectionTest.java
+index d6fa4503..ad7c0f6d 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorInjectionTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorInjectionTest.java
+@@ -103,17 +103,8 @@ class PlatformBaggagePropagatorInjectionTest {
+         assertThat(baggage.getEntryValue("tenant_class")).isEqualTo("gold");
+     }
+ 
+-    private static final TextMapGetter<Map<String, String>> MAP_GETTER = new TextMapGetter<>() {
+-        @Override
+-        public Iterable<String> keys(Map<String, String> carrier) {
+-            return carrier.keySet();
+-        }
+-
+-        @Override
+-        public String get(Map<String, String> carrier, String key) {
+-            return carrier == null ? null : carrier.get(key);
+-        }
+-    };
++    private static final TextMapGetter<Map<String, String>> MAP_GETTER =
++            (carrier, key) -> carrier == null ? null : carrier.get(key);
+ 
+     @Test
+     @DisplayName("conformance: ASCII space кодируется как %20 (не '+') и проходит stock round-trip")
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorTest.java
+index ff5076b7..23e331f8 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorTest.java
+@@ -35,25 +35,8 @@ class PlatformBaggagePropagatorTest {
+     private static final BaggageKeyPolicy POLICY = new BaggageKeyPolicy(
+             Set.of("tenant_class", PlatformBaggageKeys.CORRELATION_ID), List.of());
+ 
+-    private static final TextMapGetter<Map<String, String>> GETTER = new TextMapGetter<>() {
+-        @Override
+-        public Iterable<String> keys(Map<String, String> carrier) {
+-            if (carrier == null) {
+-                return List.of();
+-            }
+-
+-            return carrier.keySet();
+-        }
+-
+-        @Override
+-        public String get(Map<String, String> carrier, String key) {
+-            if (carrier == null) {
+-                return null;
+-            }
+-
+-            return carrier.get(key);
+-        }
+-    };
++    private static final TextMapGetter<Map<String, String>> GETTER =
++            (carrier, key) -> carrier == null ? null : carrier.get(key);
+ 
+     private static final TextMapSetter<Map<String, String>> SETTER = (carrier, key, value) -> {
+         if (carrier == null || key == null || value == null) {
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/SafeTextMapPropagatorTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/SafeTextMapPropagatorTest.java
+index 48b08bd8..c5f16ccb 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/SafeTextMapPropagatorTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/SafeTextMapPropagatorTest.java
+@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
+ import space.br1440.platform.tracing.otel.javaagent.diagnostics.TracingDiagnostics;
+ 
+ import java.util.Collection;
+-import java.util.List;
+ 
+ import static org.assertj.core.api.Assertions.assertThat;
+ import static org.assertj.core.api.Assertions.assertThatCode;
+@@ -114,17 +113,7 @@ class SafeTextMapPropagatorTest {
+     }
+ 
+     private static TextMapGetter<Object> dummyGetter() {
+-        return new TextMapGetter<>() {
+-            @Override
+-            public Iterable<String> keys(Object carrier) {
+-                return List.of();
+-            }
+-
+-            @Override
+-            public String get(Object carrier, String key) {
+-                return null;
+-            }
+-        };
++        return (carrier, key) -> null;
+     }
+ 
+     private static TextMapSetter<Object> dummySetter() {
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/TraceControlPropagatorProviderTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/TraceControlPropagatorProviderTest.java
+index 6206f399..716e900d 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/TraceControlPropagatorProviderTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/TraceControlPropagatorProviderTest.java
+@@ -22,17 +22,8 @@ import io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties;
+ @DisplayName("TraceControlPropagatorProvider (named platform-trace-control)")
+ class TraceControlPropagatorProviderTest {
+ 
+-    private static final TextMapGetter<Map<String, String>> MAP_GETTER = new TextMapGetter<>() {
+-        @Override
+-        public Iterable<String> keys(Map<String, String> carrier) {
+-            return carrier.keySet();
+-        }
+-
+-        @Override
+-        public String get(Map<String, String> carrier, String key) {
+-            return carrier == null ? null : carrier.get(key);
+-        }
+-    };
++    private static final TextMapGetter<Map<String, String>> MAP_GETTER =
++            (carrier, key) -> carrier == null ? null : carrier.get(key);
+ 
+     private static ConfigProperties config(Map<String, String> map) {
+         return DefaultConfigProperties.createFromMap(map);
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/TraceControlPropagatorTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/TraceControlPropagatorTest.java
+index 85fba252..350cbc5b 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/TraceControlPropagatorTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/TraceControlPropagatorTest.java
+@@ -27,17 +27,8 @@ class TraceControlPropagatorTest {
+ 
+     private final TraceControlPropagator propagator = new TraceControlPropagator();
+ 
+-    private static final TextMapGetter<Map<String, String>> MAP_GETTER = new TextMapGetter<>() {
+-        @Override
+-        public Iterable<String> keys(Map<String, String> carrier) {
+-            return carrier.keySet();
+-        }
+-
+-        @Override
+-        public String get(Map<String, String> carrier, String key) {
+-            return carrier == null ? null : carrier.get(key);
+-        }
+-    };
++    private static final TextMapGetter<Map<String, String>> MAP_GETTER =
++            (carrier, key) -> carrier == null ? null : carrier.get(key);
+ 
+     private static final TextMapSetter<Map<String, String>> MAP_SETTER = (carrier, key, value) -> {
+         if (carrier == null) {
+@@ -124,17 +115,9 @@ class TraceControlPropagatorTest {
+ 
+             // when/then
+             AtomicInteger getterCalls = new AtomicInteger();
+-            TextMapGetter<Map<String, String>> countingGetter = new TextMapGetter<>() {
+-                @Override
+-                public Iterable<String> keys(Map<String, String> carrier) {
+-                    return carrier.keySet();
+-                }
+-
+-                @Override
+-                public String get(Map<String, String> carrier, String key) {
+-                    getterCalls.incrementAndGet();
+-                    return carrier == null ? null : carrier.get(key);
+-                }
++            TextMapGetter<Map<String, String>> countingGetter = (carrier, key) -> {
++                getterCalls.incrementAndGet();
++                return carrier == null ? null : carrier.get(key);
+             };
+             Context extracted = gated.extract(input, inbound, countingGetter);
+             assertThat(extracted).isSameAs(input);
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/resource/PlatformResourceCustomizerTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/resource/PlatformResourceCustomizerTest.java
+index 43d6e514..ddb89d01 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/resource/PlatformResourceCustomizerTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/resource/PlatformResourceCustomizerTest.java
+@@ -64,17 +64,17 @@ class PlatformResourceCustomizerTest {
+     }
+ 
+     @Test
+-    void platformPropertiesFillIdentity() {
++    void platformPropertiesFillIdentityAlongsideSdkServiceName() {
+         // given
++        Resource existing = existingWith(PlatformAttributes.SERVICE_NAME, "demo-service");
+         Map<String, String> values = Map.of(
+-                ExtensionPropertyNames.SERVICE_NAME, "demo-service",
+                 ExtensionPropertyNames.SERVICE_VERSION, "1.0.0",
+                 ExtensionPropertyNames.SERVICE_ENVIRONMENT, "production",
+                 ExtensionPropertyNames.SERVICE_HOST, "Host-01",
+                 ExtensionPropertyNames.SERVICE_CONTAINER_ID, "docker-abc123");
+ 
+         // when
+-        Resource resource = customize(customizer(), Resource.empty(), values);
++        Resource resource = customize(customizer(), existing, values);
+ 
+         // then
+         assertThat(resource.getAttribute(key(PlatformAttributes.SERVICE_NAME))).isEqualTo("demo-service");
+@@ -87,15 +87,12 @@ class PlatformResourceCustomizerTest {
+     @Test
+     void platformPropertiesAreStripped() {
+         // given
+-        Map<String, String> values = Map.of(
+-                ExtensionPropertyNames.SERVICE_NAME, "  demo-service ",
+-                ExtensionPropertyNames.SERVICE_VERSION, " 1.0.0\t");
++        Map<String, String> values = Map.of(ExtensionPropertyNames.SERVICE_VERSION, " 1.0.0\t");
+ 
+         // when
+         Resource resource = customize(customizer(), Resource.empty(), values);
+ 
+         // then
+-        assertThat(resource.getAttribute(key(PlatformAttributes.SERVICE_NAME))).isEqualTo("demo-service");
+         assertThat(resource.getAttribute(key(PlatformAttributes.SERVICE_VERSION))).isEqualTo("1.0.0");
+     }
+ 
+@@ -140,7 +137,7 @@ class PlatformResourceCustomizerTest {
+     }
+ 
+     @Test
+-    void platformPropertiesOverrideExistingIdentity() {
++    void platformPropertiesOverrideOtherIdentityButPreserveSdkServiceName() {
+         // given
+         Resource existing = Resource.create(Attributes.builder()
+                 .put(key(PlatformAttributes.SERVICE_NAME), "existing-service")
+@@ -156,7 +153,7 @@ class PlatformResourceCustomizerTest {
+         Resource resource = customize(customizer(), existing, values);
+ 
+         // then
+-        assertThat(resource.getAttribute(key(PlatformAttributes.SERVICE_NAME))).isEqualTo("platform-service");
++        assertThat(resource.getAttribute(key(PlatformAttributes.SERVICE_NAME))).isEqualTo("existing-service");
+         assertThat(resource.getAttribute(key(PlatformAttributes.PLATFORM_HOST))).isEqualTo("Platform-Host");
+         assertThat(resource.getAttribute(key(PlatformAttributes.CONTAINER_ID))).isEqualTo("platform-container");
+     }
+@@ -414,7 +411,7 @@ class PlatformResourceCustomizerTest {
+ 
+         // then
+         assertThat(resource.getAttribute(key(PlatformAttributes.PLATFORM_HOST))).isNull();
+-        assertThat(resource.getAttribute(key(PlatformAttributes.SERVICE_NAME))).isEqualTo("demo-service");
++        assertThat(resource.getAttribute(key(PlatformAttributes.SERVICE_NAME))).isNull();
+     }
+ 
+     @Test
+@@ -472,12 +469,12 @@ class PlatformResourceCustomizerTest {
+     @Test
+     void completeIdentityIsLoggedAtInfoWithoutKindAndCount() {
+         // given
++        Resource existing = existingWith(PlatformAttributes.SERVICE_NAME, "demo-service");
+         Map<String, String> values = Map.of(
+-                ExtensionPropertyNames.SERVICE_NAME, "demo-service",
+                 ExtensionPropertyNames.SERVICE_ENVIRONMENT, "production");
+         try (AgentLogCapture logs = AgentLogCapture.installed()) {
+             // when
+-            customize(customizer(), Resource.empty(), values);
++            customize(customizer(), existing, values);
+ 
+             // then
+             assertThat(logs.events())
+diff --git a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/scrubbing/runtime/ScrubbingRuntimeCurrentBehaviorTest.java b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/scrubbing/runtime/ScrubbingRuntimeCurrentBehaviorTest.java
+index 52c662e1..f4ff54e0 100644
+--- a/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/scrubbing/runtime/ScrubbingRuntimeCurrentBehaviorTest.java
++++ b/platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/scrubbing/runtime/ScrubbingRuntimeCurrentBehaviorTest.java
+@@ -32,6 +32,8 @@ import io.opentelemetry.api.trace.Span;
+ import io.opentelemetry.sdk.trace.ReadWriteSpan;
+ import io.opentelemetry.sdk.trace.SdkTracerProvider;
+ import io.opentelemetry.sdk.trace.data.SpanData;
++import io.opentelemetry.sdk.trace.export.SimpleSpanProcessor;
++import io.opentelemetry.sdk.trace.export.SpanExporter;
+ 
+ class ScrubbingRuntimeCurrentBehaviorTest {
+ 
+@@ -188,7 +190,7 @@ class ScrubbingRuntimeCurrentBehaviorTest {
+         AttributeKey<Value<?>> valueKey = AttributeKey.valueKey("payload");
+         AttributeKey<String> typedKey = AttributeKey.stringKey("payload");
+ 
+-        try (SdkTracerProvider provider = SdkTracerProvider.builder().build()) {
++        try (SdkTracerProvider provider = realSpanProvider()) {
+             ReadWriteSpan valueOrigin = (ReadWriteSpan) provider.get("value-origin").spanBuilder("value-origin").startSpan();
+             valueOrigin.setAttribute(valueKey, Value.of("secret"));
+             ReadWriteSpan nativeOrigin = (ReadWriteSpan) provider.get("native-origin").spanBuilder("native-origin").startSpan();
+@@ -219,7 +221,7 @@ class ScrubbingRuntimeCurrentBehaviorTest {
+         AttributeKey<String> typedKey = AttributeKey.stringKey("payload");
+         ScrubbingRuntime runtime = runtime(ScrubbingDecision.mask("test"));
+ 
+-        try (SdkTracerProvider provider = SdkTracerProvider.builder().build()) {
++        try (SdkTracerProvider provider = realSpanProvider()) {
+             ReadWriteSpan valueOrigin = (ReadWriteSpan) provider.get("value-origin").spanBuilder("value-origin").startSpan();
+             valueOrigin.setAttribute(valueKey, Value.of("secret"));
+             ReadWriteSpan nativeOrigin = (ReadWriteSpan) provider.get("native-origin").spanBuilder("native-origin").startSpan();
+@@ -249,7 +251,7 @@ class ScrubbingRuntimeCurrentBehaviorTest {
+         AttributeKey<String> nativeKey = AttributeKey.stringKey("neighbor.secret");
+         ScrubbingRuntime runtime = runtime(ScrubbingDecision.mask("test"));
+ 
+-        try (SdkTracerProvider provider = SdkTracerProvider.builder().build()) {
++        try (SdkTracerProvider provider = realSpanProvider()) {
+             ReadWriteSpan span = (ReadWriteSpan) provider.get("fail-closed").spanBuilder("fail-closed").startSpan();
+             span.setAttribute(valueKey, Value.of("secret"));
+             span.setAttribute(nativeKey, "native-secret");
+@@ -537,4 +539,11 @@ class ScrubbingRuntimeCurrentBehaviorTest {
+                 });
+         runtime.scrubSpanAttributes(span);
+     }
++
++    private static SdkTracerProvider realSpanProvider() {
++        // SDK 1.67 без процессора возвращает noop-tracer, и span не является ReadWriteSpan.
++        return SdkTracerProvider.builder()
++                .addSpanProcessor(SimpleSpanProcessor.create(SpanExporter.noop()))
++                .build();
++    }
+ }
+diff --git a/platform-starters-tracing/spring-boot-starter-platform-tracing-autoconfigure/src/test/java/space/br1440/platform/tracing/autoconfigure/integrations/errorhandling/RequestTraceContextSnapshotSupplierTest.java b/platform-starters-tracing/spring-boot-starter-platform-tracing-autoconfigure/src/test/java/space/br1440/platform/tracing/autoconfigure/integrations/errorhandling/RequestTraceContextSnapshotSupplierTest.java
+index 7193c644..6e79fec7 100644
+--- a/platform-starters-tracing/spring-boot-starter-platform-tracing-autoconfigure/src/test/java/space/br1440/platform/tracing/autoconfigure/integrations/errorhandling/RequestTraceContextSnapshotSupplierTest.java
++++ b/platform-starters-tracing/spring-boot-starter-platform-tracing-autoconfigure/src/test/java/space/br1440/platform/tracing/autoconfigure/integrations/errorhandling/RequestTraceContextSnapshotSupplierTest.java
+@@ -7,6 +7,8 @@ import io.opentelemetry.api.trace.Tracer;
+ import io.opentelemetry.context.Scope;
+ import io.opentelemetry.sdk.OpenTelemetrySdk;
+ import io.opentelemetry.sdk.trace.SdkTracerProvider;
++import io.opentelemetry.sdk.trace.export.SimpleSpanProcessor;
++import io.opentelemetry.sdk.trace.export.SpanExporter;
+ import org.junit.jupiter.api.AfterEach;
+ import org.junit.jupiter.api.BeforeEach;
+ import org.junit.jupiter.api.Test;
+@@ -27,8 +29,11 @@ class RequestTraceContextSnapshotSupplierTest {
+ 
+     @BeforeEach
+     void setUp() {
++        // SDK 1.67 без процессора возвращает noop-tracer, и traceId в снимке пустой.
+         sdk = OpenTelemetrySdk.builder()
+-                .setTracerProvider(SdkTracerProvider.builder().build())
++                .setTracerProvider(SdkTracerProvider.builder()
++                        .addSpanProcessor(SimpleSpanProcessor.create(SpanExporter.noop()))
++                        .build())
+                 .build();
+         runtime = OtelTracingRuntimeFactory.create(sdk);
+         traceOperations = new DefaultTraceOperations(runtime);
+diff --git a/platform-starters-tracing/spring-boot-starter-platform-tracing-otel/src/main/java/space/br1440/platform/tracing/otel/propagation/OtelTraceparentReaderImpl.java b/platform-starters-tracing/spring-boot-starter-platform-tracing-otel/src/main/java/space/br1440/platform/tracing/otel/propagation/OtelTraceparentReaderImpl.java
+index c2d56ad9..0d7b45fc 100644
+--- a/platform-starters-tracing/spring-boot-starter-platform-tracing-otel/src/main/java/space/br1440/platform/tracing/otel/propagation/OtelTraceparentReaderImpl.java
++++ b/platform-starters-tracing/spring-boot-starter-platform-tracing-otel/src/main/java/space/br1440/platform/tracing/otel/propagation/OtelTraceparentReaderImpl.java
+@@ -116,11 +116,6 @@ public final class OtelTraceparentReaderImpl implements OtelTraceparentReader {
+     private enum CarrierGetter implements TextMapGetter<Map<String, String>> {
+         INSTANCE;
+ 
+-        @Override
+-        public Iterable<String> keys(Map<String, String> carrier) {
+-            return carrier.keySet();
+-        }
+-
+         @Override
+         @Nullable
+         public String get(@Nullable Map<String, String> carrier, @Nonnull String key) {
+diff --git a/platform-starters-tracing/spring-boot-starter-platform-tracing-otel/src/test/java/space/br1440/platform/tracing/otel/runtime/NoOpTracingRuntimeTraceparentContractTest.java b/platform-starters-tracing/spring-boot-starter-platform-tracing-otel/src/test/java/space/br1440/platform/tracing/otel/runtime/NoOpTracingRuntimeTraceparentContractTest.java
+index b77ef373..c19bec23 100644
+--- a/platform-starters-tracing/spring-boot-starter-platform-tracing-otel/src/test/java/space/br1440/platform/tracing/otel/runtime/NoOpTracingRuntimeTraceparentContractTest.java
++++ b/platform-starters-tracing/spring-boot-starter-platform-tracing-otel/src/test/java/space/br1440/platform/tracing/otel/runtime/NoOpTracingRuntimeTraceparentContractTest.java
+@@ -9,10 +9,18 @@ import space.br1440.platform.tracing.otel.facade.NoopTraceOperations;
+ 
+ import io.opentelemetry.api.trace.Span;
+ import io.opentelemetry.sdk.OpenTelemetrySdk;
++import io.opentelemetry.sdk.trace.SdkTracerProvider;
++import io.opentelemetry.sdk.trace.export.SimpleSpanProcessor;
++import io.opentelemetry.sdk.trace.export.SpanExporter;
+ 
+ class NoOpTracingRuntimeTraceparentContractTest {
+ 
+-    private final OpenTelemetrySdk openTelemetry = OpenTelemetrySdk.builder().build();
++    // SDK 1.67 без процессора возвращает noop-tracer, и чужой span невалиден.
++    private final OpenTelemetrySdk openTelemetry = OpenTelemetrySdk.builder()
++            .setTracerProvider(SdkTracerProvider.builder()
++                    .addSpanProcessor(SimpleSpanProcessor.create(SpanExporter.noop()))
++                    .build())
++            .build();
+ 
+     @Test
+     void traceparent_isEmpty_evenWithForeignActiveSpan() {

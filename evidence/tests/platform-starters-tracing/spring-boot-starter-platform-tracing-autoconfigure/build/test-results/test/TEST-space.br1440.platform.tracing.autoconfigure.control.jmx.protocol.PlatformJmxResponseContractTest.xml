@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.PlatformJmxResponseContractTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:00.342Z" hostname="DESKTOP-OEGBG7F" time="0.011">
+  <properties/>
+  <testcase name="constructorRejectsInconsistentEvidenceForSuccessfulOutcomeDirectly()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.PlatformJmxResponseContractTest" time="0.001"/>
+  <testcase name="successfulResponseWithMismatchedRequestCorrelationIsRejected()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.PlatformJmxResponseContractTest" time="0.003"/>
+  <testcase name="unchangedOutcomeRequiresAcceptedSequenceToMatchTheRequestExactly()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.PlatformJmxResponseContractTest" time="0.001"/>
+  <testcase name="successfulOutcomeWithAnyFailureMessageCodeIsRejectedEvenWithoutViolationCodes()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.PlatformJmxResponseContractTest" time="0.001"/>
+  <testcase name="constructorRejectsDuplicateViolationCodesDirectly()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.PlatformJmxResponseContractTest" time="0.001"/>
+  <testcase name="rejectedOutcomeWithExactlyOneEvidenceCodeDecodesSuccessfully()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.PlatformJmxResponseContractTest" time="0.0"/>
+  <testcase name="constructorRejectsNegativeAcceptedSequenceDirectly()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.PlatformJmxResponseContractTest" time="0.001"/>
+  <testcase name="failedOutcomeWithoutExactFailureEvidenceIsRejected()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.PlatformJmxResponseContractTest" time="0.001"/>
+  <testcase name="completeSuccessfulResponsePassesStructuralAndCorrelationValidation()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.PlatformJmxResponseContractTest" time="0.001"/>
+  <testcase name="duplicateViolationCodesAreRejected()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.PlatformJmxResponseContractTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

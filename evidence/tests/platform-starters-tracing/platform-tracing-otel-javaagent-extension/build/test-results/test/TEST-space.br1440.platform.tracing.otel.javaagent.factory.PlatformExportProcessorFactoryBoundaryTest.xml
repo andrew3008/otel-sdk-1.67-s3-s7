@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryBoundaryTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:15.477Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="Foreign SafeSpanExporter is rejected at startup instead of being wrapped twice" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryBoundaryTest" time="0.002"/>
+  <testcase name="Single wrapped exporter still acknowledges export mode for a non-batch processor" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryBoundaryTest" time="0.0"/>
+  <testcase name="Non-batch processor keeps the wrapped exporter" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryBoundaryTest" time="0.001"/>
+  <testcase name="Missing captured exporter keeps the incoming processor" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryBoundaryTest" time="0.0"/>
+  <testcase name="Same-runtime identity alone does not prove factory provenance: a manually-built SafeSpanExporter is rejected even when it shares the session runtime (H-4)" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryBoundaryTest" time="0.001"/>
+  <testcase name="Re-entry with this factory's own ReplacementAwareSpanExporter output does not re-wrap or run the boundary a second time" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryBoundaryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

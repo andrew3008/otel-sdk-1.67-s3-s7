@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationCleanupTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:08.761Z" hostname="DESKTOP-OEGBG7F" time="0.22">
+  <properties/>
+  <testcase name="failed_readiness_publication_does_not_skip_customization_cleanup()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationCleanupTest" time="0.051"/>
+  <testcase name="customization_winning_close_race_keeps_sole_session_ownership()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationCleanupTest" time="0.01"/>
+  <testcase name="linkage_error_is_propagated_after_customization_cleanup()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationCleanupTest" time="0.004"/>
+  <testcase name="publication_and_cleanup_failures_preserve_customization_primary_and_escalation()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationCleanupTest" time="0.124"/>
+  <testcase name="customization_failure_releases_session_once_and_retains_diagnostics_until_close()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationCleanupTest" time="0.008"/>
+  <testcase name="customization_cleanup_failure_preserves_primary_and_is_not_replayed_by_close()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationCleanupTest" time="0.005"/>
+  <testcase name="virtual_machine_error_remains_primary_after_failed_customization_cleanup()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationCleanupTest" time="0.005"/>
+  <testcase name="close_winning_customization_race_keeps_sole_session_ownership()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationCleanupTest" time="0.005"/>
+  <testcase name="fatal_customizer_failure_remains_primary_when_readiness_publication_fails()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorCustomizationCleanupTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

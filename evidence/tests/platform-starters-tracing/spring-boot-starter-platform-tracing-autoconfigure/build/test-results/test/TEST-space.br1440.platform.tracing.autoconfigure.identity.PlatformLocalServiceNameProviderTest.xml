@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.identity.PlatformLocalServiceNameProviderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:09.861Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="ignores_platform_tracing_service_name_spring_binding()" classname="space.br1440.platform.tracing.autoconfigure.identity.PlatformLocalServiceNameProviderTest" time="0.001"/>
+  <testcase name="falls_back_to_unknown_service_when_spring_name_absent()" classname="space.br1440.platform.tracing.autoconfigure.identity.PlatformLocalServiceNameProviderTest" time="0.0"/>
+  <testcase name="resolves_spring_application_name()" classname="space.br1440.platform.tracing.autoconfigure.identity.PlatformLocalServiceNameProviderTest" time="0.0"/>
+  <testcase name="blank_spring_application_name_falls_back_to_unknown_service()" classname="space.br1440.platform.tracing.autoconfigure.identity.PlatformLocalServiceNameProviderTest" time="0.0"/>
+  <testcase name="tolerates_null_environment()" classname="space.br1440.platform.tracing.autoconfigure.identity.PlatformLocalServiceNameProviderTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

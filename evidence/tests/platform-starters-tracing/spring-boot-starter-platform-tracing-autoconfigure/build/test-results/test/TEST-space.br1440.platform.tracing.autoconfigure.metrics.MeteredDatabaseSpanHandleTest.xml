@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.metrics.MeteredDatabaseSpanHandleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.689Z" hostname="DESKTOP-OEGBG7F" time="0.084">
+  <properties/>
+  <testcase name="recordException_thenSpi_incrementsExactlyOnce()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MeteredDatabaseSpanHandleTest" time="0.078"/>
+  <testcase name="responseStatusCode_doesNotIncrementExceptionsRecorded()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MeteredDatabaseSpanHandleTest" time="0.0"/>
+  <testcase name="startSpan_preservesDatabaseHandleType()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MeteredDatabaseSpanHandleTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

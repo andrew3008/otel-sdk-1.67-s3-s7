@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeConcurrencyTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.771Z" hostname="DESKTOP-OEGBG7F" time="0.042">
+  <properties/>
+  <testcase name="HMAC is stable across threads: the thread-local Mac never leaks state" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeConcurrencyTest" time="0.01"/>
+  <testcase name="Concurrent span scrubbing counts every action exactly once" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeConcurrencyTest" time="0.012"/>
+  <testcase name="Обе плоскости на одном runtime: processor и exporter-boundary считают точно и не мешают друг другу" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeConcurrencyTest" time="0.019"/>
+  <testcase name="Two sessions are isolated: different HMAC keys, independent counters and state flags" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeConcurrencyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

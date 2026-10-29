@@ -1,0 +1,42 @@
+package space.br1440.platform.tracing.otel.runtime;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+
+import space.br1440.platform.tracing.api.TraceOperations;
+import space.br1440.platform.tracing.otel.facade.NoopTraceOperations;
+
+import io.opentelemetry.api.trace.Span;
+import io.opentelemetry.sdk.OpenTelemetrySdk;
+import io.opentelemetry.sdk.trace.SdkTracerProvider;
+import io.opentelemetry.sdk.trace.export.SimpleSpanProcessor;
+import io.opentelemetry.sdk.trace.export.SpanExporter;
+
+class NoOpTracingRuntimeTraceparentContractTest {
+
+    // SDK 1.67 без процессора возвращает noop-tracer, и чужой span невалиден.
+    private final OpenTelemetrySdk openTelemetry = OpenTelemetrySdk.builder()
+            .setTracerProvider(SdkTracerProvider.builder()
+                    .addSpanProcessor(SimpleSpanProcessor.create(SpanExporter.noop()))
+                    .build())
+            .build();
+
+    @Test
+    void traceparent_isEmpty_evenWithForeignActiveSpan() {
+        // given
+        TraceOperations disabled = NoopTraceOperations.forDisabledRuntime(
+                NoOpTracingRuntime.disabledByConfiguration("test")
+        );
+        Span foreignSpan = openTelemetry.getTracer("foreign-instrumentation").spanBuilder("foreign").startSpan();
+
+        // when
+        try (var ignored = foreignSpan.makeCurrent()) {
+            // then
+            assertThat(foreignSpan.getSpanContext().isValid()).isTrue();
+            assertThat(disabled.traceContext().traceparent()).isEmpty();
+        } finally {
+            foreignSpan.end();
+        }
+    }
+}

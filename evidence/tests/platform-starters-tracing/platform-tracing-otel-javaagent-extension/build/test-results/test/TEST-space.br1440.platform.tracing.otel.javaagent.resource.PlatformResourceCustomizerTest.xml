@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" tests="31" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.068Z" hostname="DESKTOP-OEGBG7F" time="0.009">
+  <properties/>
+  <testcase name="platformPropertiesOverrideOtherIdentityButPreserveSdkServiceName()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="otelResourceAttributesStayAheadOfPlatformProperties()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="detectorNameIsExportedAndLoggedWhenPlatformNameIsAbsent()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="unknownServiceNameCountsAsMissing()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.001"/>
+  <testcase name="platformEnvironmentOverridesExisting()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="containerIdEnvIsIgnored()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="errorPropagatesRuntimeCustomizationFailure()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.001"/>
+  <testcase name="serviceVersionFromBuildInfoWhenExplicitNotSet()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="absentEnvironmentIsNotWritten()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="platformPropertiesFillIdentityAlongsideSdkServiceName()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="containerIdExplicitConfig()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="otelServiceNameBlocksPlatformOverride()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.001"/>
+  <testcase name="disabledKeyAlreadyPresentOnExistingResourceIsNotStripped()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="hostNameFromHostnameEnvPreservesCase()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="serviceVersionExplicitWinsOverBuildInfo()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="environmentIsCanonicalized()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.001"/>
+  <testcase name="completeIdentityIsLoggedAtInfoWithoutKindAndCount()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="existingVersionWinsOverBuildInfo()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="warningReturnsExistingAndCountsCustomizationFailure()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.001"/>
+  <testcase name="unknownServicePrefixOnHostNameIsPreserved()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="errorValidatesMergedResourceNotOnlyAdditions()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="warningLogsIncompleteIdentityWithoutFailing()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.001"/>
+  <testcase name="errorFailsWhenRequiredKeysAbsent()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="hostNameOmitWhenUndefined()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="errorDoesNotFailWhenServiceNameComesFromOtelConfiguration()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.001"/>
+  <testcase name="hostNameEnvDoesNotOverrideExisting()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="hostNameFallsBackToComputerNameEnv()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="warningDoesNotSwallowErrors()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="disabledKeyIsNotProjectedByPlatform()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <testcase name="platformPropertiesAreStripped()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.001"/>
+  <testcase name="environmentIsNotRenamed()" classname="space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

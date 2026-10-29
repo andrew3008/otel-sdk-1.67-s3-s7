@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageAttributeCopyContractTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.986Z" hostname="DESKTOP-OEGBG7F" time="0.006">
+  <properties/>
+  <testcase name="accepts_absent_include()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageAttributeCopyContractTest" time="0.0"/>
+  <testcase name="[1] propertyName=otel.java.experimental.span-attributes.copy-from-baggage.include, value=" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageAttributeCopyContractTest" time="0.001"/>
+  <testcase name="[2] propertyName=otel.java.experimental.span-attributes.copy-from-baggage.include, value= " classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageAttributeCopyContractTest" time="0.0"/>
+  <testcase name="[3] propertyName=otel.java.experimental.span-attributes.copy-from-baggage.include, value=," classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageAttributeCopyContractTest" time="0.001"/>
+  <testcase name="[4] propertyName=otel.java.experimental.log-attributes.copy-from-baggage.include, value=" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageAttributeCopyContractTest" time="0.0"/>
+  <testcase name="[5] propertyName=otel.java.experimental.log-attributes.copy-from-baggage.include, value= " classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageAttributeCopyContractTest" time="0.0"/>
+  <testcase name="[6] propertyName=otel.java.experimental.log-attributes.copy-from-baggage.include, value=," classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageAttributeCopyContractTest" time="0.0"/>
+  <testcase name="[1] propertyName=otel.java.experimental.span-attributes.copy-from-baggage.include" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageAttributeCopyContractTest" time="0.001"/>
+  <testcase name="[2] propertyName=otel.java.experimental.log-attributes.copy-from-baggage.include" classname="space.br1440.platform.tracing.otel.javaagent.configuration.BaggageAttributeCopyContractTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

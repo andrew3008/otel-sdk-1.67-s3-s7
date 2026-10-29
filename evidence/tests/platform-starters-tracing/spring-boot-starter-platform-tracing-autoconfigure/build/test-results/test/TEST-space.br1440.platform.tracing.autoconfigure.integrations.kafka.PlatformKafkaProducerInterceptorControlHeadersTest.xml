@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.463Z" hostname="DESKTOP-OEGBG7F" time="0.129">
+  <properties/>
+  <testcase name="[1] key=platform.tracing.kafka.outbound-policy" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.002"/>
+  <testcase name="[2] key=platform.tracing.kafka.outbound-propagation" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.0"/>
+  <testcase name="[3] key=platform.tracing.kafka.identity-boundary" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.0"/>
+  <testcase name="[1] preset=false, scenario=ALLOW" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.073"/>
+  <testcase name="[2] preset=false, scenario=PARTIAL_DENY" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.0"/>
+  <testcase name="[3] preset=false, scenario=DENY" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.0"/>
+  <testcase name="[4] preset=false, scenario=EMPTY" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.001"/>
+  <testcase name="[5] preset=false, scenario=POLICY_FAILURE" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.001"/>
+  <testcase name="[6] preset=false, scenario=RESOLVE_FAILURE" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.0"/>
+  <testcase name="[7] preset=true, scenario=ALLOW" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.001"/>
+  <testcase name="[8] preset=true, scenario=PARTIAL_DENY" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.001"/>
+  <testcase name="[9] preset=true, scenario=DENY" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.0"/>
+  <testcase name="[10] preset=true, scenario=EMPTY" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.001"/>
+  <testcase name="[11] preset=true, scenario=POLICY_FAILURE" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.0"/>
+  <testcase name="[12] preset=true, scenario=RESOLVE_FAILURE" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.001"/>
+  <testcase name="readOnlyHeadersRetainCallerValuesAndWarnOnceWithoutComputingPropagation()" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.001"/>
+  <testcase name="producerInterceptorChainReplacesCallerPresetsAndInvokesEachInterceptorOnce()" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.04"/>
+  <testcase name="[1] key=platform.tracing.kafka.outbound-policy" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.001"/>
+  <testcase name="[2] key=platform.tracing.kafka.outbound-propagation" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.0"/>
+  <testcase name="[3] key=platform.tracing.kafka.identity-boundary" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.001"/>
+  <testcase name="propagationFailureWarnIsBoundedPerInstanceWithoutLeakingExceptionDetails()" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaProducerInterceptorControlHeadersTest" time="0.002"/>
+  <system-out><![CDATA[2026-10-29T12:48:10.542Z  WARN 25468 --- [    Test worker] [                                                 ] t.a.i.k.PlatformKafkaProducerInterceptor : Failed to prepare platform propagation headers: java.lang.IllegalStateException
+2026-10-29T12:48:10.542Z  WARN 25468 --- [    Test worker] [                                                 ] t.a.i.k.PlatformKafkaProducerInterceptor : Failed to prepare platform propagation headers: java.lang.IllegalStateException
+2026-10-29T12:48:10.545Z  WARN 25468 --- [    Test worker] [                                                 ] t.a.i.k.PlatformKafkaProducerInterceptor : Failed to prepare platform propagation headers: java.lang.IllegalStateException
+2026-10-29T12:48:10.546Z  WARN 25468 --- [    Test worker] [                                                 ] t.a.i.k.PlatformKafkaProducerInterceptor : Failed to prepare platform propagation headers: java.lang.IllegalStateException
+2026-10-29T12:48:10.546Z  WARN 25468 --- [    Test worker] [                                                 ] t.a.i.k.PlatformKafkaProducerInterceptor : Failed to prepare platform propagation headers: java.lang.IllegalStateException
+2026-10-29T12:48:10.591Z  WARN 25468 --- [    Test worker] [                                                 ] t.a.i.k.PlatformKafkaProducerInterceptor : Failed to prepare platform propagation headers: java.lang.IllegalStateException
+2026-10-29T12:48:10.592Z  WARN 25468 --- [    Test worker] [                                                 ] t.a.i.k.PlatformKafkaProducerInterceptor : Failed to prepare platform propagation headers: java.lang.IllegalStateException
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

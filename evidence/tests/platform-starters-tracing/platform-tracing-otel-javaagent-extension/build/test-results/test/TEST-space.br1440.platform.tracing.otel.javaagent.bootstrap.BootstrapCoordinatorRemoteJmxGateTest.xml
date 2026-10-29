@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorRemoteJmxGateTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:10.909Z" hostname="DESKTOP-OEGBG7F" time="0.017">
+  <properties/>
+  <testcase name="remote_jmx_gate_denial_publishes_failed_diagnostic_snapshot_before_runtime_registration()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorRemoteJmxGateTest" time="0.006"/>
+  <testcase name="unhandled_remote_jmx_phase_error_publishes_evidence_unknown_without_registering_mutation()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorRemoteJmxGateTest" time="0.004"/>
+  <testcase name="remote_jmx_capture_failure_is_published_as_classified_evidence_unknown_denial()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorRemoteJmxGateTest" time="0.003"/>
+  <testcase name="remote_jmx_denial_event_reports_argument_names_without_values()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorRemoteJmxGateTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

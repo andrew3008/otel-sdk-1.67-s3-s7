@@ -1,0 +1,124 @@
+﻿
+E:\Platform_Traces>if "Windows_NT" == "Windows_NT" setlocal
+
+E:\Platform_Traces>set DIRNAME=E:\Platform_Traces\ 
+
+E:\Platform_Traces>if "E:\Platform_Traces\" == "" set DIRNAME=. 
+
+E:\Platform_Traces>set APP_BASE_NAME=gradlew 
+
+E:\Platform_Traces>set APP_HOME=E:\Platform_Traces\ 
+
+E:\Platform_Traces>for %i in ("E:\Platform_Traces\") do set APP_HOME=%~fi 
+
+E:\Platform_Traces>set APP_HOME=E:\Platform_Traces\ 
+
+E:\Platform_Traces>set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m" 
+
+E:\Platform_Traces>if defined JAVA_HOME goto findJavaFromJavaHome 
+
+E:\Platform_Traces>set JAVA_HOME=G:\JavaFrameworks\jdk-21.0.6 
+
+E:\Platform_Traces>set JAVA_EXE=G:\JavaFrameworks\jdk-21.0.6/bin/java.exe 
+
+E:\Platform_Traces>if exist "G:\JavaFrameworks\jdk-21.0.6/bin/java.exe" goto execute 
+
+E:\Platform_Traces>set CLASSPATH= 
+
+E:\Platform_Traces>"G:\JavaFrameworks\jdk-21.0.6/bin/java.exe" "-Xmx64m" "-Xms64m"   "-Dorg.gradle.appname=gradlew" -classpath "" -jar "E:\Platform_Traces\\gradle\wrapper\gradle-wrapper.jar" :platform-starters-tracing:platform-tracing-otel-javaagent-extension:test --tests *ResourceCustomizerAutoconfigureIntegrationTest.pinned_resource_detectors_preserve_service_schema_without_merge_conflicts --init-script build/otel-sdk-1.67-s3-s7/resource-detectors-2.33.0.init.gradle --no-daemon --no-build-cache --console=plain 
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :build-logic:compileJava UP-TO-DATE
+> Task :build-logic:pluginDescriptors UP-TO-DATE
+> Task :build-logic:processResources UP-TO-DATE
+> Task :build-logic:classes UP-TO-DATE
+> Task :build-logic:jar UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-otel-javaagent-extension:writeExtensionArtifactMetadata UP-TO-DATE
+> Task :platform-starters-tracing:spring-boot-starter-platform-tracing-otel:processResources UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-runtime-policy:processResources UP-TO-DATE
+> Task :spring-boot-starter-platform-logging:preparePlatformLogMasking UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-testkit:processResources NO-SOURCE
+> Task :platform-starters-tracing:platform-tracing-otel-javaagent-extension:processResources UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-otel-javaagent-extension:processTestResources UP-TO-DATE
+> Task :platform-starters-common:platform-starters-common-util:compileJava UP-TO-DATE
+> Task :platform-starters-common:platform-starters-common-util:processResources NO-SOURCE
+> Task :platform-starters-common:platform-starters-common-util:classes UP-TO-DATE
+> Task :platform-starters-tracing:spring-boot-starter-platform-tracing-api:compileJava UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-jmx-contract:compileJava UP-TO-DATE
+> Task :platform-starters-tracing:spring-boot-starter-platform-tracing-api:processResources UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-jmx-contract:processResources UP-TO-DATE
+> Task :platform-starters-common:platform-starters-common-util:jar UP-TO-DATE
+> Task :platform-starters-tracing:spring-boot-starter-platform-tracing-api:classes UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-jmx-contract:classes UP-TO-DATE
+> Task :platform-starters-tracing:spring-boot-starter-platform-tracing-api:jar UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-jmx-contract:generateJmxWireContract UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-runtime-policy:compileJava UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-runtime-policy:classes UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-runtime-policy:jar UP-TO-DATE
+> Task :platform-starters-tracing:spring-boot-starter-platform-tracing-otel:compileJava UP-TO-DATE
+> Task :platform-starters-tracing:spring-boot-starter-platform-tracing-otel:classes UP-TO-DATE
+> Task :platform-starters-tracing:spring-boot-starter-platform-tracing-otel:jar UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-testkit:compileJava UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-testkit:classes UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-testkit:jar UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-otel-javaagent-extension:compileJava UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-otel-javaagent-extension:classes UP-TO-DATE
+> Task :platform-starters-tracing:platform-tracing-otel-javaagent-extension:compileTestJava
+> Task :platform-starters-tracing:platform-tracing-otel-javaagent-extension:testClasses
+gradlew.bat : {"timestamp":"2026-10-29T12:45:16.088514100Z","level":"INFO","logger":"space.br1440.platform.tracing.otel.javaagent.scrubbing.assembly.StartupDiagnostics","message":"Scrubbing rule initialized","event_code":"PTA-SCRUB-008","event_name":"SCRUBBING_RULES_INITIALIZED","fields":{"builtInRules":"11","bundledSpiRules":"1","clampedPriorities":"0","customRules":"0","failedProviders":"0","kind":"NONE"}}
+At line:2 char:1
++ & .\gradlew.bat :platform-starters-tracing:platform-tracing-otel-java ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ({"timestamp":"2..."kind":"NONE"}}:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+{"timestamp":"2026-10-29T12:45:16.090628500Z","level":"WARN","logger":"space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntime","message":"Scrubbing HMAC key is not set","event_code":"PTA-SCRUB-001","event_name":"SCRUBBING_HMAC_KEY_MISSING","fields":{}}
+{"timestamp":"2026-10-29T12:45:16.101961900Z","level":"INFO","logger":"space.br1440.platform.tracing.otel.javaagent.resource.PlatformResourceCustomizer","message":"Resource identity resolved","event_code":"PTA-BOOT-005","event_name":"RESOURCE_IDENTITY_RESOLVED","fields":{"environment":"production","service":"platform-service"}}
+
+> Task :platform-starters-tracing:platform-tracing-otel-javaagent-extension:test
+
+ResourceCustomizerAutoconfigureIntegrationTest > pinned_resource_detectors_preserve_service_schema_without_merge_conflicts() FAILED
+    java.lang.AssertionError: 
+    Expecting no elements of:
+      [java.util.logging.LogRecord@4a734c04, java.util.logging.LogRecord@4760f169]
+    to match given predicate but this element did:
+      java.util.logging.LogRecord@4a734c04
+        at space.br1440.platform.tracing.otel.javaagent.bootstrap.ResourceCustomizerAutoconfigureIntegrationTest.pinned_resource_detectors_preserve_service_schema_without_merge_conflicts(ResourceCustomizerAutoconfigureIntegrationTest.java:149)
+
+45 tests completed, 1 failed
+
+> Task :platform-starters-tracing:platform-tracing-otel-javaagent-extension:test FAILED
+
+[Incubating] Problems report is available at: file:///E:/Platform_Traces/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':platform-starters-tracing:platform-tracing-otel-javaagent-extension:test'.
+> There were failing tests. See the report at: file:///E:/Platform_Traces/platform-starters-tracing/platform-tracing-otel-javaagent-extension/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 15s
+27 actionable tasks: 2 executed, 25 up-to-date
+
+E:\Platform_Traces>if 1 EQU 0 goto mainEnd 
+
+E:\Platform_Traces>rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of 
+
+E:\Platform_Traces>rem the _cmd.exe /c_ return code! 
+
+E:\Platform_Traces>set EXIT_CODE=1 
+
+E:\Platform_Traces>if 1 EQU 0 set EXIT_CODE=1 
+
+E:\Platform_Traces>if not "" == "" exit 1 
+
+E:\Platform_Traces>exit /b 1 

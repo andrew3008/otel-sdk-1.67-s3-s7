@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.934Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="positiveDeltaSaturatesAccumulatedCounterAtLongMaximum()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" time="0.002"/>
+  <testcase name="coalescingWindowSuppressesRefreshUntilElapsed()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" time="0.0"/>
+  <testcase name="backwardAnomalyIsolatedToAffectedKeyOthersStillAdvance()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" time="0.0"/>
+  <testcase name="firstObservationPopulatesAccumulatedWithoutResetEvent()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" time="0.0"/>
+  <testcase name="sameGenerationAccumulatesPositiveDeltaPerKey()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" time="0.0"/>
+  <testcase name="coherenceFailureKeepsLastAccumulatedSnapshot()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" time="0.001"/>
+  <testcase name="ownerReplacementSaturatesAccumulatedCounterAtLongMaximum()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" time="0.0"/>
+  <testcase name="ownerReplacementAddsFirstRawAsIncrementWithoutDecreasingAccumulated()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" time="0.0"/>
+  <testcase name="concurrentCountersNeverBlockOnTryLockLoser()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" time="0.002"/>
+  <testcase name="unavailableReadDoesNotChangeAccumulatedButRefreshesTimestamp()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" time="0.0"/>
+  <testcase name="agentInstanceChangeIsClassifiedSeparatelyFromOwnerReplacementAndDoesNotDecreaseAccumulated()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MonotonicJmxCounterGroupBridgeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.888Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="[1] expected=WARNING" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" time="0.0"/>
+  <testcase name="[2] expected=ERROR" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" time="0.0"/>
+  <testcase name="[3] expected=DISABLED" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" time="0.0"/>
+  <testcase name="recognizedValuesAreExact()" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" time="0.0"/>
+  <testcase name="startupParseRemainsCaseAndWhitespaceTolerant()" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" time="0.0"/>
+  <testcase name="requireRejectsBlank()" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" time="0.0"/>
+  <testcase name="[1] value=error" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" time="0.0"/>
+  <testcase name="[2] value=warning" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" time="0.0"/>
+  <testcase name="[3] value= WARNING" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" time="0.0"/>
+  <testcase name="[4] value=Error" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" time="0.0"/>
+  <testcase name="blankDefaultsToWarningOnStartupParse()" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.validation.SpanAttributeValidationLevelTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

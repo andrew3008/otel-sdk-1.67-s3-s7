@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scrubbing enabled with defaults → session runtime registered" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:20.571Z" hostname="DESKTOP-OEGBG7F" time="0.004">
+  <properties/>
+  <testcase name="scrubbing_enabled_default_rules_registers_processor()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingEnabledWithDefaults" time="0.002"/>
+  <testcase name="empty_effective_rule_set_fails_secure_profile()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingEnabledWithDefaults" time="0.001"/>
+  <testcase name="bundled_rule_metadata_failure_preserves_cause_without_exposing_it_in_the_message()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingEnabledWithDefaults" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

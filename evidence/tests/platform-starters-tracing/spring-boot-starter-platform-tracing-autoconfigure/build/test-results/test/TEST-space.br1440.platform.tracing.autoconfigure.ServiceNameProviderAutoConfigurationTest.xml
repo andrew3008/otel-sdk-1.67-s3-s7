@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.ServiceNameProviderAutoConfigurationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:54.167Z" hostname="DESKTOP-OEGBG7F" time="0.014">
+  <properties/>
+  <testcase name="providers_start_by_default()" classname="space.br1440.platform.tracing.autoconfigure.ServiceNameProviderAutoConfigurationTest" time="0.004"/>
+  <testcase name="local_provider_uses_spring_application_name()" classname="space.br1440.platform.tracing.autoconfigure.ServiceNameProviderAutoConfigurationTest" time="0.002"/>
+  <testcase name="local_provider_does_not_read_platform_tracing_service_name()" classname="space.br1440.platform.tracing.autoconfigure.ServiceNameProviderAutoConfigurationTest" time="0.003"/>
+  <testcase name="providers_start_even_when_tracing_enabled_false()" classname="space.br1440.platform.tracing.autoconfigure.ServiceNameProviderAutoConfigurationTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

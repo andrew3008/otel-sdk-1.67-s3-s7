@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.PlatformStderrSinkFd2Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.637Z" hostname="DESKTOP-OEGBG7F" time="0.12">
+  <properties/>
+  <testcase name="production_sink_writes_to_os_fd2_after_system_err_is_replaced()" classname="space.br1440.platform.tracing.otel.javaagent.logging.PlatformStderrSinkFd2Test" time="0.12"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

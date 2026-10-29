@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.ApplySnapshotRequestParametersTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:00.270Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="blankWriterIsRejected()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.ApplySnapshotRequestParametersTest" time="0.001"/>
+  <testcase name="nullPolicyIsRejected()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.ApplySnapshotRequestParametersTest" time="0.0"/>
+  <testcase name="fullyPopulatedBuilderExposesAllFieldsThroughAccessors()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.ApplySnapshotRequestParametersTest" time="0.0"/>
+  <testcase name="nullExpectedBaseIsRejected()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.ApplySnapshotRequestParametersTest" time="0.001"/>
+  <testcase name="blankAttemptIdIsRejected()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.ApplySnapshotRequestParametersTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

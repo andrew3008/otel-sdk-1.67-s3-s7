@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.jmx.observation.OwnerRegistrationSlotTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:21.201Z" hostname="DESKTOP-OEGBG7F" time="0.011">
+  <properties/>
+  <testcase name="captureNeverObservesTornPairOfOwnerAndGeneration()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.OwnerRegistrationSlotTest" time="0.008"/>
+  <testcase name="removePreservesGenerationForStrictlyIncreasingReattachment()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.OwnerRegistrationSlotTest" time="0.0"/>
+  <testcase name="replaceProducesStrictlyIncreasingGeneration()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.OwnerRegistrationSlotTest" time="0.0"/>
+  <testcase name="concurrentReplacementsNeverPublishDecreasingGenerationAndEachGetsUniqueGeneration()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.OwnerRegistrationSlotTest" time="0.002"/>
+  <testcase name="initialStateIsAbsentWithZeroGeneration()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.observation.OwnerRegistrationSlotTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

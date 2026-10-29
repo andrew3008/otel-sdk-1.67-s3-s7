@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.integrations.observation.HttpObservationSuppressionStartupTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.596Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="noWarnWhenSuppressTrueAndAgentDetected()" classname="space.br1440.platform.tracing.autoconfigure.integrations.observation.HttpObservationSuppressionStartupTest" time="0.0"/>
+  <testcase name="noWarnWhenSuppressFalseAndAgentNotDetected()" classname="space.br1440.platform.tracing.autoconfigure.integrations.observation.HttpObservationSuppressionStartupTest" time="0.0"/>
+  <testcase name="warnWhenSuppressTrueAndAgentNotDetected()" classname="space.br1440.platform.tracing.autoconfigure.integrations.observation.HttpObservationSuppressionStartupTest" time="0.0"/>
+  <testcase name="warnWhenSuppressFalseAndAgentDetected()" classname="space.br1440.platform.tracing.autoconfigure.integrations.observation.HttpObservationSuppressionStartupTest" time="0.001"/>
+  <system-out><![CDATA[2026-10-29T12:48:10.596Z  WARN 25468 --- [    Test worker] [                                                 ] .HttpObservationSuppressionStartupRunner : platform.tracing.suppression.suppress-micrometer-http-observations=true is enabled, but OpenTelemetry Java Agent was not detected in the JVM. HTTP Micrometer observations (http.server.requests / http.client.requests) are suppressed and the Agent is not creating HTTP spans. Disable suppression or attach the Controlled Platform Agent.
+2026-10-29T12:48:10.596Z  WARN 25468 --- [    Test worker] [                                                 ] .HttpObservationSuppressionStartupRunner : OpenTelemetry Java Agent detected, but platform.tracing.suppression.suppress-micrometer-http-observations=false. Micrometer HTTP observations remain enabled: http.server.requests and http.client.requests metrics are published alongside Agent HTTP spans. The standard starter does not add a second HTTP span producer. Set platform.tracing.suppression.suppress-micrometer-http-observations=true to suppress those observations.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

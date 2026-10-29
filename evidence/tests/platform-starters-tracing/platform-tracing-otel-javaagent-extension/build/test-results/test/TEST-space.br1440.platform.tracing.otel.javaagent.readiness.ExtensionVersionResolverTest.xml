@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.readiness.ExtensionVersionResolverTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.039Z" hostname="DESKTOP-OEGBG7F" time="0.008">
+  <properties/>
+  <testcase name="missingOrBlankVersionHasNoVersion()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.ExtensionVersionResolverTest" time="0.001"/>
+  <testcase name="unexpectedOrMissingArtifactHasNoVersion()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.ExtensionVersionResolverTest" time="0.001"/>
+  <testcase name="resolvesValidatedAndTrimmedVersion()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.ExtensionVersionResolverTest" time="0.001"/>
+  <testcase name="resolvesGeneratedMetadataBesideTheExtensionClass()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.ExtensionVersionResolverTest" time="0.001"/>
+  <testcase name="unsupportedOrMissingFormatHasNoVersion()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.ExtensionVersionResolverTest" time="0.001"/>
+  <testcase name="malformedPropertiesHaveNoVersion()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.ExtensionVersionResolverTest" time="0.002"/>
+  <testcase name="missingResourceHasNoVersion()" classname="space.br1440.platform.tracing.otel.javaagent.readiness.ExtensionVersionResolverTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

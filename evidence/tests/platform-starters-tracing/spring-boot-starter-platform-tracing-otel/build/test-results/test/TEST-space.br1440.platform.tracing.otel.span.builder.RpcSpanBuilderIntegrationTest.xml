@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderIntegrationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.906Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="rpcClientRoot_isRootWithSemconvAttributes()" classname="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderIntegrationTest" time="0.003"/>
+  <testcase name="rpcServerChild_insideActiveParent_isChildWithSemconvAttributes()" classname="space.br1440.platform.tracing.otel.span.builder.RpcSpanBuilderIntegrationTest" time="0.002"/>
+  <system-out><![CDATA[12:47:47.911 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

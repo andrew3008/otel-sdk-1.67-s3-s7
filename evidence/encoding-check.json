@@ -1,0 +1,302 @@
+﻿[
+    {
+        "Path":  "gradle/libs.versions.toml",
+        "Bytes":  6093,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/build-logic/src/test/java/space/br1440/platform/tracing/gradle/javaagent/distribution/ControlledAgentDistributionContractTest.java",
+        "Bytes":  42551,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/build-logic/src/test/java/space/br1440/platform/tracing/gradle/javaagent/distribution/ControlledAgentTestArgumentsTest.java",
+        "Bytes":  4971,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-collector-config/otel-collector-agent-loadbalancing.yaml",
+        "Bytes":  4351,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-collector-config/otel-collector-config-ttl-tiers.yaml",
+        "Bytes":  6783,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-collector-config/otel-collector-gateway-tail-sampling.yaml",
+        "Bytes":  12277,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-distribution/src/controlledAgentRuntimeTest/java/space/br1440/platform/tracing/otel/javaagent/distribution/ControlledAgentStartupTest.java",
+        "Bytes":  6447,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/build.gradle",
+        "Bytes":  6303,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/BootstrapAutoConfigurationCustomizerProvider.java",
+        "Bytes":  6896,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactory.java",
+        "Bytes":  5834,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/configuration/OtelSdkDefaults.java",
+        "Bytes":  1074,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/configuration/OtelSdkPropertyNames.java",
+        "Bytes":  971,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/exporter/SafeSpanExporter.java",
+        "Bytes":  20627,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/factory/PlatformSpanProcessorFactory.java",
+        "Bytes":  7530,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/logging/event/ExporterLogEvent.java",
+        "Bytes":  6066,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/processor/dropoldest/ExportWorker.java",
+        "Bytes":  6542,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/resource/PlatformResourceCustomizer.java",
+        "Bytes":  11509,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/resources/META-INF/platform-tracing/otel-javaagent-acp-pin.properties",
+        "Bytes":  791,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/BootstrapTerminalTransitionsTest.java",
+        "Bytes":  51715,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/PlatformAutoConfigurationCustomizerTest.java",
+        "Bytes":  30260,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/PlatformPropagationAutoconfigureIntegrationTest.java",
+        "Bytes":  16348,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/ResourceCustomizerAutoconfigureIntegrationTest.java",
+        "Bytes":  12628,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactoryCleanupTest.java",
+        "Bytes":  4462,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactorySamplerTest.java",
+        "Bytes":  7069,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/configuration/SamplingRatioFacadeVsSamplerParityTest.java",
+        "Bytes":  4241,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/exporter/SafeSpanExporterTest.java",
+        "Bytes":  82714,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/exporter/SpanDataBoundaryScrubberTest.java",
+        "Bytes":  18624,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/logging/AgentLogEventTypeTest.java",
+        "Bytes":  10364,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/processor/SpanLimitsMetricsProcessorTest.java",
+        "Bytes":  5391,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/processor/dropoldest/ExportWorkerDelegatePendingTest.java",
+        "Bytes":  7934,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/BaggageIngressPipelineTest.java",
+        "Bytes":  3225,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/BaggagePropagationCustomizerTest.java",
+        "Bytes":  10287,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorBaggageLimitsTest.java",
+        "Bytes":  4950,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorInjectionTest.java",
+        "Bytes":  9947,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/PlatformBaggagePropagatorTest.java",
+        "Bytes":  9583,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/SafeTextMapPropagatorTest.java",
+        "Bytes":  4658,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/TraceControlPropagatorProviderTest.java",
+        "Bytes":  4716,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/propagation/TraceControlPropagatorTest.java",
+        "Bytes":  5992,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/resource/PlatformResourceCustomizerTest.java",
+        "Bytes":  23889,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/scrubbing/runtime/ScrubbingRuntimeCurrentBehaviorTest.java",
+        "Bytes":  24760,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/spring-boot-starter-platform-tracing-autoconfigure/src/test/java/space/br1440/platform/tracing/autoconfigure/integrations/errorhandling/RequestTraceContextSnapshotSupplierTest.java",
+        "Bytes":  4038,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/spring-boot-starter-platform-tracing-otel/src/main/java/space/br1440/platform/tracing/otel/propagation/OtelTraceparentReaderImpl.java",
+        "Bytes":  4497,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/spring-boot-starter-platform-tracing-otel/src/test/java/space/br1440/platform/tracing/otel/runtime/NoOpTracingRuntimeTraceparentContractTest.java",
+        "Bytes":  1682,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/configuration/BaggageAttributeCopyContract.java",
+        "Bytes":  1751,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/main/java/space/br1440/platform/tracing/otel/javaagent/exporter/OtlpRequestSizeCustomizer.java",
+        "Bytes":  2254,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/PlatformServiceNameDefaultsTest.java",
+        "Bytes":  2651,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/bootstrap/session/AutoconfigureSessionFactoryBaggageCopyTest.java",
+        "Bytes":  2412,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/configuration/BaggageAttributeCopyContractTest.java",
+        "Bytes":  2880,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/platform-tracing-otel-javaagent-extension/src/test/java/space/br1440/platform/tracing/otel/javaagent/exporter/response/OtlpRequestSizeCustomizerTest.java",
+        "Bytes":  18585,
+        "Utf8":  "valid",
+        "Bom":  false
+    },
+    {
+        "Path":  "platform-starters-tracing/spring-boot-starter-platform-tracing-otel/src/test/java/space/br1440/platform/tracing/otel/arch/TextMapGetterKeysArchTest.java",
+        "Bytes":  4135,
+        "Utf8":  "valid",
+        "Bom":  false
+    }
+]

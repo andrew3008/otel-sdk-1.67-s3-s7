@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.metrics.MeteredMetricsCountTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.776Z" hostname="DESKTOP-OEGBG7F" time="0.041">
+  <properties/>
+  <testcase name="startSpan_incrementsSpansStartedByCategory()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MeteredMetricsCountTest" time="0.022"/>
+  <testcase name="recordException_incrementsExceptionsRecorded()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MeteredMetricsCountTest" time="0.007"/>
+  <testcase name="spansStartedMetric_usesBoundedCategoryTagsOnly()" classname="space.br1440.platform.tracing.autoconfigure.metrics.MeteredMetricsCountTest" time="0.008"/>
+  <system-out><![CDATA[2026-10-29T12:48:10.788Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+2026-10-29T12:48:10.807Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+2026-10-29T12:48:10.817Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.o.a.v.SpanAttributeValidator     : span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

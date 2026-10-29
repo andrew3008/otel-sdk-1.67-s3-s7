@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" tests="36" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:54.567Z" hostname="DESKTOP-OEGBG7F" time="0.036">
+  <properties/>
+  <testcase name="[1] applicationVersion=1.2.0, extensionVersion=2.0.0" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.006"/>
+  <testcase name="[2] applicationVersion=2.0.0, extensionVersion=1.2.0" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="[1] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.READINESS_SCHEMA_ID_MISMATCH" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="[2] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.READINESS_SCHEMA_DIGEST_MISMATCH" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="[3] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.READINESS_MISSING_REQUIRED_MISMATCH" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="[4] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.READINESS_GENERATION_INVALID" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="[5] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.READINESS_GENERATION_INCONSISTENT" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="[6] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.EXTENSION_LIFECYCLE_UNEXPECTED" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="[7] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.EXTENSION_FAILED_WITHOUT_CODE" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="[8] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.EXTENSION_FAILED_CODE_PAIR_INCONSISTENT" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="[9] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.EXTENSION_INITIALIZING_INCONSISTENT" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="[10] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.EXTENSION_READY_WITH_FAILURE_CODE" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="[11] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.REQUIRED_CAPABILITY_MISSING" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="[12] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.DISTRIBUTION_EVIDENCE_INVALID" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="[13] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.EXTENSION_VERSION_MISMATCH" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="[14] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.CLASSLOADER_TOPOLOGY_INVALID" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="[15] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.DUAL_SDK_COLLISION" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="[16] reasonCodeField=static final java.lang.String space.br1440.platform.tracing.autoconfigure.agent.AgentNotReadyReasonCodes.EXTENSION_LINKAGE_ERROR" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="formatsGenerationInconsistentContextWithMissingBatch()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="printsMissingObservedContractId()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="formatsAnchorDriftContextWithFullObservedAnchor()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="includesPrimaryFailureCodeWhenEffectiveFailureCodeWasEscalated()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="includesSchemaIdMismatchContext()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="reportsReadyFailureCodeWithoutInventingObservedValue()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="formatsInitializingInconsistentContextOmitsBatchWhenAbsent()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="rejectOmitsContextWhenReadinessEndpointIsAbsent()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="formatsInitializingInconsistentContextWithUnexpectedBatch()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="rejectUsesUnspecifiedContractFailureWhenFailureCodeIsBlank()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="formatsMixedGenerationWithoutSnapshotAnchors()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="explainsShutdownCleanupFailure()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="formatsGenerationInconsistentContextWithoutUuidsWhenAnchorsArePresent()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="formatsGenerationInvalidContextWithNegativeGenerationWithoutAnchors()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.0"/>
+  <testcase name="formatsVersionMismatchWhenContractIdIsBlank()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="includesSchemaDigestMismatchContext()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="keepsUnknownReasonAndLifecycleFallback()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <testcase name="usesStarterFailureCodeAndDropsPrimaryWhenSnapshotFailureCodeDiffers()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentContractFailureMessagesTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

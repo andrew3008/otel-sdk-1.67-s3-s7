@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" tests="27" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.461Z" hostname="DESKTOP-OEGBG7F" time="0.008">
+  <properties/>
+  <testcase name="supplier_error_propagates_instead_of_being_classified()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="empty_startup_arguments_allow_mutation_registration()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="every_assessment_recaptures_startup_arguments_and_stays_deterministic()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.001"/>
+  <testcase name="repeated_management_argument_names_are_reported_once_in_startup_order()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="assessment_is_a_snapshot_of_the_arguments_captured_at_assess_time()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.001"/>
+  <testcase name="null_startup_argument_supplier_is_rejected_at_construction()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="null_startup_argument_capture_is_evidence_unknown()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="failing_startup_argument_capture_is_evidence_unknown_without_naming_arguments()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="detected_argument_names_are_reported_without_their_values()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-XX:+DisableAttachMechanism" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-XX:-DisableAttachMechanism" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-Dcom.sun.management.jmxremote" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.001"/>
+  <testcase name="-Dcom.sun.management.jmxremote=true" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-Dcom.sun.management.jmxremote=false" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-Dcom.sun.management.jmxremote=" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-Dcom.sun.management.jmxremote.port=9010" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-Dcom.sun.management.jmxremote.authenticate=false" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-Dcom.sun.management.config.file=/etc/management.properties" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.001"/>
+  <testcase name="-Dcom.sun.management.agent.class=Foo" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-Dcom.sun.management.jmxremoteOther=1" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-Dcom.sun.managementX=1" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-XX:+ManagementServer" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-Dcom.sun.manage=1" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.001"/>
+  <testcase name="-Dcom.sun.jmx.remote.x=1" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-Dcom.sun.managemen=1" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="-XX:-ManagementServer" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <testcase name="null_startup_argument_entries_are_ignored()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.RemoteJmxMutationRegistrationAssessorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

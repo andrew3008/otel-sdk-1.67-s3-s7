@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.147Z" hostname="DESKTOP-OEGBG7F" time="0.033">
+  <properties/>
+  <testcase name="setSamplingRatio_via_platform_JMX_is_rejected()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.011"/>
+  <testcase name="unknown_primary_scrubbing_rule_name_fails_configuration()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.002"/>
+  <testcase name="extension_order_equals_100_priority_over_default()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.001"/>
+  <testcase name="all_enabled_subsystems_are_added_to_tracer_provider_builder()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.001"/>
+  <testcase name="object_name_sampling_MBean_matches_public_contract()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.0"/>
+  <testcase name="disabling_all_subsystems_does_not_create_MBean_during_failed_preparation()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.001"/>
+  <testcase name="prepared_session_owns_safe_platform_sampler()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.001"/>
+  <testcase name="MBean_registration_runs_after_activation()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.002"/>
+  <testcase name="without_explicit_ratio_default_ratio_is_used()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.002"/>
+  <testcase name="unknown_additional_scrubbing_rule_name_fails_configuration()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.003"/>
+  <testcase name="prepared_session_sampler_uses_explicit_startup_ratio()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.002"/>
+  <testcase name="custom_sampling_ratio_is_reflected_in_registered_MBean()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformAutoConfigurationCustomizerProcessorsTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

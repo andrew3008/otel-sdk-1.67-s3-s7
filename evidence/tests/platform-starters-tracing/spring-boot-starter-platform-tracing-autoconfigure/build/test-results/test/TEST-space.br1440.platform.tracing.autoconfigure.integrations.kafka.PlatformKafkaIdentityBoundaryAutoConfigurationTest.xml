@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaIdentityBoundaryAutoConfigurationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.406Z" hostname="DESKTOP-OEGBG7F" time="0.022">
+  <properties/>
+  <testcase name="sameRunnerWithEnrichmentStarts()" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaIdentityBoundaryAutoConfigurationTest" time="0.004"/>
+  <testcase name="kafkaAspectUsesTraceOperationsFromTracingRuntimeAutoConfiguration()" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaIdentityBoundaryAutoConfigurationTest" time="0.006"/>
+  <testcase name="missingSpanEnricherFailsBecauseEnricherIsRequired()" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaIdentityBoundaryAutoConfigurationTest" time="0.002"/>
+  <testcase name="tracingDisabledOmitsKafkaRequestIdentityAspect()" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaIdentityBoundaryAutoConfigurationTest" time="0.001"/>
+  <testcase name="registersKafkaRequestIdentityAspectByDefault()" classname="space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaIdentityBoundaryAutoConfigurationTest" time="0.002"/>
+  <system-out><![CDATA[2026-10-29T12:48:10.422Z  WARN 25468 --- [    Test worker] [                                                 ] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaRequestIdentityAspect' defined in space.br1440.platform.tracing.autoconfigure.integrations.kafka.PlatformKafkaAutoConfiguration: Unsatisfied dependency expressed through method 'kafkaRequestIdentityAspect' parameter 1: No qualifying bean of type 'space.br1440.platform.tracing.api.span.enrich.SpanEnricher' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.TracingPropertiesBindingTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:54.438Z" hostname="DESKTOP-OEGBG7F" time="0.029">
+  <properties/>
+  <testcase name="platformHeaderNameInApplicationPropertiesIsRejected()" classname="space.br1440.platform.tracing.autoconfigure.TracingPropertiesBindingTest" time="0.008"/>
+  <testcase name="bindsSpanAttributeValidationAndExceptionRecording()" classname="space.br1440.platform.tracing.autoconfigure.TracingPropertiesBindingTest" time="0.014"/>
+  <testcase name="bindsRequestIdHeader()" classname="space.br1440.platform.tracing.autoconfigure.TracingPropertiesBindingTest" time="0.007"/>
+  <system-out><![CDATA[12:47:54.445 [Test worker] WARN org.springframework.context.annotation.AnnotationConfigApplicationContext -- Exception encountered during context initialization - cancelling refresh attempt: space.br1440.platform.tracing.autoconfigure.control.TracingConfigurationGuardException: Property 'platform.tracing.propagation.platform-headers.request-id-header' is owned by AGENT and is not admitted from source='test'. Agent-owned keys are set with environment variables or system properties; Spring does not read them.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

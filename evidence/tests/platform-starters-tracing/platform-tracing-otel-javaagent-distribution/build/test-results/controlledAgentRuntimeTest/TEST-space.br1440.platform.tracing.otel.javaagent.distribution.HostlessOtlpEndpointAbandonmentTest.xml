@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.distribution.HostlessOtlpEndpointAbandonmentTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:07.235Z" hostname="DESKTOP-OEGBG7F" time="0.974">
+  <properties/>
+  <testcase name="hostless_otlp_endpoint_leaves_diagnostic_readiness_initializing()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.HostlessOtlpEndpointAbandonmentTest" time="0.974"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

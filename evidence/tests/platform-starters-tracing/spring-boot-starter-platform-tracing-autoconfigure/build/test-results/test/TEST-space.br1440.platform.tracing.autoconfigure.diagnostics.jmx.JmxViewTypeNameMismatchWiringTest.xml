@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:09.621Z" hostname="DESKTOP-OEGBG7F" time="0.01">
+  <properties/>
+  <testcase name="validationTopLevelMismatchIsContractViolation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" time="0.004"/>
+  <testcase name="exportProcessorNestedMismatchIsContractViolation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" time="0.001"/>
+  <testcase name="processorMetricsTopLevelMismatchIsContractViolation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" time="0.001"/>
+  <testcase name="processorMetricsSpanTimeoutNestedMismatchIsContractViolation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" time="0.0"/>
+  <testcase name="samplingTopLevelMismatchIsContractViolation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" time="0.0"/>
+  <testcase name="processorMetricsCompositeNestedMismatchIsContractViolation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" time="0.001"/>
+  <testcase name="exportTopLevelMismatchIsContractViolation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" time="0.0"/>
+  <testcase name="exportExporterNestedMismatchIsContractViolation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" time="0.001"/>
+  <testcase name="processorMetricsMetricsNestedMismatchIsContractViolation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" time="0.0"/>
+  <testcase name="diagnosticsTopLevelMismatchIsContractViolation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" time="0.001"/>
+  <testcase name="scrubbingTopLevelMismatchIsContractViolation()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.JmxViewTypeNameMismatchWiringTest" time="0.0"/>
+  <system-out><![CDATA[2026-10-29T12:48:09.625Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.d.j.t.JmxReadStateRegistry     : JMX contract: CONTRACT_VIOLATION COMPOSITE_TYPE_NAME_MISMATCH at point VALIDATION_OBSERVATION (first occurrence or repeat after recovery)
+2026-10-29T12:48:09.627Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.d.j.t.JmxReadStateRegistry     : JMX contract: CONTRACT_VIOLATION COMPOSITE_TYPE_NAME_MISMATCH at point EXPORT_OBSERVATION (first occurrence or repeat after recovery)
+2026-10-29T12:48:09.627Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.d.j.t.JmxReadStateRegistry     : JMX contract: CONTRACT_VIOLATION COMPOSITE_TYPE_NAME_MISMATCH at point PROCESSOR_METRICS_OBSERVATION (first occurrence or repeat after recovery)
+2026-10-29T12:48:09.628Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.d.j.t.JmxReadStateRegistry     : JMX contract: CONTRACT_VIOLATION COMPOSITE_TYPE_NAME_MISMATCH at point PROCESSOR_METRICS_OBSERVATION (first occurrence or repeat after recovery)
+2026-10-29T12:48:09.629Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.d.j.t.JmxReadStateRegistry     : JMX contract: CONTRACT_VIOLATION COMPOSITE_TYPE_NAME_MISMATCH at point SAMPLING_OBSERVATION (first occurrence or repeat after recovery)
+2026-10-29T12:48:09.630Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.d.j.t.JmxReadStateRegistry     : JMX contract: CONTRACT_VIOLATION COMPOSITE_TYPE_NAME_MISMATCH at point PROCESSOR_METRICS_OBSERVATION (first occurrence or repeat after recovery)
+2026-10-29T12:48:09.630Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.d.j.t.JmxReadStateRegistry     : JMX contract: CONTRACT_VIOLATION COMPOSITE_TYPE_NAME_MISMATCH at point EXPORT_OBSERVATION (first occurrence or repeat after recovery)
+2026-10-29T12:48:09.630Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.d.j.t.JmxReadStateRegistry     : JMX contract: CONTRACT_VIOLATION COMPOSITE_TYPE_NAME_MISMATCH at point EXPORT_OBSERVATION (first occurrence or repeat after recovery)
+2026-10-29T12:48:09.631Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.d.j.t.JmxReadStateRegistry     : JMX contract: CONTRACT_VIOLATION COMPOSITE_TYPE_NAME_MISMATCH at point PROCESSOR_METRICS_OBSERVATION (first occurrence or repeat after recovery)
+2026-10-29T12:48:09.631Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.d.j.t.JmxReadStateRegistry     : JMX contract: CONTRACT_VIOLATION COMPOSITE_TYPE_NAME_MISMATCH at point DIAGNOSTICS_OBSERVATION (first occurrence or repeat after recovery)
+2026-10-29T12:48:09.632Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.d.j.t.JmxReadStateRegistry     : JMX contract: CONTRACT_VIOLATION COMPOSITE_TYPE_NAME_MISMATCH at point SCRUBBING_OBSERVATION (first occurrence or repeat after recovery)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

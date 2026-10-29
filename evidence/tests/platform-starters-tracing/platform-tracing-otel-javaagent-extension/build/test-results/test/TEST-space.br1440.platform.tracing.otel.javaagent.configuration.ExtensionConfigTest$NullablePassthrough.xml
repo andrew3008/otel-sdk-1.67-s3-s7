@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Nullable values remain null when not configured" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.045Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="scrubbing_hmacKey_null_when_absent()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest$NullablePassthrough" time="0.0"/>
+  <testcase name="scrubbing_rulesExtensions_null_when_absent()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest$NullablePassthrough" time="0.001"/>
+  <testcase name="scrubbing_rulesConfig_null_when_absent()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest$NullablePassthrough" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

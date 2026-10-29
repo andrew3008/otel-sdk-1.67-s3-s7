@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSourcePolicyTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.589Z" hostname="DESKTOP-OEGBG7F" time="0.033">
+  <properties/>
+  <testcase name="scanner_enforces_the_logging_cutover_without_flagging_catalog_internals()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSourcePolicyTest" time="0.001"/>
+  <testcase name="scanner_rejects_raw_throwable_fields_but_allows_non_logging_message_use()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSourcePolicyTest" time="0.0"/>
+  <testcase name="production_sources_use_only_the_structured_logging_path()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSourcePolicyTest" time="0.032"/>
+  <testcase name="scanner_rejects_each_forbidden_output_construct()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSourcePolicyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.jmx.security.JmxSecurityArchitectureGateTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.066Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="spring_plane_javaagent_reference_is_limited_to_marker_detector()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.JmxSecurityArchitectureGateTest" time="0.001"/>
+  <testcase name="runtime_registration_has_single_production_caller()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.JmxSecurityArchitectureGateTest" time="0.0"/>
+  <testcase name="tracing_production_code_does_not_add_loader_hacks()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.JmxSecurityArchitectureGateTest" time="0.0"/>
+  <testcase name="spring_plane_does_not_use_standard_mbean_proxies()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.JmxSecurityArchitectureGateTest" time="0.001"/>
+  <testcase name="connector_server_apis_are_confined_to_security_package()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.JmxSecurityArchitectureGateTest" time="0.0"/>
+  <testcase name="private_mbean_server_factory_usage_is_forbidden()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.security.JmxSecurityArchitectureGateTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

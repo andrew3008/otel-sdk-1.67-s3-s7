@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="userinfo removal" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.933Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="user:pass@host — userinfo is removed completely" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$UserinfoRemoval" time="0.0"/>
+  <testcase name="@ at start of path segment is not treated as userinfo — regression bug #1" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$UserinfoRemoval" time="0.0"/>
+  <testcase name="URL without path and query: scheme://user:pass@host" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$UserinfoRemoval" time="0.0"/>
+  <testcase name="user only (no password) — userinfo is removed" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$UserinfoRemoval" time="0.0"/>
+  <testcase name="non-standard scheme (jdbc): userinfo is removed" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$UserinfoRemoval" time="0.0"/>
+  <testcase name="@ in query value is not treated as userinfo" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$UserinfoRemoval" time="0.0"/>
+  <testcase name="no userinfo — URL unchanged" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$UserinfoRemoval" time="0.0"/>
+  <testcase name="userinfo + query — only userinfo removed, query redacted" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$UserinfoRemoval" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

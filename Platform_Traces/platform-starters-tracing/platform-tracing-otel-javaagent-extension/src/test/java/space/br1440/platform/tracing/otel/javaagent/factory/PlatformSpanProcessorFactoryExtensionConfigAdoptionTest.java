@@ -1,0 +1,771 @@
+package space.br1440.platform.tracing.otel.javaagent.factory;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.time.Duration;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicReference;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+
+import space.br1440.platform.tracing.api.attributes.PlatformAttributes;
+import space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfig;
+import space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionPropertyNames;
+import space.br1440.platform.tracing.otel.javaagent.control.TracingSettingsSource;
+import space.br1440.platform.tracing.otel.javaagent.identity.AgentInstanceId;
+import space.br1440.platform.tracing.otel.javaagent.jmx.observation.OwnerRegistrationSlot;
+import space.br1440.platform.tracing.otel.javaagent.jmx.observation.OwnerRegistrationState;
+import space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrar;
+import space.br1440.platform.tracing.otel.javaagent.processor.SpanLimitsMetricsProcessor;
+import space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessor;
+import space.br1440.platform.tracing.otel.javaagent.processor.composite.PlatformCompositeSpanProcessor;
+import space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutProcessor;
+import space.br1440.platform.tracing.otel.javaagent.scrubbing.assembly.PlatformScrubberFactory;
+import space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeTestFixtures;
+
+import io.opentelemetry.api.common.AttributeKey;
+import io.opentelemetry.api.trace.Span;
+import io.opentelemetry.api.trace.SpanKind;
+import io.opentelemetry.api.trace.Tracer;
+import io.opentelemetry.context.Context;
+import io.opentelemetry.sdk.OpenTelemetrySdk;
+import io.opentelemetry.sdk.autoconfigure.spi.ConfigProperties;
+import io.opentelemetry.sdk.testing.exporter.InMemorySpanExporter;
+import io.opentelemetry.sdk.trace.ReadWriteSpan;
+import io.opentelemetry.sdk.trace.ReadableSpan;
+import io.opentelemetry.sdk.trace.SdkTracerProvider;
+import io.opentelemetry.sdk.trace.SdkTracerProviderBuilder;
+import io.opentelemetry.sdk.trace.SpanProcessor;
+import io.opentelemetry.sdk.trace.data.SpanData;
+import io.opentelemetry.sdk.trace.export.SimpleSpanProcessor;
+
+class PlatformSpanProcessorFactoryExtensionConfigAdoptionTest {
+
+    private static ExtensionConfig configWithAllDisabled() {
+        return new ExtensionConfig(new ConfigProperties() {
+            @Override public String getString(String name) {
+                if (ExtensionPropertyNames.BAGGAGE_SPAN_ATTRIBUTES_ALLOWED_KEYS.equals(name)) {
+                    return "";
+                }
+
+                return null;
+            }
+            @Override public Boolean getBoolean(String name) {
+                return isBootstrapPolicyBoolean(name) ? null : false;
+            }
+            @Override public Integer getInt(String name) { return null; }
+            @Override public Long getLong(String name) { return null; }
+            @Override public Double getDouble(String name) { return null; }
+            @Override public Duration getDuration(String name) { return null; }
+            @Override public List<String> getList(String name) {
+                if (ExtensionPropertyNames.BAGGAGE_SPAN_ATTRIBUTES_ALLOWED_KEYS.equals(name)) {
+                    return List.of();
+                }
+
+                return List.of();
+            }
+            @Override public Map<String, String> getMap(String name) { return null; }
+        });
+    }
+
+    private static ExtensionConfig configWithMetricsEnabled() {
+        return new ExtensionConfig(new ConfigProperties() {
+            @Override public String getString(String name) { return null; }
+            @Override public Boolean getBoolean(String name) {
+                return isBootstrapPolicyBoolean(name)
+                        ? null
+                        : "platform.tracing.metrics.enabled".equals(name);
+            }
+            @Override public Integer getInt(String name) { return null; }
+            @Override public Long getLong(String name) { return null; }
+            @Override public Double getDouble(String name) { return null; }
+            @Override public Duration getDuration(String name) { return null; }
+            @Override public List<String> getList(String name) { return List.of(); }
+            @Override public Map<String, String> getMap(String name) { return null; }
+        });
+    }
+
+    private static ExtensionConfig configWithSpanTimeoutEnabled() {
+        return new ExtensionConfig(new ConfigProperties() {
+            @Override public String getString(String name) { return null; }
+            @Override public Boolean getBoolean(String name) {
+                return isBootstrapPolicyBoolean(name)
+                        ? null
+                        : "platform.tracing.span-timeout.enabled".equals(name);
+            }
+            @Override public Integer getInt(String name) { return null; }
+            @Override public Long getLong(String name) { return null; }
+            @Override public Double getDouble(String name) { return null; }
+            @Override public Duration getDuration(String name) { return null; }
+            @Override public Map<String, String> getMap(String name) { return null; }
+            @Override public List<String> getList(String name) { return List.of(); }
+        });
+    }
+
+    private static boolean isBootstrapPolicyBoolean(String name) {
+        return ExtensionPropertyNames.SAMPLING_ENABLED.equals(name)
+                || ExtensionPropertyNames.EXPORTER_ENABLED.equals(name)
+                || ExtensionPropertyNames.TRACE_CONTROL_HEADERS_ENABLED.equals(name);
+    }
+
+    private static ExtensionConfig configWithValidationWarning() {
+        return new ExtensionConfig(new ConfigProperties() {
+            @Override public String getString(String name) { return null; }
+            @Override public Boolean getBoolean(String name) {
+                return null;
+            }
+            @Override public Integer getInt(String name) { return null; }
+            @Override public Long getLong(String name) { return null; }
+            @Override public Double getDouble(String name) { return null; }
+            @Override public Duration getDuration(String name) { return null; }
+            @Override public List<String> getList(String name) { return List.of(); }
+            @Override public Map<String, String> getMap(String name) { return null; }
+        });
+    }
+
+    private static ConfigProperties allEnabledConfig() {
+        return new ConfigProperties() {
+            @Override public String getString(String name) { return null; }
+            @Override public Boolean getBoolean(String name) {
+                return isBootstrapPolicyBoolean(name) ? null : true;
+            }
+            @Override public Integer getInt(String name) { return null; }
+            @Override public Long getLong(String name) { return null; }
+            @Override public Double getDouble(String name) { return null; }
+            @Override public Duration getDuration(String name) { return null; }
+            @Override public List<String> getList(String name) { return List.of(); }
+            @Override public Map<String, String> getMap(String name) { return null; }
+        };
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T> T registrarSlotOwner(PlatformTracingMBeanRegistrar reg, String slotAccessorName) throws Exception {
+        Field runtimePlaneField = PlatformTracingMBeanRegistrar.class.getDeclaredField("runtimePlane");
+        runtimePlaneField.setAccessible(true);
+        Object runtimePlane = runtimePlaneField.get(reg);
+
+        Field slotsField = runtimePlane.getClass().getDeclaredField("slots");
+        slotsField.setAccessible(true);
+        Object slots = slotsField.get(runtimePlane);
+
+        Method slotAccessor = slots.getClass().getDeclaredMethod(slotAccessorName);
+        slotAccessor.setAccessible(true);
+        OwnerRegistrationSlot<T> slot = (OwnerRegistrationSlot<T>) slotAccessor.invoke(slots);
+
+        OwnerRegistrationState<T> state = slot.capture();
+        return state instanceof OwnerRegistrationState.Present<T> present ? present.owner() : null;
+    }
+
+    private static SpanLimitsMetricsProcessor getMetrics(PlatformTracingMBeanRegistrar r) throws Exception {
+        return registrarSlotOwner(r, "metrics");
+    }
+
+    private static SpanTimeoutProcessor getSpanTimeout(PlatformTracingMBeanRegistrar r) throws Exception {
+        return registrarSlotOwner(r, "spanTimeout");
+    }
+
+    private static ValidatingSpanProcessor getValidating(PlatformTracingMBeanRegistrar r) throws Exception {
+        return registrarSlotOwner(r, "validating");
+    }
+
+    private static PlatformCompositeSpanProcessor getComposite(PlatformTracingMBeanRegistrar r) throws Exception {
+        return registrarSlotOwner(r, "composite");
+    }
+
+    private static Object firstCompositeDelegate(PlatformCompositeSpanProcessor composite) throws Exception {
+        Field delegatesField = PlatformCompositeSpanProcessor.class.getDeclaredField("delegates");
+        delegatesField.setAccessible(true);
+        List<?> delegates = (List<?>) delegatesField.get(composite);
+
+        Object namedDelegate = delegates.getFirst();
+        Method delegateAccessor = namedDelegate.getClass().getDeclaredMethod("delegate");
+        delegateAccessor.setAccessible(true);
+        return delegateAccessor.invoke(namedDelegate);
+    }
+
+    @Nested
+    @DisplayName("Optional subsystems disabled → validation and enrichment remain")
+    class AllDisabled {
+
+        @Test
+        void composite_contains_validation_and_enrichment() throws Exception {
+            // given
+            PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+            PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                    registrar, ScrubbingRuntimeTestFixtures.disabled());
+
+            ExtensionConfig extensionConfig = configWithAllDisabled();
+
+            // when
+            factory.registerSpanProcessors(
+                    SdkTracerProvider.builder(),
+                    extensionConfig,
+                    TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId()));
+
+            // then
+            assertThat(getComposite(registrar).getProcessorErrorCounts().keySet())
+                    .as("validation, enrichment, and request id propagation are mandatory factory delegates")
+                    .containsExactly("validation", "enrichment", "request_id_propagation");
+        }
+
+        @Test
+        void validation_owner_is_the_processor_installed_in_composite() throws Exception {
+            // given
+            PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+            PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                    registrar, ScrubbingRuntimeTestFixtures.disabled());
+
+            ExtensionConfig extensionConfig = configWithAllDisabled();
+
+            // when
+            factory.registerSpanProcessors(
+                    SdkTracerProvider.builder(),
+                    extensionConfig,
+                    TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId()));
+
+            // then
+            ValidatingSpanProcessor validating = getValidating(registrar);
+            assertThat(validating).isNotNull();
+            assertThat(firstCompositeDelegate(getComposite(registrar))).isSameAs(validating);
+        }
+
+        @Test
+        void no_metrics_set_when_all_disabled() throws Exception {
+            // given
+            PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+            PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                    registrar, ScrubbingRuntimeTestFixtures.disabled());
+
+            ExtensionConfig extensionConfig = configWithAllDisabled();
+
+            // when
+            factory.registerSpanProcessors(
+                    SdkTracerProvider.builder(),
+                    extensionConfig,
+                    TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId()));
+
+            // then
+            assertThat(getMetrics(registrar)).as("no metrics when all disabled").isNull();
+        }
+
+        @Test
+        void no_span_timeout_set_when_all_disabled() throws Exception {
+            // given
+            PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+            PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                    registrar, ScrubbingRuntimeTestFixtures.disabled());
+
+            ExtensionConfig extensionConfig = configWithAllDisabled();
+
+            // when
+            factory.registerSpanProcessors(
+                    SdkTracerProvider.builder(),
+                    extensionConfig,
+                    TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId()));
+
+            // then
+            assertThat(getSpanTimeout(registrar)).as("no span-timeout processor when all disabled").isNull();
+        }
+    }
+
+    @Test
+    void factory_preserves_required_on_ending_order() throws Exception {
+        // given
+        PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+        ConfigProperties properties = allEnabledConfig();
+        ExtensionConfig extensionConfig = new ExtensionConfig(properties);
+        PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                registrar, new PlatformScrubberFactory().buildRuntime(extensionConfig));
+
+        // when
+        factory.registerSpanProcessors(
+                SdkTracerProvider.builder(),
+                extensionConfig,
+                TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId()));
+
+        PlatformCompositeSpanProcessor composite = getComposite(registrar);
+        // then
+        try {
+            List<String> order = List.copyOf(composite.getProcessorErrorCounts().keySet());
+            assertThat(order).contains("validation", "enrichment", "scrubbing");
+            assertThat(order.getLast())
+                    .as("scrubbing must be the last onEnding delegate in factory composition")
+                    .isEqualTo("scrubbing");
+            assertThat(order.indexOf("validation"))
+                    .as("validation must observe the span before enrichment normalizes it")
+                    .isLessThan(order.indexOf("enrichment"));
+            assertThat(order.indexOf("enrichment"))
+                    .isLessThan(order.indexOf("scrubbing"));
+            assertThat(order.indexOf("validation"))
+                    .isLessThan(order.indexOf("scrubbing"));
+
+            assertThat(order.indexOf("classification"))
+                    .isLessThan(order.indexOf("span_timeout"));
+            assertThat(order.indexOf("span_timeout"))
+                    .isLessThan(order.indexOf("span_limits_metrics"));
+            assertThat(order.indexOf("span_timeout"))
+                    .isLessThan(order.indexOf("scrubbing"));
+        } finally {
+            composite.shutdown();
+        }
+    }
+
+    @Test
+    void factory_backed_pipeline_recordsTypeOmissionBeforeDefaultEnrichment() throws Exception {
+        // given
+        PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+        ConfigProperties properties = allEnabledConfig();
+        ExtensionConfig extensionConfig = new ExtensionConfig(properties);
+        PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                registrar, new PlatformScrubberFactory().buildRuntime(extensionConfig));
+
+        InMemorySpanExporter exporter = InMemorySpanExporter.create();
+        SdkTracerProviderBuilder builder = SdkTracerProvider.builder()
+                .addSpanProcessor(SimpleSpanProcessor.create(exporter));
+
+        factory.registerSpanProcessors(
+                builder,
+                extensionConfig,
+                TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId()));
+
+        ValidatingSpanProcessor validating = getValidating(registrar);
+        long violationsBefore = validating.getValidationViolationsTotal();
+
+        try (OpenTelemetrySdk sdk = OpenTelemetrySdk.builder().setTracerProvider(builder.build()).build()) {
+            Tracer tracer = sdk.getTracer("t");
+
+            // when
+            Span withoutProducerResult = tracer.spanBuilder("server-op-without-result")
+                    .setSpanKind(SpanKind.SERVER)
+                    .startSpan();
+            withoutProducerResult.end();
+
+            Span withProducerResult = tracer.spanBuilder("server-op-with-result")
+                    .setSpanKind(SpanKind.SERVER)
+                    .startSpan();
+            withProducerResult.setAttribute(
+                    AttributeKey.stringKey(PlatformAttributes.PLATFORM_RESULT), "success");
+            withProducerResult.end();
+
+            sdk.getSdkTracerProvider().forceFlush().join(2, TimeUnit.SECONDS);
+
+            List<SpanData> spans = exporter.getFinishedSpanItems();
+            SpanData withoutResultData = spanNamed(spans, "server-op-without-result");
+            SpanData withResultData = spanNamed(spans, "server-op-with-result");
+
+            // then
+            AttributeKey<String> missingKey = AttributeKey.stringKey("platform.validation.missing");
+            AttributeKey<String> typeKey = AttributeKey.stringKey(PlatformAttributes.PLATFORM_TYPE);
+            AttributeKey<String> resultKey = AttributeKey.stringKey(PlatformAttributes.PLATFORM_RESULT);
+            assertThat(withoutResultData.getAttributes().get(missingKey))
+                    .isEqualTo(PlatformAttributes.PLATFORM_TYPE + "," + PlatformAttributes.PLATFORM_RESULT);
+            assertThat(withResultData.getAttributes().get(missingKey))
+                    .isEqualTo(PlatformAttributes.PLATFORM_TYPE);
+            assertThat(withoutResultData.getAttributes().get(typeKey)).isEqualTo("http_server");
+            assertThat(withoutResultData.getAttributes().get(resultKey)).isEqualTo("success");
+            assertThat(withResultData.getAttributes().get(typeKey)).isEqualTo("http_server");
+            assertThat(withResultData.getAttributes().get(resultKey)).isEqualTo("success");
+
+            long violationsAfter = validating.getValidationViolationsTotal();
+            assertThat(violationsAfter - violationsBefore).isEqualTo(2L);
+        }
+    }
+
+    @Test
+    void factory_start_delegates_do_not_write_required_platform_attributes() {
+        // given
+        PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+        ConfigProperties properties = allEnabledConfig();
+        ExtensionConfig extensionConfig = new ExtensionConfig(properties);
+        PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                registrar, new PlatformScrubberFactory().buildRuntime(extensionConfig)
+        );
+
+        SdkTracerProviderBuilder builder = SdkTracerProvider.builder();
+        factory.registerSpanProcessors(
+                builder,
+                extensionConfig,
+                TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId())
+        );
+        StartAttributeProbe probe = new StartAttributeProbe();
+        builder.addSpanProcessor(probe);
+
+        try (OpenTelemetrySdk sdk = OpenTelemetrySdk.builder().setTracerProvider(builder.build()).build()) {
+            Tracer tracer = sdk.getTracer("t");
+
+            // when
+            Span span = tracer.spanBuilder("start-probe").setSpanKind(SpanKind.SERVER).startSpan();
+            span.end();
+
+            // then
+            assertThat(probe.type()).isNull();
+            assertThat(probe.result()).isNull();
+        }
+    }
+
+    @Test
+    void factory_backed_pipeline_reclassifies_client_with_db_system_as_database() {
+        // given
+        PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+        ConfigProperties properties = allEnabledConfig();
+        ExtensionConfig extensionConfig = new ExtensionConfig(properties);
+        PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                registrar, new PlatformScrubberFactory().buildRuntime(extensionConfig)
+        );
+
+        InMemorySpanExporter exporter = InMemorySpanExporter.create();
+        SdkTracerProviderBuilder builder = SdkTracerProvider.builder()
+                .addSpanProcessor(SimpleSpanProcessor.create(exporter));
+        factory.registerSpanProcessors(
+                builder,
+                extensionConfig,
+                TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId())
+        );
+
+        try (OpenTelemetrySdk sdk = OpenTelemetrySdk.builder().setTracerProvider(builder.build()).build()) {
+            Tracer tracer = sdk.getTracer("t");
+
+            // when
+            Span span = tracer.spanBuilder("db-client").setSpanKind(SpanKind.CLIENT).startSpan();
+            span.setAttribute("db.system", "postgresql");
+            span.end();
+            sdk.getSdkTracerProvider().forceFlush().join(2, TimeUnit.SECONDS);
+
+            // then
+            SpanData data = spanNamed(exporter.getFinishedSpanItems(), "db-client");
+            assertThat(data.getAttributes().get(AttributeKey.stringKey(PlatformAttributes.PLATFORM_TYPE)))
+                    .isEqualTo("database");
+        }
+    }
+
+    private static SpanData spanNamed(List<SpanData> spans, String name) {
+        return spans.stream()
+                .filter(span -> span.getName().equals(name))
+                .findFirst()
+                .orElseThrow(() -> new AssertionError("Span not found: " + name));
+    }
+
+    @Nested
+    @DisplayName("Individual subsystem enabled → correct processor registered")
+    class IndividualEnabled {
+
+        @Test
+        void metrics_enabled_registers_metrics_processor() throws Exception {
+            // given
+            PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+            PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                    registrar, ScrubbingRuntimeTestFixtures.disabled());
+
+            ExtensionConfig extensionConfig = configWithMetricsEnabled();
+
+            // when
+            factory.registerSpanProcessors(
+                    SdkTracerProvider.builder(),
+                    extensionConfig,
+                    TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId()));
+
+            // then
+            assertThat(getMetrics(registrar))
+                    .as("metrics enabled → SpanLimitsMetricsProcessor set on registrar")
+                    .isNotNull()
+                    .isInstanceOf(SpanLimitsMetricsProcessor.class);
+        }
+
+        @Test
+        void metrics_enabled_registers_composite() throws Exception {
+            // given
+            PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+            PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                    registrar, ScrubbingRuntimeTestFixtures.disabled());
+
+            ExtensionConfig extensionConfig = configWithMetricsEnabled();
+
+            // when
+            factory.registerSpanProcessors(
+                    SdkTracerProvider.builder(),
+                    extensionConfig,
+                    TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId()));
+
+            // then
+            assertThat(getComposite(registrar))
+                    .as("at least one processor → composite set on registrar")
+                    .isNotNull();
+        }
+
+        @Test
+        void span_timeout_enabled_registers_span_timeout_processor() throws Exception {
+            // given
+            PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+            PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                    registrar, ScrubbingRuntimeTestFixtures.disabled());
+
+            ExtensionConfig extensionConfig = configWithSpanTimeoutEnabled();
+
+            // when
+            factory.registerSpanProcessors(
+                    SdkTracerProvider.builder(),
+                    extensionConfig,
+                    TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId()));
+
+            // then
+            assertThat(getSpanTimeout(registrar))
+                    .as("span-timeout enabled → SpanTimeoutProcessor set on registrar")
+                    .isNotNull()
+                    .isInstanceOf(SpanTimeoutProcessor.class);
+        }
+
+        @Test
+        void validation_enabled_registers_validating_processor() throws Exception {
+            // given
+            PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+            PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                    registrar, ScrubbingRuntimeTestFixtures.disabled());
+
+            ExtensionConfig extensionConfig = configWithValidationWarning();
+
+            // when
+            factory.registerSpanProcessors(
+                    SdkTracerProvider.builder(),
+                    extensionConfig,
+                    TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId()));
+
+            // then
+            assertThat(getValidating(registrar))
+                    .as("validation enabled → ValidatingSpanProcessor set on registrar")
+                    .isNotNull()
+                    .isInstanceOf(ValidatingSpanProcessor.class);
+        }
+    }
+
+    @Nested
+    @DisplayName("Default config (no properties set) — span-timeout processor not added")
+    class DefaultConfig {
+
+        @Test
+        void factoryAddsBaggageProcessorWithCanonicalDefaults() throws Exception {
+            // given
+            PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+            PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                    registrar, ScrubbingRuntimeTestFixtures.disabled());
+            ExtensionConfig defaultConfig = new ExtensionConfig(new ConfigProperties() {
+                @Override public String getString(String name) { return null; }
+                @Override public Boolean getBoolean(String name) {
+                    if ("platform.tracing.javaagent.scrubbing.enabled".equals(name)) return false;
+                    return null;
+                }
+                @Override public Integer getInt(String name) { return null; }
+                @Override public Long getLong(String name) { return null; }
+                @Override public Double getDouble(String name) { return null; }
+                @Override public Duration getDuration(String name) { return null; }
+                @Override public List<String> getList(String name) { return List.of(); }
+                @Override public Map<String, String> getMap(String name) { return null; }
+            });
+
+            // when
+            factory.registerSpanProcessors(
+                    SdkTracerProvider.builder(),
+                    defaultConfig,
+                    TracingSettingsSource.fromStartup(defaultConfig, registrar.agentInstanceId()));
+
+            // then
+            assertThat(getComposite(registrar).getProcessorErrorCounts())
+                    .containsKey("baggage");
+        }
+
+        @Test
+        void empty_processor_allowlist_does_not_register_baggage_processor() throws Exception {
+            // given
+            PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+
+            PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                    registrar,
+                    ScrubbingRuntimeTestFixtures.disabled()
+            );
+
+            ExtensionConfig extensionConfig = new ExtensionConfig(new ConfigProperties() {
+                @Override public String getString(String name) {
+                    if (ExtensionPropertyNames.BAGGAGE_SPAN_ATTRIBUTES_ALLOWED_KEYS.equals(name)) {
+                        return "";
+                    }
+
+                    return null;
+                }
+
+                @Override public Boolean getBoolean(String name) {
+                    if ("platform.tracing.javaagent.scrubbing.enabled".equals(name)) {
+                        return false;
+                    }
+
+                    return null;
+                }
+
+                @Override public Integer getInt(String name) { return null; }
+                @Override public Long getLong(String name) { return null; }
+                @Override public Double getDouble(String name) { return null; }
+                @Override public Duration getDuration(String name) { return null; }
+                @Override public List<String> getList(String name) {
+                    if (ExtensionPropertyNames.BAGGAGE_SPAN_ATTRIBUTES_ALLOWED_KEYS.equals(name)) {
+                        return List.of();
+                    }
+
+                    return List.of();
+                }
+
+                @Override public Map<String, String> getMap(String name) { return null; }
+            });
+
+            // when
+            factory.registerSpanProcessors(
+                    SdkTracerProvider.builder(),
+                    extensionConfig,
+                    TracingSettingsSource.fromStartup(extensionConfig, registrar.agentInstanceId()));
+
+            // then
+            assertThat(getComposite(registrar).getProcessorErrorCounts())
+                    .doesNotContainKey("baggage");
+        }
+
+        @Test
+        void factoryDoesNotAddSpanTimeoutProcessorByDefault() throws Exception {
+            // given
+            PlatformTracingMBeanRegistrar registrar = new PlatformTracingMBeanRegistrar(AgentInstanceId.random());
+            PlatformSpanProcessorFactory factory = new PlatformSpanProcessorFactory(
+                    registrar, ScrubbingRuntimeTestFixtures.disabled()
+            );
+
+            ExtensionConfig defaultConfig = new ExtensionConfig(new ConfigProperties() {
+                @Override public String getString(String name) { return null; }
+                @Override public Boolean getBoolean(String name) {
+                    if ("platform.tracing.javaagent.scrubbing.enabled".equals(name)) {
+                        return false;
+                    }
+
+                    return null;
+                }
+                @Override public Integer getInt(String name) { return null; }
+                @Override public Long getLong(String name) { return null; }
+                @Override public Double getDouble(String name) { return null; }
+                @Override public Duration getDuration(String name) { return null; }
+                @Override public List<String> getList(String name) { return List.of(); }
+                @Override public Map<String, String> getMap(String name) { return null; }
+            });
+
+            // when
+            factory.registerSpanProcessors(
+                    SdkTracerProvider.builder(),
+                    defaultConfig,
+                    TracingSettingsSource.fromStartup(defaultConfig, registrar.agentInstanceId()));
+
+            // then
+            assertThat(getSpanTimeout(registrar))
+                    .as("span-timeout processor must not be registered with default config (SP-01 default-off)")
+                    .isNull();
+        }
+    }
+
+    @Nested
+    @DisplayName("Parity: ExtensionConfig values match old direct-read behavior")
+    class DefaultParity {
+
+        @Test
+        @DisplayName("Default ExtensionConfig has same effective defaults as old ExtensionDefaults")
+        void default_span_timeout_timeouts_match_extension_defaults() {
+            // given
+            ExtensionConfig cfg = new ExtensionConfig(new ConfigProperties() {
+                @Override public String getString(String n) { return null; }
+                @Override public Boolean getBoolean(String n) { return null; }
+                @Override public Integer getInt(String n) { return null; }
+                @Override public Long getLong(String n) { return null; }
+                @Override public Double getDouble(String n) { return null; }
+                @Override public Duration getDuration(String n) { return null; }
+                @Override public List<String> getList(String n) { return List.of(); }
+                @Override public Map<String, String> getMap(String n) { return null; }
+            });
+
+            // then
+            assertThat(cfg.spanTimeout().maxSpanAge())
+                    .as("span-timeout max-span-age default")
+                    .isEqualTo(Duration.ofSeconds(30));
+            assertThat(cfg.spanTimeout().maxTraceAge())
+                    .as("span-timeout max-trace-age default")
+                    .isEqualTo(Duration.ofSeconds(60));
+            assertThat(cfg.spanTimeout().scanInterval())
+                    .as("span-timeout scanInterval default")
+                    .isEqualTo(Duration.ofSeconds(5));
+            assertThat(cfg.spanTimeout().maxTrackedTraces())
+                    .as("span-timeout maxTrackedTraces default")
+                    .isEqualTo(10_000);
+            assertThat(cfg.classification().slowThreshold())
+                    .as("classification slowThreshold default")
+                    .isEqualTo(Duration.ofSeconds(5));
+            assertThat(cfg.classification().normalThreshold())
+                    .as("classification normalThreshold default")
+                    .isEqualTo(Duration.ofSeconds(1));
+        }
+
+        @Test
+        @DisplayName("Baggage defaults: canonical span attribute policy")
+        void default_baggage_matches_extension_defaults() {
+            // given
+            ExtensionConfig cfg = new ExtensionConfig(new ConfigProperties() {
+                @Override public String getString(String n) { return null; }
+                @Override public Boolean getBoolean(String n) { return null; }
+                @Override public Integer getInt(String n) { return null; }
+                @Override public Long getLong(String n) { return null; }
+                @Override public Double getDouble(String n) { return null; }
+                @Override public Duration getDuration(String n) { return null; }
+                @Override public List<String> getList(String n) { return List.of(); }
+                @Override public Map<String, String> getMap(String n) { return null; }
+            });
+
+            // when
+            var policy = cfg.baggage().spanAttributesPolicy();
+
+            // then
+            assertThat(policy.allows("traffic_source")).isTrue();
+            assertThat(policy.allows("tenant_class")).isTrue();
+            assertThat(policy.allows("platform.correlation.id")).isTrue();
+            assertThat(policy.allows("unlisted")).isFalse();
+        }
+    }
+
+    private static final class StartAttributeProbe implements SpanProcessor {
+
+        private final AtomicReference<String> type = new AtomicReference<>();
+        private final AtomicReference<String> result = new AtomicReference<>();
+
+        @Override
+        public void onStart(Context parentContext, ReadWriteSpan span) {
+            type.set(span.getAttribute(AttributeKey.stringKey(PlatformAttributes.PLATFORM_TYPE)));
+            result.set(span.getAttribute(AttributeKey.stringKey(PlatformAttributes.PLATFORM_RESULT)));
+        }
+
+        @Override
+        public boolean isStartRequired() {
+            return true;
+        }
+
+        @Override
+        public void onEnd(ReadableSpan span) {
+        }
+
+        @Override
+        public boolean isEndRequired() {
+            return false;
+        }
+
+        private String type() {
+            return type.get();
+        }
+
+        private String result() {
+            return result.get();
+        }
+    }
+}

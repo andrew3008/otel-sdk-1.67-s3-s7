@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.HmacSha256DigestTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.766Z" hostname="DESKTOP-OEGBG7F" time="0.0">
+  <properties/>
+  <testcase name="повтор того же сообщения после другого даёт прежний digest" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.HmacSha256DigestTest" time="0.0"/>
+  <testcase name="RFC 4231 case 2 и обнуление переданного ключа" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.HmacSha256DigestTest" time="0.0"/>
+  <testcase name="RFC 4231 case 2 через MaskedSecret и фасад" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.HmacSha256DigestTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

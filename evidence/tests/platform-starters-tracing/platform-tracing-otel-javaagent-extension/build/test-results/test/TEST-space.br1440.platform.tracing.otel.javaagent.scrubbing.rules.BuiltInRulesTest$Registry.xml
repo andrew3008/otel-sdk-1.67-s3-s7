@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest$Registry" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.763Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="resolve_is_case_insensitive_and_returns_null_for_unknown()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest$Registry" time="0.0"/>
+  <testcase name="resolve_returns_correct_types()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest$Registry" time="0.001"/>
+  <testcase name="priorities_are_defined_in_enum_and_increase_from_strict_to_soft_actions()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.rules.BuiltInRulesTest$Registry" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

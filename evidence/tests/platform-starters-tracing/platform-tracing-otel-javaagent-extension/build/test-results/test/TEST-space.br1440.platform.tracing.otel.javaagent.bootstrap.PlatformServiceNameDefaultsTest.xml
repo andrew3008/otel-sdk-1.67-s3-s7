@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformServiceNameDefaultsTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.513Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="absent platform name" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformServiceNameDefaultsTest" time="0.0"/>
+  <testcase name="empty platform name" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformServiceNameDefaultsTest" time="0.001"/>
+  <testcase name="blank platform name" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformServiceNameDefaultsTest" time="0.0"/>
+  <testcase name="stripped platform name" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformServiceNameDefaultsTest" time="0.001"/>
+  <testcase name="explicit service name" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformServiceNameDefaultsTest" time="0.0"/>
+  <testcase name="empty explicit name" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformServiceNameDefaultsTest" time="0.0"/>
+  <testcase name="blank explicit name" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformServiceNameDefaultsTest" time="0.0"/>
+  <testcase name="resource attribute" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformServiceNameDefaultsTest" time="0.0"/>
+  <testcase name="empty resource attribute" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.PlatformServiceNameDefaultsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.runtime.otel.OtelTracingRuntimeTraceparentFormatTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.667Z" hostname="DESKTOP-OEGBG7F" time="0.007">
+  <properties/>
+  <testcase name="unsampledContext_returnsTraceparentWithUnsampledFlag()" classname="space.br1440.platform.tracing.otel.runtime.otel.OtelTracingRuntimeTraceparentFormatTest" time="0.003"/>
+  <testcase name="repeatedCalls_doNotMutateActiveContext()" classname="space.br1440.platform.tracing.otel.runtime.otel.OtelTracingRuntimeTraceparentFormatTest" time="0.001"/>
+  <testcase name="noActiveContext_isEmpty()" classname="space.br1440.platform.tracing.otel.runtime.otel.OtelTracingRuntimeTraceparentFormatTest" time="0.001"/>
+  <testcase name="sampledContext_returnsTraceparentWithSampledFlag()" classname="space.br1440.platform.tracing.otel.runtime.otel.OtelTracingRuntimeTraceparentFormatTest" time="0.0"/>
+  <testcase name="validNonRecordingContext_stillReturnsTraceparent()" classname="space.br1440.platform.tracing.otel.runtime.otel.OtelTracingRuntimeTraceparentFormatTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

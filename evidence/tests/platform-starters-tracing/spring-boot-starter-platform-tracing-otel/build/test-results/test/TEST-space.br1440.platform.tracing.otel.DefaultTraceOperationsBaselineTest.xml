@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.DefaultTraceOperationsBaselineTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:46.550Z" hostname="DESKTOP-OEGBG7F" time="0.356">
+  <properties/>
+  <testcase name="defaultChildSpan_keepsActiveParent()" classname="space.br1440.platform.tracing.otel.DefaultTraceOperationsBaselineTest" time="0.332"/>
+  <testcase name="fromSpec_withLinks_exportsProvidedRemoteLinks()" classname="space.br1440.platform.tracing.otel.DefaultTraceOperationsBaselineTest" time="0.007"/>
+  <testcase name="rootSpan_hasNoParent_evenInsideActiveParentScope()" classname="space.br1440.platform.tracing.otel.DefaultTraceOperationsBaselineTest" time="0.002"/>
+  <testcase name="recordException_recordsOnCurrentSpan()" classname="space.br1440.platform.tracing.otel.DefaultTraceOperationsBaselineTest" time="0.005"/>
+  <testcase name="childSpan_keepsActiveParent()" classname="space.br1440.platform.tracing.otel.DefaultTraceOperationsBaselineTest" time="0.003"/>
+  <testcase name="traceContext_presentOnlyWhileSpanActive()" classname="space.br1440.platform.tracing.otel.DefaultTraceOperationsBaselineTest" time="0.001"/>
+  <testcase name="detachedSpan_hasNoParentAndNoLinks_evenInsideActiveParentScope()" classname="space.br1440.platform.tracing.otel.DefaultTraceOperationsBaselineTest" time="0.002"/>
+  <system-out><![CDATA[12:47:46.717 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:46.795 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:46.886 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=KAFKA_CONSUMER: required attribute 'messaging.destination.name' is missing
+12:47:46.886 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=KAFKA_CONSUMER: required attribute 'messaging.system' is missing
+12:47:46.886 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=KAFKA_CONSUMER: required attribute 'platform.trace.type' is missing
+12:47:46.892 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:46.893 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:46.895 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:46.902 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:46.902 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:46.904 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:46.906 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:46.906 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

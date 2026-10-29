@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorLoggingTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:09.044Z" hostname="DESKTOP-OEGBG7F" time="0.036">
+  <properties/>
+  <testcase name="rule_source_failure_preserves_SANITIZER_RULE_LOADING_FAILED()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorLoggingTest" time="0.007"/>
+  <testcase name="known_configuration_failure_logs_property_name_without_property_value()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorLoggingTest" time="0.004"/>
+  <testcase name="foreign_sampler_name_fails_preparation()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorLoggingTest" time="0.002"/>
+  <testcase name="failed_activation_does_not_emit_installed_marker()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorLoggingTest" time="0.004"/>
+  <testcase name="unknown_resource_validation_mode_fails_preparation_with_property_name()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorLoggingTest" time="0.005"/>
+  <testcase name="successful_activation_emits_exactly_one_installed_marker()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorLoggingTest" time="0.006"/>
+  <testcase name="diagnostic_registration_failure_is_suppressed_on_primary_configuration_cause()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorLoggingTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

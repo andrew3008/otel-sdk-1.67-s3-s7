@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.integrations.reactor.OtelReactorContextPropagationAutoConfigurationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.600Z" hostname="DESKTOP-OEGBG7F" time="0.008">
+  <properties/>
+  <testcase name="registersPropagationInReactiveApplication()" classname="space.br1440.platform.tracing.autoconfigure.integrations.reactor.OtelReactorContextPropagationAutoConfigurationTest" time="0.005"/>
+  <testcase name="doesNotRegisterWhenTracingDisabled()" classname="space.br1440.platform.tracing.autoconfigure.integrations.reactor.OtelReactorContextPropagationAutoConfigurationTest" time="0.002"/>
+  <system-out><![CDATA[2026-10-29T12:48:10.602Z DEBUG 25468 --- [    Test worker] [                                                 ] ationConfigReactiveWebApplicationContext : Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebApplicationContext@53cffd7c
+2026-10-29T12:48:10.605Z DEBUG 25468 --- [    Test worker] [                                                 ] ationConfigReactiveWebApplicationContext : Closing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebApplicationContext@53cffd7c, started on Thu Oct 29 12:48:10 UTC 2026
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,16 @@
+package space.br1440.platform.tracing.otel.javaagent.control.settings.update;
+
+public enum SettingsRejectionReason {
+    NONE,
+    MISSING_REQUIRED_FIELD,
+    TYPE_MISMATCH,
+    INVALID_VALUE,
+    INVALID_SAMPLING_RATIO,
+    INVALID_ROUTE_RATIO,
+    INVALID_VALIDATION_LEVEL,
+    INVALID_DIAGNOSTICS_LOG_LEVEL,
+    LIMIT_EXCEEDED,
+    AGENT_INSTANCE_MISMATCH,
+    ACCEPTED_SEQUENCE_MISMATCH,
+    INTERNAL_FAILURE
+}

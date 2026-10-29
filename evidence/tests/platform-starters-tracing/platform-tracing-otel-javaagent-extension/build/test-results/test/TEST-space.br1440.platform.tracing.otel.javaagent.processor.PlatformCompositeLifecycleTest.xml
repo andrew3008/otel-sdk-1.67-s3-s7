@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeLifecycleTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.934Z" hostname="DESKTOP-OEGBG7F" time="0.011">
+  <properties/>
+  <testcase name="shutdownPublishesSharedResultBeforeDelegateInvocationCompletes()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeLifecycleTest" time="0.002"/>
+  <testcase name="pendingDelegateFailureIsObservedAndCounted()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeLifecycleTest" time="0.001"/>
+  <testcase name="malformedAndFailedResultsDoNotPreventLaterDelegateShutdown()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeLifecycleTest" time="0.002"/>
+  <testcase name="repeatedAndConcurrentShutdownUsesOneSharedResultAndInvokesDelegateOnce()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeLifecycleTest" time="0.002"/>
+  <testcase name="shutdownWaitsForRegisteredFlushBeforeInvokingDelegates()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeLifecycleTest" time="0.0"/>
+  <testcase name="reentrantShutdownFailsClosedWithoutDeadlock()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeLifecycleTest" time="0.001"/>
+  <testcase name="closeUsesOtelDefaultImplementation()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeLifecycleTest" time="0.0"/>
+  <testcase name="flushIsRegisteredBeforeDelegateInvocationCompletes()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeLifecycleTest" time="0.001"/>
+  <testcase name="fatalFailureCompletesSharedResultBeforePropagation()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeLifecycleTest" time="0.001"/>
+  <testcase name="forceFlushAfterShutdownReturnsSharedResultWithoutCallingDelegate()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeLifecycleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

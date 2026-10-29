@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.distribution.PublishedAgentCompositionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:57.056Z" hostname="DESKTOP-OEGBG7F" time="1.577">
+  <properties/>
+  <testcase name="published_agent_is_otel_payload_plus_one_extension_and_identity()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.PublishedAgentCompositionTest" time="0.795"/>
+  <testcase name="upstream_payload_does_not_shadow_platform_extension_resources()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.PublishedAgentCompositionTest" time="0.37"/>
+  <testcase name="embedded_extension_matches_standalone_artifact_by_sha256()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.PublishedAgentCompositionTest" time="0.411"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.status.NoneControlChannelStatusIntegrationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:11.063Z" hostname="DESKTOP-OEGBG7F" time="0.12">
+  <properties/>
+  <testcase name="coherenceFailureLatchesTrustWithoutChangingStartupContractHealth()" classname="space.br1440.platform.tracing.autoconfigure.status.NoneControlChannelStatusIntegrationTest" time="0.087"/>
+  <testcase name="missingAcceptedSnapshotKeepsContextUpAndReportsSettingsUnreadable()" classname="space.br1440.platform.tracing.autoconfigure.status.NoneControlChannelStatusIntegrationTest" time="0.011"/>
+  <testcase name="unreadableAcceptedSnapshotKeepsContextUpAndRepeatedlyReportsSettingsUnreadable()" classname="space.br1440.platform.tracing.autoconfigure.status.NoneControlChannelStatusIntegrationTest" time="0.01"/>
+  <testcase name="acceptedBootstrapSnapshotIsVisibleThroughNoneStatus()" classname="space.br1440.platform.tracing.autoconfigure.status.NoneControlChannelStatusIntegrationTest" time="0.012"/>
+  <system-out><![CDATA[2026-10-29T12:48:11.158Z  WARN 25468 --- [    Test worker] [                                                 ] t.a.c.j.PlatformJmxReadAutoConfiguration : Accepted settings metadata is unavailable; tracing status will report SETTINGS_UNREADABLE. errorType=space.br1440.platform.tracing.autoconfigure.diagnostics.jmx.transport.JmxMBeanInfoShapeViolationException
+2026-10-29T12:48:11.160Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractViolationException
+2026-10-29T12:48:11.170Z  WARN 25468 --- [    Test worker] [                                                 ] s.b.p.t.a.status.SettingsStatusResolver  : Accepted tracing settings are unreadable; failureKind=space.br1440.platform.tracing.autoconfigure.control.settings.TracingSettingsContractViolationException
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

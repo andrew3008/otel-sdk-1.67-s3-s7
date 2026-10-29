@@ -1,0 +1,66 @@
+plugins {
+    id 'java-gradle-plugin'
+}
+
+group = 'space.br1440.platform.tracing.gradle'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    controlledAgentFixtureJunit {
+        canBeConsumed = false
+        canBeResolved = true
+    }
+}
+
+dependencies {
+    implementation "com.gradleup.shadow:shadow-gradle-plugin:${libs.versions.shadow.gradle.plugin.get()}"
+
+    // Apache Ant используется плагином Shadow только во время сборки и не попадает в javaagent.
+    // Ограничение фиксирует исправленную версию транзитивной зависимости для CVE-2026-78254.
+    constraints { DependencyConstraintHandler constraintHandler ->
+        constraintHandler.add('implementation', 'org.apache.ant:ant:1.10.18') { DependencyConstraint constraint ->
+            constraint.because('CVE-2026-78254 is fixed in Apache Ant 1.10.18')
+        }
+    }
+
+    testImplementation platform("org.junit:junit-bom:${libs.versions.junit.jupiter.get()}")
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation "org.assertj:assertj-core:${libs.versions.assertj.get()}"
+    testImplementation "com.tngtech.archunit:archunit-junit5:${libs.versions.archunit.get()}"
+    testImplementation gradleTestKit()
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    controlledAgentFixtureJunit platform("org.junit:junit-bom:${libs.versions.junit.jupiter.get()}")
+    controlledAgentFixtureJunit 'org.junit.jupiter:junit-jupiter'
+    controlledAgentFixtureJunit 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.named('test', Test) {
+    useJUnitPlatform()
+    def fixtureJunit = configurations.controlledAgentFixtureJunit
+    inputs.files(fixtureJunit).withPropertyName('controlledAgentFixtureJunit')
+    systemProperty 'fixture.junitJars', fixtureJunit.asPath
+}
+
+gradlePlugin {
+    plugins {
+        create('javaagentExtensionPackaging') { PluginDeclaration declaration ->
+            declaration.setId('platform.javaagent-extension-packaging')
+            declaration.setImplementationClass('space.br1440.platform.tracing.gradle.javaagent.extension.JavaAgentExtensionPackagingPlugin')
+        }
+
+        create('javaagentDistribution') { PluginDeclaration declaration ->
+            declaration.setId('platform.javaagent-distribution')
+            declaration.setImplementationClass('space.br1440.platform.tracing.gradle.javaagent.distribution.JavaAgentDistributionPlugin')
+        }
+    }
+}

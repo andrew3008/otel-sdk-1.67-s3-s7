@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.946Z" hostname="DESKTOP-OEGBG7F" time="0.013">
+  <properties/>
+  <testcase name="getProcessorErrorCounts_returns_immutable_snapshot()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" time="0.001"/>
+  <testcase name="rejectsMissingBlankAndDuplicateDiagnosticIdentity()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" time="0.001"/>
+  <testcase name="isolatesRuntimeExceptionFromOnEndingAndContinuesPipeline()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" time="0.002"/>
+  <testcase name="isolatesRuntimeExceptionFromOnEndAndContinuesPipeline()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" time="0.002"/>
+  <testcase name="phaseParticipationIsSnapshotAtConstructionAndIgnoresLaterPredicateChanges()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" time="0.001"/>
+  <testcase name="empty_delegate_list_does_not_crash_composite()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" time="0.0"/>
+  <testcase name="validationViolationUsesValidatorDiagnosticsWithoutCompositeError()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" time="0.001"/>
+  <testcase name="validSpanDoesNotIncrementValidationViolationCounter()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" time="0.001"/>
+  <testcase name="exception_in_one_delegate_does_not_stop_others_and_increments_counter()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" time="0.001"/>
+  <testcase name="isolatesRuntimeExceptionFromOnStartAndContinuesPipeline()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" time="0.002"/>
+  <testcase name="onEnding_is_called_only_for_ExtendedSpanProcessor()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PlatformCompositeSpanProcessorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

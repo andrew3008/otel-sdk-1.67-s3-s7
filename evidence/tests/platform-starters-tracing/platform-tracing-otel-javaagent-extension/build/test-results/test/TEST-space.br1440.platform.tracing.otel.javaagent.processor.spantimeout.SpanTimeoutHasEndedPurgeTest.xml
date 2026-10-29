@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutHasEndedPurgeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:35.677Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="endedSpanIsPurgedWithoutForceClose()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutHasEndedPurgeTest" time="0.001"/>
+  <testcase name="sameSpanDoesNotIncrementBothCounters()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutHasEndedPurgeTest" time="0.001"/>
+  <testcase name="exactDeadlineDoesNotForceClose()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.SpanTimeoutHasEndedPurgeTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oct 29, 2026 12:47:35 PM io.opentelemetry.sdk.trace.SdkTracerProvider shutdown
+INFO: Calling shutdown() multiple times.
+Oct 29, 2026 12:47:35 PM io.opentelemetry.sdk.trace.SdkTracerProvider shutdown
+INFO: Calling shutdown() multiple times.
+Oct 29, 2026 12:47:35 PM io.opentelemetry.sdk.trace.SdkTracerProvider shutdown
+INFO: Calling shutdown() multiple times.
+]]></system-err>
+</testsuite>

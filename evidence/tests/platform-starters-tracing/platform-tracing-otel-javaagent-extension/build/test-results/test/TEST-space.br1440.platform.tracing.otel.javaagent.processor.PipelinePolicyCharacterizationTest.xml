@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.PipelinePolicyCharacterizationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.929Z" hostname="DESKTOP-OEGBG7F" time="0.004">
+  <properties/>
+  <testcase name="validation_marker_absent_whenValidationDisabled()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PipelinePolicyCharacterizationTest" time="0.002"/>
+  <testcase name="enriching_runs_before_scrubbing_in_composite_onEnding()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PipelinePolicyCharacterizationTest" time="0.002"/>
+  <testcase name="validation_runs_before_enrichment_in_composite_onEnding()" classname="space.br1440.platform.tracing.otel.javaagent.processor.PipelinePolicyCharacterizationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

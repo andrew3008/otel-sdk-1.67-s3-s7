@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="B: runtime refresh — missing/deleted leaf → REJECTED, LKG immutable" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:59.161Z" hostname="DESKTOP-OEGBG7F" time="0.022">
+  <properties/>
+  <testcase name="runtime refresh with missing leaf does NOT call applySnapshot" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.CategoryALeafMissingTest$RuntimeMissingLeaf" time="0.007"/>
+  <testcase name="multiple consecutive runtime missing-leaf events do NOT accumulate applySnapshot calls" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.CategoryALeafMissingTest$RuntimeMissingLeaf" time="0.004"/>
+  <testcase name="agentInstanceId returned by reader is unchanged after runtime missing leaf" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.CategoryALeafMissingTest$RuntimeMissingLeaf" time="0.004"/>
+  <testcase name="runtime missing leaf does not apply and leaves the last applied sequence unchanged" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.CategoryALeafMissingTest$RuntimeMissingLeaf" time="0.002"/>
+  <testcase name="LKG snapshot content is unchanged after runtime missing leaf" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.CategoryALeafMissingTest$RuntimeMissingLeaf" time="0.003"/>
+  <system-out><![CDATA[2026-10-29T12:47:59.168Z ERROR 25468 --- [    Test worker] [                                                 ] a.c.c.ConfigServerTracingSettingsAdapter : Config Server manifest rejected locally; LKG retained: Required Category A policy key missing: 'platform.tracing.policy.exporter.enabled'
+2026-10-29T12:47:59.171Z ERROR 25468 --- [    Test worker] [                                                 ] a.c.c.ConfigServerTracingSettingsAdapter : Config Server manifest rejected locally; LKG retained: leaf missing
+2026-10-29T12:47:59.171Z ERROR 25468 --- [    Test worker] [                                                 ] a.c.c.ConfigServerTracingSettingsAdapter : Config Server manifest rejected locally; LKG retained: leaf missing
+2026-10-29T12:47:59.172Z ERROR 25468 --- [    Test worker] [                                                 ] a.c.c.ConfigServerTracingSettingsAdapter : Config Server manifest rejected locally; LKG retained: leaf missing
+2026-10-29T12:47:59.175Z ERROR 25468 --- [    Test worker] [                                                 ] a.c.c.ConfigServerTracingSettingsAdapter : Config Server manifest rejected locally; LKG retained: Required Category A policy key missing: 'platform.tracing.policy.validation.level'
+2026-10-29T12:47:59.178Z  INFO 25468 --- [    Test worker] [                                                 ] .ConfigServerTracingSettingsSynchronizer : Config Server settings delivery: phase=REFRESH, attemptId=00000000-0000-0000-0000-000000000001, outcome=APPLIED, messageCode=NONE, base=SettingsRevision[agentInstanceId=d7468019-f52a-44a9-b3cd-3654c13ebc4d, acceptedSequence=42]
+2026-10-29T12:47:59.180Z ERROR 25468 --- [    Test worker] [                                                 ] a.c.c.ConfigServerTracingSettingsAdapter : Config Server manifest rejected locally; LKG retained: Required Category A policy key missing: 'platform.tracing.policy.sampling.ratio'
+2026-10-29T12:47:59.183Z ERROR 25468 --- [    Test worker] [                                                 ] a.c.c.ConfigServerTracingSettingsAdapter : Config Server manifest rejected locally; LKG retained: Required Category A policy key missing: 'platform.tracing.policy.diagnostics.log-level'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

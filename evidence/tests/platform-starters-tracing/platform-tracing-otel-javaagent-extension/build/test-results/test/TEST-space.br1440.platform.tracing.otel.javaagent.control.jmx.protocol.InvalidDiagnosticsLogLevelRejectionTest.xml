@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.InvalidDiagnosticsLogLevelRejectionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.310Z" hostname="DESKTOP-OEGBG7F" time="0.013">
+  <properties/>
+  <testcase name="invalid_jmx_log_level_rejects_the_apply_and_keeps_effective_level()" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.InvalidDiagnosticsLogLevelRejectionTest" time="0.013"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

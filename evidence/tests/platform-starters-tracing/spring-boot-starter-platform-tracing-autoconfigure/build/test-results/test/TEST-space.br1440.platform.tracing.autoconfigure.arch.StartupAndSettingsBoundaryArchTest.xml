@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.arch.StartupAndSettingsBoundaryArchTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:52.609Z" hostname="DESKTOP-OEGBG7F" time="3.861">
+  <properties/>
+  <testcase name="startupCoreDependencyBoundary" classname="space.br1440.platform.tracing.autoconfigure.arch.StartupAndSettingsBoundaryArchTest" time="0.01"/>
+  <testcase name="startupAutoConfigurationDependencyBoundary" classname="space.br1440.platform.tracing.autoconfigure.arch.StartupAndSettingsBoundaryArchTest" time="0.0"/>
+  <testcase name="startupForbiddenTransportAndSdkDependencies" classname="space.br1440.platform.tracing.autoconfigure.arch.StartupAndSettingsBoundaryArchTest" time="0.01"/>
+  <testcase name="startupCoreDoesNotDependOnAutoConfiguration" classname="space.br1440.platform.tracing.autoconfigure.arch.StartupAndSettingsBoundaryArchTest" time="0.001"/>
+  <testcase name="settingsRootDoesNotDependOnChildContracts" classname="space.br1440.platform.tracing.autoconfigure.arch.StartupAndSettingsBoundaryArchTest" time="0.0"/>
+  <testcase name="startupTransportBoundaryDetectsInvalidDependency()" classname="space.br1440.platform.tracing.autoconfigure.arch.StartupAndSettingsBoundaryArchTest" time="0.002"/>
+  <testcase name="startupCoreBoundaryDetectsInvalidDependency()" classname="space.br1440.platform.tracing.autoconfigure.arch.StartupAndSettingsBoundaryArchTest" time="0.001"/>
+  <testcase name="startupDirectionBoundaryDetectsReverseDependency()" classname="space.br1440.platform.tracing.autoconfigure.arch.StartupAndSettingsBoundaryArchTest" time="0.001"/>
+  <testcase name="startupAutoConfigurationBoundaryDetectsInvalidDependency()" classname="space.br1440.platform.tracing.autoconfigure.arch.StartupAndSettingsBoundaryArchTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

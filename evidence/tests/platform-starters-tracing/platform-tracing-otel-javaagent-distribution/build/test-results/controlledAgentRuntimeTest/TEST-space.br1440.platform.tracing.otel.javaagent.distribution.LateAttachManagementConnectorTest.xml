@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.distribution.LateAttachManagementConnectorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:49:12.414Z" hostname="DESKTOP-OEGBG7F" time="3.582">
+  <properties/>
+  <testcase name="late_local_management_connector_can_discover_mutation_mbean()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.LateAttachManagementConnectorTest" time="3.582"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

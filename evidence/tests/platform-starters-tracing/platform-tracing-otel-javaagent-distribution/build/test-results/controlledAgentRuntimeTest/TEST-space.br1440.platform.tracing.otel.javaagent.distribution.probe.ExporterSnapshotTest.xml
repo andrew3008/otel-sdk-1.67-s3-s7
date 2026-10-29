@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:49:47.486Z" hostname="DESKTOP-OEGBG7F" time="0.013">
+  <properties/>
+  <testcase name="rejects_negative_required_metric()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.003"/>
+  <testcase name="rejects_noncanonical_agent_instance_id()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.0"/>
+  <testcase name="rejects_absent_exporter_owner()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.0"/>
+  <testcase name="rejects_agent_replacement()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.001"/>
+  <testcase name="rejects_nonpositive_present_owner_generation()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.0"/>
+  <testcase name="decodes_required_export_metrics()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.003"/>
+  <testcase name="does_not_accept_warning_only_partial_success()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.0"/>
+  <testcase name="rejects_exporter_replacement()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.0"/>
+  <testcase name="computes_deltas_from_nonzero_baseline()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.001"/>
+  <testcase name="rejects_foreign_open_type()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.0"/>
+  <testcase name="rejects_counter_reset()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.001"/>
+  <testcase name="rejects_missing_required_metric()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.0"/>
+  <testcase name="does_not_accept_rejection_without_exported_span()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.001"/>
+  <testcase name="rejects_negative_counter_on_construction()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.probe.ExporterSnapshotTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

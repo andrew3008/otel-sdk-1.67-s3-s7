@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.480Z" hostname="DESKTOP-OEGBG7F" time="0.007">
+  <properties/>
+  <testcase name="string_value_is_sanitized_and_bounded_before_snapshot()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.0"/>
+  <testcase name="snapshot_uses_catalog_order_and_canonical_typed_values()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.0"/>
+  <testcase name="required_cause_must_be_assigned_exactly_once()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.0"/>
+  <testcase name="blank_string_is_rejected_unless_catalog_explicitly_allows_it()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.001"/>
+  <testcase name="duplicate_field_is_rejected()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.001"/>
+  <testcase name="optional_cause_may_be_omitted_or_rendered()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.0"/>
+  <testcase name="disallowed_field_is_rejected_before_value_is_stored()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.0"/>
+  <testcase name="snapshot_is_immutable_and_detached_from_builder()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.001"/>
+  <testcase name="null_cause_is_rejected_before_cause_policy_is_evaluated()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.0"/>
+  <testcase name="value_kind_must_match_field_kind()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.001"/>
+  <testcase name="forbidden_cause_is_rejected()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.001"/>
+  <testcase name="null_catalog_inputs_are_rejected()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogFieldsBuilderTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

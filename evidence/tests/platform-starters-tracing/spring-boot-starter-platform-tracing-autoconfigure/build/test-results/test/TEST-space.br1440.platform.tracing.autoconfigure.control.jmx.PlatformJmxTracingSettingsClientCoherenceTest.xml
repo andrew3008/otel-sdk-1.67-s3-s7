@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.jmx.PlatformJmxTracingSettingsClientCoherenceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:00.082Z" hostname="DESKTOP-OEGBG7F" time="0.107">
+  <properties/>
+  <testcase name="mutationCrossingReadinessGenerationIsDiscardedAndTrustRemainsInvalid()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.PlatformJmxTracingSettingsClientCoherenceTest" time="0.014"/>
+  <testcase name="initializeDeniedMetadataAccessTerminallyInvalidatesTrust()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.PlatformJmxTracingSettingsClientCoherenceTest" time="0.006"/>
+  <testcase name="statusEndpointDisappearanceDoesNotInvalidateTrust()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.PlatformJmxTracingSettingsClientCoherenceTest" time="0.006"/>
+  <testcase name="acceptedSnapshotCrossingReadinessGenerationIsDiscardedAndTrustRemainsInvalid()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.PlatformJmxTracingSettingsClientCoherenceTest" time="0.006"/>
+  <testcase name="statusSnapshotUsesOnlySurroundingReadinessBracket()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.PlatformJmxTracingSettingsClientCoherenceTest" time="0.004"/>
+  <testcase name="acceptedSnapshotDriftingDuringDecodeIsDiscardedAndTrustRemainsInvalid()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.PlatformJmxTracingSettingsClientCoherenceTest" time="0.055"/>
+  <testcase name="mutationResponseDriftingDuringDecodeIsDiscardedAndTrustRemainsInvalid()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.PlatformJmxTracingSettingsClientCoherenceTest" time="0.007"/>
+  <testcase name="initializeWritableStatusSnapshotCannotRestoreTrust()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.PlatformJmxTracingSettingsClientCoherenceTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

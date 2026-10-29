@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsConcurrencyTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:11.666Z" hostname="DESKTOP-OEGBG7F" time="1.127">
+  <properties/>
+  <testcase name="hook_owner_and_direct_follower_share_one_failed_close_flight()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsConcurrencyTest" time="0.221"/>
+  <testcase name="section_one_publication_failure_still_rolls_back_resources_once()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsConcurrencyTest" time="0.033"/>
+  <testcase name="activation_rollback_while_holding_lifecycle_monitor_fails_before_resource_close()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsConcurrencyTest" time="0.003"/>
+  <testcase name="failed_is_visible_before_activation_rollback_starts()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsConcurrencyTest" time="0.003"/>
+  <testcase name="direct_owner_and_hook_follower_share_one_failed_close_flight()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsConcurrencyTest" time="0.211"/>
+  <testcase name="close_during_activation_rollback_reuses_failure_without_duplicate_publication_or_log()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsConcurrencyTest" time="0.222"/>
+  <testcase name="activation_failure_and_shutdown_hook_complete_without_monitor_resource_deadlock()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsConcurrencyTest" time="0.006"/>
+  <testcase name="reentrant_owner_close_returns_and_success_is_replayed()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsConcurrencyTest" time="0.004"/>
+  <testcase name="interrupted_follower_waits_for_outcome_and_restores_interrupt_status()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsConcurrencyTest" time="0.206"/>
+  <testcase name="direct_callers_share_the_exact_failed_close_outcome()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapTerminalTransitionsConcurrencyTest" time="0.217"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

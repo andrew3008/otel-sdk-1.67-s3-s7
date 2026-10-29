@@ -1,0 +1,144 @@
+plugins {
+    id 'platform.java-library'
+    id 'platform.testing'
+    id 'platform.javaagent-extension-packaging'
+}
+
+group = 'space.br1440.platform.starters.tracing'
+
+platformJavaLibrary {
+    bomProjectPath = ':spring-boot-starter-platform-bom'
+}
+
+configurations.create('jmxExtensionContractSources') {
+    canBeConsumed = false
+    canBeResolved = true
+    transitive = false
+
+    attributes {
+        attribute(Usage.USAGE_ATTRIBUTE as Attribute<Object>, objects.named(Usage, 'platform-jmx-extension-contract'))
+        attribute(Category.CATEGORY_ATTRIBUTE as Attribute<Object>, objects.named(Category, Category.DOCUMENTATION))
+        attribute(DocsType.DOCS_TYPE_ATTRIBUTE as Attribute<Object>, objects.named(DocsType, DocsType.SOURCES))
+    }
+}
+
+def extensionVersionProvider = project.provider { project.version.toString() }
+
+sourceSets.named('main') {
+    java.srcDir(configurations.jmxExtensionContractSources)
+}
+
+abstract class JavaAgentArgumentProvider implements CommandLineArgumentProvider {
+    @Classpath
+    abstract ConfigurableFileCollection getAgentClasspath()
+
+    @Override
+    Iterable<String> asArguments() {
+        return ["-javaagent:${agentClasspath.singleFile.absolutePath}"]
+    }
+}
+
+def mockitoAgentConfiguration = configurations.register('mockitoAgent') {
+    canBeConsumed = false
+    canBeResolved = true
+}
+
+def resourceDetectorsConfiguration = configurations.register('resourceDetectors') {
+    canBeConsumed = false
+    canBeResolved = true
+    transitive = false
+}
+
+abstract class ResourceDetectorsArgumentProvider implements CommandLineArgumentProvider {
+    @Classpath
+    abstract ConfigurableFileCollection getResourceDetectorsClasspath()
+
+    @Override
+    Iterable<String> asArguments() {
+        return ["-DplatformTracing.resourceDetectorsJar=${resourceDetectorsClasspath.singleFile.absolutePath}"]
+    }
+}
+
+dependencies {
+    jmxExtensionContractSources project(':platform-starters-tracing:platform-tracing-jmx-contract')
+
+    resourceDetectors "io.opentelemetry.instrumentation:opentelemetry-resources:${libs.versions.bom.otelextension.get()}"
+
+    mockitoAgent platform(project(':spring-boot-starter-platform-bom'))
+    mockitoAgent('org.mockito:mockito-core') {
+        transitive = false
+    }
+
+    implementation project(':platform-starters-tracing:spring-boot-starter-platform-tracing-api')
+    implementation project(':platform-starters-tracing:platform-tracing-runtime-policy')
+    implementation project(':platform-starters-common:platform-starters-common-util')
+    implementation 'io.opentelemetry.proto:opentelemetry-proto'
+    implementation 'com.google.protobuf:protobuf-java'
+
+    compileOnly 'io.opentelemetry:opentelemetry-sdk'
+    compileOnly 'io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi'
+    compileOnly 'io.opentelemetry:opentelemetry-sdk-extension-autoconfigure'
+    compileOnly 'io.opentelemetry:opentelemetry-exporter-otlp'
+    compileOnly 'io.opentelemetry:opentelemetry-exporter-sender-okhttp'
+    compileOnly 'io.opentelemetry.javaagent:opentelemetry-javaagent-extension-api'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation project(':platform-starters-tracing:platform-tracing-testkit')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.assertj:assertj-core'
+    testImplementation 'org.mockito:mockito-core'
+    testImplementation "org.awaitility:awaitility:${libs.versions.awaitility.get()}"
+    testImplementation "org.openjdk.jol:jol-core:${libs.versions.jol.get()}"
+    testImplementation "com.networknt:json-schema-validator:${libs.versions.json.schema.validator.get()}"
+
+    testImplementation 'io.opentelemetry:opentelemetry-sdk'
+    testImplementation 'io.opentelemetry:opentelemetry-sdk-testing'
+    testImplementation 'io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi'
+    testImplementation 'io.opentelemetry:opentelemetry-sdk-extension-autoconfigure'
+    testImplementation 'io.opentelemetry.javaagent:opentelemetry-javaagent-extension-api'
+    testImplementation 'io.opentelemetry:opentelemetry-exporter-logging'
+    testImplementation 'io.opentelemetry:opentelemetry-exporter-logging-otlp'
+    testImplementation 'io.opentelemetry:opentelemetry-exporter-otlp'
+    testRuntimeOnly 'io.opentelemetry:opentelemetry-extension-trace-propagators'
+
+    testCompileOnly "com.google.auto.service:auto-service-annotations:${libs.versions.auto.service.get()}"
+    testAnnotationProcessor "com.google.auto.service:auto-service:${libs.versions.auto.service.get()}"
+
+    testRuntimeOnly project(path: ':spring-boot-starter-platform-logging', configuration: 'platformLogMaskingElements')
+    testRuntimeOnly 'ch.qos.logback:logback-classic'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test', Test) {
+    def expectedExtensionVersion = extensionVersionProvider.get()
+    def mockitoAgentArguments = objects.newInstance(JavaAgentArgumentProvider)
+    def updateJmxContractBaseline = providers.gradleProperty('updateJmxContractBaseline')
+    mockitoAgentArguments.agentClasspath.from(mockitoAgentConfiguration)
+    jvmArgumentProviders.add(mockitoAgentArguments)
+
+    def resourceDetectorsArguments = objects.newInstance(ResourceDetectorsArgumentProvider)
+    resourceDetectorsArguments.resourceDetectorsClasspath.from(resourceDetectorsConfiguration)
+    jvmArgumentProviders.add(resourceDetectorsArguments)
+
+    inputs.property('expectedExtensionVersion', expectedExtensionVersion)
+    systemProperty('platformTracing.expectedExtensionVersion', expectedExtensionVersion)
+
+    if (updateJmxContractBaseline.isPresent()) {
+        outputs.upToDateWhen { false }
+        outputs.doNotCacheIf('Updates the source-controlled JMX contract baseline') { true }
+        systemProperty(
+                'jmx.contract.baseline.path',
+                layout.projectDirectory.file('src/test/resources/jmx-management-contract-baseline.json').asFile.absolutePath
+        )
+    }
+}
+
+['testCompileClasspath', 'testRuntimeClasspath'].each { classpathName ->
+    configurations.named(classpathName) {
+        exclude group: 'net.bytebuddy', module: 'byte-buddy-dep'
+    }
+}

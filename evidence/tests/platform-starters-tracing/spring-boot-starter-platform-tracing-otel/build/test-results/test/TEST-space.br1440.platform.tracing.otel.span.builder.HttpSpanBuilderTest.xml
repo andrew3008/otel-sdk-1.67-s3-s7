@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.748Z" hostname="DESKTOP-OEGBG7F" time="0.019">
+  <properties/>
+  <testcase name="transportHttp_returnsNonNullEntryPoint()" classname="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderTest" time="0.0"/>
+  <testcase name="httpBuilders_haveExpectedSemconvVersionMarker()" classname="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderTest" time="0.009"/>
+  <testcase name="httpClientBlankUrl_rejected()" classname="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderTest" time="0.002"/>
+  <testcase name="httpClientWithoutMethod_rejectedInErrorMode()" classname="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderTest" time="0.001"/>
+  <testcase name="httpServerWithoutMethod_rejectedInErrorMode()" classname="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderTest" time="0.002"/>
+  <testcase name="semanticBuilder_validatesExactlyOnce()" classname="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderTest" time="0.001"/>
+  <testcase name="httpClientStart_routesSpanSpecWithoutDirectOtelUse()" classname="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderTest" time="0.001"/>
+  <testcase name="httpServerStart_routesSpanSpecWithoutDirectOtelUse()" classname="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderTest" time="0.001"/>
+  <system-out><![CDATA[12:47:47.765 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=HttpServerSpanBuilder category=HTTP_SERVER: required attribute 'http.request.method' is missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.arch.AutoconfigureInternalBoundaryArchTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:52.563Z" hostname="DESKTOP-OEGBG7F" time="3.69">
+  <properties/>
+  <testcase name="neutralAutoconfigureDoesNotDependOnWebStacks" classname="space.br1440.platform.tracing.autoconfigure.arch.AutoconfigureInternalBoundaryArchTest" time="0.015"/>
+  <testcase name="controlProtocolDoesNotDependOnSpring" classname="space.br1440.platform.tracing.autoconfigure.arch.AutoconfigureInternalBoundaryArchTest" time="0.001"/>
+  <testcase name="jmxViewsAreNotHeldOutsideRoot" classname="space.br1440.platform.tracing.autoconfigure.arch.AutoconfigureInternalBoundaryArchTest" time="0.004"/>
+  <testcase name="jmxViewsAreNotAcceptedOutsideRoot" classname="space.br1440.platform.tracing.autoconfigure.arch.AutoconfigureInternalBoundaryArchTest" time="0.004"/>
+  <testcase name="configServerDoesNotDependOnJmx" classname="space.br1440.platform.tracing.autoconfigure.arch.AutoconfigureInternalBoundaryArchTest" time="0.001"/>
+  <testcase name="configServerGuardLoadsWithoutSpringCloud" classname="space.br1440.platform.tracing.autoconfigure.arch.AutoconfigureInternalBoundaryArchTest" time="0.0"/>
+  <testcase name="onlyJmxClientReturnsJmxViews" classname="space.br1440.platform.tracing.autoconfigure.arch.AutoconfigureInternalBoundaryArchTest" time="0.002"/>
+  <testcase name="jmxViewBoundaryDetectsInvalidStateHolder()" classname="space.br1440.platform.tracing.autoconfigure.arch.AutoconfigureInternalBoundaryArchTest" time="0.021"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

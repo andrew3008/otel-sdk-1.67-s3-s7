@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.RateLimitedLoggerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.757Z" hostname="DESKTOP-OEGBG7F" time="0.013">
+  <properties/>
+  <testcase name="fallbackAndDeliveryFailureReportTheirEmitResults()" classname="space.br1440.platform.tracing.otel.javaagent.logging.RateLimitedLoggerTest" time="0.001"/>
+  <testcase name="transitionsFromFastBucketToOnePerIntervalWithSingleMarker()" classname="space.br1440.platform.tracing.otel.javaagent.logging.RateLimitedLoggerTest" time="0.002"/>
+  <testcase name="concurrentTransitionHasOneMarkerAndOneSlowAdmission()" classname="space.br1440.platform.tracing.otel.javaagent.logging.RateLimitedLoggerTest" time="0.004"/>
+  <testcase name="healedThrottleCanEmitASecondTransitionMarker()" classname="space.br1440.platform.tracing.otel.javaagent.logging.RateLimitedLoggerTest" time="0.002"/>
+  <testcase name="throwableRenderingRunsOnlyAfterAThrottleAdmission()" classname="space.br1440.platform.tracing.otel.javaagent.logging.RateLimitedLoggerTest" time="0.0"/>
+  <testcase name="warnAndErrorUseIndependentThrottlesAndMatchingMarkerLevels()" classname="space.br1440.platform.tracing.otel.javaagent.logging.RateLimitedLoggerTest" time="0.0"/>
+  <testcase name="problemDeliveryFailureAfterMarkerKeepsMarkerDelivered()" classname="space.br1440.platform.tracing.otel.javaagent.logging.RateLimitedLoggerTest" time="0.001"/>
+  <testcase name="errorMarkerPassesErrorThresholdWhileWarnDoesNotConsumePermit()" classname="space.br1440.platform.tracing.otel.javaagent.logging.RateLimitedLoggerTest" time="0.0"/>
+  <testcase name="nestedLogFromMarkerSinkIsRejectedAfterConsumingItsPermit()" classname="space.br1440.platform.tracing.otel.javaagent.logging.RateLimitedLoggerTest" time="0.001"/>
+  <testcase name="markerDeliveryFailureDoesNotStopProblem()" classname="space.br1440.platform.tracing.otel.javaagent.logging.RateLimitedLoggerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

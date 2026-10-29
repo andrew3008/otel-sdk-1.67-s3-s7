@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentToSpringWireCodecParityTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:11.282Z" hostname="DESKTOP-OEGBG7F" time="0.092">
+  <properties/>
+  <testcase name="routeMappingIsDeterministic()" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentToSpringWireCodecParityTest" time="0.053"/>
+  <testcase name="emptyRouteRatiosRoundTrip()" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentToSpringWireCodecParityTest" time="0.001"/>
+  <testcase name="mixedPolicyRoundTrips()" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentToSpringWireCodecParityTest" time="0.0"/>
+  <testcase name="[1] samplingEnabled=true, validationLevel=DISABLED, exporterEnabled=false, traceControlHeadersEnabled=false" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentToSpringWireCodecParityTest" time="0.027"/>
+  <testcase name="[2] samplingEnabled=false, validationLevel=ERROR, exporterEnabled=false, traceControlHeadersEnabled=false" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentToSpringWireCodecParityTest" time="0.0"/>
+  <testcase name="[3] samplingEnabled=false, validationLevel=WARNING, exporterEnabled=false, traceControlHeadersEnabled=false" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentToSpringWireCodecParityTest" time="0.001"/>
+  <testcase name="[4] samplingEnabled=false, validationLevel=DISABLED, exporterEnabled=true, traceControlHeadersEnabled=false" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentToSpringWireCodecParityTest" time="0.0"/>
+  <testcase name="[5] samplingEnabled=false, validationLevel=DISABLED, exporterEnabled=false, traceControlHeadersEnabled=true" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentToSpringWireCodecParityTest" time="0.001"/>
+  <testcase name="allDiagnosticsLogLevelsRoundTrip()" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentToSpringWireCodecParityTest" time="0.001"/>
+  <testcase name="maximumBootstrapSnapshotPassesSpringWireBoundary()" classname="space.br1440.platform.tracing.otel.javaagent.control.jmx.protocol.AgentToSpringWireCodecParityTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

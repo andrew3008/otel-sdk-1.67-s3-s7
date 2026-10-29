@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:54.669Z" hostname="DESKTOP-OEGBG7F" time="0.006">
+  <properties/>
+  <testcase name="rejectsNullDistributionIdentity()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.001"/>
+  <testcase name="rejectsNullLifecycleState()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.0"/>
+  <testcase name="classloaderTopologyRejectsNullSdkDefiningLoader()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.0"/>
+  <testcase name="lifecycleStateRejectsNullFailureCode()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.0"/>
+  <testcase name="rejectsNullContractIdentity()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.0"/>
+  <testcase name="rejectsNullClassloaderTopology()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.0"/>
+  <testcase name="lifecycleStateDefensivelyCopiesMissingRequired()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.001"/>
+  <testcase name="contractIdentityRejectsNullContractId()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.0"/>
+  <testcase name="anchorIdentityRejectsNullAgentInstanceId()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.001"/>
+  <testcase name="distributionIdentityRejectsNullUpstreamAgentVersion()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.0"/>
+  <testcase name="lifecycleStateDefensivelyCopiesCapabilities()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.0"/>
+  <testcase name="lifecycleStateRejectsNullPrimaryFailureCode()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.001"/>
+  <testcase name="rejectsNullAnchorIdentity()" classname="space.br1440.platform.tracing.autoconfigure.agent.AgentReadinessSnapshotGroupsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

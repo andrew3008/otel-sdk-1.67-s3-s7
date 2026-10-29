@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:10.940Z" hostname="DESKTOP-OEGBG7F" time="0.077">
+  <properties/>
+  <testcase name="graceful_shutdown_closes_without_failure()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" time="0.005"/>
+  <testcase name="unregister_exception_after_actual_removal_does_not_imply_live_endpoint()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" time="0.016"/>
+  <testcase name="close_before_activation_publishes_diagnostic_cleanup_failure()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" time="0.006"/>
+  <testcase name="graceful_shutdown_closes_scrubbing_runtime()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" time="0.003"/>
+  <testcase name="withdrawal_and_failure_publication_failure_still_releases_runtime()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" time="0.009"/>
+  <testcase name="failed_readiness_withdrawal_publishes_failed_before_runtime_teardown()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" time="0.006"/>
+  <testcase name="shutdown_cleanup_failure_publishes_shutdown_failure_and_replays_cached_outcome()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" time="0.008"/>
+  <testcase name="cleanup_after_published_bootstrap_failure_preserves_primary_failure()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" time="0.009"/>
+  <testcase name="process_lifetime_hook_after_explicit_close_replays_without_side_effects()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" time="0.004"/>
+  <testcase name="shutdown_withdraws_readiness_before_runtime_controls()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" time="0.004"/>
+  <testcase name="raw_fatal_cleanup_uses_unknown_resource_label()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorShutdownTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

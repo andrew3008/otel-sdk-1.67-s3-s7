@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.control.settings.model.PolicyLeafTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.476Z" hostname="DESKTOP-OEGBG7F" time="0.007">
+  <properties/>
+  <testcase name="[1] leaf=SAMPLING_ENABLED" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.model.PolicyLeafTest" time="0.002"/>
+  <testcase name="[2] leaf=SAMPLING_RATIO" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.model.PolicyLeafTest" time="0.001"/>
+  <testcase name="[3] leaf=SAMPLING_ROUTE_RATIOS" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.model.PolicyLeafTest" time="0.001"/>
+  <testcase name="[4] leaf=VALIDATION_LEVEL" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.model.PolicyLeafTest" time="0.001"/>
+  <testcase name="[5] leaf=EXPORTER_ENABLED" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.model.PolicyLeafTest" time="0.0"/>
+  <testcase name="[6] leaf=TRACE_CONTROL_HEADERS_ENABLED" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.model.PolicyLeafTest" time="0.0"/>
+  <testcase name="[7] leaf=DIAGNOSTICS_LOG_LEVEL" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.model.PolicyLeafTest" time="0.001"/>
+  <testcase name="identicalSettingsProduceNoLeaves()" classname="space.br1440.platform.tracing.otel.javaagent.control.settings.model.PolicyLeafTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

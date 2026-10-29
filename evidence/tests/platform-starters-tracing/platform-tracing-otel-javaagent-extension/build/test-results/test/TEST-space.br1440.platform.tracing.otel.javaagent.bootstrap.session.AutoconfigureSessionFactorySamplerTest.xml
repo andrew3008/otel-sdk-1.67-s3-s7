@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.AutoconfigureSessionFactorySamplerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.617Z" hostname="DESKTOP-OEGBG7F" time="0.007">
+  <properties/>
+  <testcase name="create_builds_one_safe_sampler_over_the_session_policy_and_evidence()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.AutoconfigureSessionFactorySamplerTest" time="0.003"/>
+  <testcase name="absent_force_record_values_keep_the_default_on_control_value()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.AutoconfigureSessionFactorySamplerTest" time="0.001"/>
+  <testcase name="rejected_session_does_not_publish_the_sampler_to_the_registrar()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.AutoconfigureSessionFactorySamplerTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

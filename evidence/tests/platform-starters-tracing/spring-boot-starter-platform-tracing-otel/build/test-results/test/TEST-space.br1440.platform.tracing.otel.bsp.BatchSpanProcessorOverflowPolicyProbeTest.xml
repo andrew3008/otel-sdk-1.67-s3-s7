@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.bsp.BatchSpanProcessorOverflowPolicyProbeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.379Z" hostname="DESKTOP-OEGBG7F" time="0.066">
+  <properties/>
+  <testcase name="Probe: actual overflow policy of stock BSP on the catalog SDK (snapshot)" classname="space.br1440.platform.tracing.otel.bsp.BatchSpanProcessorOverflowPolicyProbeTest" time="0.066"/>
+  <system-out><![CDATA[[BSP overflow probe] SDK observed exported seq: [0, 1, 2, 3, 4, 5]
+[BSP overflow probe] SDK observed exported count: 6
+[BSP overflow probe] SDK observed export() call count: 3
+]]></system-out>
+  <system-err><![CDATA[Oct 29, 2026 12:47:47 PM io.opentelemetry.sdk.trace.export.BatchSpanProcessor$Worker exportCurrentBatch
+WARNING: BatchSpanProcessor dropped 28 span(s) since the last export because the queue is full (maxQueueSize=4)
+Oct 29, 2026 12:47:47 PM io.opentelemetry.sdk.trace.SdkTracerProvider shutdown
+INFO: Calling shutdown() multiple times.
+]]></system-err>
+</testsuite>

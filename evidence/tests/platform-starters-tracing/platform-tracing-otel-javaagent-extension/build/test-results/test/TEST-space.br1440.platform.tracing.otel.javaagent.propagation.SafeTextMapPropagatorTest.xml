@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.propagation.SafeTextMapPropagatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.035Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="fields_on_failure_returns_empty_list()" classname="space.br1440.platform.tracing.otel.javaagent.propagation.SafeTextMapPropagatorTest" time="0.0"/>
+  <testcase name="inject_on_fatal_throwable_is_not_swallowed_and_is_rethrown()" classname="space.br1440.platform.tracing.otel.javaagent.propagation.SafeTextMapPropagatorTest" time="0.0"/>
+  <testcase name="extract_on_fatal_throwable_is_not_swallowed_and_is_rethrown()" classname="space.br1440.platform.tracing.otel.javaagent.propagation.SafeTextMapPropagatorTest" time="0.0"/>
+  <testcase name="inject_on_failure_does_not_throw()" classname="space.br1440.platform.tracing.otel.javaagent.propagation.SafeTextMapPropagatorTest" time="0.0"/>
+  <testcase name="extract_on_failure_returns_original_context()" classname="space.br1440.platform.tracing.otel.javaagent.propagation.SafeTextMapPropagatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

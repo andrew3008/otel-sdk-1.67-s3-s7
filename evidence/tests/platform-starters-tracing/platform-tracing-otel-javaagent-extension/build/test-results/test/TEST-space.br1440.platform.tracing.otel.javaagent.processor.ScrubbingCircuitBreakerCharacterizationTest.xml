@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingCircuitBreakerCharacterizationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:23.425Z" hostname="DESKTOP-OEGBG7F" time="0.006">
+  <properties/>
+  <testcase name="custom_rule_open_is_skipped_by_merge_engine()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingCircuitBreakerCharacterizationTest" time="0.002"/>
+  <testcase name="critical_rule_open_returns_scrubbing_failed_in_merge_engine()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingCircuitBreakerCharacterizationTest" time="0.002"/>
+  <testcase name="critical_rule_failure_masks_attribute_with_scrubbing_failed()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ScrubbingCircuitBreakerCharacterizationTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.span.builder.KafkaConsumerBatchLinksTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.787Z" hostname="DESKTOP-OEGBG7F" time="0.02">
+  <properties/>
+  <testcase name="spanHandle_hasNoPostStartAddLinkApi()" classname="space.br1440.platform.tracing.otel.span.builder.KafkaConsumerBatchLinksTest" time="0.004"/>
+  <testcase name="kafkaBatchRootInsideActiveParent_isNotChildSpan()" classname="space.br1440.platform.tracing.otel.span.builder.KafkaConsumerBatchLinksTest" time="0.004"/>
+  <testcase name="kafkaBatchRootWithFromTraceparent_parsesTraceparentIntoLinks()" classname="space.br1440.platform.tracing.otel.span.builder.KafkaConsumerBatchLinksTest" time="0.003"/>
+  <testcase name="kafkaBatchChildWithLinks_rejectedBeforeStart()" classname="space.br1440.platform.tracing.otel.span.builder.KafkaConsumerBatchLinksTest" time="0.002"/>
+  <testcase name="kafkaBatchDetachedWithLinks_rejectedBeforeStart()" classname="space.br1440.platform.tracing.otel.span.builder.KafkaConsumerBatchLinksTest" time="0.003"/>
+  <testcase name="kafkaBatchRootWithLinkedTo_createsRootSpanWithRemoteLinks()" classname="space.br1440.platform.tracing.otel.span.builder.KafkaConsumerBatchLinksTest" time="0.002"/>
+  <system-out><![CDATA[12:47:47.793 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.AdmissionBudgetTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:35.339Z" hostname="DESKTOP-OEGBG7F" time="0.004">
+  <properties/>
+  <testcase name="releaseRestoresAvailableCapacity()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.AdmissionBudgetTest" time="0.0"/>
+  <testcase name="recordInvariantViolationIncrementsTotal()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.AdmissionBudgetTest" time="0.0"/>
+  <testcase name="concurrentAcquireDoesNotExceedCapacity()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.AdmissionBudgetTest" time="0.003"/>
+  <testcase name="tryAcquireRejectsAtCapacity()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.AdmissionBudgetTest" time="0.0"/>
+  <testcase name="releaseIgnoresNonPositiveCount()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.AdmissionBudgetTest" time="0.0"/>
+  <testcase name="releaseRejectsOverReleaseAndRecordsViolation()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.AdmissionBudgetTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

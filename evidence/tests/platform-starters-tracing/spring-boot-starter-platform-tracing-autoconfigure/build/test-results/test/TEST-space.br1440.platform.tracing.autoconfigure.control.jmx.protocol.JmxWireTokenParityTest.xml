@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.JmxWireTokenParityTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:00.274Z" hostname="DESKTOP-OEGBG7F" time="0.006">
+  <properties/>
+  <testcase name="generatedTokenSetsMatchSpringEnums()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.JmxWireTokenParityTest" time="0.002"/>
+  <testcase name="springMessageCodesDoNotUseLocalClientFailureNamespace()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.JmxWireTokenParityTest" time="0.002"/>
+  <testcase name="generatedProcessorLifecyclesMatchApplicationModel()" classname="space.br1440.platform.tracing.autoconfigure.control.jmx.protocol.JmxWireTokenParityTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

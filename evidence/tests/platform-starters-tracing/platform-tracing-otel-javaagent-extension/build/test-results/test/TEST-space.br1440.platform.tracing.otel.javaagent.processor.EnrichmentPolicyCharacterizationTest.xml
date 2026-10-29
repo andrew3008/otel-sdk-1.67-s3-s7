@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.EnrichmentPolicyCharacterizationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.926Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="EnrichmentDecisionCase[caseId=ENR-SERVER-OK, spanKind=SERVER, statusCode=OK, presetPlatformType=null, dbSystemAttribute=null, peerService=null, expectedPlatformType=http_server, expectedPlatformResult=success, expectedRemoteService=null]" classname="space.br1440.platform.tracing.otel.javaagent.processor.EnrichmentPolicyCharacterizationTest" time="0.001"/>
+  <testcase name="EnrichmentDecisionCase[caseId=ENR-CLIENT-ERR, spanKind=CLIENT, statusCode=ERROR, presetPlatformType=null, dbSystemAttribute=null, peerService=billing-service, expectedPlatformType=http_client, expectedPlatformResult=failure, expectedRemoteService=billing-service]" classname="space.br1440.platform.tracing.otel.javaagent.processor.EnrichmentPolicyCharacterizationTest" time="0.0"/>
+  <testcase name="EnrichmentDecisionCase[caseId=ENR-DB-OVERRIDE, spanKind=CLIENT, statusCode=OK, presetPlatformType=null, dbSystemAttribute=postgresql, peerService=null, expectedPlatformType=database, expectedPlatformResult=success, expectedRemoteService=null]" classname="space.br1440.platform.tracing.otel.javaagent.processor.EnrichmentPolicyCharacterizationTest" time="0.001"/>
+  <testcase name="EnrichmentDecisionCase[caseId=ENR-PRESERVE-TYPE, spanKind=CLIENT, statusCode=OK, presetPlatformType=rpc, dbSystemAttribute=postgresql, peerService=null, expectedPlatformType=rpc, expectedPlatformResult=success, expectedRemoteService=null]" classname="space.br1440.platform.tracing.otel.javaagent.processor.EnrichmentPolicyCharacterizationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

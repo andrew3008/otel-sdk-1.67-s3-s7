@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.channel.DisabledNoDiscoveryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:59.048Z" hostname="DESKTOP-OEGBG7F" time="0.044">
+  <properties/>
+  <testcase name="disabledWithoutChannel_bootstrapFlagsAreFalse()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.DisabledNoDiscoveryTest" time="0.01"/>
+  <testcase name="disabledWithConfigServerCreatesNoDiscoveryBeans()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.DisabledNoDiscoveryTest" time="0.009"/>
+  <testcase name="disabledWithActuatorFailsClosedBeforeDiscovery()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.DisabledNoDiscoveryTest" time="0.006"/>
+  <testcase name="disabledWithNone_noDiscoveryBeansCreated()" classname="space.br1440.platform.tracing.autoconfigure.control.channel.DisabledNoDiscoveryTest" time="0.01"/>
+  <system-out><![CDATA[2026-10-29T12:47:59.078Z  WARN 25468 --- [    Test worker] [                                                 ] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: space.br1440.platform.tracing.autoconfigure.control.TracingConfigurationGuardException: Tracing disabled is incompatible with ACTUATOR control channel.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

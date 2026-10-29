@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarIntegrationTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:21.258Z" hostname="DESKTOP-OEGBG7F" time="0.007">
+  <properties/>
+  <testcase name="samplingMBeanReflectsAcceptedPolicy()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarIntegrationTest" time="0.001"/>
+  <testcase name="registeredDomainMBeansExposeNoMutatingOperations()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarIntegrationTest" time="0.001"/>
+  <testcase name="registeredObservationMBeansExposeExactGeneratedOpenMetadata()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarIntegrationTest" time="0.001"/>
+  <testcase name="allDomainMBeansRegisteredAfterWiring()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarIntegrationTest" time="0.0"/>
+  <testcase name="secondRegisterRuntimeControlsWhileActiveIsRejected()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarIntegrationTest" time="0.0"/>
+  <testcase name="readinessSettingsAndObservationsExposeOneAgentInstanceId()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarIntegrationTest" time="0.002"/>
+  <testcase name="noMBeansRegisteredBeforeRuntimeControlsAreRegistered()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarIntegrationTest" time="0.0"/>
+  <testcase name="closingRuntimeRegistrationRemovesAllDomainMBeans()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformTracingMBeanRegistrarIntegrationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

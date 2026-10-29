@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.mdc.MdcPropagationCompletableFutureTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.617Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="wrappedTaskSeesCallerTraceId()" classname="space.br1440.platform.tracing.autoconfigure.mdc.MdcPropagationCompletableFutureTest" time="0.001"/>
+  <testcase name="unwrappedTaskDoesNotSeeCallerMdc()" classname="space.br1440.platform.tracing.autoconfigure.mdc.MdcPropagationCompletableFutureTest" time="0.001"/>
+  <testcase name="wrappedTaskRestoresWorkerMdcAfterCompletion()" classname="space.br1440.platform.tracing.autoconfigure.mdc.MdcPropagationCompletableFutureTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

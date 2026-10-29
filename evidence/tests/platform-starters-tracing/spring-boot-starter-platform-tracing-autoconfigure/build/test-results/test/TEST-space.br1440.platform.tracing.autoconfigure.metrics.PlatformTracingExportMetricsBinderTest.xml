@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingExportMetricsBinderTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:10.940Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="absentProcessorOwnerPreservesGenerationWithoutMapping()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingExportMetricsBinderTest" time="0.0"/>
+  <testcase name="absentExporterOwnerPreservesGenerationWithoutMapping()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingExportMetricsBinderTest" time="0.0"/>
+  <testcase name="lifecycleGaugeReturnsNaNWhenObservationReadFails()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingExportMetricsBinderTest" time="0.004"/>
+  <testcase name="presentProcessorOwnerMapsAllScalarsToEnumKeys()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingExportMetricsBinderTest" time="0.001"/>
+  <testcase name="presentExporterOwnerMapsRejectionCountersFromTheWireMap()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingExportMetricsBinderTest" time="0.0"/>
+  <testcase name="presentExporterOwnerMapsKnownWireKeysAndDefaultsMissingKeysToZero()" classname="space.br1440.platform.tracing.autoconfigure.metrics.PlatformTracingExportMetricsBinderTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

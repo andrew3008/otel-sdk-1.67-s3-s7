@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.931Z" hostname="DESKTOP-OEGBG7F" time="0.008">
+  <properties/>
+  <testcase name="HASH without an HMAC key falls back to MASK (&quot;***&quot;), never keeps the raw value" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.0"/>
+  <testcase name="Clean attributes are returned as the same instance: no builder allocation on the clean path" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.0"/>
+  <testcase name="DROP on a non-string attribute removes the key entirely (contract is uniform across types)" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.0"/>
+  <testcase name="Non-TRUNCATE actions still collapse numeric arrays to a sentinel of the same length" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.0"/>
+  <testcase name="DROP removes the attribute key entirely (nested surfaces do not use &quot;&quot;)" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.0"/>
+  <testcase name="TRUNCATE on a numeric attribute keeps the value: the matrix maps numeric TRUNCATE to KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.0"/>
+  <testcase name="HASH with an HMAC key produces a deterministic digest, never the raw value" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.0"/>
+  <testcase name="Non-string attribute types are collapsed to a typed sentinel for MASK/HASH decisions" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.001"/>
+  <testcase name="Empty attributes short-circuit without allocating a builder" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.0"/>
+  <testcase name="DROP on a string-array attribute removes the key entirely" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.0"/>
+  <testcase name="TRUNCATE on a boolean attribute keeps the value" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.001"/>
+  <testcase name="No rules configured: attributes pass through untouched, changed=false" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.0"/>
+  <testcase name="TRUNCATE (IP address) collapses to a /24-style prefix, same as span-attribute plane" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.004"/>
+  <testcase name="TRUNCATE keeps numeric and boolean arrays too, element-for-element" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.001"/>
+  <testcase name="Entries read before the first change are preserved when the lazy copy starts" classname="space.br1440.platform.tracing.otel.javaagent.exporter.AttributesScrubberTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorQueueCharacterizationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:35.230Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="Test 1: при overflow вытесняется oldest span; newest принимается в очередь" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorQueueCharacterizationTest" time="0.001"/>
+  <testcase name="Test 3: droppedSpansOverflow инкрементируется ровно N раз при N overflow'ах" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorQueueCharacterizationTest" time="0.0"/>
+  <testcase name="Test 2: onEnd не блокирует caller, даже если exporter заблокирован и очередь полна" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorQueueCharacterizationTest" time="0.0"/>
+  <testcase name="Test 4: принятые спаны экспортируются после снятия очередной нагрузки" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorQueueCharacterizationTest" time="0.001"/>
+  <testcase name="Test 5: shutdown завершается после сценария переполнения очереди" classname="space.br1440.platform.tracing.otel.javaagent.processor.dropoldest.PlatformDropOldestExportSpanProcessorQueueCharacterizationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

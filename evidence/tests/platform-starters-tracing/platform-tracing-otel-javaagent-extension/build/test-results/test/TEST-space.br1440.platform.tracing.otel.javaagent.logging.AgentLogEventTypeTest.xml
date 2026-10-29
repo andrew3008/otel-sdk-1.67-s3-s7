@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogEventTypeTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.473Z" hostname="DESKTOP-OEGBG7F" time="0.007">
+  <properties/>
+  <testcase name="catalog_covers_every_caller_event_code()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogEventTypeTest" time="0.001"/>
+  <testcase name="field_catalog_has_valid_unique_names_outside_reserved_vocabularies()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogEventTypeTest" time="0.001"/>
+  <testcase name="only_expected_code_message_pairs_span_multiple_levels()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogEventTypeTest" time="0.001"/>
+  <testcase name="allowed_fields_view_is_immutable()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogEventTypeTest" time="0.0"/>
+  <testcase name="blank_values_are_allowed_only_for_fields_with_valid_empty_state()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogEventTypeTest" time="0.0"/>
+  <testcase name="every_event_has_fixed_valid_metadata()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogEventTypeTest" time="0.002"/>
+  <testcase name="optional_cause_policy_lists_known_events()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogEventTypeTest" time="0.0"/>
+  <testcase name="cause_policy_values_are_exactly_forbidden_optional_and_required()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogEventTypeTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

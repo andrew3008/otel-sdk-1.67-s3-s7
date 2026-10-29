@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Accessors return cached final-field instances" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.048Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="baggage_returns_same_instance()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest$CachedInstances" time="0.0"/>
+  <testcase name="sampling_returns_same_instance()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest$CachedInstances" time="0.0"/>
+  <testcase name="spanTimeout_returns_same_instance()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest$CachedInstances" time="0.0"/>
+  <testcase name="validation_returns_same_instance()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest$CachedInstances" time="0.0"/>
+  <testcase name="classification_returns_same_instance()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest$CachedInstances" time="0.0"/>
+  <testcase name="resource_returns_same_instance()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest$CachedInstances" time="0.0"/>
+  <testcase name="scrubbing_returns_same_instance()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest$CachedInstances" time="0.0"/>
+  <testcase name="metrics_returns_same_instance()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.ExtensionConfigTest$CachedInstances" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

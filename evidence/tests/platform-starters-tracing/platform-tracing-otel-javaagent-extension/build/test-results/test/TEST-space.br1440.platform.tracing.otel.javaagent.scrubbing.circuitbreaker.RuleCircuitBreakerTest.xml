@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.scrubbing.circuitbreaker.RuleCircuitBreakerTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.721Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="successful_probe_closes_breaker()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.circuitbreaker.RuleCircuitBreakerTest" time="0.001"/>
+  <testcase name="half_open_issues_probe_to_only_one_thread()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.circuitbreaker.RuleCircuitBreakerTest" time="0.0"/>
+  <testcase name="cooldown_uses_injected_monotonic_clock_across_overflow()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.circuitbreaker.RuleCircuitBreakerTest" time="0.0"/>
+  <testcase name="null_failure_is_rejected_without_state_change_or_log_emission()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.circuitbreaker.RuleCircuitBreakerTest" time="0.001"/>
+  <testcase name="warning_throttle_uses_monotonic_interval_gate()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.circuitbreaker.RuleCircuitBreakerTest" time="0.001"/>
+  <testcase name="opens_after_error_threshold()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.circuitbreaker.RuleCircuitBreakerTest" time="0.0"/>
+  <testcase name="failed_probe_returns_to_open()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.circuitbreaker.RuleCircuitBreakerTest" time="0.0"/>
+  <testcase name="failure_log_includes_type_without_exception_message_fields()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.circuitbreaker.RuleCircuitBreakerTest" time="0.001"/>
+  <testcase name="stale_outcomes_from_previous_generations_do_not_complete_current_probe()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.circuitbreaker.RuleCircuitBreakerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

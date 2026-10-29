@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryShutdownTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:15.487Z" hostname="DESKTOP-OEGBG7F" time="5.06">
+  <properties/>
+  <testcase name="unfinished_stock_shutdown_rejects_replacement()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryShutdownTest" time="5.055"/>
+  <testcase name="completed_failed_stock_shutdown_logs_warning_and_builds_replacement()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryShutdownTest" time="0.002"/>
+  <testcase name="real_stock_shutdown_keeps_delegate_open_until_replacement_shutdown()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryShutdownTest" time="0.001"/>
+  <testcase name="invalid_bsp_config_is_rejected_before_stock_shutdown_or_wrapper_mutation()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryShutdownTest" time="0.001"/>
+  <testcase name="thrown_stock_shutdown_failure_is_propagated_without_replacement()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformExportProcessorFactoryShutdownTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

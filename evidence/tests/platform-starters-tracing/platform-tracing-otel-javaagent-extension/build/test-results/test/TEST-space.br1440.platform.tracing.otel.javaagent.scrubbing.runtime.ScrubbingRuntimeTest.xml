@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.870Z" hostname="DESKTOP-OEGBG7F" time="0.007">
+  <properties/>
+  <testcase name="boundary_count_recording_is_monotonic()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeTest" time="0.001"/>
+  <testcase name="attributesVerified is monotonic: cannot be set back to true once cleared" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeTest" time="0.001"/>
+  <testcase name="SKIPPED_CIRCUIT_OPEN does not increment failures; a new non-critical exception does" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeTest" time="0.001"/>
+  <testcase name="Installation barrier: requireComplete() throws until every acknowledgement is present" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeTest" time="0.002"/>
+  <testcase name="SPI-projection: builtInTextRules() excludes BUNDLED_SPI and EXTERNAL_EXTENSION rules" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeTest" time="0.0"/>
+  <testcase name="classloader_close_failure_is_replayed_to_lifecycle_owner()" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeTest" time="0.002"/>
+  <testcase name="Attribute plane sees BUILT_IN + BUNDLED_SPI + EXTERNAL_EXTENSION rules" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeTest" time="0.0"/>
+  <testcase name="Disabled runtime is inert: no rules, no HMAC, boundary calls are no-ops" classname="space.br1440.platform.tracing.otel.javaagent.scrubbing.runtime.ScrubbingRuntimeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

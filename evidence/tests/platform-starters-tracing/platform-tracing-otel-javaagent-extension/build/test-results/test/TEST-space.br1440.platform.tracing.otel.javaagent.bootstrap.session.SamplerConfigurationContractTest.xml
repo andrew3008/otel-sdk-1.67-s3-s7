@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:13.760Z" hostname="DESKTOP-OEGBG7F" time="0.012">
+  <properties/>
+  <testcase name="sampler_argument_value_is_not_exposed_in_the_failure_or_logs()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.002"/>
+  <testcase name="normalize_preserves_an_explicit_sampler_for_final_validation()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.0"/>
+  <testcase name="foreign sampler" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.004"/>
+  <testcase name="whitespace sampler" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.001"/>
+  <testcase name="sampler argument" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.001"/>
+  <testcase name="disabled sdk" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.0"/>
+  <testcase name="non-boolean disabled sdk" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.0"/>
+  <testcase name="external extension" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.0"/>
+  <testcase name="whitespace extension" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.0"/>
+  <testcase name="require_final_accepts_the_controlled_agent_configuration()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.001"/>
+  <testcase name="[1] properties={}" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.0"/>
+  <testcase name="[2] properties={otel.traces.sampler=}" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.session.SamplerConfigurationContractTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

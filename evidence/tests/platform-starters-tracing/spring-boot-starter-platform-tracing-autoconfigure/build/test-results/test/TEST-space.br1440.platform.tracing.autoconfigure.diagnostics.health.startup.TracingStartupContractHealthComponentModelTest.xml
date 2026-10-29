@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.diagnostics.health.startup.TracingStartupContractHealthComponentModelTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:08.979Z" hostname="DESKTOP-OEGBG7F" time="0.097">
+  <properties/>
+  <testcase name="legacyTracingPropertyDoesNotDisableContributor()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.health.startup.TracingStartupContractHealthComponentModelTest" time="0.025"/>
+  <testcase name="componentModelExposesTracingStartupContractKeyAndNotLegacyTracingKey()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.health.startup.TracingStartupContractHealthComponentModelTest" time="0.03"/>
+  <testcase name="userSuppliedBeanWithSameNameBacksOffAutoConfiguration()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.health.startup.TracingStartupContractHealthComponentModelTest" time="0.02"/>
+  <testcase name="kebabCasePropertyDisablesContributor()" classname="space.br1440.platform.tracing.autoconfigure.diagnostics.health.startup.TracingStartupContractHealthComponentModelTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,113 @@
+# =============================================================================
+#  Каталог версий Gradle (`libs.versions.toml`)
+# =============================================================================
+#
+#  Назначение
+#  ----------
+#  Каталог — реестр номеров в `[versions]`. Он не публикуется и не заменяет
+#  стартовый BOM. Скрипт сборки называет группу и артефакт сам.
+#
+#  Закрытый список форм в `*.gradle`. Другие обращения к каталогу запрещены:
+#   * полная координата: без номера, либо двойные кавычки и
+#     `${libs.versions.<ключ>.get()}`;
+#   * `libs.bundles.testcontainers`;
+#   * `alias(libs.plugins.<имя>)`.
+#  Одинарные кавычки вокруг `${libs` запрещены: Groovy не интерполирует такую строку.
+#
+#  Разграничение с платформенным BOM
+#  ---------------------------------
+#  BOM (`spring-boot-starter-platform-bom`) публикуется и управляет версиями
+#  зависимостей потребителей. Каталог — внутренний реестр монорепозитория.
+#  Версии constraint BOM хранятся в `[versions]` с префиксом `bom-`.
+#  Дефис создаёт вложенный accessor: `bom-logstash` даёт
+#  `libs.versions.bom.logstash.get()`. Часть после `bom-` — одно слово без дефисов.
+#    Правильно: bom-logstash → libs.versions.bom.logstash.get()
+#    Неправильно: bom-logstash-logback-encoder → libs.versions.bom.logstash.logback.encoder.get()
+#  Номер в строке `[libraries]` запрещён: только `version.ref`.
+# =============================================================================
+
+[versions]
+# ---------------------------------------------------------------------------
+# Модули платформы, публикуемые из других её Git-репозиториев.
+# ---------------------------------------------------------------------------
+errorHandlingModel = "1.1.0"
+
+# Spring Boot
+springBoot = "3.5.16"
+
+# ---------------------------------------------------------------------------------------------
+# BOM-версии: сторонние зависимости, публикуемые в constraints BOM для SpringBoot-стартеров.
+# ---------------------------------------------------------------------------------------------
+bom-logstash    = "8.1"
+bom-uuid        = "6.1.1"
+bom-grpc        = "0.9.0"
+bom-openfeign   = "4.3.0"
+bom-minio       = "8.6.0"
+bom-okhttp      = "5.3.2"
+bom-resilience  = "2.3.0"
+bom-opentelemetry = "1.67.0"
+bom-otelproto   = "1.11.1-alpha"
+bom-protobuf    = "4.36.2"
+bom-otelinstrumentation = "2.33.1"
+bom-otelextension = "2.33.1-alpha"
+bom-springcloud = "2025.0.0"
+bom-logbook     = "4.0.4"
+
+# -----------------------------------------------------------------------------------
+# Тестовые и вспомогательные зависимости (только для сборки/тестирования стартеров)
+# -----------------------------------------------------------------------------------
+archunit                 = "1.3.0"
+junit-jupiter            = "5.12.2"
+assertj                  = "3.27.7"
+json-schema-validator    = "1.5.6"
+testcontainers           = "1.21.3"
+byte-buddy               = "1.15.10"
+blockhound               = "1.0.17.RELEASE"
+awaitility               = "4.3.0"
+jedis                    = "7.0.0"
+lombok                   = "1.18.46"
+
+# ------------------------------------------------------------------------
+# Зависимости для модуля "platform-error-handling-core"
+# ------------------------------------------------------------------------
+expressly = "5.0.0"
+clickhouse-client-v2 = "0.9.8"
+
+# ------------------------------------------------------------------------
+# Зависимости для модуля "spring-boot-starter-platform-leader-election"
+# ------------------------------------------------------------------------
+jetbrains-annotations = "26.1.0"
+
+# ------------------------------------------------------------------------
+# Зависимости для модуля "platform-tracing-otel-javaagent-extension"
+# ------------------------------------------------------------------------
+jol = "0.17"
+auto-service = "1.1.1"
+
+# ------------------------------------------------------------------------
+# Зависимости для модуля "platform-tracing-jib-plugin"
+# ------------------------------------------------------------------------
+jib-gradle-plugin = "3.3.2"
+jib-extension-api = "0.4.0"
+
+# ------------------------------------------------------------------------
+# Зависимости для "platform-starters-tracing/build-logic"
+# ------------------------------------------------------------------------
+# 9.2.2 — последняя версия, совместимая с Gradle 8.14. С 9.3.0 минимум — Gradle 9.0.0.
+shadow-gradle-plugin = "9.2.2"
+
+# ----------------------------------------------------------------------------------------
+# Зависимости для модуля "spring-boot-starter-platform-postgres-read-write-split-jdbc"
+# ----------------------------------------------------------------------------------------
+postgresReadWriteSplitJdbc-spotbugs = "6.1.2"
+
+[libraries]
+testcontainers-core  = { module = "org.testcontainers:testcontainers", version.ref = "testcontainers" }
+testcontainers-junit = { module = "org.testcontainers:junit-jupiter",  version.ref = "testcontainers" }
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "springBoot" }
+postgresReadWriteSplitJdbc-spotbugs = { id = "com.github.spotbugs", version.ref = "postgresReadWriteSplitJdbc-spotbugs" }
+
+[bundles]
+testcontainers = ["testcontainers-core", "testcontainers-junit"]

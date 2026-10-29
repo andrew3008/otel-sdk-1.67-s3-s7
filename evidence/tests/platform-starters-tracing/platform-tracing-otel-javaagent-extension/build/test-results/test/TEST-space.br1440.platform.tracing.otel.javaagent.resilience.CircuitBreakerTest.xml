@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:40.059Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="cooldown_is_measured_across_nano_time_overflow()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" time="0.0"/>
+  <testcase name="invalid_configuration_is_rejected()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" time="0.001"/>
+  <testcase name="rejected_admission_has_no_outcome()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" time="0.0"/>
+  <testcase name="success_in_closed_resets_consecutive_failures()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" time="0.0"/>
+  <testcase name="probe_outcome_outside_half_open_is_rejected()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" time="0.0"/>
+  <testcase name="late_closed_outcomes_do_not_change_open_or_half_open()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" time="0.0"/>
+  <testcase name="concurrent_acquire_after_cooldown_admits_exactly_one_probe()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" time="0.002"/>
+  <testcase name="failed_probe_reopens_and_restarts_cooldown()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" time="0.0"/>
+  <testcase name="successful_probe_closes()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" time="0.0"/>
+  <testcase name="opens_after_consecutive_failure_threshold()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" time="0.0"/>
+  <testcase name="open_rejects_until_cooldown_elapses_then_admits_single_probe()" classname="space.br1440.platform.tracing.otel.javaagent.resilience.CircuitBreakerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

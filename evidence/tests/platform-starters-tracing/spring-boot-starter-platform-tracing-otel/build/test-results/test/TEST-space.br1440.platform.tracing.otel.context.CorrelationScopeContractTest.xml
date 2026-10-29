@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.context.CorrelationScopeContractTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.500Z" hostname="DESKTOP-OEGBG7F" time="0.029">
+  <properties/>
+  <testcase name="helpersExecuteOnceAndPreserveExceptionIdentity()" classname="space.br1440.platform.tracing.otel.context.CorrelationScopeContractTest" time="0.004"/>
+  <testcase name="closeIsIdempotentAndOutOfOrderCloseIsRejectedWithoutMutation()" classname="space.br1440.platform.tracing.otel.context.CorrelationScopeContractTest" time="0.003"/>
+  <testcase name="deferredResultDoesNotInheritSynchronousScope()" classname="space.br1440.platform.tracing.otel.context.CorrelationScopeContractTest" time="0.003"/>
+  <testcase name="invalidAndNullInputsFailBeforeMutation()" classname="space.br1440.platform.tracing.otel.context.CorrelationScopeContractTest" time="0.003"/>
+  <testcase name="disabledFacadeKeepsIdentityFunctionalWithoutBaggageEmission()" classname="space.br1440.platform.tracing.otel.context.CorrelationScopeContractTest" time="0.006"/>
+  <testcase name="nestedScopesRestoreIdentityAndMdcInLifoOrder()" classname="space.br1440.platform.tracing.otel.context.CorrelationScopeContractTest" time="0.0"/>
+  <testcase name="crossThreadCloseFailsAndOwnerCanStillClose()" classname="space.br1440.platform.tracing.otel.context.CorrelationScopeContractTest" time="0.002"/>
+  <testcase name="lateAssignmentLeavesParentImmutableAndChildReceivesValueAtBirth()" classname="space.br1440.platform.tracing.otel.context.CorrelationScopeContractTest" time="0.004"/>
+  <system-out><![CDATA[12:47:47.528 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

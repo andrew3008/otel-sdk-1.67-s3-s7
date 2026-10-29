@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapActivationOwnershipTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:07.632Z" hostname="DESKTOP-OEGBG7F" time="0.822">
+  <properties/>
+  <testcase name="activation_failure_after_transfer_closes_session_only_through_resources()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapActivationOwnershipTest" time="0.535"/>
+  <testcase name="duplicate_activation_does_not_close_active_session()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapActivationOwnershipTest" time="0.127"/>
+  <testcase name="fatal_activation_failure_closes_untransferred_session_before_propagation()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapActivationOwnershipTest" time="0.004"/>
+  <testcase name="[1] resourcesAllocated=false" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapActivationOwnershipTest" time="0.01"/>
+  <testcase name="[2] resourcesAllocated=true" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapActivationOwnershipTest" time="0.004"/>
+  <testcase name="untransferred_session_cleanup_failure_escalates_activation_failure()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapActivationOwnershipTest" time="0.017"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

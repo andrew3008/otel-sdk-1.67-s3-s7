@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:15.131Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="Verified span attributes only remove unsupported VALUE trees at the export boundary" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.0"/>
+  <testcase name="Event name: email HASH downgrades to &lt;redacted&gt;, never raw and never HMAC" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.0"/>
+  <testcase name="ExceptionEventData is canonicalized: no Throwable side-channel in type, attributes, toString, logging or OTLP-visible fields" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.001"/>
+  <testcase name="Identity fast-path: nothing to scrub returns the exact same SpanData instance" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.001"/>
+  <testcase name="DROP on link attributes removes the key but preserves SpanContext and totalAttributeCount" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.0"/>
+  <testcase name="attributesVerified=false: span attributes collapse to sentinels, span not dropped" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.0"/>
+  <testcase name="Status description: DROP becomes empty string, not &lt;redacted&gt;" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.0"/>
+  <testcase name="Link attributes: DROP removes the key entirely (unlike span-attribute DROP, which uses &quot;&quot;)" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.0"/>
+  <testcase name="Fail-closed: an exception while scrubbing drops only that span, never throws" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.001"/>
+  <testcase name="Event attributes: MASK is applied using the same effective ruleset as span attributes" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.0"/>
+  <testcase name="DROP on event attributes removes the key but preserves totalAttributeCount and timestamp" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.0"/>
+  <testcase name="spanAttributeDropPreservesTheOriginalTotalAttributeCount()" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.0"/>
+  <testcase name="SPI-projection: an EXTERNAL_EXTENSION spy never sees span.name / event.name / status.description" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.001"/>
+  <testcase name="Span name: forbidden HASH downgrades to &lt;redacted&gt;, never the raw HMAC digest or KEEP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.SpanDataBoundaryScrubberTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oct 29, 2026 12:47:15 PM io.opentelemetry.exporter.logging.LoggingSpanExporter export
+INFO: 'op' : 00000000000000000000000000000000 0000000000000000 INTERNAL [tracer: :] {}
+]]></system-err>
+</testsuite>

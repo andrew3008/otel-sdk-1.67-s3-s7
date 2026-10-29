@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.metrics.utils.CoalescingObservationMetricReaderTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:11.054Z" hostname="DESKTOP-OEGBG7F" time="0.0">
+  <properties/>
+  <testcase name="readTriStateMetric_presentKey_returnsDoubleValue()" classname="space.br1440.platform.tracing.autoconfigure.metrics.utils.CoalescingObservationMetricReaderTest" time="0.0"/>
+  <testcase name="readTriStateMetric_presentMapMissingKey_returnsZeroNotNaN()" classname="space.br1440.platform.tracing.autoconfigure.metrics.utils.CoalescingObservationMetricReaderTest" time="0.0"/>
+  <testcase name="nullKeyRejected()" classname="space.br1440.platform.tracing.autoconfigure.metrics.utils.CoalescingObservationMetricReaderTest" time="0.0"/>
+  <testcase name="readMetric_missingKey_returnsZero()" classname="space.br1440.platform.tracing.autoconfigure.metrics.utils.CoalescingObservationMetricReaderTest" time="0.0"/>
+  <testcase name="readMetric_nullMetricsRejected()" classname="space.br1440.platform.tracing.autoconfigure.metrics.utils.CoalescingObservationMetricReaderTest" time="0.0"/>
+  <testcase name="readMetric_presentKey_returnsDoubleValue()" classname="space.br1440.platform.tracing.autoconfigure.metrics.utils.CoalescingObservationMetricReaderTest" time="0.0"/>
+  <testcase name="readTriStateMetric_nullMetrics_returnsNaN()" classname="space.br1440.platform.tracing.autoconfigure.metrics.utils.CoalescingObservationMetricReaderTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

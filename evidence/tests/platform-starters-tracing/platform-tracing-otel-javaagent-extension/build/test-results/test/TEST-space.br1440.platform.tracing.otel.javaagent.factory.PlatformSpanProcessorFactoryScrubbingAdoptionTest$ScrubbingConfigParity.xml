@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ScrubbingExtensionConfig defaults and nullable passthroughs" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:20.567Z" hostname="DESKTOP-OEGBG7F" time="0.003">
+  <properties/>
+  <testcase name="rulesValidationMode_override_ERROR()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.0"/>
+  <testcase name="builtInRules_default_non_empty()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.0"/>
+  <testcase name="rulesConfig_passthrough_when_configured()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.0"/>
+  <testcase name="missingKeyPolicy_default_is_mask()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.0"/>
+  <testcase name="rulesExtensions_passthrough_when_configured()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.0"/>
+  <testcase name="hmacKey_null_when_not_configured()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.0"/>
+  <testcase name="builtInRules_override_preserved()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.001"/>
+  <testcase name="missingKeyPolicy_override_fail_fast()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.0"/>
+  <testcase name="hmacKey_passthrough_when_configured()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.0"/>
+  <testcase name="rulesExtensions_null_when_not_configured()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.0"/>
+  <testcase name="rulesValidationMode_default_is_WARNING()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.0"/>
+  <testcase name="rulesConfig_null_when_not_configured()" classname="space.br1440.platform.tracing.otel.javaagent.factory.PlatformSpanProcessorFactoryScrubbingAdoptionTest$ScrubbingConfigParity" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

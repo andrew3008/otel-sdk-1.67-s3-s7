@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BspDropOldestNoDoubleExportTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:12.886Z" hostname="DESKTOP-OEGBG7F" time="0.22">
+  <properties/>
+  <testcase name="каждый span экспортируется ровно один раз" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BspDropOldestNoDoubleExportTest" time="0.22"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oct 29, 2026 12:47:13 PM io.opentelemetry.sdk.trace.SdkTracerProvider shutdown
+INFO: Calling shutdown() multiple times.
+]]></system-err>
+</testsuite>

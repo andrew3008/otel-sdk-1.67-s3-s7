@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.configserver.ConfigServerInitialDeliveryTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:59.506Z" hostname="DESKTOP-OEGBG7F" time="0.021">
+  <properties/>
+  <testcase name="initialDeliveryFailedBlocksStartupWithoutRetry()" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.ConfigServerInitialDeliveryTest" time="0.004"/>
+  <testcase name="emptyAcceptedSettingsFailInsideDeliverInitial()" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.ConfigServerInitialDeliveryTest" time="0.002"/>
+  <testcase name="initialDeliveryUnchangedMarksRunning()" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.ConfigServerInitialDeliveryTest" time="0.002"/>
+  <testcase name="initialDeliveryStaleBlocksStartupWithoutRetry()" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.ConfigServerInitialDeliveryTest" time="0.002"/>
+  <testcase name="initialDeliveryPhasePrecedesWebServer()" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.ConfigServerInitialDeliveryTest" time="0.003"/>
+  <testcase name="invalidManifestFailsBeforeAcceptedSettingsAreRead()" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.ConfigServerInitialDeliveryTest" time="0.005"/>
+  <testcase name="initialDeliveryAppliedMarksRunning()" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.ConfigServerInitialDeliveryTest" time="0.002"/>
+  <testcase name="initialDeliveryRejectedBlocksStartupWithoutRetry()" classname="space.br1440.platform.tracing.autoconfigure.control.configserver.ConfigServerInitialDeliveryTest" time="0.001"/>
+  <system-out><![CDATA[2026-10-29T12:47:59.510Z ERROR 25468 --- [    Test worker] [                                                 ] .ConfigServerTracingSettingsSynchronizer : Config Server settings delivery: phase=INITIAL, attemptId=00000000-0000-0000-0000-000000000001, outcome=FAILED, messageCode=INTERNAL_FAILURE, base=SettingsRevision[agentInstanceId=060130bb-9b7d-4d70-9806-0339966e4231, acceptedSequence=7]
+2026-10-29T12:47:59.514Z  INFO 25468 --- [    Test worker] [                                                 ] .ConfigServerTracingSettingsSynchronizer : Config Server settings delivery: phase=INITIAL, attemptId=00000000-0000-0000-0000-000000000001, outcome=UNCHANGED, messageCode=NONE, base=SettingsRevision[agentInstanceId=060130bb-9b7d-4d70-9806-0339966e4231, acceptedSequence=7]
+2026-10-29T12:47:59.516Z  WARN 25468 --- [    Test worker] [                                                 ] .ConfigServerTracingSettingsSynchronizer : Config Server settings delivery: phase=INITIAL, attemptId=00000000-0000-0000-0000-000000000001, outcome=STALE, messageCode=ACCEPTED_SEQUENCE_MISMATCH, base=SettingsRevision[agentInstanceId=060130bb-9b7d-4d70-9806-0339966e4231, acceptedSequence=7]
+2026-10-29T12:47:59.525Z  INFO 25468 --- [    Test worker] [                                                 ] .ConfigServerTracingSettingsSynchronizer : Config Server settings delivery: phase=INITIAL, attemptId=00000000-0000-0000-0000-000000000001, outcome=APPLIED, messageCode=NONE, base=SettingsRevision[agentInstanceId=060130bb-9b7d-4d70-9806-0339966e4231, acceptedSequence=7]
+2026-10-29T12:47:59.527Z  WARN 25468 --- [    Test worker] [                                                 ] .ConfigServerTracingSettingsSynchronizer : Config Server settings delivery: phase=INITIAL, attemptId=00000000-0000-0000-0000-000000000001, outcome=REJECTED, messageCode=INVALID_VALUE, base=SettingsRevision[agentInstanceId=060130bb-9b7d-4d70-9806-0339966e4231, acceptedSequence=7]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.runtime.TracingRuntimeRoutingTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.626Z" hostname="DESKTOP-OEGBG7F" time="0.02">
+  <properties/>
+  <testcase name="noOpFacade_keepsManualOperationsNonRecording()" classname="space.br1440.platform.tracing.otel.runtime.TracingRuntimeRoutingTest" time="0.002"/>
+  <testcase name="spanSpecAttributesReasonReference_preserved()" classname="space.br1440.platform.tracing.otel.runtime.TracingRuntimeRoutingTest" time="0.001"/>
+  <testcase name="operationStart_routesThroughStartSpan()" classname="space.br1440.platform.tracing.otel.runtime.TracingRuntimeRoutingTest" time="0.002"/>
+  <testcase name="operationCall_routesThroughStartSpan()" classname="space.br1440.platform.tracing.otel.runtime.TracingRuntimeRoutingTest" time="0.002"/>
+  <testcase name="operationRun_routesThroughStartSpan()" classname="space.br1440.platform.tracing.otel.runtime.TracingRuntimeRoutingTest" time="0.002"/>
+  <testcase name="topologyRoot_preserved()" classname="space.br1440.platform.tracing.otel.runtime.TracingRuntimeRoutingTest" time="0.001"/>
+  <testcase name="topologyRootWithLinks_preserved()" classname="space.br1440.platform.tracing.otel.runtime.TracingRuntimeRoutingTest" time="0.001"/>
+  <testcase name="fromSpecStart_routesNormalizedSpec()" classname="space.br1440.platform.tracing.otel.runtime.TracingRuntimeRoutingTest" time="0.001"/>
+  <testcase name="fromSpecRun_routesNormalizedSpec()" classname="space.br1440.platform.tracing.otel.runtime.TracingRuntimeRoutingTest" time="0.002"/>
+  <testcase name="topologyDetached_preserved()" classname="space.br1440.platform.tracing.otel.runtime.TracingRuntimeRoutingTest" time="0.002"/>
+  <system-out><![CDATA[12:47:47.628 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.631 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec category=DATABASE: required attribute 'platform.trace.type' is missing
+12:47:47.633 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.635 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.638 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.639 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.640 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.641 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec (repeat)
+12:47:47.644 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=DefaultSpanSpecFactory.fromSpec (repeat)
+12:47:47.646 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

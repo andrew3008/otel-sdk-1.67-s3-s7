@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.854Z" hostname="DESKTOP-OEGBG7F" time="0.039">
+  <properties/>
+  <testcase name="[1] builder=space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderImpl@6fd46b61" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[2] builder=space.br1440.platform.tracing.otel.span.builder.DefaultHttpTracing$HttpServerSpanBuilderImpl@15273ae8" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[3] builder=space.br1440.platform.tracing.otel.span.builder.DatabaseSpanBuilderImpl@69cf9dd" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[4] builder=space.br1440.platform.tracing.otel.span.builder.DefaultRpcTracing$RpcServerSpanBuilderImpl@43be5d62" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[1] builder=space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderImpl@5d34e3b3" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[2] builder=space.br1440.platform.tracing.otel.span.builder.DefaultHttpTracing$HttpServerSpanBuilderImpl@14a28980" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[3] builder=space.br1440.platform.tracing.otel.span.builder.DatabaseSpanBuilderImpl@31d4c6c9" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[4] builder=space.br1440.platform.tracing.otel.span.builder.DefaultRpcTracing$RpcServerSpanBuilderImpl@7f8f2761" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="linkedToThenRootThenStart_succeedsForOperationBuilder()" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[1] builder=space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderImpl@7b7fa640" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.002"/>
+  <testcase name="[2] builder=space.br1440.platform.tracing.otel.span.builder.DefaultHttpTracing$HttpServerSpanBuilderImpl@5387e079" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[3] builder=space.br1440.platform.tracing.otel.span.builder.DatabaseSpanBuilderImpl@249dd7e6" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[4] builder=space.br1440.platform.tracing.otel.span.builder.DefaultRpcTracing$RpcServerSpanBuilderImpl@56f13088" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[1] builder=space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderImpl@29ef49a1" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.002"/>
+  <testcase name="[2] builder=space.br1440.platform.tracing.otel.span.builder.DefaultHttpTracing$HttpServerSpanBuilderImpl@5f284d00" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[3] builder=space.br1440.platform.tracing.otel.span.builder.DatabaseSpanBuilderImpl@35ae4079" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[4] builder=space.br1440.platform.tracing.otel.span.builder.DefaultRpcTracing$RpcServerSpanBuilderImpl@1ed17302" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.0"/>
+  <testcase name="[1] builder=space.br1440.platform.tracing.otel.span.builder.OperationSpanBuilderImpl@188b224d" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.002"/>
+  <testcase name="[2] builder=space.br1440.platform.tracing.otel.span.builder.DefaultHttpTracing$HttpServerSpanBuilderImpl@3a1e65ea" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[3] builder=space.br1440.platform.tracing.otel.span.builder.DatabaseSpanBuilderImpl@31899998" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <testcase name="[4] builder=space.br1440.platform.tracing.otel.span.builder.DefaultRpcTracing$RpcServerSpanBuilderImpl@46bde78e" classname="space.br1440.platform.tracing.otel.span.builder.ManualSpanBuilderRelationshipContractTest" time="0.001"/>
+  <system-out><![CDATA[12:47:47.869 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.873 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.distribution.ReproducibleAgentArchiveTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:58.634Z" hostname="DESKTOP-OEGBG7F" time="0.018">
+  <properties/>
+  <testcase name="archive_uses_the_gradle_reproducible_profile()" classname="space.br1440.platform.tracing.otel.javaagent.distribution.ReproducibleAgentArchiveTest" time="0.018"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

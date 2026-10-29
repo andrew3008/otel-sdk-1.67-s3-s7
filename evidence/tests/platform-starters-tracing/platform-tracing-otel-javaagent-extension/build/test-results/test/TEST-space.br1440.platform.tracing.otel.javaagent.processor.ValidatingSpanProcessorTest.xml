@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessorTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:23.520Z" hostname="DESKTOP-OEGBG7F" time="0.014">
+  <properties/>
+  <testcase name="warnLevelValidationDoesNotThrowWhenRequiredSpanAttributesExistOnlyOnResource()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessorTest" time="0.0"/>
+  <testcase name="sets_platform_validation_missing_when_span_attributes_absent()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessorTest" time="0.001"/>
+  <testcase name="warn_and_error_diagnostics_have_independent_throttling()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessorTest" time="0.003"/>
+  <testcase name="does_not_record_violation_when_span_type_and_result_attributes_are_set()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessorTest" time="0.0"/>
+  <testcase name="strictValidationDoesNotUseResourceAttributeAsTraceResultFallback()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessorTest" time="0.001"/>
+  <testcase name="missing_required_attribute_log_contains_count_and_fixed_key_name()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessorTest" time="0.001"/>
+  <testcase name="strictValidationAcceptsTraceTypeAndTraceResultSpanAttributes()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessorTest" time="0.0"/>
+  <testcase name="strictValidationDoesNotUseResourceAttributeAsTraceTypeFallback()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessorTest" time="0.0"/>
+  <testcase name="throttling_suppresses_repeated_warn_diagnostics()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessorTest" time="0.008"/>
+  <testcase name="error_level_records_violation_without_interrupting_span_end()" classname="space.br1440.platform.tracing.otel.javaagent.processor.ValidatingSpanProcessorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

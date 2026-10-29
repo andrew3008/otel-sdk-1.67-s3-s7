@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpRequestSizeCustomizerTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:15.306Z" hostname="DESKTOP-OEGBG7F" time="0.169">
+  <properties/>
+  <testcase name="otherExportersAreNeitherReplacedNorClosed()" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpRequestSizeCustomizerTest" time="0.006"/>
+  <testcase name="[1] protocol=GRPC" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpRequestSizeCustomizerTest" time="0.124"/>
+  <testcase name="[2] protocol=HTTP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpRequestSizeCustomizerTest" time="0.002"/>
+  <testcase name="[1] protocol=GRPC" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpRequestSizeCustomizerTest" time="0.024"/>
+  <testcase name="[2] protocol=HTTP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpRequestSizeCustomizerTest" time="0.01"/>
+  <testcase name="[1] protocol=GRPC" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpRequestSizeCustomizerTest" time="0.001"/>
+  <testcase name="[2] protocol=HTTP" classname="space.br1440.platform.tracing.otel.javaagent.exporter.response.OtlpRequestSizeCustomizerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oct 29, 2026 12:47:15 PM io.opentelemetry.sdk.common.internal.ThrottlingLogger doLog
+WARNING: Failed to export spans. Request message size 15728641 exceeded limit of 15728640 bytes
+Oct 29, 2026 12:47:15 PM io.opentelemetry.sdk.common.internal.ThrottlingLogger doLog
+WARNING: Failed to export spans. Request body size 15728641 exceeded limit of 15728640 bytes
+]]></system-err>
+</testsuite>

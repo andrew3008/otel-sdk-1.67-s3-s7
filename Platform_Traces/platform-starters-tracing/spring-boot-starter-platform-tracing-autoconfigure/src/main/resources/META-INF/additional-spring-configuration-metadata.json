@@ -1,0 +1,26 @@
+{
+  "properties": [
+    {
+      "name": "platform.tracing.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Включает платформенную трассировку. true (default) требует READY Controlled Platform Agent. false публикует NoOp facade и требует отсутствия Agent в течение startup validation window; dynamic attach после старта не поддерживается. Не отключает уже прикреплённый Java Agent.",
+      "defaultValue": true
+    },
+    {
+      "name": "platform.tracing.control.channel",
+      "type": "space.br1440.platform.tracing.autoconfigure.bootstrap.TracingControlChannel",
+      "description": "Единственный разрешённый канал управления runtime-политикой трассировки. При включённой трассировке обязателен; допустимые значения NONE, CONFIG_SERVER, ACTUATOR. При выключенной трассировке отсутствие ключа эквивалентно NONE. Библиотечного default для включённой трассировки нет. NONE подключает только чтение принятой политики для статуса."
+    },
+    {
+      "name": "platform.tracing.kafka.propagate-platform-headers",
+      "type": "java.lang.Boolean",
+      "description": "Разрешает исходящую передачу платформенных управляющих заголовков для доверенных Kafka topics.",
+      "defaultValue": false
+    },
+    {
+      "name": "platform.tracing.suppression.suppress-micrometer-http-observations",
+      "type": "java.lang.Boolean",
+      "description": "Подавляет Micrometer HTTP server/client observations (http.server.requests / http.client.requests). Не создаёт и не убирает Agent HTTP spans. Штатный стартер не содержит micrometer-tracing-bridge-otel и не публикует второй OTel span. При отсутствии значения выводится из присутствия Java Agent. Игнорируется при platform.tracing.enabled=false, чтобы не гасить Actuator HTTP-метрики без трассировки."
+    }
+  ]
+}

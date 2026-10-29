@@ -1,0 +1,23 @@
+﻿{
+    "version":  "otelcol-contrib version 0.154.0",
+    "execution":  "Official native Windows amd64 binary; validate only, no Collector server startup",
+    "dockerLimitation":  "Configured remote Docker endpoint 192.168.100.70:2375 was unavailable; root observed connection timeout",
+    "releaseUrl":  "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/tag/v0.154.0",
+    "archiveUrl":  "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.154.0/otelcol-contrib_0.154.0_windows_amd64.tar.gz",
+    "archiveSha256":  "3f68a2f48da37da37e478b50814f2da408fb66593b288d4bb57bd3d832339e3b",
+    "executableSha256":  "f448e99a200f7f096a85f3e66c761dc8652d9d3893a6e4a2bad8ab49ab65ac03",
+    "configurations":  [
+                           {
+                               "path":  "E:\\Platform_Traces\\platform-starters-tracing\\platform-tracing-collector-config\\otel-collector-agent-loadbalancing.yaml",
+                               "sha256":  "f1052e06a94afef88bc35b95d320748ce0e042c09bfa19dd83f74964a61ae1ee"
+                           },
+                           {
+                               "path":  "E:\\Platform_Traces\\platform-starters-tracing\\platform-tracing-collector-config\\otel-collector-gateway-tail-sampling.yaml",
+                               "sha256":  "88eec463183581e2ce4f0b3f08d257eebf41849613334d16f843bc851b08e7ea"
+                           },
+                           {
+                               "path":  "E:\\Platform_Traces\\platform-starters-tracing\\platform-tracing-collector-config\\otel-collector-config-ttl-tiers.yaml",
+                               "sha256":  "b3d88e2c8811ce4a0bf165bf03867fb81e45d65f191a9cd60df07680e1f6c2e0"
+                           }
+                       ]
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:35.654Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="duplicateSpanIdIsRejectedInSingleMode()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.0"/>
+  <testcase name="drainOnEmptyStateReportsZero()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.0"/>
+  <testcase name="duplicateSpanIdIsRejectedInMultipleModeToo()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.0"/>
+  <testcase name="removeUnknownTrackedReturnsFalseAndDoesNotMutateState()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.001"/>
+  <testcase name="startNanosIsImmutableAcrossMutations()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.0"/>
+  <testcase name="singleTrackedSpanIsReportedWithoutPromotion()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.0"/>
+  <testcase name="drainClearsMultipleModeAndReportsExactCount()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.0"/>
+  <testcase name="removeIfPresentRequiresIdentityMatchOnSpanReference()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.0"/>
+  <testcase name="removeIfPresentInMultipleModeCollapsesBackToSingleWhenOneRemains()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.0"/>
+  <testcase name="removeByReferenceCollapsesMultipleBackToSingle()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.0"/>
+  <testcase name="drainClearsSingleModeAndReportsOneRemoved()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.0"/>
+  <testcase name="secondDistinctSpanIdPromotesToMultipleMode()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceStateTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

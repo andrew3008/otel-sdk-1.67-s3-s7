@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:09.095Z" hostname="DESKTOP-OEGBG7F" time="0.071">
+  <properties/>
+  <testcase name="oversized_startup_route_prefix_preserves_limit_message_in_bootstrap_exception()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.004"/>
+  <testcase name="unknown_span_attribute_validation_level_classified_as_CONFIGURATION_INITIALIZATION_FAILED()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.002"/>
+  <testcase name="linkage_error_during_runtime_attestation_publishes_failed_before_propagation()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.003"/>
+  <testcase name="close_during_prepare_waits_for_session_ownership_and_closes_runtime()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.021"/>
+  <testcase name="oversized_startup_route_map_preserves_limit_message_in_bootstrap_exception()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.003"/>
+  <testcase name="repeated_prepare_after_configuration_failure_preserves_primary_cause()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.001"/>
+  <testcase name="fatal_preparation_cleanup_failure_is_settled_before_propagation()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.004"/>
+  <testcase name="second_prepare_rejection_preserves_original_updated_policy_store()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.005"/>
+  <testcase name="reentrant_prepare_is_rejected_without_terminalizing_or_registering_diagnostics()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.002"/>
+  <testcase name="second_prepare_with_identical_configuration_classified_as_SECOND_SDK_BUILD()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.003"/>
+  <testcase name="separate_bootstrap_owners_receive_different_agent_instance_ids()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.002"/>
+  <testcase name="activate_during_prepare_is_rejected_without_terminalizing_or_registering_diagnostics()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.002"/>
+  <testcase name="failed_lifecycle_precedes_diagnostic_readiness_registration_on_preparation_failure()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.001"/>
+  <testcase name="prepare_failure_publishes_diagnostic_mbean_until_coordinator_close()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.002"/>
+  <testcase name="fatal_initializing_publication_failure_remains_primary_when_diagnostic_registration_fails()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.004"/>
+  <testcase name="second_prepare_after_activation_keeps_ACTIVE_and_READY()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.003"/>
+  <testcase name="verificationFailureDuringPreparePublishesFailedDiagnosticMBean()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.003"/>
+  <testcase name="second_prepare_is_rejected_as_SECOND_SDK_BUILD_regardless_of_configuration()" classname="space.br1440.platform.tracing.otel.javaagent.bootstrap.BootstrapCoordinatorPrepareTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

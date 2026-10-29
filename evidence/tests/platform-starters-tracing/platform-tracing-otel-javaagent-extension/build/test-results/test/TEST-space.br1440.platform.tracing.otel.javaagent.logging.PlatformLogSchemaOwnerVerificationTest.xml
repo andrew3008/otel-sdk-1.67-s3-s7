@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.PlatformLogSchemaOwnerVerificationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.632Z" hostname="DESKTOP-OEGBG7F" time="0.004">
+  <properties/>
+  <testcase name="published_length_limits_reject_oversized_wire_values()" classname="space.br1440.platform.tracing.otel.javaagent.logging.PlatformLogSchemaOwnerVerificationTest" time="0.0"/>
+  <testcase name="schema_is_open_root_v1_with_required_message()" classname="space.br1440.platform.tracing.otel.javaagent.logging.PlatformLogSchemaOwnerVerificationTest" time="0.001"/>
+  <testcase name="generic_negative_corpus_fails()" classname="space.br1440.platform.tracing.otel.javaagent.logging.PlatformLogSchemaOwnerVerificationTest" time="0.001"/>
+  <testcase name="owner_schema_is_utf8_without_bom_and_uses_lf()" classname="space.br1440.platform.tracing.otel.javaagent.logging.PlatformLogSchemaOwnerVerificationTest" time="0.0"/>
+  <testcase name="generic_positive_corpus_passes()" classname="space.br1440.platform.tracing.otel.javaagent.logging.PlatformLogSchemaOwnerVerificationTest" time="0.001"/>
+  <system-out><![CDATA[12:47:22.634 [Test worker] DEBUG com.networknt.schema.format.DateTimeFormat -- Invalid date-time: Expected character [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] at position 3, found -: 16-08-2026 19:00:00
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

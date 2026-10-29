@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaIdentityTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.587Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="reviewed_identity_matches_sha256_of_the_schema_file()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaIdentityTest" time="0.0"/>
+  <testcase name="normalized_fixture_matches_the_frozen_sha256()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaIdentityTest" time="0.0"/>
+  <testcase name="schema_name_matches_json_title_and_declared_version()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLoggingSchemaIdentityTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

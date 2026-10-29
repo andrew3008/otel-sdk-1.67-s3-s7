@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:57.184Z" hostname="DESKTOP-OEGBG7F" time="0.071">
+  <properties/>
+  <testcase name="[1] rawValue=" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" time="0.005"/>
+  <testcase name="[2] rawValue=invalid" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" time="0.003"/>
+  <testcase name="canonical NONE" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" time="0.013"/>
+  <testcase name="canonical CONFIG_SERVER" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" time="0.013"/>
+  <testcase name="canonical ACTUATOR" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" time="0.009"/>
+  <testcase name="mixed case none" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" time="0.003"/>
+  <testcase name="mixed case Config_Server" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" time="0.004"/>
+  <testcase name="mixed case actuator" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" time="0.004"/>
+  <testcase name="surrounding whitespace" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" time="0.005"/>
+  <testcase name="[1] rawValue=REMOTE" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" time="0.005"/>
+  <testcase name="[2] rawValue=" classname="space.br1440.platform.tracing.autoconfigure.control.channel.ControlChannelParserAlignmentTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

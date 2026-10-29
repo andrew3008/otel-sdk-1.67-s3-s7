@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.exception.ExceptionRecorderTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.530Z" hostname="DESKTOP-OEGBG7F" time="0.015">
+  <properties/>
+  <testcase name="record_withAllowedMessage_writesTruncatedMessageAndDescription()" classname="space.br1440.platform.tracing.otel.exception.ExceptionRecorderTest" time="0.001"/>
+  <testcase name="record_withErrorTypeOverride_keepsExceptionClassOnEvent()" classname="space.br1440.platform.tracing.otel.exception.ExceptionRecorderTest" time="0.001"/>
+  <testcase name="record_withNullSpan_andInvalidSpan_doNotThrow()" classname="space.br1440.platform.tracing.otel.exception.ExceptionRecorderTest" time="0.002"/>
+  <testcase name="record_secureDefault_doesNotWriteMessageAndStacktrace_butSetsErrorTypeAndStatus()" classname="space.br1440.platform.tracing.otel.exception.ExceptionRecorderTest" time="0.003"/>
+  <testcase name="markCurrentSpanAsError_setsStatusErrorAndResultFailure()" classname="space.br1440.platform.tracing.otel.exception.ExceptionRecorderTest" time="0.002"/>
+  <testcase name="record_withoutActiveSpan_andNull_doNotThrowAndDoNotCreateSpan()" classname="space.br1440.platform.tracing.otel.exception.ExceptionRecorderTest" time="0.002"/>
+  <testcase name="record_withBlankErrorType_usesExceptionClass()" classname="space.br1440.platform.tracing.otel.exception.ExceptionRecorderTest" time="0.001"/>
+  <testcase name="record_withExplicitSpan_writesToPassedSpanNotCurrent()" classname="space.br1440.platform.tracing.otel.exception.ExceptionRecorderTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

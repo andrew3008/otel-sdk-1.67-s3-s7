@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformExtensionReadinessJmxTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:21.253Z" hostname="DESKTOP-OEGBG7F" time="0.005">
+  <properties/>
+  <testcase name="mbeanReflectsOnlyPublishedSnapshotNotLiveMutation()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformExtensionReadinessJmxTest" time="0.001"/>
+  <testcase name="getAttributesCapturesProjectionExactlyOnce()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformExtensionReadinessJmxTest" time="0.002"/>
+  <testcase name="mbeanRejectsSnapshotFromAnotherAgentInstanceAfterRegistration()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformExtensionReadinessJmxTest" time="0.001"/>
+  <testcase name="mbeanInfoExposesExactlyOneReadOnlyGeneratedCompositeAttributeAndNoOperations()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformExtensionReadinessJmxTest" time="0.0"/>
+  <testcase name="readinessIsPublishedBeforeDomainMBeansAndDoesNotClaimReady()" classname="space.br1440.platform.tracing.otel.javaagent.jmx.registration.PlatformExtensionReadinessJmxTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

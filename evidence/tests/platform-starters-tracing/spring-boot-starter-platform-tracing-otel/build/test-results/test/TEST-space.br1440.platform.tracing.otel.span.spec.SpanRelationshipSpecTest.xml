@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.span.spec.SpanRelationshipSpecTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.963Z" hostname="DESKTOP-OEGBG7F" time="0.009">
+  <properties/>
+  <testcase name="linkedToThenDetached_isInvalid()" classname="space.br1440.platform.tracing.otel.span.spec.SpanRelationshipSpecTest" time="0.001"/>
+  <testcase name="detachedWithLinks_failsBeforeSpanStart()" classname="space.br1440.platform.tracing.otel.span.spec.SpanRelationshipSpecTest" time="0.0"/>
+  <testcase name="childInsideActiveParent_inheritsParentSpanIdAndTraceId()" classname="space.br1440.platform.tracing.otel.span.spec.SpanRelationshipSpecTest" time="0.001"/>
+  <testcase name="detachedInsideActiveParent_hasInvalidParentIndependentTraceIdAndNoLinks()" classname="space.br1440.platform.tracing.otel.span.spec.SpanRelationshipSpecTest" time="0.001"/>
+  <testcase name="detachedWithLinks_rejectedBeforeSpanStartAtSpecBuild()" classname="space.br1440.platform.tracing.otel.span.spec.SpanRelationshipSpecTest" time="0.001"/>
+  <testcase name="validateRelationshipLinks_rejectsChildLinks()" classname="space.br1440.platform.tracing.otel.span.spec.SpanRelationshipSpecTest" time="0.0"/>
+  <testcase name="rootInsideActiveParent_hasInvalidParentAndIndependentTraceId()" classname="space.br1440.platform.tracing.otel.span.spec.SpanRelationshipSpecTest" time="0.001"/>
+  <testcase name="rootWithLinks_producesRootSpanWithRemoteLinks()" classname="space.br1440.platform.tracing.otel.span.spec.SpanRelationshipSpecTest" time="0.001"/>
+  <testcase name="linkedToThenRoot_isValid()" classname="space.br1440.platform.tracing.otel.span.spec.SpanRelationshipSpecTest" time="0.001"/>
+  <testcase name="childWithLinks_failsBeforeSpanStart()" classname="space.br1440.platform.tracing.otel.span.spec.SpanRelationshipSpecTest" time="0.001"/>
+  <system-out><![CDATA[12:47:47.966 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.966 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.967 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.968 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.969 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.969 [Test worker] DEBUG space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder (repeat)
+12:47:47.970 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+12:47:47.971 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

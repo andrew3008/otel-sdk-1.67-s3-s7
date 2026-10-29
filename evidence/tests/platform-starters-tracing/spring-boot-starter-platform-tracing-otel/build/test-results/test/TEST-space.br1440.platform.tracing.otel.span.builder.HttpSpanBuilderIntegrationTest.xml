@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderIntegrationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.737Z" hostname="DESKTOP-OEGBG7F" time="0.01">
+  <properties/>
+  <testcase name="httpClientRoot_isRootWithSemconvAttributes()" classname="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderIntegrationTest" time="0.006"/>
+  <testcase name="httpServerChild_insideActiveParent_isChildWithSemconvAttributes()" classname="space.br1440.platform.tracing.otel.span.builder.HttpSpanBuilderIntegrationTest" time="0.004"/>
+  <system-out><![CDATA[12:47:47.745 [Test worker] WARN space.br1440.platform.tracing.otel.attributes.validation.SpanAttributeValidator -- span attribute violation [REQUIRED_MISSING] builder=OperationSpanBuilder category=INTERNAL: required attribute 'platform.trace.type' is missing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

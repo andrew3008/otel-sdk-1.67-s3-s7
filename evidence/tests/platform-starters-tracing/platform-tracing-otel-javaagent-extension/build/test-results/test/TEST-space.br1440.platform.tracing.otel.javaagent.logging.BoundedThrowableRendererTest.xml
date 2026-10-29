@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.623Z" hostname="DESKTOP-OEGBG7F" time="0.007">
+  <properties/>
+  <testcase name="native_method_and_unknown_source_use_fixed_locations()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="primary_cause_chain_precedes_suppressed_graph_and_has_an_independent_cause_budget()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="suppressed_cycle_is_stopped_by_the_identity_set()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.001"/>
+  <testcase name="[1] fatalFailure=java.lang.OutOfMemoryError: SECRET-MARKER" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="[2] fatalFailure=java.lang.ThreadDeath" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="[3] fatalFailure=java.lang.LinkageError: SECRET-MARKER" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="primary_cause_chain_receives_frames_before_suppressed_graph()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.001"/>
+  <testcase name="thousands_of_frames_are_stopped_by_the_global_frame_budget()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="exception_messages_are_absent_from_the_entire_graph_digest()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="primary_cause_structure_survives_character_pressure_from_root_frame()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.001"/>
+  <testcase name="character_budget_is_enforced_while_rendering_a_frame()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="rendering_failure_omits_the_exception_message_and_is_capped()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="thousands_of_nodes_are_stopped_by_the_global_node_budget()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.001"/>
+  <testcase name="shared_cause_and_suppressed_node_is_rendered_once()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="suppressed_budget_is_applied_per_node_and_named_by_its_marker()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="frame_uses_class_method_file_and_line()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.001"/>
+  <testcase name="cause_cycle_is_stopped_by_the_identity_set()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <testcase name="cause_of_suppressed_node_is_traversed()" classname="space.br1440.platform.tracing.otel.javaagent.logging.BoundedThrowableRendererTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="length truncation" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:47.926Z" hostname="DESKTOP-OEGBG7F" time="0.004">
+  <properties/>
+  <testcase name="truncation does not split %XX: boundary on first hex char — regression bug #2" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$LengthTruncation" time="0.001"/>
+  <testcase name="URL shorter than MAX_LENGTH — not truncated" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$LengthTruncation" time="0.001"/>
+  <testcase name="truncation does not split %XX: boundary on '%' — regression bug #2" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$LengthTruncation" time="0.0"/>
+  <testcase name="URL longer than MAX_LENGTH — truncated to MAX_LENGTH" classname="space.br1440.platform.tracing.otel.span.builder.UrlSanitizerTest$LengthTruncation" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

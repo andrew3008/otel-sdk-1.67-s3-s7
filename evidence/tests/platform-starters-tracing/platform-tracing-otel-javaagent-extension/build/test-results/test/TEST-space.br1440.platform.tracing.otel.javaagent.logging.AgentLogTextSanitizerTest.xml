@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogTextSanitizerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:22.488Z" hostname="DESKTOP-OEGBG7F" time="0.001">
+  <properties/>
+  <testcase name="oversized_value_is_truncated_without_scanning_as_identity()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogTextSanitizerTest" time="0.0"/>
+  <testcase name="null_field_value_becomes_empty()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogTextSanitizerTest" time="0.001"/>
+  <testcase name="safe_supplementary_unicode_is_returned_as_the_same_instance()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogTextSanitizerTest" time="0.0"/>
+  <testcase name="safe_short_value_is_returned_as_the_same_instance()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogTextSanitizerTest" time="0.0"/>
+  <testcase name="truncation_does_not_split_a_surrogate_pair()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogTextSanitizerTest" time="0.0"/>
+  <testcase name="control_and_bidi_characters_are_replaced()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogTextSanitizerTest" time="0.0"/>
+  <testcase name="isolated_surrogates_are_replaced_with_fffd()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogTextSanitizerTest" time="0.0"/>
+  <testcase name="logger_uses_logger_bound()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogTextSanitizerTest" time="0.0"/>
+  <testcase name="right_to_left_override_is_wire_unsafe_and_replaced()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogTextSanitizerTest" time="0.0"/>
+  <testcase name="bounded_engine_accepts_a_caller_specific_limit()" classname="space.br1440.platform.tracing.otel.javaagent.logging.AgentLogTextSanitizerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

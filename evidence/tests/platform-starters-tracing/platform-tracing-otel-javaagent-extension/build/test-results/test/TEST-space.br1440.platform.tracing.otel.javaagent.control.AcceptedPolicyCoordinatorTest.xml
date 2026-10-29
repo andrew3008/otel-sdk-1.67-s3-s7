@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.control.AcceptedPolicyCoordinatorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.085Z" hostname="DESKTOP-OEGBG7F" time="0.004">
+  <properties/>
+  <testcase name="samePolicyWithConfigServerAuthorityIsApplied()" classname="space.br1440.platform.tracing.otel.javaagent.control.AcceptedPolicyCoordinatorTest" time="0.001"/>
+  <testcase name="exposesAllApplyOutcomesWithoutHiddenRetry()" classname="space.br1440.platform.tracing.otel.javaagent.control.AcceptedPolicyCoordinatorTest" time="0.003"/>
+  <testcase name="agentInstanceMismatchIsReportedSeparately()" classname="space.br1440.platform.tracing.otel.javaagent.control.AcceptedPolicyCoordinatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.autoconfigure.control.management.TracingControlEndpointAutoConfigurationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:48:08.662Z" hostname="DESKTOP-OEGBG7F" time="0.025">
+  <properties/>
+  <testcase name="leftoverPlatformEnvironmentDoesNotDisableActuator()" classname="space.br1440.platform.tracing.autoconfigure.control.management.TracingControlEndpointAutoConfigurationTest" time="0.007"/>
+  <testcase name="nonActuatorChannelsHaveNoWriteSurface()" classname="space.br1440.platform.tracing.autoconfigure.control.management.TracingControlEndpointAutoConfigurationTest" time="0.008"/>
+  <testcase name="actuatorUsesFinalClientDespitePrimaryInterfaceStub()" classname="space.br1440.platform.tracing.autoconfigure.control.management.TracingControlEndpointAutoConfigurationTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

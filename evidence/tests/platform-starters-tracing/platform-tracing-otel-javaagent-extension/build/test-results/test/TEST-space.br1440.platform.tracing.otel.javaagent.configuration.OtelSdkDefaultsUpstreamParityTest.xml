@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="OtelSdkDefaults ↔ upstream OTel SDK parity" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:14.051Z" hostname="DESKTOP-OEGBG7F" time="0.002">
+  <properties/>
+  <testcase name="span limits are documented platform overrides of SpanLimits.getDefault()" classname="space.br1440.platform.tracing.otel.javaagent.configuration.OtelSdkDefaultsUpstreamParityTest" time="0.0"/>
+  <testcase name="BSP fallback contract is applied to the platform processor" classname="space.br1440.platform.tracing.otel.javaagent.configuration.OtelSdkDefaultsUpstreamParityTest" time="0.001"/>
+  <testcase name="Missing otel.bsp.export.timeout matches the upstream BatchSpanProcessor default" classname="space.br1440.platform.tracing.otel.javaagent.configuration.OtelSdkDefaultsUpstreamParityTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

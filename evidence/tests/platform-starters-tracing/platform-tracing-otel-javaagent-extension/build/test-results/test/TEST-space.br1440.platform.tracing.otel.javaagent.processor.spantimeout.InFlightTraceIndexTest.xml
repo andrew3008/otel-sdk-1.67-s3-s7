@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" tests="27" skipped="0" failures="0" errors="0" timestamp="2026-10-29T12:47:35.349Z" hostname="DESKTOP-OEGBG7F" time="0.304">
+  <properties/>
+  <testcase name="admissionIsSkippedWhenAdmissionOpenSupplierReportsClosed()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.0"/>
+  <testcase name="concurrentScanAndOnEndNeverDoubleReleaseTheSamePermit()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.002"/>
+  <testcase name="drainAllReleasesEverySpanPermitAndTraceSlot()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="collectExpiredPrefersSpanReasonOverTraceReasonWhenBothExpireTogether()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.0"/>
+  <testcase name="perTraceSaturationRejectsSecondDistinctSpanOnSameTrace()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="concurrentAdmissionOfDistinctTracesNeverExceedsTraceCapacity()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.062"/>
+  <testcase name="globalSaturationOnABrandNewTraceRollsBackTheTraceSlotAndLeavesNoGhostEntry()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="collectExpiredUsesTraceReasonWhenOnlyTraceTimeoutIsExceeded()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.0"/>
+  <testcase name="traceCapacityRejectionAndReliefAreEachLoggedOnceWithinTheirRateLimitWindows()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.004"/>
+  <testcase name="traceCapacityRejectsABrandNewTraceWithoutTouchingSpanPermits()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="relieveTracePressureEvictsTheOldestEmptyStateAndFreesItsSlotForANewTrace()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="evictionSkipsAnEmptyCandidateRevivedBetweenPlanningAndCommit()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.002"/>
+  <testcase name="hasEndedSpanIsPurgedByScanWithoutForceCloseOrLostPermit()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="traceCapacityStillAdmitsSpansOfAnAlreadyTrackedTrace()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="extractedCandidateKeepsItsPermitUntilTheCallerReleasesIt()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="evictingAnEmptyStateStartsANewTraceEpochForTheSameTraceId()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.002"/>
+  <testcase name="evictionSkipsAStaleCandidateWhoseStateWasReplacedBetweenPlanningAndCommit()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.002"/>
+  <testcase name="identitySafeEvictionNeverCorruptsEitherLedgerUnderConcurrentTraceChurn()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.088"/>
+  <testcase name="relieveTracePressureIsANoOpWhileSlotsAreFreeAndNoRejectionWasObserved()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="pressureSignalIsConsumedByASingleReliefPass()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="globalSaturationOnAnExistingTraceKeepsItsPriorStateIntact()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="duplicateSpanIdIsNoOpAndDoesNotConsumeAnExtraPermit()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.0"/>
+  <testcase name="dualSaturationIncrementsOnlyThePerTraceCounterNotTheGlobalOne()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.0"/>
+  <testcase name="liveTracesAreNeverEvictedEvenUnderTraceCapacityPressure()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.002"/>
+  <testcase name="emptyStateSurvivesScanUntilItsOwnTraceEpochExpires()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="permitReleasedOnOnEndIsReusableByANewAdmission()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.001"/>
+  <testcase name="acquiredTraceSlotsNeverExceedTraceCapacityWhilePublishedStatesAreRemovedConcurrently()" classname="space.br1440.platform.tracing.otel.javaagent.processor.spantimeout.InFlightTraceIndexTest" time="0.125"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
